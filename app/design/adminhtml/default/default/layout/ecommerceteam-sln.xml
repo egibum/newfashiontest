@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * "Seo Layered Navigation" extension for "Magento Commerce" by "EcommerceTeam (www.ecommerce-team.com)"
+ *
+ * @category     Extension
+ * @copyright    Copyright (c) 2014 EcommerceTeam (http://www.ecommerce-team.com)
+ * @author       EcommerceTeam
+ * @version      4.0.0
+ */
+-->
+<layout>
+    <adminhtml_catalog_product_attribute_edit>
+        <reference name="head">
+            <action method="addJs"><script>ecommerceteam/seo-layered-navigation/uploader/jquery-1.9.1.min.js</script></action>
+            <action method="addJs"><script>ecommerceteam/seo-layered-navigation/uploader/jquery.ui.widget.js</script></action>
+            <action method="addJs"><script>ecommerceteam/seo-layered-navigation/uploader/jquery.fileupload.js</script></action>
+            <action method="addJs"><script>ecommerceteam/seo-layered-navigation/uploader/jquery.iframe-transport.js</script></action>
+            <action method="addCss"><stylesheet>ecommerceteam/sln.css</stylesheet></action>
+        </reference>
+    </adminhtml_catalog_product_attribute_edit>
+    <adminhtml_meta_index>
+       <reference name="content">
+           <block type="ecommerceteam_sln/adminhtml_meta" name="meta" />
+       </reference>
+    </adminhtml_meta_index>
+</layout>

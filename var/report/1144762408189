@@ -1,0 +1,10 @@
+a:5:{i:0;s:75:"Mage registry key "_singleton/ewpagecache/observer_frontend" already exists";i:1;s:1225:"#0 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/Mage.php(222): Mage::throwException('Mage registry k...')
+#1 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/Mage.php(476): Mage::register('_singleton/ewpa...', false)
+#2 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/App.php(1316): Mage::getSingleton('ewpagecache/obs...')
+#3 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/Mage.php(447): Mage_Core_Model_App->dispatchEvent('controller_fron...', Array)
+#4 /var/www/vhosts/new-fashion.co.uk/httpdocs/var/cache/ew/files/52/17/Mage/Core/Controller/Varien/Front.php(205): Mage::dispatchEvent('controller_fron...', Array)
+#5 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/local/Extendware/EWPageCache/Controller/Override/Mage/Core/Varien/Front.php(17) : eval()'d code(17): Mage_Core_Controller_Varien_FrontOverriddenClass->dispatch()
+#6 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/App.php(354): Extendware_EWPageCache_Controller_Override_Mage_Core_Varien_Front->dispatch()
+#7 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#8 /var/www/vhosts/new-fashion.co.uk/httpdocs/index.php(87): Mage::run('latvia', 'website')
+#9 {main}";s:3:"url";s:198:"/directory/currency/switch/currency/GBP/uenc/aHR0cDovL25ldy1mYXNoaW9uLmx2L3Zpcmllc2llbS9mL2Rpci9hc2MvbGltaXQvMzYvb3JkZXIvbmFtZS9tYW51ZmFjdHVyZXIvYmVsbGZpZWxkL3Nob3BwaW5nX3ByaWNlLzIwYW5kbW9yZS5odG1s/";s:11:"script_name";s:10:"/index.php";s:4:"skin";s:6:"latvia";}

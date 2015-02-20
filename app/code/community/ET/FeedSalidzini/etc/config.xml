@@ -1,0 +1,255 @@
+﻿<?xml version="1.0"?>
+<!--
+/**
+ * NOTICE OF LICENSE
+ *
+ * You may not give, sell, distribute, sub-license, rent, lease or lend
+ * any portion of the Software or Documentation to anyone.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade to newer
+ * versions in the future.
+ *
+ * @category   ET
+ * @package    ET_FeedSalidzini
+ * @copyright  Copyright (c) 2012 ET Web Solutions (http://etwebsolutions.com)
+ * @contacts   support@etwebsolutions.com
+ * @license    http://shop.etwebsolutions.com/etws-license-commercial-v1/   ETWS Commercial License (ECL1)
+ */
+ -->
+<config>
+    <modules>
+        <ET_FeedSalidzini>
+            <name>ET Feed Salidzini</name>
+            <version>1.0.4</version>
+            <descr>
+                <ru_RU><![CDATA[Экспорт товаров в файл формата XML для сервиса сравнения цен www.salidzini.lv]]>
+                </ru_RU>
+                <en_US><![CDATA[Export products to XML file for price comparison service www.salidzini.lv]]>
+                </en_US>
+            </descr>
+            <permanentlink>
+                <ru_RU>http://shop.etwebsolutions.com/rus/et-feed-salidzini.html</ru_RU>
+                <en_US>http://shop.etwebsolutions.com/eng/et-feed-salidzini.html</en_US>
+            </permanentlink>
+            <license>
+                <ru_RU><![CDATA[ETWS Коммерческая лицензия (ECL1)]]></ru_RU>
+                <en_US><![CDATA[ETWS Commercial License (ECL1)]]></en_US>
+            </license>
+            <licenselink>
+                <ru_RU>http://shop.etwebsolutions.com/rus/etws-license-commercial-v1</ru_RU>
+                <en_US>http://shop.etwebsolutions.com/eng/etws-license-commercial-v1</en_US>
+            </licenselink>
+            <redminelink>http://support.etwebsolutions.com/projects/et-feed-salidzini/roadmap</redminelink>
+            <ourserviceslink>
+                <ru_RU>http://shop.etwebsolutions.com/rus/our-services</ru_RU>
+                <en_US>http://shop.etwebsolutions.com/eng/our-services</en_US>
+            </ourserviceslink>
+        </ET_FeedSalidzini>
+    </modules>
+
+
+    <global>
+        <models>
+            <feedsalidzini>
+                <class>ET_FeedSalidzini_Model</class>
+                <resourceModel>feedsalidzini_resource</resourceModel>
+            </feedsalidzini>
+            <feedsalidzini_resource>
+                <class>ET_FeedSalidzini_Model_Resource</class>
+                <entities>
+                    <filelist>
+                        <table>et_feedsalidzini</table>
+                    </filelist>
+                </entities>
+            </feedsalidzini_resource>
+        </models>
+
+        <resources>
+            <feedsalidzini_setup>
+                <setup>
+                    <module>ET_FeedSalidzini</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </feedsalidzini_setup>
+            <feedsalidzini_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </feedsalidzini_write>
+            <feedsalidzini_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </feedsalidzini_read>
+        </resources>
+
+        <blocks>
+            <feedsalidzini>
+                <class>ET_FeedSalidzini_Block</class>
+            </feedsalidzini>
+        </blocks>
+
+        <helpers>
+            <feedsalidzini>
+                <class>ET_FeedSalidzini_Helper</class>
+            </feedsalidzini>
+        </helpers>
+
+        <template>
+            <email>
+                <feedsalidzini_generate_template translate="label" module="feedsalidzini">
+                    <label>Feed Salidzini cronjob errors</label>
+                    <file>et_feedsalidzini_cron_error.html</file>
+                    <type>html</type>
+                </feedsalidzini_generate_template>
+            </email>
+        </template>
+
+        <events>
+            <default>
+                <observers>
+                    <generate_feed_by_cron>
+                        <type>model</type>
+                        <class>feedsalidzini/observer</class>
+                        <method>scheduleFeedGeneration</method>
+                    </generate_feed_by_cron>
+                </observers>
+            </default>
+        </events>
+    </global>
+
+
+    <frontend>
+        <routers>
+            <feedsalidzini>
+                <use>standard</use>
+                <args>
+                    <module>ET_FeedSalidzini</module>
+                    <frontName>feedsalidzini</frontName>
+                </args>
+            </feedsalidzini>
+        </routers>
+        <translate>
+            <modules>
+                <ET_FeedSalidzini>
+                    <files>
+                        <default>ET_FeedSalidzini.csv</default>
+                    </files>
+                </ET_FeedSalidzini>
+            </modules>
+        </translate>
+    </frontend>
+
+    <admin>
+        <routers>
+            <feedsalidzini>
+                <use>admin</use>
+                <args>
+                    <module>ET_FeedSalidzini</module>
+                    <frontName>feedsalidzini</frontName>
+                </args>
+            </feedsalidzini>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <menu>
+            <catalog>
+                <children>
+                    <feedsalidzini translate="title" module="feedsalidzini">
+                        <title>Feed Salidzini</title>
+                        <sort_order>999</sort_order>
+                        <action>feedsalidzini/adminhtml_xmlgrid</action>
+                    </feedsalidzini>
+                </children>
+            </catalog>
+        </menu>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <feedsalidzini translate="title" module="feedsalidzini">
+                                            <title>ET Feed Salidzini Sections</title>
+                                            <sort_order>300</sort_order>
+                                        </feedsalidzini>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                        <catalog>
+                            <children>
+                                <feedsalidzini translate="title" module="feedsalidzini">
+                                    <title>ET Feed Salidzini</title>
+                                    <sort_order>300</sort_order>
+                                </feedsalidzini>
+                            </children>
+                        </catalog>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+
+        <translate>
+            <modules>
+                <ET_FeedSalidzini>
+                    <files>
+                        <default>ET_FeedSalidzini.csv</default>
+                    </files>
+                </ET_FeedSalidzini>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <feedsalidzini>
+                    <file>et_feedsalidzini.xml</file>
+                </feedsalidzini>
+            </updates>
+        </layout>
+    </adminhtml>
+
+
+    <default>
+        <feedsalidzini>
+            <generate>
+                <active>0</active>
+                <template>feedsalidzini_generate_template</template>
+            </generate>
+            <filter>
+                <filter_stock>0</filter_stock>
+                <filter_stock_from>1</filter_stock_from>
+                <filter_price>0</filter_price>
+                <filter_product_type>simple</filter_product_type>
+                <filter_duplicates>1</filter_duplicates>
+                <filter_product_visibility>4</filter_product_visibility>
+            </filter>
+
+            <general>
+                <mapping_name_attribute>@name</mapping_name_attribute>
+                <include_stock_value>1</include_stock_value>
+                <emulate_stock_for_containers>0</emulate_stock_for_containers>
+                <emulate_stock_from_subproducts>1</emulate_stock_from_subproducts>
+                <emulate_stock_default>1</emulate_stock_default>
+                <hide_large_stock>0</hide_large_stock>
+                <hide_large_stock_value>5</hide_large_stock_value>
+                <hide_all_stock>0</hide_all_stock>
+                <hide_all_stock_value>1</hide_all_stock_value>
+
+                <delivery_include>1</delivery_include>
+                <delivery_default_value>3</delivery_default_value>
+                <delivery_free_from_price>100</delivery_free_from_price>
+
+                <image_width>180</image_width>
+                <image_height>180</image_height>
+            </general>
+        </feedsalidzini>
+    </default>
+
+</config>

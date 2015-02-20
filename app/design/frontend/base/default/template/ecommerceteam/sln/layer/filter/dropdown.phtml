@@ -1,0 +1,23 @@
+<?php
+/**
+ * "Seo Layered Navigation" extension for "Magento Commerce" by "EcommerceTeam (www.ecommerce-team.com)"
+ *
+ * @category     Extension
+ * @copyright    Copyright (c) 2014 EcommerceTeam (http://www.ecommerce-team.com)
+ * @author       EcommerceTeam
+ * @version      4.0.0
+ */
+/** @var EcommerceTeam_Sln_Helper_Layer $helper */
+$helper = Mage::helper('ecommerceteam_sln/layer');
+/** @var  EcommerceTeam_Sln_Block_Layer_Filter_Attribute $this */
+?>
+<select onchange="!this.value || setLocation(this.value);">
+    <option value="<?php echo $this->getRemoveUrl();?>"><?php echo $this->__('All')?></option>
+<?php
+    /** @var $_item EcommerceTeam_Sln_Model_Layer_Filter_Item */
+    foreach ($this->getAllItems() as $_item):?>
+    <option <?php echo $_item->getCount() == 0 ? 'disabled="disabled"' : ''?> <?php if($_item->getIsSelected()):?> selected="selected" <?php endif;?> value="<?php echo $this->urlEscape($_item->getUrl(true)) ?>">
+        <?php echo $_item->getLabel() ?>
+    </option>
+<?php endforeach ?>
+</select>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+* @category   Mango
+* @package    Mango_Attributeswatches
+* @author     ModuleCreator
+* @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+-->
+<config>
+    <modules>
+        <Newfashion_Morefrom>
+            <version>0.0.1</version>
+        </Newfashion_Morefrom>
+    </modules>
+    <global>
+        <blocks>
+            <newfashion_morefrom>
+                <class>Newfashion_Morefrom_Block</class>
+            </newfashion_morefrom>
+            <catalog>
+                <rewrite>
+                    <product_view>Newfashion_Morefrom_Block_Catalog_Product_View</product_view>
+                </rewrite>
+            </catalog>
+        </blocks>
+    </global>
+</config>

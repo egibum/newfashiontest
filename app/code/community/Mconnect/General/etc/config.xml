@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Mconnect_General>
+        <version>2.0.0</version>
+        </Mconnect_General>
+    </modules>
+    <adminhtml>
+        <acl>
+            <resources>
+                <general>
+                    <title>Allow Everything</title>
+                </general>
+                <admin>
+                    <children>
+                        <Mconnect_General>
+                            <title>General Module</title>
+                            <sort_order>10</sort_order>
+                        </Mconnect_General>
+                        <general module="general">
+                            <title>Mconnect Extensions</title>
+                            <sort_order>70</sort_order>               
+                        </general>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <general translate="title" module="general">
+                                            <title>General</title>
+                                        </general>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <global>
+        <helpers>
+            <general>
+                <class>Mconnect_General_Helper</class>
+            </general>
+        </helpers>        
+    </global>
+</config>

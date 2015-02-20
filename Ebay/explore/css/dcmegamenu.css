@@ -1,0 +1,241 @@
+/* Mega Menu Styles */
+#menu
+{
+	clear: both;
+    display: block;
+    margin: 0;
+    overflow: visible;
+    width: 100%;
+}
+.containerShadow
+{
+    background-image: url("../images/shadow980.png");
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 11px;
+}
+
+.mainNavigation_linkList_content
+{
+	float:left;
+	background:#FFF;
+}
+
+.floatPropertiesRight
+{
+	float:right;
+	display:block;
+	position:relative;
+	margin:10px 0 11px;
+}
+
+.mega-menu ul, .mega-menu ul li {list-style: none;}
+.mega-menu ul {position: relative; padding: 0; margin: 0;}
+.mega-menu ul li ul {display: none;}
+.mega-menu .sub {display: none;}
+.mega-menu .sub ul {display: block;}
+
+#mega-menu-1 {
+list-style: none; 
+position: relative; 
+padding: 0; 
+margin: 0;
+text-align:left;
+
+}
+#mega-menu-1 .sub ul {
+display: block;
+}
+#mega-menu-1 {
+width: 100%; 
+position: relative;
+}
+#mega-menu-1 li {
+float: left; 
+margin: 0; 
+padding: 0; 
+}
+
+#mega-menu-1 li a {
+float: left; 
+display: block; 
+color: #363636; 
+padding: 0px 30px 0px 30px; 
+text-decoration: none;
+text-transform:uppercase;
+font-weight:bold;
+font-size:18px;
+height:38px;
+line-height:38px;
+border-right:1px solid #000;
+font-family:"Times New Roman";
+}
+#mega-menu-1 li a img {
+	padding:7px 0 0 0;
+}
+#mega-menu-1 li.mega-hover a, #mega-menu-1 li a:hover {
+background: linear-gradient(to bottom, #4f5964, #5f6975) repeat scroll 0 0 rgba(0, 0, 0, 0);
+color: #FFFFFF;
+}
+#mega-menu-1 li .sub-container {
+position: absolute;
+top:20px !important;
+}
+#mega-menu-1 li .sub-container-last {
+position: absolute;
+right:-70px !important;
+}
+#mega-menu-1 li .sub-container-2nd-last {
+position: absolute;
+right:-174px !important;
+}
+#mega-menu-1 li .sub-container-3rd-last {
+position: absolute;
+right:-174px !important;
+}
+#mega-menu-1 li .sub-container-4th-last {
+position: absolute;
+right:-485px !important;
+}
+#mega-menu-1 li .sub {
+background: #000; 
+padding: 15px; 
+border: 1px solid #222;
+top:18px !important;
+}
+#mega-menu-1 li .sub .row {
+/*width: 100% !important; */
+overflow: hidden;
+clear: both;
+}
+#mega-menu-1 li .sub li {
+list-style: none; 
+float: none; 
+width: 150px; 
+font-weight: normal;
+}
+#mega-menu-1 li .sub li.mega-hdr {
+margin: 0 0px 10px 5px; 
+float: left;
+border-right:1px solid #E8E8E8;
+}
+#mega-menu-1 li .sub li.mega-hdr.last {
+margin-right: 0;
+border-right:none;
+}
+#mega-menu-1 li .sub a {
+background: none; 
+color: #FFF; 
+display: block; 
+float: none; 
+font-size: 18px;
+font-weight:normal;
+text-transform:none;
+height:30px;
+line-height:30px;
+overflow:hidden;
+border:none;
+}
+#mega-menu-1 li .sub li.mega-hdr a.mega-hdr-a {
+margin-bottom: 5px; 
+/*background: #DEDEDE; */
+text-transform: uppercase; 
+font-weight: bold; 
+color: #363636;
+font-size:12px;
+height:25px !important;
+line-height:25px;
+}
+#mega-menu-1 li .sub li.mega-hdr a.mega-hdr-a:hover {
+color: #72AEBD;
+}
+#mega-menu-1 .sub li.mega-hdr li a {
+font-weight: normal;
+color:#FFF;
+}
+#mega-menu-1 .sub li.mega-hdr li a:hover {
+color: #000;
+background:#FFF;
+}
+#mega-menu-1 .sub ul li {
+padding-right: 0;
+}
+#mega-menu-1 li .sub-container.non-mega .sub {
+padding: 10px;
+}
+#mega-menu-1 li .sub-container.non-mega li {
+padding: 0; 
+width: 190px; 
+margin: 0;
+}
+#mega-menu-1 li .sub-container.non-mega li a {
+color:#363636;
+}
+#mega-menu-1 li .sub-container.non-mega li a:hover {
+color: #72AEBD; 
+}
+
+.shop-by-brand
+{
+	width:150px;
+}
+
+.shop-by-brand a
+{
+	height:110px !important;
+	padding:0 !important;
+}
+
+.shop-by-brand a img
+{
+	display:block;
+	width:145px;
+	height:auto;
+	border:none;
+	vertical-align:middle;
+	clear:both;
+}
+
+.shop-by-brand h2
+{
+	display:block;
+	clear:both;
+	margin-top:5px;
+	font-size:14px;
+}
+
+.shop-by-brand p
+{
+	display:block;
+	clear:both;
+	margin-top:10px;
+	font-size:12px;
+}
+
+
+@media (max-width: 640px) {
+	.mainNavigation_linkList_content{
+		float:none;
+	}
+	#mega-menu-1 li{
+		float:none;
+	}
+	#mega-menu-1 li a{
+		padding:0 20px;
+		border-left:0px solid #000000;
+		border-right:0;
+		float:none;
+	}
+	#mega-menu-1 li:first-child a{
+		border-left:0;
+	}
+	#mega-menu-1 li .sub-container{
+		position:relative;
+		margin-left:0 !important;
+		top:0 !important;
+		left:0 !important;
+	}
+	#mega-menu-1 li .sub{
+		top:0 !important;
+	}
+}

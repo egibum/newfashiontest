@@ -1,0 +1,64 @@
+<?php
+/**
+ * BelVG LLC.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+ *
+ /***************************************
+ *         MAGENTO EDITION USAGE NOTICE *
+ *****************************************/
+ /* This package designed for Magento COMMUNITY edition
+ * BelVG does not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * BelVG does not provide extension support in case of
+ * incorrect edition usage.
+ /***************************************
+ *         DISCLAIMER   *
+ *****************************************/
+ /* Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future.
+ *****************************************************
+ * @category   Belvg
+ * @package    Belvg_ColorSwatchPro
+ * @copyright  Copyright (c) 2010 - 2011 BelVG LLC. (http://www.belvg.com)
+ * @license    http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+ */
+?>
+
+<?php $_product = $this->getProduct() ?>
+
+<?php if($_product->getId() AND $this->helper('colorswatch')->isEnabled() AND $this->helper('colorswatch')->showOptions()): ?>
+	<?php $unique = substr(hash('md5', uniqid()), 0, 8); // unique id for options block ?>
+	<form action="<?php echo $this->helper('checkout/cart')->getAddUrl($_product) ?>" method="post" style="display: block; clear: both;">
+		<?php $attValConfig = $_product->getTypeInstance()->getConfigurableAttributesAsArray(); ?>
+		<?php if(sizeof($attValConfig)): ?>
+			<div id="colorswatch-options-block-<?php echo $unique ?>" class="product-options-block">
+			<?php foreach($attValConfig as $attValConfigSingle): ?>
+				<?php $select_id = "attribute{$attValConfigSingle['attribute_id']}-$unique" ?>
+				<label class="required"><?php echo $attValConfigSingle['frontend_label']?> <em>*</em></label>
+				<select <?php if($this->helper('colorswatch')->useIcons()):?>style="display:none;"<?php endif;?> name="super_attribute[<?php echo $attValConfigSingle['attribute_id']?>]" class="super-attribute-select required-entry" id="<?php echo $select_id ?>">
+					<option><?php echo $this->__('Choose an Option...') ?></option>
+					<?php foreach($attValConfigSingle['values'] as $attValConfigSingleVal): ?>
+					<option value="<?php echo $attValConfigSingleVal['value_index'] ?>"><?php echo $attValConfigSingleVal['label'] ?></option>
+					<?php endforeach; ?>
+				</select>
+				<div style="clear:both;"></div>
+			<?php endforeach; ?>
+			</div>
+		<?php endif; ?>
+		<button type="submit" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+	</form>
+	<script type="text/javascript">
+	//<![CDATA[
+		var optionsPrice_<?php echo $unique ?> = new Product.OptionsPrice(<?php echo $this->getJsonOptionsPrice() ?>),
+			spConfig_<?php echo $unique ?> = new Product.Config(<?php echo $this->getJsonConfig() ?>, '<?php echo $unique ?>', optionsPrice_<?php echo $unique ?>, <?php echo $this->getJsonConfigData() ?>, $$('a#swatch-<?php echo $_product->getId() ?> img')[0]);
+	//]]>
+	</script>
+<?php else: ?>
+	<button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+<?php endif; ?>

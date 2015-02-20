@@ -1,0 +1,14 @@
+<div class="more_products_images">
+<a href="http://cgi.ebay.co.uk/ws/eBayISAPI.dll?ViewItem&amp;item=261454911448&amp;ssPageName=STRK:MESE:IT"><img src="http://new-fashion.co.uk/Ebay/listing_template/images/Brushed.png"></a>
+<a href="http://cgi.ebay.co.uk/ws/eBayISAPI.dll?ViewItem&item=261451030997&ssPageName=STRK:MESE:IT"><img src="http://new-fashion.co.uk/Ebay/listing_template/images/Embroidered.png"></a>
+<a href="http://cgi.ebay.co.uk/ws/eBayISAPI.dll?ViewItem&item=251506084413&ssPageName=STRK:MESE:IT"><img src="http://new-fashion.co.uk/Ebay/listing_template/images/Maxidress.png"></a>
+<a href="http://cgi.ebay.co.uk/ws/eBayISAPI.dll?ViewItem&item=261451008523&ssPageName=STRK:MESE:IT"><img src="http://new-fashion.co.uk/Ebay/listing_template/images/redsoulfloral.png"></a>
+<a href="http://cgi.ebay.co.uk/ws/eBayISAPI.dll?ViewItem&item=261454928852&ssPageName=STRK:MESE:IT"><img src="http://new-fashion.co.uk/Ebay/listing_template/images/SH Lace dress.png"></a></div>
+<img src="http://new-fashion.co.uk/Ebay/listing_template/footer_deals3.jpg" border="0" usemap="#deals_map" class="weekly_deals">
+&nbsp; <map name="deals_map">
+&nbsp; &nbsp; <area shape="rect" coords="5,5,154,146" href="http://stores.ebay.co.uk/newfashionofficial/pages/dresses/">
+&nbsp; &nbsp; <area shape="rect" coords="163,4,410,145" href="http://stores.ebay.co.uk/newfashionofficial/pages/mens-shirts/">
+&nbsp; &nbsp; <area shape="rect" coords="417,4,665,146" href="http://stores.ebay.co.uk/newfashionofficial/pages/mens-jackets/">
+&nbsp; &nbsp; <area shape="rect" coords="669,4,916,145" href="http://stores.ebay.co.uk/newfashionofficial/pages/knitwear/">
+&nbsp; </map>
+</div>

@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+.home_cont
+{
+	min-width:1200px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.home_cont2
+{
+	display:inline;
+	float:left;
+	margin-top:20px;
+	margin-bottom: 20px;
+}
+
+.home_cont3
+{
+	display:inline;
+	float:left;
+	margin-top:10px;
+	margin-bottom: 20px;
+}
+
+.left_cont
+{
+	display:inline;
+	float:left;
+	margin-right: 53px;
+}
+.centre_cont
+{
+	display:inline;
+	float:left;
+	margin-right: 23px;
+}
+.right_cont
+{
+	display:inline;
+	float:left;
+}
+.brand_top
+{
+	display:inline;
+	float:left;
+}
+
+.brand_line
+{
+	min-height:50px;
+}
+
+.brand_bottom
+{
+	margin-bottom:20px;
+}
+
+.home_text
+{
+	margin-top: 10px;
+	margin-left:auto;
+	margin-right:auto;
+	font:Georgia, "Times New Roman", Times, serif;
+	font-size:12px;
+}
+
+.footer-banners
+{
+	height:10px;
+	padding: 0px;
+}

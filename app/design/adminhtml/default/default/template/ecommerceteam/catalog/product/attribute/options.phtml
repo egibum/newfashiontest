@@ -1,0 +1,286 @@
+<?php
+/**
+ * "Seo Layered Navigation" extension for "Magento Commerce" by "EcommerceTeam (www.ecommerce-team.com)"
+ *
+ * @category     Extension
+ * @copyright    Copyright (c) 2014 EcommerceTeam (http://www.ecommerce-team.com)
+ * @author       EcommerceTeam
+ * @version      4.0.0
+ */
+
+/**
+ * Attribute otions control
+ *
+ * @see Mage_Adminhtml_Block_Catalog_Product_Attribute_Edit_Tab_Options
+ */
+?>
+<?php
+    $uploader_block = new Mage_Adminhtml_Block_Media_Uploader();
+
+    $slnUploaderConfig = new Varien_Object();
+    $optionType = 'option_image';
+    $uploadUrl  = Mage::getModel('adminhtml/url')
+                    ->addSessionParam()
+                    ->getUrl('*/option_image/upload', array('type' => $optionType, '_secure' => true));
+
+    $slnUploaderConfig->setUrl($uploadUrl);
+    $slnUploaderConfig->setParams(array('form_key' => $this->getFormKey()));
+    $slnUploaderConfig->setFileField($optionType);
+    $slnUploaderConfig->setFilters(array(
+        'all'    => array(
+            'label' => Mage::helper('adminhtml')->__('All Files'),
+            'files' => array('*.*')
+        )
+    ));
+    $slnUploaderConfig->setReplaceBrowseWithRemove(true);
+    $slnUploaderConfig->setWidth('32');
+    $slnUploaderConfig->setHideUploadButton(true);
+    $slnJsonConfig = Mage::helper('core')->jsonEncode($slnUploaderConfig->getData());
+?>
+<div>
+<ul class="messages">
+    <li class="notice-msg">
+        <ul>
+            <li><?php echo Mage::helper('catalog')->__('If you do not specify an option value for a specific store view then the default (Admin) value will be used.') ?></li>
+        </ul>
+    </li>
+</ul>
+</div>
+
+<div class="entity-edit">
+    <div class="entry-edit-head">
+        <h4 class="icon-head head-edit-form fieldset-legend"><?php echo Mage::helper('catalog')->__('Manage Titles (Size, Color, etc.)') ?></h4>
+    </div>
+    <div class="box">
+            <div class="hor-scroll">
+            <table class="dynamic-grid" cellspacing="0" id="attribute-labels-table">
+                <tr>
+                <?php foreach ($this->getStores() as $_store): ?>
+                    <th><?php echo $_store->getName() ?></th>
+                <?php endforeach; ?>
+                </tr>
+                <tr>
+                    <?php $_labels = $this->getLabelValues() ?>
+                    <?php foreach ($this->getStores() as $_store): ?>
+                    <td>
+                        <input class="input-text<?php if($_store->getId()==0): ?> required-option<?php endif; ?>" type="text" name="frontend_label[<?php echo $_store->getId() ?>]" value="<?php echo $this->htmlEscape($_labels[$_store->getId()]) ?>"<?php if ($this->getReadOnly()):?> disabled="disabled"<?php endif;?>/>
+                    </td>
+                    <?php endforeach; ?>
+                </tr>
+            </table>
+            </div>
+    </div>
+</div>
+<br/>
+<div class="entity-edit" id="matage-options-panel">
+    <div class="entry-edit-head">
+    <h4 class="icon-head head-edit-form fieldset-legend"><?php echo Mage::helper('catalog')->__('Manage Options (values of your attribute)') ?></h4>
+    </div>
+    <div class="box">
+        <div class="hor-scroll">
+            <table class="dynamic-grid" cellspacing="0"  cellpadding="0">
+                <tr id="attribute-options-table">
+                    <?php foreach ($this->getStores() as $_store): ?>
+                        <th><?php echo $_store->getName() ?></th>
+                    <?php endforeach; ?>
+                        <th><?php echo $this->__('URL Key')?></th>
+                        <th width="100"><?php echo $this->__('Navigation Image')?></th>
+                        <th><?php echo $this->__('Remove Image')?></th>
+                        <th><?php echo Mage::helper('catalog')->__('Position') ?></th>
+                        <th class="nobr a-center"><?php echo Mage::helper('catalog')->__('Is Default') ?></th>
+                        <th>
+                            <?php if (!$this->getReadOnly()):?>
+                                <?php echo $this->getAddNewButtonHtml() ?>
+                            <?php endif;?>
+                        </th>
+                    </tr>
+                    <tr class="no-display template" id="row-template">
+                        <?php foreach ($this->getStores() as $_store): ?>
+                        <td><input name="option[value][{{id}}][<?php echo $_store->getId() ?>]" value="{{store<?php echo $_store->getId() ?>}}" class="input-text<?php if($_store->getId()==0): ?> required-option<?php endif; ?>" type="text" <?php if ($this->getReadOnly()):?> disabled="disabled"<?php endif;?>/></td>
+                        <?php endforeach; ?>
+                        <td class="a-center"><input class="input-text" type="text" name="option[url_key][{{id}}]" value="{{url_key}}" <?php if ($this->getReadOnly()):?> disabled="disabled"<?php endif;?>/></td>
+                        <td class="a-center"><input class="input-text" type="text" name="option[image][{{id}}]" value="{{image}}" <?php if ($this->getReadOnly()):?> disabled="disabled"<?php endif;?>/>
+                        <input id="multiple_{{id}}" class="image_upload" type="file" name="option[image_file][{{id}}]" />
+                        </td>
+                        <td class="a-center"><input class="input-text" type="text" name="option[order][{{id}}]" value="{{sort_order}}" <?php if ($this->getReadOnly()):?> disabled="disabled"<?php endif;?>/></td>
+                        <td><input class="input-radio" type="radio" name="default[]" value="{{id}}" <?php if ($this->getReadOnly()):?> disabled="disabled"<?php endif;?>/></td>
+                        <td class="a-left">
+                            <input type="hidden" class="delete-flag" name="option[delete][{{id}}]" value="" />
+                            <?php if (!$this->getReadOnly()):?>
+                                <?php echo $this->getDeleteButtonHtml() ?>
+                            <?php endif;?>
+                        </td>
+                    </tr>
+            </table>
+        </div>
+        <input type="hidden" id="option-count-check" value="" />
+    </div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var optionDefaultInputType = 'radio';
+var maxUploadFileSizeInBytes = <?php echo $uploader_block->getDataMaxSizeInBytes() ?>;
+var maxUploadFileSize = '<?php echo $uploader_block->getDataMaxSize() ?>';
+
+
+
+var fileListTemplate = '<span class="file-info">' +
+                            '<span class="file-info-name">{{name}}</span>' +
+                            //'<span class="file-info-size">({{size}})</span>' +
+                        '</span>';
+
+
+
+
+// IE removes quotes from element.innerHTML whenever it thinks they're not needed, which breaks html.
+var templateText =
+        '<tr class="option-row">'+
+<?php foreach ($this->getStores() as $_store): ?>
+            '<td><input name="option[value][{{id}}][<?php echo $_store->getId() ?>]" value="{{store<?php echo $_store->getId() ?>}}" class="input-text<?php if($_store->getId()==0): ?> required-option<?php endif; ?>" type="text" <?php if ($this->getReadOnly()):?> disabled="disabled"<?php endif;?>/><\/td>'+
+<?php endforeach; ?>
+            '<td><input class="input-text" type="text" name="option[url_key][{{id}}]" value="{{url_key}}"/><\/td>'+
+            '<td><input id="option_image_{{id}}_save" class="hidden" type="hidden" name="option[image][{{id}}]" value=""/>'+
+                 '<div id="option_image_{{id}}" class="uploader">'+
+                    '<span class="ui-button">'+
+                        '<button class="form-button"><span><span>...</span></span></button>'+
+                        '<input id="multiple_{{id}}" size="2" class="image_upload" type="file" name="option_image" />'+
+                    '</span>'+
+                    '<img style="display:none;" id="loading-{{id}}" src="<?php echo $this->getSkinUrl('images/rule-ajax-loader.gif')?>" alt="uploading..."/>'+
+                '</div>'+
+                '<div id="option_image_{{id}}-old" class="file-row-info"></div>'+
+            '<\/td>'+
+            '<td class="a-center"><input class="input-text" type="checkbox" name="option[remove_image][{{id}}]]" value="1" /></td>'+
+            '<td><input class="input-text" type="text" name="option[order][{{id}}]" value="{{sort_order}}" <?php if ($this->getReadOnly()):?> disabled="disabled"<?php endif;?>/><\/td>'+
+            '<td class="a-center"><input class="input-radio" type="{{intype}}" name="default[]" value="{{id}}" {{checked}} <?php if ($this->getReadOnly()):?> disabled="disabled"<?php endif;?>/><\/td>'+
+            '<td class="a-left">'+
+                '<input type="hidden" class="delete-flag" name="option[delete][{{id}}]" value="" />'+
+                <?php if (!$this->getReadOnly()):?>
+                    '<?php echo $this->getDeleteButtonHtml() ?>'+
+                <?php endif;?>
+            '<\/td>'+
+        '<\/tr>';
+
+var attributeOption = {
+    table : $('attribute-options-table'),
+    templateSyntax : /(^|.|\r|\n)({{(\w+)}})/,
+    templateText : templateText,
+    fileListTemplate:fileListTemplate,
+    listTemplate : null,
+    itemCount : 0,
+    totalItems : 0,
+    add : function(data) {
+        this.template = new Template(this.templateText, this.templateSyntax);
+        this.listTemplate = new Template(this.fileListTemplate, this.templateSyntax);
+        if(!data.id){
+            data = {};
+            data.id  = 'option_'+this.itemCount;
+        }
+        if (!data.intype)
+            data.intype = optionDefaultInputType;
+
+        Element.insert(this.table, {after: this.template.evaluate(data)});
+        this.bindRemoveButtons();
+
+        if (!data.image_info) {
+            data.image_info = [];
+        }else{
+            $('option_image_' + data.id + '-old').innerHTML = this.listTemplate.evaluate(data.image_info[0]);
+        }
+        
+
+        $('option_image_' + data.id + '-old').show();
+        var self = this;
+        jQuery('#option_image_'+data.id+'').fileupload({
+            dataType: 'json',
+            url: '<?php echo $uploadUrl ?>',
+            send: function(){
+                jQuery("#loading-"+data.id).show();
+            },
+            done: function (e, d) {
+                jQuery.each(d.result, function (index, file) {
+                    if (file.error){
+                        console.error(file.error);
+                    }
+                    else{
+                        jQuery('#option_image_'+data.id+'_save').attr('value',JSON.stringify(d.result));
+                        $('option_image_' + data.id + '-old').innerHTML = self.listTemplate.evaluate({'name': 'file was uploaded'});
+                        //console.log(JSON.stringify(d.result));
+                    }
+                });
+                jQuery("#loading-"+data.id).hide();
+
+            }
+        });
+
+        this.itemCount++;
+        this.totalItems++;
+        this.updateItemsCountField();
+    },
+    remove : function(event){
+        var element = $(Event.findElement(event, 'tr')); // !!! Button already
+                                                               // have table parent in safari
+        // Safari workaround
+        element.ancestors().each(function(parentItem){
+           if (parentItem.hasClassName('option-row')) {
+               element = parentItem;
+               throw $break;
+           } else if (parentItem.hasClassName('box')) {
+               throw $break;
+           }
+        });
+
+
+        if(element){
+            var elementFlags = element.getElementsByClassName('delete-flag');
+            if(elementFlags[0]){
+                elementFlags[0].value=1;
+            }
+
+            element.addClassName('no-display');
+            element.addClassName('template');
+            element.hide();
+            this.totalItems--;
+            this.updateItemsCountField();
+        }
+    },
+    updateItemsCountField: function() {
+        if (this.totalItems > 0) {
+            $('option-count-check').value = '1';
+        } else {
+            $('option-count-check').value = '';
+        }
+    },
+    bindRemoveButtons : function(){
+        var buttons = $$('.delete-option');
+        for(var i=0;i<buttons.length;i++){
+            if(!$(buttons[i]).binded){
+                $(buttons[i]).binded = true;
+                Event.observe(buttons[i], 'click', this.remove.bind(this));
+            }
+        }
+    }
+
+}
+if($('row-template')){
+    $('row-template').remove();
+}
+attributeOption.bindRemoveButtons();
+
+if($('add_new_option_button')){
+    Event.observe('add_new_option_button', 'click', attributeOption.add.bind(attributeOption));
+}
+Validation.addAllThese([
+    ['required-option', '<?php echo Mage::helper('catalog')->__('Failed') ?>', function(v) {
+        return !Validation.get('IsEmpty').test(v);
+}]]);
+Validation.addAllThese([
+    ['required-options-count', '<?php echo Mage::helper('catalog')->__('Options is required') ?>', function(v) {
+        return !Validation.get('IsEmpty').test(v);
+}]]);
+<?php foreach ($this->getOptionValues() as $_value): ?>
+    attributeOption.add(<?php echo $_value->toJson() ?>);
+<?php endforeach; ?>
+
+   
+//]]>
+</script>

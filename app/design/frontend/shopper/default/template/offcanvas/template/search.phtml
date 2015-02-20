@@ -1,0 +1,28 @@
+<?php $catalogSearchHelper = $this->helper('catalogsearch'); ?>
+ 
+<form id="mobile_search_form" action="<?php echo $catalogSearchHelper->getResultUrl() ?>" method="get">
+    <div class="form-search">
+        <label for="mobile_search"><?php echo $this->__('Search site:') ?></label>
+        <span class="search-icon"></span>
+        <input id="mobile_search"
+               type="text"
+               name="<?php echo $catalogSearchHelper->getQueryParamName() ?>"
+               value="<?php echo $this->__('Search') ?>"
+               onblur="if(this.value==''){ this.value='Search';}"
+               onfocus="if(this.value=='Search'){ this.value='';}"
+               class="input-text"
+               maxlength="<?php echo $catalogSearchHelper->getMaxQueryLength(); ?>"
+        />
+        <button type="submit" title="<?php echo $this->__('Go') ?>" class="button">
+            <span><span><?php echo $this->__('Go') ?></span></span></button>
+        <a href="<?php echo $catalogSearchHelper->getAdvancedSearchUrl(); ?>"><?php echo $this->__('Advanced Search'); ?></a>
+ 
+        <div id="mobile_search_autocomplete" class="search-autocomplete"></div>
+        <script type="text/javascript">
+            //<![CDATA[
+            var searchForm = new Varien.searchForm('mobile_search_form', 'mobile_search', '<?php echo $this->__('Search') ?>');
+            searchForm.initAutocomplete('<?php echo $catalogSearchHelper->getSuggestUrl() ?>', 'mobile_search_autocomplete');
+            //]]>
+        </script>
+    </div>
+</form>

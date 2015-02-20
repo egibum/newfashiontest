@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <mconnect_general>            
+            <label>M-Connect Media Extensions</label>
+            <sort_order>198</sort_order>            
+        </mconnect_general>            
+    </tabs>
+</config>

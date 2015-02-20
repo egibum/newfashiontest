@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <Xogenics translate="label" module="cleancart">
+            <label>Xogenics</label>
+            <sort_order>1000000</sort_order>
+        </Xogenics>
+    </tabs>
+    <sections>
+        <cleancart translate="label" module="cleancart">
+            <label>Clean Carts Configuration</label>
+            <tab>Xogenics</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <cart translate="label">
+                    <label>Shopping Cart Settings</label>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <show_coupon>
+                            <label>Show Discount Coupon In Shopping Cart</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_coupon>
+                        <show_estimate>
+                            <label>Show Shipping Estimate In Shopping Cart</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_estimate>
+                    </fields>
+                </cart>
+                <global translate="label">
+                    <label>Thank you for choosing Xogenics!</label>
+                    <frontend_type>text</frontend_type>
+                    <frontend_model>Xogenics_CleanCart_Block_Adminhtml_Fieldset_System_Logo_Global</frontend_model>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                </global>
+            </groups>
+        </cleancart>
+    </sections>
+</config>

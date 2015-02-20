@@ -1,0 +1,167 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+$config = Mage::getStoreConfig('shoppersettings', Mage::app()->getStore()->getId());
+$hdr_style = '';
+if ( $config['design']['search_field'] ) {
+	$hdr_style .= ' search-field';
+}
+if ( $config['design']['below_logo'] ) {
+	$hdr_style .= ' below-logo';
+}
+
+?>
+
+<!-- HEADER BOF -->
+<div class="push ltop">	 <a href="#menu" class="menu-link"><img src="https://new-fashion.co.uk/skin/frontend/shopper/default/images/navi_button.jpg"</img></a> </div>	
+<div class="header-container push">
+    <div class="top-switch-bg">
+        <div class="row clearfix">
+            <div class="grid_6">
+                <div class="header-switch language-switch">
+    <span><?php echo $this->__('Select Language:') ?>
+    </span>
+	<div class="header-dropdown">
+        <ul><a href="http://new-fashion.co.uk"><img src="https://new-fashion.co.uk/media/icons/uk.png" alt="Visit UK website"/></a></ul>
+        <ul><a href="http://new-fashion.lt"><img src="https://new-fashion.co.uk/media/icons/lt.png" /></a></ul>
+        <ul><a href="http://new-fashion.lv"><img src="https://new-fashion.co.uk/media/icons/lv.png" alt="Apmeklēt Latvijas mājaslapu" /></a></ul>
+    </div>
+</div>
+<div class="language-select">
+    <span><?php echo $this->__('Your Language:') ?></span>
+	<select name="language_switch" onchange="window.location=this.value"><?php echo implode('', $select_stores); ?></select>
+</div>
+                <?php echo $this->getChildHtml('currencyTop') ?>
+                </div>
+            <div class="grid_6">
+                <?php echo $this->getChildHtml('topLinks') ?>
+            </div>
+        </div>
+    </div>
+    <div class="header-wrapper <?php echo $hdr_style?>">
+        <header>
+			<?php if ( $config['design']['below_logo'] ) : ?>
+            <div class="row clearfix">
+                        <div id="zem_navi">
+<p> Test Text</p>
+</div
+                ><div class="grid_12">
+			        <?php if ($this->getIsHomePage()):?>
+                    <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><?php echo $this->getChildHtml('theme_logo', false) ?></a></h1>
+			        <?php else:?>
+                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><?php echo $this->getChildHtml('theme_logo', false) ?></a>
+			        <?php endif?>
+	                <div class="mobile-nav c">
+                        <?php
+                        Mage::register('shopperPrefix', 'mobile-');
+                        echo $this->getChildHtml('topMenu');
+                        Mage::unregister('shopperPrefix');
+                        ?>
+                    </div>
+                    <div class="top-dropdowns">
+				        <?php echo $this->getChildHtml('cartTop') ?>
+				        <?php echo $this->getChildHtml('compareTop') ?>
+				        <?php echo $this->getChildHtml('topSearch'); ?>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+	        <div class="row clearfix">
+                <div class="grid_12 <?php if ( $config['navigation']['use_wide_navigation'] ) { echo 'wide-navigation'; } ?>">
+                    <!-- NAVIGATION -->
+					
+	                <?php
+	                if ( !$config['navigation']['use_wide_navigation'] && $config['navigation']['use_navigation'] ) {
+		                echo $this->getChildHtml('topShopperMenu');
+	                } else {
+		                echo $this->getChildHtml('topMenu', false);
+	                }
+	                ?>
+                    <!-- NAVIGATION EOF -->
+			        <?php echo $this->getChildHtml('topContainer'); ?>
+                </div>
+            </div>
+			<?php else:?>
+            <div class="row clearfix">
+                <div class="grid_12 <?php if ( $config['navigation']['use_wide_navigation'] ) { echo 'wide-navigation'; } ?>">
+                    <?php if ($this->getIsHomePage()):?>
+                    <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><?php echo $this->getChildHtml('theme_logo', false) ?></a></h1>
+                    <?php else:?>
+                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><?php echo $this->getChildHtml('theme_logo', false) ?></a>
+                    <?php endif; ?>
+					<!-- NAVIGATION -->
+					<script type="text/javascript">
+						window.onload = function(){
+							document.getElementById("menu").style.display = "block";
+						} 
+					</script>
+					<div id="menu" class="panel" role="navigation" style="display: none;">
+					
+						<div class="mobile-nav">						
+							<div class="mobile-search">
+								<?php echo $this->getChildHtml('topSearch'); ?>
+							</div>
+                            <div class="navi-shop"><img src="https://new-fashion.co.uk/skin/frontend/shopper/default/images/navi-shop.jpg" alt="use navigation below to shop at new fashion mobile" /></div>
+							<?php
+							Mage::register('shopperPrefix', 'mobile-');
+							echo $this->getChildHtml('topMenu');
+							Mage::unregister('shopperPrefix');
+							?>
+                             <div class="navi-shop2"><img src="https://new-fashion.co.uk/skin/frontend/shopper/default/images/navi_seperator2.jpg" alt="use navigation below to shop at new fashion mobile" /></div>
+							<div class="second-level-menu">
+							<div class="add_links"><a href="https://new-fashion.co.uk/customer/account/login/">Login</a></div>
+                            <div class="add_links"><a href="https://new-fashion.co.uk/customer/account/">My Account</a></div>
+                            <div class="add_links"><a href="https://new-fashion.co.uk/checkout/cart/">My Bag</a></div>
+                            <div class="add_links"><a href="https://new-fashion.co.uk/sales/order/history/">My Orders</a></div>
+                            <div class="add_links"><a href="https://new-fashion.co.uk/contacts-new-fashion">Contact Us</a></div>
+							</div>
+						</div>
+					</div>
+					
+	                <?php
+                        if ( !$config['navigation']['use_wide_navigation'] && $config['navigation']['use_navigation'] ) {
+                            echo $this->getChildHtml('topShopperMenu');
+                        } else {
+                            echo $this->getChildHtml('topMenu', false);
+                        }
+                    ?>
+                    <!-- NAVIGATION EOF -->
+                    <div class="top-dropdowns">
+                        <?php echo $this->getChildHtml('cartTop') ?>
+                        <?php echo $this->getChildHtml('compareTop') ?>
+                        <?php echo $this->getChildHtml('topSearch'); ?>
+                        <div class="clear"></div>
+                    </div>
+                    <?php echo $this->getChildHtml('topContainer'); ?>
+                </div>
+            </div>
+	        <?php endif?>
+        </header>
+    </div>
+<!-- HEADER EOF -->
+<?php echo $this->getChildHtml('slideshow'); ?>

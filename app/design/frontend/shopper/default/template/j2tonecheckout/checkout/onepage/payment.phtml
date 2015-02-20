@@ -1,0 +1,54 @@
+<script type="text/javascript">
+//<![CDATA[
+    var payment = new J2t_Payment('co-payment-form', '<?php echo $this->getUrl('j2tonecheckout/onepage/savePayment', array('form_key' => Mage::getSingleton('core/session')->getFormKey())) ?>', '<?php echo $this->getUrl('checkout/onepage/shippingmethod', array('form_key' => Mage::getSingleton('core/session')->getFormKey())) ?>', '<?php echo $this->getUrl('j2tonecheckout/onepage/paymentmethod', array('form_key' => Mage::getSingleton('core/session')->getFormKey()));?>', '<?php echo $this->getUrl('j2tonecheckout/onepage/review', array('form_key' => Mage::getSingleton('core/session')->getFormKey()));?>');
+//]]>
+</script>
+<form action="" id="co-payment-form">
+    <fieldset>
+        <?php echo $this->getChildHtml('methods') ?>
+    </fieldset>
+</form>
+<div class="tool-tip" id="payment-tool-tip" style="display:none;">
+    <div class="btn-close"><a href="#" id="payment-tool-tip-close" title="<?php echo $this->__('Close') ?>"><?php echo $this->__('Close') ?></a></div>
+    <div class="tool-tip-content"><img src="<?php echo $this->getSkinUrl('images/cvv.gif') ?>" alt="<?php echo $this->__('Card Verification Number Visual Reference') ?>" title="<?php echo $this->__('Card Verification Number Visual Reference') ?>" /></div>
+</div>
+<div class="buttons-set" id="payment-buttons-container">
+    <p class="required"><?php echo $this->__('* Required Fields') ?></p>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+    function toggleToolTip(event){
+        if($('payment-tool-tip')){
+            $('payment-tool-tip').setStyle({
+                top: (Event.pointerY(event)-560)+'px'//,
+                //left: (Event.pointerX(event)+100)+'px'
+            })
+            $('payment-tool-tip').toggle();
+        }
+        Event.stop(event);
+    }
+    if($('payment-tool-tip-close')){
+        Event.observe($('payment-tool-tip-close'), 'click', toggleToolTip);
+    }
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+    
+    var j2t_onechekout_payment_checked = false;
+    var j2t_onechekout_payment_form = $('co-payment-form');
+    var j2t_onechekout_payment_radios = j2t_onechekout_payment_form.getInputs('radio');
+    j2t_onechekout_payment_radios.each(function (el, index){
+        if(el.checked){
+            j2t_onechekout_payment_checked = true;
+        }
+ 
+    });
+
+    if (!j2t_onechekout_payment_checked && j2t_onechekout_payment_radios.length > 0){
+        j2t_onechekout_payment_radios[0].checked = true;
+    }
+
+    payment.currentMethod = "<?php echo $this->getChild('methods')->getSelectedMethodCode() ?>";
+//]]>
+</script>

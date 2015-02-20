@@ -1,0 +1,9 @@
+a:5:{i:0;s:260:"Error in file: "/var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/community/Rewardpoints/sql/rewardpoints_setup/mysql4-upgrade-0.2.4-0.2.5.php" - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aivis_newfashion.rewardpoints_referral' doesn't exist";i:1;s:1114:"#0 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/Resource/Setup.php(645): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/Resource/Setup.php(437): Mage_Core_Model_Resource_Setup->_modifyResourceDb('upgrade', '0.2.4', '1.7.1')
+#2 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/Resource/Setup.php(320): Mage_Core_Model_Resource_Setup->_upgradeResourceDb('0.2.4', '1.7.1')
+#3 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/Resource/Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#4 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/App.php(417): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/App.php(343): Mage_Core_Model_App->_initModules()
+#6 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#7 /var/www/vhosts/new-fashion.co.uk/httpdocs/index.php(87): Mage::run('latvia', 'website')
+#8 {main}";s:3:"url";s:55:"/sievietem/bikses-un-leggingi.html?dir=desc&order=price";s:11:"script_name";s:10:"/index.php";s:4:"skin";s:7:"default";}

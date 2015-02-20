@@ -1,0 +1,67 @@
+2014-09-12 15:10:26.000000 (1410531026.5546) DEBUG: 100000082
+2014-09-12 15:10:26.000000 (1410531026.5561) DEBUG: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:31.0) Gecko/20100101 Firefox/31.0
+2014-09-12 15:10:26.000000 (1410531026.5566) DEBUG: Array
+(
+    [order_comment] => 
+    [subscription_newsletter] => 1
+    [submitCustomCheckout] => save
+    [billing] => Array
+        (
+            [address_id] => 1399
+            [firstname] => Aivis
+            [lastname] => Zcezvdovbs
+            [street] => Array
+                (
+                    [0] => akdajdadkao ajsdajs
+                )
+
+            [country_id] => GB
+            [region_id] => 
+            [region] => 
+            [city] => kasjask
+            [postcode] => PE301BX
+            [telephone] => 077796262616
+            [email] => zvezdovs@gmail.com
+            [customer_password] => 
+            [confirm_password] => 
+            [save_in_address_book] => 1
+            [use_for_shipping] => 1
+        )
+
+    [shipping] => Array
+        (
+            [firstname] => Aivis
+            [address_id] => 1399
+            [lastname] => Zcezvdovbs
+            [street] => Array
+                (
+                    [0] => akdajdadkao ajsdajs
+                )
+
+            [country_id] => GB
+            [region_id] => 
+            [region] => 
+            [city] => kasjask
+            [postcode] => PE301BX
+            [telephone] => 077796262616
+            [save_in_address_book] => 1
+        )
+
+    [shipping_method] => freeshipping_freeshipping
+    [payment] => Array
+        (
+            [method] => sagepaydirectpro
+            [cc_owner] => Ribe Wazejigo
+            [cc_type] => VISA
+            [cc_number] => XXXXXXXXXXXXX
+            [cc_exp_month] => 11
+            [cc_exp_year] => 2015
+            [cc_cid] => XXX
+            [cc_ss_issue] => 
+            [cc_ss_start_month] => 
+            [cc_ss_start_year] => 
+        )
+
+)
+
+2014-09-12 15:10:26.000000 (1410531026.5571) DEBUG: --------------------

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @category   Mconnect
+ * @package    Mconnect_Brandlogo
+ * @author     M-Connect Solutions. (http://www.mconnectsolutions.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <tabs>
+       <mconnect>            
+            <label>M-Connect Media Extensions</label>
+            <sort_order>198</sort_order>
+        </mconnect>              
+    </tabs>
+    <sections>
+        <brandlogo translate="label" module="brandlogo">
+            <label>Brand Logo Settings</label>
+            <tab>mconnect_general</tab>
+            <frontend_type>text</frontend_type>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>               
+            <groups>
+                <general translate="label">
+                    <label>Brand Logo Slider</label>
+                    <sort_order>601</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>                            
+                        <brandlogoenabled translate="label">
+                            <label>Enable/Disable Brand Logo</label>                            
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>48</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </brandlogoenabled>                          
+                        <logotitle translate="label">
+                            <label>Brand Logo Title</label>                            
+                            <frontend_type>text</frontend_type>                                                                
+                            <comment>
+                <![CDATA[This input will be visible on the frontend the default title is "Brands".]]>
+                            </comment>
+                            <sort_order>49</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </logotitle> 
+                        <logowidth translate="label">
+                            <label>Slider Width</label>                            
+                            <validate>validate-number</validate>
+                            <frontend_type>text</frontend_type>                                                                
+                            <comment>
+                <![CDATA[ex:5000]]>
+                            </comment>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </logowidth>
+                        <moveslides translate="label">
+                            <label>Move Slides</label>
+                            <validate>validate-number</validate>                            
+                            <frontend_type>text</frontend_type>                                                                
+                            <sort_order>51</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </moveslides>                                                                                                               
+                        <slideshowspeed translate="label">
+                            <label>Slide Show Speed</label>                            
+                            <frontend_type>text</frontend_type>                            
+                            <comment>
+                <![CDATA[Slide transition duration (in ms)]]>
+                            </comment>
+                            <sort_order>55</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </slideshowspeed>                         
+                        <enableautoslide translate="label">
+                            <label>Enable Auto Slide</label>                            
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>56</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enableautoslide>
+                        <pushonhover translate="label">
+                            <label>Enable Push on Hover</label>                            
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>57</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pushonhover>                        
+                        <pager translate="label">
+                            <label>Enable Pager</label>                            
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>58</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pager>   
+                        <minslides translate="label">
+                            <label>Min Slides</label>
+                            <validate>validate-number</validate>
+                            <frontend_type>text</frontend_type>                                                                
+                            <comment>
+                            <![CDATA[Note:Number of slide at lowest resolution]]>
+                            </comment>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </minslides>
+                        <maxslides translate="label">
+                            <validate>validate-number</validate>
+                            <label>Max Slides</label>                            
+                            <frontend_type>text</frontend_type>                                                                
+                            <comment>
+                            <![CDATA[Note:Number of slide at highest resolution]]>
+                            </comment>
+                            <sort_order>61</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </maxslides>
+                    </fields>
+                </general>                    
+            </groups>
+        </brandlogo>       
+    </sections> 
+</config>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Easylife_Catalog>
+            <version>0.0.1</version>
+        </Easylife_Catalog>
+    </modules>
+    <global>
+        <blocks>
+            <catalog>
+            	<rewrite>
+            		<product_latest>Easylife_Catalog_Block_Product_Latest</product_latest>
+            	</rewrite>
+            </catalog>
+        </blocks>
+        <resources>
+            <easylife_catalog_setup>
+                <setup>
+                    <module>Easylife_Catalog</module>
+                    <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+                </setup>
+            </easylife_catalog_setup>
+        </resources>
+    </global>
+</config>

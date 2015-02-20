@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/j2t_rewardsocial.css</stylesheet></action>
+        </reference>
+        
+        <reference name="right">
+            <block type="j2trewardsocial/side" name="rewardsocial.side" before="-" template="j2trewardsocial/side.phtml" />
+        </reference>
+        
+        <reference name="before_body_end">
+            <block type="core/template" name="j2t_rewardsocial_wrapper" after="-" template="j2trewardsocial/js.phtml" />
+        </reference>
+        
+        <!--<reference name="right">
+            <block type="j2trewardsocial/socialpoints" name="j2t.points.social" as="points_social" before="-" template="j2trewardsocial/product_view_side.phtml" />
+        </reference>-->
+    </default>
+</layout>

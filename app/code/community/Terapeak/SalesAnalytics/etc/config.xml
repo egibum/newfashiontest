@@ -1,0 +1,144 @@
+<config>
+    <modules>
+        <Terapeak_SalesAnalytics>
+            <version>1.4.6</version>
+        </Terapeak_SalesAnalytics>
+    </modules>
+    
+    <global>
+        
+        <models>
+            <terapeak_salesanalytics>
+                <class>Terapeak_SalesAnalytics_Model</class>
+                <resourceModel>salesanalytics_resource</resourceModel>
+            </terapeak_salesanalytics>
+            <salesanalytics_resource>
+                <class>Terapeak_SalesAnalytics_Model_Resource</class>
+                <entities>
+                    <usercredentials>
+                        <table>terapeak_salesanalytics_user_credentials</table>
+                    </usercredentials>
+                    <linkedchannel>
+                        <table>terapeak_salesanalytics_linked_channel</table>
+                    </linkedchannel>
+                    <historicaldata>
+                        <table>terapeak_salesanalytics_historical_data</table>
+                    </historicaldata>
+                </entities>
+            </salesanalytics_resource>
+        </models>
+        
+        <events>
+            <checkout_submit_all_after>
+                <observers>
+                    <Terapeak_SalesAnalytics_checkoutSubmitAllAfter>
+                        <type>singleton</type>
+                        <class>Terapeak_SalesAnalytics_Model_Observer</class>
+                        <method>checkoutSubmitAllAfter</method>
+                    </Terapeak_SalesAnalytics_checkoutSubmitAllAfter>
+                </observers>
+            </checkout_submit_all_after>
+            <catalog_product_save_commit_after>
+                <observers>
+                    <Terapeak_SalesAnalytics_catalogProductSaveCommitAfter>
+                        <type>singleton</type>
+                        <class>Terapeak_SalesAnalytics_Model_Observer</class>
+                        <method>catalogProductSaveCommitAfter</method>
+                    </Terapeak_SalesAnalytics_catalogProductSaveCommitAfter>
+                </observers>
+            </catalog_product_save_commit_after>
+            <catalog_product_delete_after_done>
+                <observers>
+                    <Terapeak_SalesAnalytics_catalogProductDeleteAfterDone>
+                        <type>singleton</type>
+                        <class>Terapeak_SalesAnalytics_Model_Observer</class>
+                        <method>catalogProductDeleteAfterDone</method>
+                    </Terapeak_SalesAnalytics_catalogProductDeleteAfterDone>
+                </observers>
+            </catalog_product_delete_after_done>
+        </events>
+        
+        <blocks>
+            <terapeak_salesanalytics>
+                <class>Terapeak_SalesAnalytics_Block</class>
+            </terapeak_salesanalytics>
+        </blocks>
+       	
+        <resources>
+            <terapeak_salesanalytics_setup>
+                <setup>
+                    <module>Terapeak_SalesAnalytics</module>
+                    <class>Mage_Core_MOdel_Resource_Setup</class>
+                </setup>
+            </terapeak_salesanalytics_setup>
+        </resources>
+        
+        <helpers>
+            <salesanalytics>
+                <class>Terapeak_SalesAnalytics_Helper</class>
+            </salesanalytics>
+        </helpers>
+    </global>
+    
+    
+    <admin>
+        <routers>
+            <salesanalytics>
+                <use>admin</use>
+                <args>
+                    <module>Terapeak_SalesAnalytics</module>
+                    <frontName>salesanalytics</frontName>
+                </args>
+            </salesanalytics>
+        </routers>
+    </admin>
+    
+    <adminhtml>
+        <menu>
+            <report>
+                <children>
+                    <salesanalytics_adminform translate="title" module="salesanalytics">
+                        <title>Terapeak</title>
+                        <sort_order>60</sort_order>
+                        <children>
+                            <salesanalytics_child translate="title" module="salesanalytics">
+                                <title>MySales</title>
+                                <action>salesanalytics/index/index</action>
+                            </salesanalytics_child>
+                        </children>
+                    </salesanalytics_adminform>
+                    
+                </children>
+            </report>
+        </menu>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <report>
+                            <children>
+                                <salesanalytics_adminform>
+                                    <title>Terapeak</title>
+                                    <children>
+                                        <salesanalytics_child>
+                                            <title>MySales</title>
+                                        </salesanalytics_child>
+                                    </children>
+                                </salesanalytics_adminform>
+                            </children>
+                        </report>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <layout>
+            <updates>
+                <salesanalytics>
+                    <file>salesanalytics.xml</file>
+                </salesanalytics>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>
+
+

@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <J2t_Smsgateway>
+            <version>0.1.0</version>
+        </J2t_Smsgateway>
+    </modules>
+    
+    <global>
+        <models>
+            <j2tsmsgateway>
+                <class>J2t_Smsgateway_Model</class>
+                <!--<resourceModel>j2tsmsgateway_mysql4</resourceModel>-->
+            </j2tsmsgateway>
+            <!--<j2tsmsgateway_mysql4>
+                <class>J2t_Smsgateway_Model_Mysql4</class>
+                <entities>
+                    <tooltips>
+                        <table>j2t_smsgateway</table>
+                    </tooltips>
+                </entities>
+            </j2tsmsgateway_mysql4>-->
+        </models>
+        <blocks>
+            <j2tsmsgateway>
+                <class>J2t_Smsgateway_Block</class>
+            </j2tsmsgateway>
+        </blocks>
+        
+        <helpers>
+            <j2tsmsgateway>
+                <class>J2t_Smsgateway_Helper</class>
+            </j2tsmsgateway>
+        </helpers>
+
+        <!--<resources>
+            <j2tsmsgateway_setup>
+                <setup>
+                    <module>J2t_Smsgateway</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </j2tsmsgateway_setup>
+            <j2tsmsgateway_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </j2tsmsgateway_write>
+            <j2tsmsgateway_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </j2tsmsgateway_read>
+        </resources>-->
+
+    </global>
+
+
+
+    <frontend>
+        <layout>
+            <updates>
+                <j2tsmsgateway>
+                    <file>j2tsmsgateway.xml</file>
+                </j2tsmsgateway>
+            </updates>
+        </layout>
+        <!--<translate>
+            <modules>
+                <j2tsmsgateway>
+                    <files>
+                        <default>j2tsmsgateway.csv</default>
+                    </files>
+                </j2tsmsgateway>
+            </modules>
+        </translate>-->
+
+        <routers>
+            <j2tsmsgateway>
+                <use>standard</use>
+                <args>
+                    <module>J2t_Smsgateway</module>
+                    <frontName>j2tsmsgateway</frontName>
+                </args>
+            </j2tsmsgateway>
+        </routers>
+    </frontend>
+
+    <!--<admin>
+        <routers>
+            <j2tsmsgateway>
+                <use>admin</use>
+                <args>
+                    <module>J2t_Smsgateway</module>
+                    <frontName>j2tsmsgateway</frontName>
+                </args>
+            </j2tsmsgateway>
+
+            <j2tsmsgateway_admin>
+                <use>admin</use>
+                <args>
+                    <module>J2t_Smsgateway</module>
+                    <frontName>j2tsmsgateway_admin</frontName>
+                </args>
+            </j2tsmsgateway_admin>
+        </routers>
+    </admin>-->
+
+    <adminhtml>
+
+        <!--<menu>
+            <system>
+                <children>
+                    <j2tsmsgateway translate="title" module="j2tsmsgateway">
+                        <title>J2T Sms Gateway</title>
+                        <sort_order>55</sort_order>
+                    </j2tsmsgateway>
+                </children>
+            </system>
+        </menu>-->
+
+
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <j2tsmsgateway>
+                                            <title>J2T Sms Gateway</title>
+                                        </j2tsmsgateway>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        
+    </adminhtml>
+
+    <default>
+        <j2tsmsgateway>
+            <default>
+                <get_post>get</get_post>
+                <url><![CDATA[http://multilevel.mobyt.fr/sms/send.php]]></url>
+                <params><![CDATA[user={{user}}&pass={{pass}}&rcpt={{phone_number}}&data={{text_message}}&sender={{sender}}&qty=ll]]></params>
+                <max_char>160</max_char>
+                <return_ok>OK</return_ok>
+            </default>
+        </j2tsmsgateway>
+    </default>
+</config>
+

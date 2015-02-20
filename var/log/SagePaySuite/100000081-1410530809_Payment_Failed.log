@@ -1,0 +1,67 @@
+2014-09-12 15:06:49.000000 (1410530809.1051) DEBUG: 100000081
+2014-09-12 15:06:49.000000 (1410530809.1065) DEBUG: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36
+2014-09-12 15:06:49.000000 (1410530809.1071) DEBUG: Array
+(
+    [order_comment] => 
+    [subscription_newsletter] => 1
+    [submitCustomCheckout] => save
+    [billing] => Array
+        (
+            [address_id] => 1395
+            [firstname] => Aivis
+            [lastname] => Zvezdovs
+            [street] => Array
+                (
+                    [0] => 1b High Street
+                )
+
+            [country_id] => GB
+            [region_id] => 
+            [region] => 
+            [city] => Kings Lynn
+            [postcode] => PE30 1BX
+            [telephone] => 0777962661612
+            [email] => tilgaso@gmail.com
+            [customer_password] => 
+            [confirm_password] => 
+            [save_in_address_book] => 1
+            [use_for_shipping] => 1
+        )
+
+    [shipping] => Array
+        (
+            [firstname] => Aivis
+            [address_id] => 1396
+            [lastname] => Zvezdovs
+            [street] => Array
+                (
+                    [0] => 1b High Street
+                )
+
+            [country_id] => GB
+            [region_id] => 
+            [region] => 
+            [city] => Kings Lynn
+            [postcode] => PE30 1BX
+            [telephone] => Kings Lynn
+            [save_in_address_book] => 1
+        )
+
+    [shipping_method] => freeshipping_freeshipping
+    [payment] => Array
+        (
+            [method] => sagepaydirectpro
+            [cc_owner] => Aivis Z
+            [cc_type] => VISA
+            [cc_number] => XXXXXXXXXXXXX
+            [cc_exp_month] => 5
+            [cc_exp_year] => 2017
+            [cc_cid] => XXX
+            [cc_ss_issue] => 
+            [cc_ss_start_month] => 
+            [cc_ss_start_year] => 
+        )
+
+)
+
+2014-09-12 15:06:49.000000 (1410530809.1076) DEBUG: --------------------

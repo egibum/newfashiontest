@@ -1,0 +1,248 @@
+.TabbedPanels {
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+	margin-top:0px;
+	margin-bottom:10px;
+	width:625px;
+	-moz-border-radius-bottomright: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	overflow:hidden;
+	float:right;
+	/*border-radius:10px 10px 0 0;*/
+	
+}
+.TabbedPanelsTabGroup {
+	margin: 0px;
+	padding: 0px;
+}
+
+.TabbedPanelsTab {
+	position: relative;
+	top: 1px;
+	float: left;
+	font-size:17.1px;
+	font-weight:normal;
+	background:#fff;
+	list-style: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	cursor: pointer;
+	text-align: center;
+	
+	-webkit-outline: 0px;-moz-outline: 0px;outline: 0px;
+	-moz-border-radius-topleft: 0px;
+-webkit-border-top-left-radius: 0px;
+ border-top-left-radius: 0px;
+-moz-border-radius-topright: 0px;
+-webkit-border-top-right-radius: 0px;
+border-top-right-radius: 0px;
+
+	height:40px;
+	line-height:40px;
+	border: solid 1px #ddd;
+}
+
+.TabbedPanelsTabHover {
+	
+	
+}
+
+.TabbedPanelsTabSelected {
+	
+/*	background: url(../images/tab-bg.jpg) repeat-x;*/
+background: #fff;
+border: 1px solid #ddd;
+border-bottom: none;
+height:41px;
+}
+
+.TabbedPanelsTabSelected a
+{
+	color: #000 !important;
+}
+
+
+.TabbedPanelsTab a {
+	/*color: #7F7E79;*/
+	text-decoration: none;
+	text-transform:capitalize;
+	height:40px;
+	line-height:40px;
+	color:#000;
+	display:block;
+	padding:0 35.7px;
+}
+.TabbedPanelsTab a:hover {
+	color: #000;
+	text-decoration: none;
+	background:#fff;
+}
+.TabbedPanelsContent ul
+{
+	list-style:disc;
+		
+}
+.TabbedPanelsContent ul li
+{
+	margin-left:15px;
+	line-height:20px;	
+	margin-top:10px;
+}
+.TabbedPanelsContentGroup {
+	clear: both;
+	
+		-moz-border-radius-topright: 0px;
+-webkit-border-top-right-radius: 0px;
+border-top-right-radius: 0px;
+-moz-border-radius-bottomright: 0px;
+-webkit-border-bottom-right-radius: 0px;
+border-bottom-right-radius: 0px;
+-moz-border-radius-bottomleft: 0px;
+-webkit-border-bottom-left-radius: 0px;
+border-bottom-left-radius: 0px;
+overflow:hidden;
+
+	border: solid 1px #ddd;
+	width:623px;
+
+}
+
+.TabbedPanelsContent {   
+	padding: 10px;
+	font-size:12px;
+	line-height:1.5;
+	height:625px;
+	overflow-y:scroll;
+}
+.TabbedPanelsContent p
+{
+	padding:0 0 0 0px;
+	margin:10;
+	line-height:1.6;
+	text-align:justify;
+	color:#000;
+}
+
+.TabbedPanelsContentVisible {
+}
+
+.VTabbedPanels {
+	overflow: hidden;
+	zoom: 1;
+}
+
+.VTabbedPanels .TabbedPanelsTabGroup {
+	float: left;
+	width: 10em;
+	height: 20em;
+	
+	position: relative;
+	border-top: solid 1px #97c7db;
+	border-right: solid 1px #97c7db;
+	border-left: solid 1px #97c7db;
+	border-bottom: solid 1px #97c7db;
+}
+
+.VTabbedPanels .TabbedPanelsTab {
+	float: none;
+	margin: 0px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.VTabbedPanels .TabbedPanelsTabSelected {
+	background-color: #EEE;
+	border-bottom: solid 1px #97c7db;
+}
+
+.VTabbedPanels .TabbedPanelsContentGroup {
+	clear: none;
+	float: left;
+	padding: 0px;
+	width: 30em;
+	height: 20em;
+}
+
+/* Styles for Printing */
+@media print {
+.TabbedPanels {
+	overflow: visible !important;
+}
+.TabbedPanelsContentGroup {
+	display: block !important;
+	overflow: visible !important;
+	height: auto !important;
+}
+.TabbedPanelsContent {
+	overflow: visible !important;
+	display: block !important;
+	clear:both !important;
+}
+.TabbedPanelsTab {
+	 overflow: visible !important;
+	 display: block !important;
+	 clear:both !important;
+}
+}
+
+.description-tab
+{
+	clear:both;
+	height:auto;
+	overflow:hidden;
+}
+
+.description-tab h2
+{
+	margin:2 7px 0;
+	color:#000;
+	font-family:Tahoma;
+	font-style: normal;
+	font-weight: bold;
+	font-size:23px;
+	margin-bottom: 6.7px;
+}
+
+.description-tab p
+{
+	letter-spacing:1.3px;
+	color:#000;
+	font-size:14px;
+	margin:2 7px 0;
+}
+
+.delivery-tab
+{
+	clear:both;
+	height:auto;
+	overflow:hidden;
+	position:relative;
+	top:-70px;
+}
+
+.delivery-tab h2
+{
+	margin:2 7px 0;
+	padding-left: 1px;
+	color:#000;
+	font-family: Tahoma;
+	font-style: normal;
+	font-weight: bold;
+	font-size:23px;
+	margin-top: 25px;
+	margin-bottom: 6.7px;
+}
+
+.delivery-tab p
+{
+	letter-spacing:1.3px;
+	color:#000;
+	font-size: 14px;
+	margin:2 7px 0;
+}

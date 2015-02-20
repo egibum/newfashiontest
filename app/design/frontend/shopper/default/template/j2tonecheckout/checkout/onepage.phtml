@@ -1,0 +1,308 @@
+<script type="text/javascript">
+    //<![CDATA[
+    
+    /*
+    * So colissimo JS
+    */
+   
+    var soColissimoTreated = false;
+    var rateCodeSoColissimoSimplicite = 'not-available-yet';
+    
+//]]>
+</script>
+
+<?php if (Mage::getConfig()->getModuleConfig('LaPoste_SoColissimoSimplicite')->is('active', 'true')):?>
+
+<?php
+/* @var $_helper LaPoste_SoColissimoSimplicite_Helper_Data */
+$_helper = $this->helper('socolissimosimplicite');
+
+?>
+
+<div id="socolissimo_area" style="display:none;">
+    <div class="page-title" id="j2t-onecheckout-title">
+        <h1><?php echo $this->__('SoColissimo');?></h1>
+    </div>
+    <p><?php echo $this->__('Fill the form or cancel in order to continue.')?></p>
+    <div class="buttons-set">
+        <button id="cancel_soco_shipping_button" type="button" class="button" onclick="cancelSocollisimo();"><span><span><?php echo $this->__('Cancel SoCollissimo') ?></span></span></button>
+    </div>
+    <iframe id="socolissimosimplicite_iframe_parent" src="about:blank" style="width:572px; height:1100px; border: 0 none; display:none;"></iframe>
+    <iframe id="socolissimosimplicite_iframe" src="about:blank" style="width:572px; height:1100px; border: 0 none; display:none;"></iframe>
+</div>
+<script type="text/javascript">
+    //<![CDATA[
+    /*
+    * So colissimo JS
+    */
+   
+    //var soColissimoTreated = false;
+    
+    <?php if (Mage::getSingleton('checkout/session')->getData('socolissimosimplicite_checkout_onepage_nextstep') == 'payment' && Mage::getSingleton('checkout/session')->getQuote()->getShippingAddress()->getShippingMethod() == $_helper->getRateCode()):?>
+        soColissimoTreated = true;
+    <?php endif;?>
+    
+    rateCodeSoColissimoSimplicite = '<?php echo $_helper->getRateCode()?>';
+   
+    // check if colissimo is selected, then redirect on form which post data on this platform
+    function redirectToColissimo(){
+        var urlFormSoColissimoSimplicite  = '<?php echo $_helper->getFormUrl()?>';
+        // Remove ending slash for iframe src
+        urlFormSoColissimoSimplicite = urlFormSoColissimoSimplicite.replace(/\/$/, '');
+        
+        var socoIframe = document.getElementById('socolissimosimplicite_iframe');
+        //var socoIframeParent = document.getElementById('socolissimosimplicite_iframe_parent');
+        //socoIframeParent.style.display = 'block';
+        //socoIframeParent.src = '<?php echo $this->getUrl('j2tonecheckout/onepage/socolissimoIframe');?>';
+        //var socoIframe = document.getElementById('socolissimosimplicite_iframe_parent').document.getElementById('socolissimosimplicite_iframe');
+        socoIframe.src = urlFormSoColissimoSimplicite;
+        socoIframe.style.display = 'block';
+        $('socolissimo_area').show();
+        $('j2t-onecheckout-wrapper').hide();
+    }
+
+    // Cancel socolissimo iframe and reenable disbaled checkout feature
+    function cancelSocollisimo() {
+        var socoIframe = document.getElementById('socolissimosimplicite_iframe');
+        //var socoIframeParent = document.getElementById('socolissimosimplicite_iframe_parent');
+        //socoIframeParent.style.display = 'none';
+        //socoIframe.src = 'about:blank';
+        //var socoIframe = document.getElementById('socolissimosimplicite_iframe_parent').document.getElementById('socolissimosimplicite_iframe');
+        socoIframe.src = 'about:blank';
+        socoIframe.style.display = 'none';
+        
+        $('socolissimo_area').hide();
+        $('j2t-onecheckout-wrapper').show();
+    }
+    
+    /*Event.observe(window, 'beforeunload',
+        //this.confirmExit.bind(this)
+        function(event){
+            //alert('ici');
+            return Event.stop(event);
+        }
+    );*/
+    /*window.onbeforeunload = function() { 
+    } */ 
+    
+    //]]>
+</script>
+
+<?php endif;?>
+
+<div id="j2t-onecheckout-wrapper">
+    <div class="page-title" id="j2t-onecheckout-title">
+        <h1><?php echo $this->__('Checkout') ?></h1>
+        <div class="checkout-description">
+            <h3><?php echo $this->__('Please fill out the following forms in order to complete your purchase.') ?></h3>
+        </div>
+    </div>
+    
+
+    <div class="j2t-onecheckout-loading" id="j2t-onecheckout-loading" style="display: none;">
+        <div id="j2t-onecheckout-loading-img">
+            <img src="<?php echo $this->getSkinUrl('images/j2t_onecheckout/ajax-loader.gif') ?>" alt="<?php echo $this->__('Loading');?>" />
+            <div id="j2t-onecheckout-loading-img-txt"><?php echo $this->__('Loading...');?></div>
+        </div>
+    </div>
+    <div class="j2t-onecheckout-address-arraw" id="j2t-onecheckout-address-arraw" style="display: none;">
+        &nbsp;
+    </div>
+    <div onclick="j2t_one_checkout.hideAddressModifying();" class="j2t-onecheckout-address" id="j2t-onecheckout-address" style="display: none;">
+        <div class="j2t-onecheckout-address-txt" id="j2t-onecheckout-address-txt">
+            <a href="javascript:j2t_one_checkout.hideAddressModifying();"><?php echo $this->__('You are modifying billing/shipping details, click here to continue.');?></a>
+            <div id="j2t-onecheckout-address-complete" class="j2t-onecheckout-address-complete"><?php echo $this->__('Please complete billing/shipping details before.');?></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">countryRegions = <?php echo $this->helper('directory')->getRegionJson() ?></script>
+
+    <div id="j2t-onecheckout-main">
+        <div class="j2t-onecheckout-left-1" id="j2t-onecheckout-left-1">
+            <div class="j2t-onecheckout-p10">
+                <h3><?php echo $this->__('1. Customer details'); ?></h3>
+                <?php if (!$this->helper('customer')->isLoggedIn()):?>
+                <div id="j2t-onecheckout-login">
+                    <?php echo $this->getChildHtml('login');?>
+                </div>
+                <?php endif;?>
+                <div id="j2t-onecheckout-billing">
+                    <h4><?php echo $this->__('Billing details'); ?></h4>
+                    <?php echo $this->getChildHtml('billing');?>
+                </div>
+                <div id="j2t-onecheckout-shipping">
+                    <h4><?php echo $this->__('Shipping details'); ?></h4>
+                    <?php echo $this->getChildHtml('shipping');?>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="j2t-onecheckout-left-2-3">
+            <div class="j2t-onecheckout-left-2">
+                <h3><?php echo $this->__('2. Shipping method'); ?> <span class="please-wait" id="j2t-shipping-please-wait" style="display:none;"><img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="" title="" class="v-middle" /></span></h3>
+                <?php echo $this->getChildHtml('shipping_method');?>
+            </div>
+            <div class="j2t-onecheckout-left-3">
+                <h3><?php echo $this->__('3. Payment method');?> <span class="please-wait" id="j2t-payment-please-wait" style="display:none;"><img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="" title="" class="v-middle" /></span></h3>
+                <?php echo $this->getChildHtml('payment');?>
+            </div>
+        </div>
+        <div class="j2t-onecheckout-left-4">
+            <h3><?php echo $this->__('4. Order review'); ?> <span class="please-wait" id="j2t-review-please-wait" style="display:none;"><img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="" title="" class="v-middle" /></span></h3>
+            <?php echo $this->getChildHtml('review');?>
+        </div>
+
+        <div class="j2t-clear-both">&nbsp;</div>
+    </div>
+</div>
+
+<?php //echo $this->getChildHtml('j2t_poll');?>
+
+<script type="text/javascript">
+    Translator.add('Please review the checkout forms.','<?php echo Mage::helper('j2tonecheckout')->__('Please review the checkout forms.')?>');
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+    var j2t_address_completion = <?php echo (int)Mage::getStoreConfig('j2tonecheckout/default/address_completion'); ?>;
+        
+    var view_options_txt = '<?php echo $this->__("view option(s)");?>';
+    var hide_options_txt = '<?php echo $this->__("hide option(s)");?>';
+    
+    var j2t_one_checkout = new J2t_One_Checkout({
+        shippingUrl: '<?php echo $this->getUrl('checkout/onepage/shippingMethod', array('form_key' => Mage::getSingleton('core/session')->getFormKey())) ?>',
+        saveBilling: '<?php echo $this->getUrl('checkout/onepage/saveBilling', array('form_key' => Mage::getSingleton('core/session')->getFormKey())) ?>',
+        shippingMethod: '<?php echo $this->getUrl('checkout/onepage/shippingmethod', array('form_key' => Mage::getSingleton('core/session')->getFormKey())) ?>',
+        paymentMethod: '<?php echo $this->getUrl('j2tonecheckout/onepage/paymentmethod', array('form_key' => Mage::getSingleton('core/session')->getFormKey()));?>',
+        reviewUrl: '<?php echo $this->getUrl('j2tonecheckout/onepage/review', array('form_key' => Mage::getSingleton('core/session')->getFormKey()));?>',
+        couponUrl: '<?php echo $this->getUrl('j2tonecheckout/onepage/coupon', array('form_key' => Mage::getSingleton('core/session')->getFormKey()));?>',
+        
+        j2tbillingUrl: '<?php echo $this->getUrl('j2tonecheckout/onepage/j2tsaveBilling', array('form_key' => Mage::getSingleton('core/session')->getFormKey()));?>',
+
+	<?php if (Mage::getStoreConfig('j2tonecheckout/default/reload_paymentmethod') == 1): ?>
+	reloadPaymentMethodOnShipping: true,
+	<?php endif;?>
+
+        progress: '<?php echo $this->getUrl('checkout/onepage/progress', array('form_key' => Mage::getSingleton('core/session')->getFormKey())) ?>',
+        review: '<?php echo $this->getUrl('j2tonecheckout/onepage/review', array('form_key' => Mage::getSingleton('core/session')->getFormKey())) ?>',
+        saveMethod: '<?php echo $this->getUrl('checkout/onepage/saveMethod', array('form_key' => Mage::getSingleton('core/session')->getFormKey())) ?>',
+        shippingQuoteMethodUrl : '<?php echo $this->getUrl('checkout/cart/estimatePost', array('form_key' => Mage::getSingleton('core/session')->getFormKey())) ?>',
+        
+        failure: '<?php echo $this->getUrl('checkout/cart', array('form_key' => Mage::getSingleton('core/session')->getFormKey())) ?>',
+        showOverlay: '<?php echo Mage::getStoreConfig('j2tonecheckout/default/show_loading') ?>'});
+        
+    
+    j2t_one_checkout.stepPaymentComplete = false;
+    j2t_one_checkout.stepShippingComplete = false;
+    
+    <?php if (Mage::getStoreConfig('j2tonecheckout/default/reload_paymentmethod') == 1): ?>
+	j2t_one_checkout.reloadPaymentMethodOnShipping = true;
+    <?php endif;?>
+    
+    j2t_one_checkout.processCouponForm();
+
+
+    function firstLoadProcess(){
+        var j2t_onechekout_shipment_form = $('co-shipping-method-form');
+        var j2t_onechekout_shipment_radios = j2t_onechekout_shipment_form.getInputs('radio');
+        
+
+        var j2t_onechekout_payment_form = $('co-payment-form');
+        var j2t_onechekout_payment_radios = j2t_onechekout_payment_form.getInputs('radio');
+
+    }
+    function showPlaceOrder(){
+        if (!j2t_one_checkout.submittingOrder){
+            if (j2t_one_checkout.stepPaymentComplete == true && j2t_one_checkout.stepShippingComplete == true){
+                $('order-info-complete').hide();
+                $('review-buttons-container').show();
+                j2t_one_checkout.unrestrictForms();
+            } else {
+                $('order-info-complete').show();
+                $('review-buttons-container').hide();
+                j2t_one_checkout.restrictForms();
+            }
+        }
+    }
+    
+    <?php if (Mage::getConfig()->getModuleConfig('Netresearch_OPS')->is('active', 'true') || Mage::getConfig()->getModuleConfig('Mage_Ogone')->is('active', 'true')):?>
+    var checkout = new Object();
+    checkout.setLoadWaiting = function (param) {
+        if (param == false || param == 'complete'){
+            j2t_one_checkout.stepShippingMethodOk = true;
+            j2t_one_checkout.stepPaymentMethodOk = true;
+            j2t_one_checkout.stepOrderReviewOk = true;
+            j2t_one_checkout.submittingOrder = false;
+            j2t_one_checkout.hideLoading();
+            j2t_one_checkout.stepShippingMethodOk = false;
+            j2t_one_checkout.stepPaymentMethodOk = false;
+            j2t_one_checkout.stepOrderReviewOk = false;
+        } 
+        j2t_one_checkout.setLoadWaiting = j2t_one_checkout.setLoadWaiting.wrap(function(j2tSetLoadWaiting) { 
+            j2tSetLoadWaiting();
+        });
+    };
+    
+    var accordion = new Object();
+    accordion.openSection = function (section) {
+        return;
+    }
+    <?php endif;?>
+    
+    
+    var agreement_txt = "<?php echo $this->__("I accept the %s", "[[replace]]"); ?>";
+    
+    function showJ2tAgreements(element_id, close_element_id){
+        if ($(element_id).style.display == 'none'){
+            new Effect.BlindDown(element_id, {beforeStart: function () { $(close_element_id).show();} }); 
+        }
+    }
+    
+    function hideJ2tAgreements(element_id, close_element_id){
+        if ($(element_id).style.display != 'none'){
+            new Effect.BlindUp(element_id, {afterFinish: function () {$(close_element_id).hide();} }); 
+        }
+    }
+    
+    document.observe("dom:loaded", function() {
+        
+        if ($('j2t-block-poll')){
+            var selected = $('j2t-block-poll');
+            var copy = Element.clone(selected, true);
+            $('j2t-block-poll').remove();
+        }
+        
+        if ($("checkout-agreements")){
+            $$('.checkout-agreements li').each(function (el, index){
+                if (el.down(".agreement-content")){
+                    el.down(".agreement-content").id = 'agreement-text-'+index;
+                    //el.insert({top: new Element('a', {class: 'j2t-agreement-url', id: 'agreement-text-close-'+index, href: "javascript:hideJ2tAgreements('agreement-text-"+index+"', 'agreement-text-close-"+index+"'); void(0);"}).update('<?php echo $this->__("Close (x)")?>')});
+                    el.insert({top: "<a id=\"agreement-text-close-"+index+"\" class=\"j2t-agreement-url\" href=\"javascript:hideJ2tAgreements('agreement-text-"+index+"', 'agreement-text-close-"+index+"'); void(0);\"><?php echo $this->__("Close (x)")?></a>"});
+                    $('agreement-text-close-'+index).hide();
+                    el.down(".agreement-content").hide();
+                }
+                if (el.down(".agree label")){
+                    var agreement_txt_label = agreement_txt.replace("[[replace]]", '<a href="javascript:showJ2tAgreements(\'agreement-text-'+index+'\', \'agreement-text-close-'+index+'\'); void(0); /*$(\'agreement-text-'+index+'\').show();*/">'+el.down(".agree label").innerHTML+'</a>');
+                    el.down(".agree label").update(agreement_txt_label);
+                }
+            });
+            $("checkout-agreements").insert({top: copy});
+        }
+        
+        if ($("rewardFormArea")){
+            j2t_one_checkout.rewardUrl = '<?php echo $this->getUrl('j2tonecheckout/onepage/reward', array('form_key' => Mage::getSingleton('core/session')->getFormKey())) ?>';
+            j2t_one_checkout.restrictRewardButtons();
+        }
+        
+    });
+    
+    document.onkeypress = function(evt) {
+        evt = evt || window.event;
+        var charCode = evt.which || evt.keyCode;
+        if (charCode == 13) {return false; void(0);}
+    };
+    
+//]]>
+</script>

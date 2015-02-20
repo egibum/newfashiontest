@@ -1,0 +1,15 @@
+<?php if(isset($poll)) : ?>
+<div class="j2t-block-poll" id="j2t-block-poll">
+    <p class="block-subtitle"><?php echo $this->htmlEscape($poll->getPollTitle()); ?></p>
+    <?php if( $poll_answers ): ?>
+
+    <select name="vote" id="j2t_poll_vote" class="poll-answers">
+        <option value=""><?php echo $this->htmlEscape($this->__('Please select')) ?></option>
+        <?php foreach( $poll_answers as $answer ): ?>
+        <option value="<?php echo $answer->getAnswerId() ?>"><?php echo $this->htmlEscape($answer->getAnswerTitle()) ?></option>
+        <?php endforeach; ?>
+    </select>
+    <input type="hidden" name="poll_id" value="<?php echo $poll_id;?>" />
+    <?php endif; ?>
+</div>
+<?php endif; ?>

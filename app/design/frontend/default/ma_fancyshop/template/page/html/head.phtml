@@ -1,0 +1,97 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
+<title><?php echo $this->getTitle() ?></title>
+<meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
+<meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
+<meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = '<?php echo $this->helper('core/js')->getJsUrl('blank.html') ?>';
+    var BLANK_IMG = '<?php echo $this->helper('core/js')->getJsUrl('spacer.gif') ?>';
+//]]>
+</script>
+<![endif]-->
+<?php echo $this->getCssJsHtml() ?>
+<?php echo $this->getChildHtml() ?>
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<?php echo $this->getIncludes() ?>
+
+<!-- set css color -->
+<?php $_style_color = Mage::getStoreConfig('themeoptions/themeoptions_config/theme_color') ?>
+<?php if ( $_COOKIE['style_color'] ){ ?>
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('css/styles_'.$_COOKIE['style_color'].'.css'); ?>" media="screen" />
+<?php } elseif ( $_style_color ) { ?>
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('css/styles_'.$_style_color.'.css'); ?>" media="screen" />
+<?php } else { ?>
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('css/styles_pumpkin.css'); ?>" media="screen" />
+<?php } ?>
+
+<!-- MENU -->
+<?php $_menu_style = Mage::getStoreConfig('themeoptions/themeoptions_config/menu_style') ?>
+<?php if ( $_menu_style == 'wine_menu') { ?>
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('css/wide_menu.css'); ?>" media="screen"/>
+<?php } else { ?>
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('css/fish_menu.css'); ?>" media="screen"/>
+<?php } ?>
+
+<!-- set background -->
+<?php $_main_color = Mage::getStoreConfig('themeoptions/themeoptions_config/main_color') ?>
+<?php $_text_color = Mage::getStoreConfig('themeoptions/themeoptions_config/text_color') ?>
+<?php $_link_color = Mage::getStoreConfig('themeoptions/themeoptions_config/link_color') ?>
+<?php $_head_color = Mage::getStoreConfig('themeoptions/themeoptions_config/head_color') ?>
+<?php $_bg_color = Mage::getStoreConfig('themeoptions/themeoptions_config/bg_color') ?>
+<?php $_bg_image = Mage::getStoreConfig('themeoptions/themeoptions_config/bg_image') ?>
+
+<style type="text/css">
+    <?php if ( $_bg_image ) { ?>
+        body { background-image: url("<?php echo Mage::getBaseUrl('media').'magentothem/img/'.$_bg_image ?>"); }
+    <?php } ?>
+    <?php if ( $_bg_color ) { ?>
+        body, .breadcrumbs, .block-cart .summary, .product-tabs li.active a, .product-tabs li.active a:hover, .product-tabs-content { background-color: #<?php echo $_bg_color ?>; }
+    <?php } ?>
+    <?php if ($_main_color) { ?>
+        #nav li.active a, #nav li.over a, #nav a:hover, button.button span, .wine_menu .container, #nav li.over a, #nav a:hover { background-color: #<?php echo $_main_color ?> ; }
+        .breadcrumbs li strong { color: #<?php echo $_main_color ?>; }
+        .toolbar, .toolbar .pager, #nav, .ma-bestseller-sldier-title, .ma-bestseller-sldier-title h2, .products-grid .product-info .price-cart, .ma-featuredproductslider-container .flexslider .slides .product-info .price-cart, .top-cart-content, .block .block-title, .block .block-title strong, .fish_menu ul, .fish_menu div { border-color: #<?php echo $_main_color ?>; }
+    <?php } ?>
+    <?php if ( $_text_color ) { ?>
+        body, .product-info, .phone-number span, .price, .block-layered-nav li, .add-to-cart label, .label, .form-list label { color: #<?php echo $_text_color ?> !important; }
+    <?php } ?>
+    <?php if ( $_link_color ) { ?>
+        body a, .product-name a { color: #<?php echo $_link_color ?> !important; }
+    <?php } ?>
+    <?php if ( $_head_color ) { ?>
+        h1, h2, h3, h4, .block .block-title strong { color: #<?php echo $_head_color ?> !important; }
+    <?php } ?>
+</style>
+
+

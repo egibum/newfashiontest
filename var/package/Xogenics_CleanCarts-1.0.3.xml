@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Xogenics_CleanCarts</name>
+    <version>1.0.3</version>
+    <stability>stable</stability>
+    <license>OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>The free "Clean Carts" extension allows you to individually disable the shipping estimate and coupon code boxes in your shopping cart. Whenever you think these features need to be shown again, simply enable either or both. With this little extension, you never have to show redundant information wich confuses your customer.</summary>
+    <description>Remove irrelevant information on your shop and retain clarity and simplicity. Easily hide the coupon code block in your shopping cart when you&#x2019;re (temporarily) not using it! Also hide the shipping estimate block in case you don&#x2019;t use variable shipping rates or simply because you don&#x2019;t want to scare potential customers away even before they reach your checkout page. Of course you can easily switch it back on whenever you need! This extension is completely free; no strings attached!</description>
+    <notes>layout fixed for magento 1.6</notes>
+    <authors><author><name>Miroslav Pavkovic</name><user>auto-converted</user><email>ms.pavkovic@levi9.com</email></author></authors>
+    <date>2012-02-03</date>
+    <time>15:29:07</time>
+    <contents><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="images"><dir name="xogenics"><file name="xogenics_logo_full_72ppi.png" hash="92fe62378d1e07b3fcf0afadcd72bc82"/></dir></dir></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="cleancart"><file name="global.phtml" hash="0eff2585f2d4ae91c5f7e169cac9addb"/></dir></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="cleancart.xml" hash="5fdc6f8f1736e13cd27b5b70f89415fe"/></dir><dir name="template"><dir name="cleancart"><file name="cart.phtml" hash="2e456fef9bbc4c7fa5f81f4c9ef55ccd"/></dir></dir></dir></dir></dir></target><target name="magelocale"><dir name="en_US"><file name="Xogenics_CleanCart.csv" hash="11831b2bc104be3981a52c8b26822f63"/></dir><dir name="nl_NL"><file name="Xogenics_CleanCart.csv" hash="ddce6ce663e9fab9c89157e44f48d3dd"/></dir><dir name="sr_RS"><file name="Xogenics_CleanCart.csv" hash="7860484e58ed4f44230a6811480018f0"/></dir></target><target name="mageetc"><dir name="modules"><file name="Xogenics_CleanCart.xml" hash="01c74bfe4dc54c3c023a83d2d885f1ec"/></dir></target><target name="magecommunity"><dir name="Xogenics"><dir name="CleanCart"><dir name="Block"><dir name="Adminhtml"><dir name="Fieldset"><dir name="System"><dir name="Logo"><file name="Global.php" hash="38f4823b909d0698958137d9391bb987"/></dir></dir></dir></dir></dir><dir name="etc"><file name="config.xml" hash="3d68765137cdda58297bdb50fbe4829a"/><file name="system.xml" hash="f0e1a640fdc4d995c503b146a3973d8b"/></dir><dir name="Helper"><file name="Data.php" hash="a513c8b7e52fd90c3f6e58664cefb1ba"/></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>

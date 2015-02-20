@@ -1,0 +1,38 @@
+-------------------------------------------------
+- eBay Scrolling Related Items Widget Instructions
+- Version: 1.0
+- By: Matthew Ogborne
+- Support: http://lastdropofink.co.uk/forum/
+-------------------------------------------------
+
+-------------------------------------------------
+Video Instructions:
+-------------------------------------------------
+Below is a link to the video to guide you through the steps below to set up your eBay Scrolling Related Items Widget
+
+Video: 
+
+-------------------------------------------------
+Alternative Instructions:
+-------------------------------------------------
+if you are unable to view the video the above, use the steps below:
+
+#1 Unizip the file and upload to your web hosting
+#2 Open the config file
+#3 Go to http://apps.lastdropofink.co.uk/GetToken/Login.php
+#4 Enter your UserID and press "Create Token"
+#5 Sign into eBay if required
+#6 Read the terms and press I Agree
+#7 Close that browser tab
+#8 Go back to the prior tab and press "Continue to verify token"
+#9 Copy the reallllllllly long text in the edit box, this is your token.
+#10 Open config file
+#11 For $userToken paste this token between the two quotes ''
+#12 Change the other settings as required
+#13 Open the example.html file
+#14 Change the file path for "Gallery_URL" to the address where you uploaded your files to.
+#15 Open a browser window and navigate to the example.html file
+#16 The first time its loaded, it will take a few seconds, after that each refresh will be super quick
+#17 Add the Javscript and any styling you wish to add your eBay template.
+
+TIP: Ensure that the cahce directory is writable. In Linux hosting, setting to 775 or 777 is suggested.

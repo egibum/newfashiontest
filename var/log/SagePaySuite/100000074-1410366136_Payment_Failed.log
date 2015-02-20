@@ -1,0 +1,14 @@
+2014-09-10 17:22:16.000000 (1410366136.5673) DEBUG: 100000074
+2014-09-10 17:22:16.000000 (1410366136.5687) DEBUG: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.103 Safari/537.36
+2014-09-10 17:22:16.000000 (1410366136.5692) DEBUG: Array
+(
+    [payment] => Array
+        (
+            [method] => sagepayserver
+            [cc_number] => XXXXXXXXXXXXX
+            [cc_cid] => XXX
+        )
+
+)
+
+2014-09-10 17:22:16.000000 (1410366136.5698) DEBUG: --------------------

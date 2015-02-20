@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <BusinessKing_GridQty>
+            <version>0.1.0</version>
+        </BusinessKing_GridQty>
+    </modules>
+    <global>
+        <blocks>
+            <gridqty>
+                <class>BusinessKing_GridQty_Block</class>
+            </gridqty>
+            <adminhtml>
+                <rewrite>
+                    <catalog_product_grid>BusinessKing_GridQty_Block_Adminhtml_Catalog_Product_Grid</catalog_product_grid>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+    </global>
+    <admin>
+        <routers>
+			<gridqty>
+                <use>admin</use>
+                <args>
+                    <module>BusinessKing_GridQty</module>
+                    <frontName>gridqty</frontName>
+                </args>
+            </gridqty>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <BusinessKing_GridQty before="Mage_Adminhtml">BusinessKing_GridQty_Adminhtml</BusinessKing_GridQty>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

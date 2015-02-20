@@ -1,0 +1,661 @@
+
+<!-- menu start -->
+
+<!-- menu end -->
+<div class="nav-bar">
+    <ul id="nav">
+                <li  class="  active  level0 "> <a href="http://test.new-fashion.co.uk/index.php/admin/dashboard/index/key/$dashboard/index$/"   class="active" style=""><span>Dashboard</span></a>
+                    </li>
+                <li  class="   level0 "> <a href="http://test.new-fashion.co.uk/index.php/sgpsSecure/adminhtml_dashboard/index/key/$adminhtml_dashboard/index$/"   class="" style=""><span>Sage Pay Dashboard</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Sales</span></a>
+                                <ul >
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/sales_order/index/key/$sales_order/index$/"   class="" style=""><span>Orders</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/sales_invoice/index/key/$sales_invoice/index$/"   class="" style=""><span>Invoices</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/sales_shipment/index/key/$sales_shipment/index$/"   class="" style=""><span>Shipments</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/sales_creditmemo/index/key/$sales_creditmemo/index$/"   class="" style=""><span>Credit Memos</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/sales_transactions/index/key/$sales_transactions/index$/"   class="" style=""><span>Transactions</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/sales_recurring_profile/index/key/$sales_recurring_profile/index$/"   class="" style=""><span>Recurring Profiles (beta)</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/sales_billing_agreement/index/key/$sales_billing_agreement/index$/"   class="" style=""><span>Billing Agreements</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/checkout_agreement/index/key/$checkout_agreement/index$/"   class="" style=""><span>Terms and conditions</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Tax</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/tax_rule/index/key/$tax_rule/index$/"   class="" style=""><span>Manage Tax Rules</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/tax_rate/index/key/$tax_rate/index$/"   class="" style=""><span>Manage Tax Zones & Rates</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/tax_rate/importExport/key/$tax_rate/importExport$/"   class="" style=""><span>Import / Export Tax Rates</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/tax_class_customer/index/key/$tax_class_customer/index$/"   class="" style=""><span>Customer Tax Classes</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/tax_class_product/index/key/$tax_class_product/index$/"   class="" style=""><span>Product Tax Classes</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent last level1 "> <a href="#"  onclick="return false" class="" style=""><span>Sage Pay</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/sgpsSecure/adminhtml_token/index/key/$adminhtml_token/index$/"   class="" style=""><span>Token Cards</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/sgpsSecure/adminhtml_sales_order_deferred/index/key/$adminhtml_sales_order_deferred/index$/"   class="" style=""><span>Deferred Orders</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/sgpsSecure/adminhtml_transaction/orphan/key/$adminhtml_transaction/orphan$/"   class="" style=""><span>Orphan Transactions</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/sgpsSecure/adminhtml_transaction/payments/key/$adminhtml_transaction/payments$/"   class="" style=""><span>Payment Transactions</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/sgpsSecure/adminhtml_log/index/key/$adminhtml_log/index$/"   class="" style=""><span>Logs</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent last level2 "> <a href="#"  onclick="return false" class="" style=""><span>Admin & Access API
+                            </span></a>
+                                <ul >
+                <li  class="   level3 "> <a href="http://test.new-fashion.co.uk/index.php/sagepayreporting/adminhtml_sagepayreporting/transactionDetail/key/$adminhtml_sagepayreporting/transactionDetail$/"   class="" style=""><span>Transaction Detail</span></a>
+                    </li>
+                <li  class="   level3 "> <a href="http://test.new-fashion.co.uk/index.php/sagepayreporting/adminhtml_sagepayreporting_fraud/index/key/$adminhtml_sagepayreporting_fraud/index$/"   class="" style=""><span>Fraud Information</span></a>
+                    </li>
+                <li  class="   level3 "> <a href="http://test.new-fashion.co.uk/index.php/sagepayreporting/adminhtml_sagepayreporting_whitelistip/whitelistIp/key/$adminhtml_sagepayreporting_whitelistip/whitelistIp$/"   class="" style=""><span>White list IP address</span></a>
+                    </li>
+                <li  class="   level3 "> <a href="http://test.new-fashion.co.uk/index.php/sagepayreporting/adminhtml_sagepayreporting/threedstatus/key/$adminhtml_sagepayreporting/threedstatus$/"   class="" style=""><span>3D Secure Administration
+                                    </span></a>
+                    </li>
+                <li  class="   level3 "> <a href="http://test.new-fashion.co.uk/index.php/sagepayreporting/adminhtml_sagepayreporting/avscvstatus/key/$adminhtml_sagepayreporting/avscvstatus$/"   class="" style=""><span>AVS/CV2 Administration
+                                    </span></a>
+                    </li>
+                <li  class="   last level3 "> <a href="http://test.new-fashion.co.uk/index.php/sagepayreporting/adminhtml_sagepayreporting/showpost/key/$adminhtml_sagepayreporting/showpost$/"   class="" style=""><span>Perform Show POST
+                                    </span></a>
+                    </li>
+            </ul>
+                    </li>
+            </ul>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Catalog</span></a>
+                                <ul >
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/catalog_product/index/key/$catalog_product/index$/"   class="" style=""><span>Manage Products</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Automatic Related Products</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin_awautorelated/adminhtml_blocksgrid/new/key/$adminhtml_blocksgrid/new$/"   class="" style=""><span>Add Block</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin_awautorelated/adminhtml_blocksgrid/list/key/$adminhtml_blocksgrid/list$/"   class="" style=""><span>Manage Blocks</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_config/edit/section/awautorelated/key/$system_config/edit$/"   class="" style=""><span>Configuration</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/catalog_category/index/key/$catalog_category/index$/"   class="" style=""><span>Manage Categories</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Attributes</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/catalog_product_attribute/index/key/$catalog_product_attribute/index$/"   class="" style=""><span>Manage Attributes</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/catalog_product_set/index/key/$catalog_product_set/index$/"   class="" style=""><span>Manage Attribute Sets</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/urlrewrite/index/key/$urlrewrite/index$/"   class="" style=""><span>URL Rewrite Management</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/catalog_search/index/key/$catalog_search/index$/"   class="" style=""><span>Search Terms</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Reviews and Ratings</span></a>
+                                <ul >
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level2 "> <a href="#"  onclick="return false" class="" style=""><span>Customer Reviews</span></a>
+                                <ul >
+                <li  class="   level3 "> <a href="http://test.new-fashion.co.uk/index.php/admin/catalog_product_review/pending/key/$catalog_product_review/pending$/"   class="" style=""><span>Pending Reviews</span></a>
+                    </li>
+                <li  class="   last level3 "> <a href="http://test.new-fashion.co.uk/index.php/admin/catalog_product_review/index/key/$catalog_product_review/index$/"   class="" style=""><span>All Reviews</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/rating/index/key/$rating/index$/"   class="" style=""><span>Manage Ratings</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Tags</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/tag/index/key/$tag/index$/"   class="" style=""><span>All Tags</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/tag/pending/key/$tag/pending$/"   class="" style=""><span>Pending Tags</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/SimpleBarcodeInventory/Admin/index/key/$Admin/index$/"   class="" style=""><span>Barcode Inventory</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/sitemap/index/key/$sitemap/index$/"   class="" style=""><span>Google Sitemap</span></a>
+                    </li>
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/feedsalidzini/adminhtml_xmlgrid/index/key/$adminhtml_xmlgrid/index$/"   class="" style=""><span>Feed Salidzini</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Mobile</span></a>
+                                <ul >
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/mobile/index/key/$mobile/index$/"   class="" style=""><span>Manage Apps</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/mobile/history/key/$mobile/history$/"   class="" style=""><span>Submission History</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/mobile/template/key/$mobile/template$/"   class="" style=""><span>Message Templates</span></a>
+                    </li>
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/mobile/queue/key/$mobile/queue$/"   class="" style=""><span>Message Queue</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Customers</span></a>
+                                <ul >
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/customer/index/key/$customer/index$/"   class="" style=""><span>Manage Customers</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/customer_group/index/key/$customer_group/index$/"   class="" style=""><span>Customer Groups</span></a>
+                    </li>
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/customer_online/index/key/$customer_online/index$/"   class="" style=""><span>Online Customers</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>EaDesign PDF</span></a>
+                                <ul >
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/adminpdfgenerator/adminhtml_pdfgenerator/index/key/$adminhtml_pdfgenerator/index$/"   class="" style=""><span>Templates</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Promotions</span></a>
+                                <ul >
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/promo_catalog/index/key/$promo_catalog/index$/"   class="" style=""><span>Catalog Price Rules</span></a>
+                    </li>
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/promo_quote/index/key/$promo_quote/index$/"   class="" style=""><span>Shopping Cart Price Rules</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Reward Points</span></a>
+                                <ul >
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/rewardpoints/adminhtml_stats/index/key/$adminhtml_stats/index$/"   class="" style=""><span>Statistics</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/rewardpoints/adminhtml_clientpoints/index/key/$adminhtml_clientpoints/index$/"   class="" style=""><span>Client points</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/rewardpoints/adminhtml_referrals/index/key/$adminhtml_referrals/index$/"   class="" style=""><span>Referrals</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/rewardpoints/adminhtml_catalogpointrules/index/key/$adminhtml_catalogpointrules/index$/"   class="" style=""><span>Catalog point rules</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/rewardpoints/adminhtml_pointrules/index/key/$adminhtml_pointrules/index$/"   class="" style=""><span>Cart point rules</span></a>
+                    </li>
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_config/edit/section/rewardpoints/key/$system_config/edit$/"   class="" style=""><span>Configuration</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Newsletter</span></a>
+                                <ul >
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/newsletter_template/index/key/$newsletter_template/index$/"   class="" style=""><span>Newsletter Templates</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/newsletter_queue/index/key/$newsletter_queue/index$/"   class="" style=""><span>Newsletter Queue</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/newsletter_subscriber/index/key/$newsletter_subscriber/index$/"   class="" style=""><span>Newsletter Subscribers</span></a>
+                    </li>
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/newsletter_problem/index/key/$newsletter_problem/index$/"   class="" style=""><span>Newsletter Problem Reports</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>CMS</span></a>
+                                <ul >
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/cms_page/index/key/$cms_page/index$/"   class="" style=""><span>Pages</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/cms_block/index/key/$cms_block/index$/"   class="" style=""><span>Static Blocks</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/widget_instance/index/key/$widget_instance/index$/"   class="" style=""><span>Widgets</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/poll/index/key/$poll/index$/"   class="" style=""><span>Polls</span></a>
+                    </li>
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/meta/index/key/$meta/index$/"   class="" style=""><span>SLN Meta Tags</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Magentothem</span></a>
+                                <ul >
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Theme Options</span></a>
+                                <ul >
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_config/edit/section/themeoptions/key/$system_config/edit$/"   class="" style=""><span>Configuration</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Featured Products Slider</span></a>
+                                <ul >
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_config/edit/section/featuredproductslider/key/$system_config/edit$/"   class="" style=""><span>Configuration</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Banner7</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/banner7/adminhtml_banner7/index/key/$adminhtml_banner7/index$/"   class="" style=""><span>Manage Items</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_config/edit/section/banner7/key/$system_config/edit$/"   class="" style=""><span>Configuration</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent last level1 "> <a href="#"  onclick="return false" class="" style=""><span>Prozoom</span></a>
+                                <ul >
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_config/edit/section/prozoom/key/$system_config/edit$/"   class="" style=""><span>Configuration</span></a>
+                    </li>
+            </ul>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Templates Master</span></a>
+                                <ul >
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/tmcore_module/index/key/$tmcore_module/index$/"   class="" style=""><span>Modules</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Storeya</span></a>
+                                <ul >
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/storeya/admin/index/key/$admin/index$/"   class="" style=""><span>Create API</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Sell On eBay</span></a>
+                                <ul >
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_ebay_listing/index/key/$adminhtml_ebay_listing/index$/"   class="" style=""><span>Listings</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_ebay_order/index/key/$adminhtml_ebay_order/index$/"   class="" style=""><span>Sales</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_ebay_log/listing/key/$adminhtml_ebay_log/listing$/"   class="" style=""><span>Logs</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_ebay_synchronization/index/key/$adminhtml_ebay_synchronization/index$/"   class="" style=""><span>Configuration</span></a>
+                    </li>
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_support/index/referrer/ebay/key/$adminhtml_support/index$/"   class="" style=""><span>Help</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Banner Slider</span></a>
+                                <ul >
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/bannerslideradmin/adminhtml_bannerslider/index/key/$adminhtml_bannerslider/index$/"   class="" style=""><span>Manage Sliders</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/bannerslideradmin/adminhtml_banner/index/key/$adminhtml_banner/index$/"   class="" style=""><span>Manage Banners</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/bannerslideradmin/adminhtml_standardslider/index/key/$adminhtml_standardslider/index$/"   class="" style=""><span>Preview Slider Styles</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Report Banners</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/bannerslideradmin/adminhtml_report/index/key/$adminhtml_report/index$/"   class="" style=""><span>Per Slider</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/bannerslideradmin/adminhtml_report/banner/key/$adminhtml_report/banner$/"   class="" style=""><span>All Sliders</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_config/edit/section/bannerslider/key/$system_config/edit$/"   class="" style=""><span>Settings</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Brand Logo</span></a>
+                                <ul >
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/brandlogo/adminhtml_brandlogo/index/key/$adminhtml_brandlogo/index$/"   class="" style=""><span>Manage Brands</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Attribute Swatches</span></a>
+                                <ul >
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/attributeswatches/adminhtml_attributeswatches/index/key/$adminhtml_attributeswatches/index$/"   class="" style=""><span>Manage Items</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Sell On Multi-Channels</span></a>
+                                <ul >
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Manage Listings</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_common_listing/index/key/$adminhtml_common_listing/index$/"   class="" style=""><span>Listings</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_common_listing_other/index/key/$adminhtml_common_listing_other/index$/"   class="" style=""><span>3rd Party Listings</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_common_order/index/key/$adminhtml_common_order/index$/"   class="" style=""><span>Sales</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Templates</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_common_template_sellingFormat/index/key/$adminhtml_common_template_sellingFormat/index$/"   class="" style=""><span>Selling Format Templates</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_common_template_synchronization/index/key/$adminhtml_common_template_synchronization/index$/"   class="" style=""><span>Synchronization Templates</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Activity Logs</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_common_log/listing/key/$adminhtml_common_log/listing$/"   class="" style=""><span>Listings Log</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_common_log/listingOther/key/$adminhtml_common_log/listingOther$/"   class="" style=""><span>3rd Party Listings Log</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_common_log/synchronization/key/$adminhtml_common_log/synchronization$/"   class="" style=""><span>Synchronization Log</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_common_log/order/key/$adminhtml_common_log/order$/"   class="" style=""><span>Orders Log</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Configuration</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_common_account/index/key/$adminhtml_common_account/index$/"   class="" style=""><span>Account Settings</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_common_marketplace/index/key/$adminhtml_common_marketplace/index$/"   class="" style=""><span>Marketplaces</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_common_synchronization/index/key/$adminhtml_common_synchronization/index$/"   class="" style=""><span>Synchronization</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_common_configuration/index/key/$adminhtml_common_configuration/index$/"   class="" style=""><span>Global Settings</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent last level1 "> <a href="#"  onclick="return false" class="" style=""><span>Help</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://docs.m2epro.com/display/AmazonRakutenPlayMagentoV6/M2E+Pro/"  onclick="window.open(this.href, '_blank'); return false;" class="" style=""><span>Documentation</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://docs.m2epro.com/display/AmazonRakutenPlayMagentoV6/Video+Tutorials/"  onclick="window.open(this.href, '_blank'); return false;" class="" style=""><span>Video Tutorials</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/M2ePro/adminhtml_support/index/referrer/common/key/$adminhtml_support/index$/"   class="" style=""><span>Support</span></a>
+                    </li>
+            </ul>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   level0 "> <a href="http://test.new-fashion.co.uk/index.php/admin/mgt/index/key/$mgt/index$/"   class="" style=""><span>Mgt-Commerce.com</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Reports</span></a>
+                                <ul >
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Sales</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_sales/sales/key/$report_sales/sales$/"   class="" style=""><span>Orders</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_sales/tax/key/$report_sales/tax$/"   class="" style=""><span>Tax</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_sales/invoiced/key/$report_sales/invoiced$/"   class="" style=""><span>Invoiced</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_sales/shipping/key/$report_sales/shipping$/"   class="" style=""><span>Shipping</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_sales/refunded/key/$report_sales/refunded$/"   class="" style=""><span>Refunds</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_sales/coupons/key/$report_sales/coupons$/"   class="" style=""><span>Coupons</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/paypal_reports/index/key/$paypal_reports/index$/"   class="" style=""><span>PayPal Settlement Reports</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Shopping Cart</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_shopcart/product/key/$report_shopcart/product$/"   class="" style=""><span>Products in carts</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_shopcart/abandoned/key/$report_shopcart/abandoned$/"   class="" style=""><span>Abandoned carts</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Products</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_sales/bestsellers/key/$report_sales/bestsellers$/"   class="" style=""><span>Bestsellers</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_product/sold/key/$report_product/sold$/"   class="" style=""><span>Products Ordered</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_product/viewed/key/$report_product/viewed$/"   class="" style=""><span>Most Viewed</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_product/lowstock/key/$report_product/lowstock$/"   class="" style=""><span>Low stock</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_product/downloads/key/$report_product/downloads$/"   class="" style=""><span>Downloads</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Customers</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_customer/accounts/key/$report_customer/accounts$/"   class="" style=""><span>New Accounts</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_customer/totals/key/$report_customer/totals$/"   class="" style=""><span>Customers by orders total</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_customer/orders/key/$report_customer/orders$/"   class="" style=""><span>Customers by number of orders</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Tags</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_tag/customer/key/$report_tag/customer$/"   class="" style=""><span>Customers</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_tag/product/key/$report_tag/product$/"   class="" style=""><span>Products</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_tag/popular/key/$report_tag/popular$/"   class="" style=""><span>Popular</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Reviews</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_review/customer/key/$report_review/customer$/"   class="" style=""><span>Customers Reviews</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_review/product/key/$report_review/product$/"   class="" style=""><span>Products Reviews</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Terapeak</span></a>
+                                <ul >
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/salesanalytics/index/index/key/$index/index$/"   class="" style=""><span>MySales</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report/search/key/$report/search$/"   class="" style=""><span>Search Terms</span></a>
+                    </li>
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/report_statistics/index/key/$report_statistics/index$/"   class="" style=""><span>Refresh Statistics</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Search</span></a>
+                                <ul >
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/searchindex/adminhtml_index/index/key/$adminhtml_index/index$/"   class="" style=""><span>Manage Search Indexes</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/searchlandingpage/adminhtml_page/index/key/$adminhtml_page/index$/"   class="" style=""><span>Manage Landing Pages</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/searchsphinx/adminhtml_synonym/index/key/$adminhtml_synonym/index$/"   class="" style=""><span>Dictionary of synonyms</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/searchsphinx/adminhtml_stopword/index/key/$adminhtml_stopword/index$/"   class="" style=""><span>Dictionary of stopwords</span></a>
+                    </li>
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_config/edit/section/searchsphinx/key/$system_config/edit$/"   class="" style=""><span>Settings</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_config/edit/section/wordpress/key/$system_config/edit$/"   class="" style=""><span>WordPress</span></a>
+                                <ul >
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/wordpress/login/key/$wordpress/login$/"   class="" style=""><span>WordPress &raquo;</span></a>
+                    </li>
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_config/edit/section/wordpress/key/$system_config/edit$/"   class="" style=""><span>Settings</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>System</span></a>
+                                <ul >
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 ewcore-main"> <a href="#"  onclick="return false" class="" style=""><span>Extendware</span></a>
+                                <ul >
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level2 "> <a href="#"  onclick="return false" class="" style=""><span>Manage Extensions</span></a>
+                                <ul >
+                <li  class="   level3 ewcore-overview"> <a href="http://test.new-fashion.co.uk/index.php/extendware_ewcore/adminhtml_module/index/key/$adminhtml_module/index$/"   class="" style=""><span>Overview</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level3 "> <a href="#"  onclick="return false" class="" style=""><span>Cache Warmer</span></a>
+                                <ul >
+                <li  class="   level4 "> <a href="http://test.new-fashion.co.uk/index.php/extendware_ewcrawler/adminhtml_job/index/key/$adminhtml_job/index$/"   class="" style=""><span>Jobs</span></a>
+                    </li>
+                <li  class="   last level4 ewcore-configure"> <a href="http://test.new-fashion.co.uk/index.php/extendware_ewcrawler/adminhtml_config/index/key/$adminhtml_config/index$/"   class="" style=""><span>Configure </span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level3 "> <a href="#"  onclick="return false" class="" style=""><span>Extendware Core</span></a>
+                                <ul >
+                <li  class="   last level4 ewcore-configure"> <a href="http://test.new-fashion.co.uk/index.php/extendware_ewcore/adminhtml_config/index/key/$adminhtml_config/index$/"   class="" style=""><span>Configure </span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent last level3 "> <a href="#"  onclick="return false" class="" style=""><span>Image Optimization</span></a>
+                                <ul >
+                <li  class="   last level4 ewcore-configure"> <a href="http://test.new-fashion.co.uk/index.php/extendware_ewimageopt/adminhtml_config/index/key/$adminhtml_config/index$/"   class="" style=""><span>Configure </span></a>
+                    </li>
+            </ul>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/extendware_ewcore/adminhtml_userguide/index/key/$adminhtml_userguide/index$/"   class="" style=""><span>User Guides / Help</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/extendware_ewcore/adminhtml_message/index/key/$adminhtml_message/index$/"   class="" style=""><span>Message Inbox</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level2 "> <a href="#"  onclick="return false" class="" style=""><span>System / Developer</span></a>
+                                <ul >
+                <li  class="   level3 "> <a href="http://test.new-fashion.co.uk/index.php/extendware_ewcore/adminhtml_system_information/index/key/$adminhtml_system_information/index$/"   class="" style=""><span>Information</span></a>
+                    </li>
+                <li  class="   level3 "> <a href="http://test.new-fashion.co.uk/index.php/extendware_ewcore/adminhtml_system_message/index/key/$adminhtml_system_message/index$/"   class="" style=""><span>Messages</span></a>
+                    </li>
+                <li  class="   level3 "> <a href="http://test.new-fashion.co.uk/index.php/extendware_ewcore/adminhtml_system_cronjob/index/key/$adminhtml_system_cronjob/index$/"   class="" style=""><span>Cronjobs</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent last level3 "> <a href="#"  onclick="return false" class="" style=""><span>Logs</span></a>
+                                <ul >
+                <li  class="   level4 "> <a href="http://test.new-fashion.co.uk/index.php/extendware_ewcore/adminhtml_system_log/index/key/$adminhtml_system_log/index$/"   class="" style=""><span>Logs</span></a>
+                    </li>
+                <li  class="   last level4 "> <a href="http://test.new-fashion.co.uk/index.php/extendware_ewcore/adminhtml_system_report/index/key/$adminhtml_system_report/index$/"   class="" style=""><span>Reports</span></a>
+                    </li>
+            </ul>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   last level2 ewcore-extendware-link"> <a href="http://test.new-fashion.co.uk/index.php/extendware_ewcore/adminhtml_redirect/extendware/key/$adminhtml_redirect/extendware$/"   class="" style=""><span>Improve Your Store</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>IWD Extensions</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/iwdall/adminhtml_support/index/key/$adminhtml_support/index$/"   class="" style=""><span>Support</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_config/edit/section/iwdpopup/key/$system_config/edit$/"   class="" style=""><span>Newsletter Popup</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_account/index/key/$system_account/index$/"   class="" style=""><span>My Account</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Magestore Extensions</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_config/edit/section/magenotificationsecure/key/$system_config/edit$/"   class="" style=""><span>License Keys</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/magenotification/adminhtml_feedback/index/key/$adminhtml_feedback/index$/"   class="" style=""><span>Extension Feedbacks</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/notification/index/key/$notification/index$/"   class="" style=""><span>Notifications</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Tools</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_backup/index/key/$system_backup/index$/"   class="" style=""><span>Backups</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/compiler_process/index/key/$compiler_process/index$/"   class="" style=""><span>Compilation</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Web Services</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/api_user/index/key/$api_user/index$/"   class="" style=""><span>SOAP/XML-RPC - Users</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/api_role/index/key/$api_role/index$/"   class="" style=""><span>SOAP/XML-RPC - Roles</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/api2_role/index/key/$api2_role/index$/"   class="" style=""><span>REST - Roles</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/api2_attribute/index/key/$api2_attribute/index$/"   class="" style=""><span>REST - Attributes</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/oauth_consumer/index/key/$oauth_consumer/index$/"   class="" style=""><span>REST - OAuth Consumers</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/oauth_authorizedTokens/index/key/$oauth_authorizedTokens/index$/"   class="" style=""><span>REST - OAuth Authorized Tokens</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/oauth_admin_token/index/key/$oauth_admin_token/index$/"   class="" style=""><span>REST - My Apps</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_design/index/key/$system_design/index$/"   class="" style=""><span>Design</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Import/Export</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/import/index/key/$import/index$/"   class="" style=""><span>Import</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/export/index/key/$export/index$/"   class="" style=""><span>Export</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_convert_gui/index/key/$system_convert_gui/index$/"   class="" style=""><span>Dataflow - Profiles</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_convert_profile/index/key/$system_convert_profile/index$/"   class="" style=""><span>Dataflow - Advanced Profiles</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_currency/index/key/$system_currency/index$/"   class="" style=""><span>Manage Currency</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_currency/index/key/$system_currency/index$/"   class="" style=""><span>Rates</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_currencysymbol/index/key/$system_currencysymbol/index$/"   class="" style=""><span>Symbols</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_email_template/index/key/$system_email_template/index$/"   class="" style=""><span>Transactional Emails</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_variable/index/key/$system_variable/index$/"   class="" style=""><span>Custom Variables</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Permissions</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/permissions_user/index/key/$permissions_user/index$/"   class="" style=""><span>Users</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/permissions_role/index/key/$permissions_role/index$/"   class="" style=""><span>Roles</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level1 "> <a href="#"  onclick="return false" class="" style=""><span>Magento Connect</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/extension_local/index/key/$extension_local/index$/"   class="" style=""><span>Magento Connect Manager</span></a>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/extension_custom/index/key/$extension_custom/index$/"   class="" style=""><span>Package Extensions</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/cache/index/key/$cache/index$/"   class="" style=""><span>Cache Management</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/process/list/key/$process/list$/"   class="" style=""><span>Index Management</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/cdnmanagement/index/key/$cdnmanagement/index$/"   class="" style=""><span>CDN Management</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_store/index/key/$system_store/index$/"   class="" style=""><span>Manage Stores</span></a>
+                    </li>
+                <li  class="   level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/sales_order_status/index/key/$sales_order_status/index$/"   class="" style=""><span>Order Statuses</span></a>
+                    </li>
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_config/index/key/$system_config/index$/"   class="" style=""><span>Configuration</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Magic Toolbox</span></a>
+                                <ul >
+                <li  class="   last level1 "> <a href="http://test.new-fashion.co.uk/index.php/admin/magiczoomplus/index/key/$magiczoomplus/index$/"   class="" style=""><span>Magic Zoom Plus settings</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level0 "> <a href="#"  onclick="return false" class="" style=""><span>Queldorei</span></a>
+                                <ul >
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent last level1 "> <a href="#"  onclick="return false" class="" style=""><span>Shopper</span></a>
+                                <ul >
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_config/edit/section/shoppersettings/key/$system_config/edit$/"   class="" style=""><span>Theme Settings</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/shoppersettings/adminhtml_restore/index/key/$adminhtml_restore/index$/"   class="" style=""><span>Restore Defaults</span></a>
+                    </li>
+                <li  class="   level2 "> <a href="http://test.new-fashion.co.uk/index.php/shoppersettings/adminhtml_activate/index/key/$adminhtml_activate/index$/"   class="" style=""><span>Activate Theme</span></a>
+                    </li>
+                <li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="   parent level2 "> <a href="#"  onclick="return false" class="" style=""><span>Slideshow</span></a>
+                                <ul >
+                <li  class="   level3 "> <a href="http://test.new-fashion.co.uk/index.php/shopperslideshow/adminhtml_shopperslideshow/index/key/$adminhtml_shopperslideshow/index$/"   class="" style=""><span>Flexslider Slides</span></a>
+                    </li>
+                <li  class="   level3 "> <a href="http://test.new-fashion.co.uk/index.php/shopperslideshow/adminhtml_shopperrevolution/index/key/$adminhtml_shopperrevolution/index$/"   class="" style=""><span>Revolution slider Slides</span></a>
+                    </li>
+                <li  class="   last level3 "> <a href="http://test.new-fashion.co.uk/index.php/admin/system_config/edit/section/shopperslideshow/key/$system_config/edit$/"   class="" style=""><span>Configuration</span></a>
+                    </li>
+            </ul>
+                    </li>
+                <li  class="   last level2 "> <a href="http://test.new-fashion.co.uk/index.php/shoppercategories/adminhtml_shoppercategories/index/key/$adminhtml_shoppercategories/index$/"   class="" style=""><span>Categories Color Schemes</span></a>
+                    </li>
+            </ul>
+                    </li>
+            </ul>
+                    </li>
+            </ul>
+
+    <a id="page-help-link" href="http://www.magentocommerce.com/gethelp/en_GB/Mage_Adminhtml/dashboard/index/">Get help for this page</a>
+    <script type="text/javascript">$('page-help-link').target = 'magento_page_help'</script>
+
+</div>
+

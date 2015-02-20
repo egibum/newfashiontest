@@ -1,0 +1,9 @@
+a:5:{i:0;s:248:"Error in file: "/var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/local/EaDesign/PdfGenerator/sql/eadesign_pdfgenerator_setup/mysql4-upgrade-1.0.1-1.0.2.php" - SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'template_store_id'";i:1;s:1119:"#0 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/Resource/Setup.php(645): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/Resource/Setup.php(437): Mage_Core_Model_Resource_Setup->_modifyResourceDb('upgrade', '1.0.1', '1.0.16')
+#2 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/Resource/Setup.php(320): Mage_Core_Model_Resource_Setup->_upgradeResourceDb('1.0.1', '1.0.16')
+#3 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/Resource/Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#4 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/App.php(417): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/App.php(343): Mage_Core_Model_App->_initModules()
+#6 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#7 /var/www/vhosts/new-fashion.co.uk/httpdocs/index.php(87): Mage::run('lithuania', 'website')
+#8 {main}";s:3:"url";s:159:"/vyrams/ispardavimas/f/mode/list/color/blue,grey/manufacturer/bravesoul/size/32inregw32in81cml32in81cm,34inregw34in86cml32in81cm,mchest3840in96101cm,s3032.html";s:11:"script_name";s:10:"/index.php";s:4:"skin";s:7:"default";}

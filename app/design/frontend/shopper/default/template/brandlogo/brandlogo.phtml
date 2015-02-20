@@ -1,0 +1,109 @@
+<?php
+/**
+ * M-Connect Solutions.
+ * 
+ *
+ * NOTICE OF LICENSE
+ *
+ *
+ * It is also available through the world-wide-web at this URL:
+ * http://www.mconnectsolutions.com/lab/
+ *
+ * @category   M-Connect
+ * @package    M-Connect
+ * @copyright  Copyright (c) 2009-2010 M-Connect Solutions. (http://www.mconnectsolutions.com)
+ */
+ if (Mage::getStoreConfig('brandlogo/general/brandlogoenabled')):
+ 
+ if(Mage::getStoreConfig('brandlogo/general/logowidth') != ''){
+ $_sliderWidth = Mage::getStoreConfig('brandlogo/general/logowidth');
+ }else{
+     $_sliderWidth = 300;
+ }
+ if(Mage::getStoreConfig('brandlogo/general/moveslides') != ''){
+ $_moveSlides = Mage::getStoreConfig('brandlogo/general/moveslides');
+ }else{
+     $_moveSlides = 3;
+ }
+ if(Mage::getStoreConfig('brandlogo/general/minslides') != ''){
+ $_minSlides = Mage::getStoreConfig('brandlogo/general/minslides');
+ }else{
+     $_minSlides = 3;
+ }
+ if(Mage::getStoreConfig('brandlogo/general/maxslides') != ''){
+ $_maxSlides = Mage::getStoreConfig('brandlogo/general/maxslides');
+ }else{
+     $_maxSlides = 3;
+ }  
+  if(Mage::getStoreConfig('brandlogo/general/slideshowspeed') != ''){
+ $_speedSlides = Mage::getStoreConfig('brandlogo/general/slideshowspeed');
+ }else{
+     $_speedSlides = 500;
+ }
+ if(Mage::getStoreConfig('brandlogo/general/pager')){
+ $_pager = 'true';
+ }else{
+     $_pager = 'false';
+ }
+ if(Mage::getStoreConfig('brandlogo/general/enableautoslide')){
+ $_autoSlide = 'true';
+ }else{
+     $_autoSlide = 'false';
+ }
+ if(Mage::getStoreConfig('brandlogo/general/pushonhover')){
+ $pauseOnHover = 'true';
+ }else{
+     $pauseOnHover = 'false';
+ }
+ ?>
+
+
+
+<script type="">
+jQuery(document).ready(function(){
+  jQuery('.mcts1').bxSlider({
+    slideWidth: <?php echo $_sliderWidth; ?>,
+    minSlides: <?php echo $_minSlides; ?>,
+    maxSlides: <?php echo $_maxSlides; ?>,
+    moveSlides: <?php echo $_moveSlides; ?>,
+    speed: <?php echo $_speedSlides; ?>,
+    pager: <?php echo $_pager; ?>,
+    auto: <?php echo $_autoSlide; ?>,
+    autoHover: <?php echo $pauseOnHover; ?>,
+    slideMargin: 10
+    
+  });
+});
+</script>
+
+                       
+<?php
+    $brandModel = Mage::getModel('brandlogo/brandlogo')->getCollection()->addFieldToFilter('status', 1);
+    if (count($brandModel) > 0):
+        ?>
+        <div class="carosel_title">
+        <?php
+        if (Mage::getStoreConfig('brandlogo/general/logotitle') != ""):
+            echo Mage::getStoreConfig('brandlogo/general/logotitle');
+        endif; 
+    ?>
+    </div>
+ 
+<div class="mcts1">
+    <?php
+    $imageUrl = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA)."brandlogo";
+    foreach ($brandModel as $k => $v) { ?>
+                 <div class="slide">   
+			     <a href="<?php echo $v->getUrl(); ?>" target="_blank">
+				<img src="<?php echo $imageUrl . $v->getFilename(); ?>" alt="<?php echo $v->getTitle(); ?>" title="<?php echo $v->getTitle(); ?>" />
+			     </a>
+                 </div>
+	 <?php
+     }
+     ?> 
+</div>
+
+<?php 
+endif;
+endif; ?>
+

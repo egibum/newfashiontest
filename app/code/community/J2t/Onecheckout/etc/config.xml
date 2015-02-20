@@ -1,0 +1,345 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <J2t_Onecheckout>
+            <version>1.2.0</version>
+        </J2t_Onecheckout>
+    </modules>
+    
+    <global>
+        <models>
+            <j2tonecheckout>
+                <class>J2t_Onecheckout_Model</class>
+            </j2tonecheckout>
+        </models>
+        <blocks>
+            <j2tonecheckout>
+                <class>J2t_Onecheckout_Block</class>
+            </j2tonecheckout>
+        </blocks>
+        
+        <helpers>
+            <j2tonecheckout>
+                <class>J2t_Onecheckout_Helper</class>
+            </j2tonecheckout>
+        </helpers>
+        
+        <models>
+            <!-- Mage_Captcha_Model_Observer -->
+            <captcha>
+                <rewrite>
+                    <observer>J2t_Onecheckout_Model_Observer</observer>
+                </rewrite>
+            </captcha>
+        </models>
+        
+        
+        <!-- Mage_Poll_Model_Resource_Poll -->
+        <!--<models>
+            <poll_resource>
+                <rewrite>
+                  <poll>J2t_Onecheckout_Model_Poll</poll>
+                </rewrite>
+            </poll_resource>
+        </models>-->
+
+
+        <resources>
+            <!--<j2tonecheckout_setup>
+                <setup>
+                    <module>J2t_Onecheckout</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </j2tonecheckout_setup>
+            <j2tonecheckout_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </j2tonecheckout_write>
+            <j2tonecheckout_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </j2tonecheckout_read>-->
+        </resources>
+        
+        <!--<rewrite>
+            <j2t_onecheckout_couponpost>
+                <from><![CDATA[#^/checkout/cart/couponPost/#]]></from>
+                <to>/j2tonecheckout/cart/couponPost/</to>
+            </j2t_onecheckout_couponpost>
+        </rewrite>-->
+        
+        <models>
+            <checkout>
+                <rewrite>
+                    <type_onepage>J2t_Onecheckout_Model_Checkout_Type_Onepage</type_onepage>
+                </rewrite>
+            </checkout>
+        </models>
+        
+        <events>
+            <!--<core_block_abstract_to_html_after>
+                <observers>
+                    <j2tonecheckout_message>
+                        <class>j2tonecheckout/observer</class>
+                        <method>setMessage</method>
+                    </j2tonecheckout_message>
+                </observers>
+            </core_block_abstract_to_html_after>-->
+        </events>
+        
+        <customer>
+            <address>
+                <formats>
+                    <j2thtml translate="title" module="customer">
+                        <title>J2T HTML</title>
+                        <htmlEscape>true</htmlEscape>
+                        <defaultFormat><![CDATA[
+    {{if street1}}{{var street1}}<br />{{/if}}
+    {{depend street2}}{{var street2}}<br />{{/depend}}
+    {{depend street3}}{{var street3}}<br />{{/depend}}
+    {{depend street4}}{{var street4}}<br />{{/depend}}
+    {{if city}}{{var city}},  {{/if}}{{if region}}{{var region}}, {{/if}}{{if postcode}}{{var postcode}}{{/if}}
+            ]]></defaultFormat>
+                    </j2thtml>
+                </formats>
+            </address>
+        </customer>
+        <events>
+            <model_save_before>
+                <observers>
+                    <j2tonecheckout_poll_closingdate>
+                        <type>singleton</type>
+                        <class>j2tonecheckout/observer</class>
+                        <method>verifyClosingDate</method>
+                    </j2tonecheckout_poll_closingdate>
+                </observers>
+            </model_save_before>
+        </events>
+    </global>
+
+
+
+    <frontend>
+        <layout>
+            <updates>
+                <j2tonecheckout>
+                    <file>j2tonecheckout.xml</file>
+                </j2tonecheckout>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <j2tonecheckout>
+                    <files>
+                        <default>j2t_onecheckout.csv</default>
+                    </files>
+                </j2tonecheckout>
+            </modules>
+        </translate>
+
+        <routers>
+            <j2tonecheckout>
+                <use>standard</use>
+                <args>
+                    <module>J2t_Onecheckout</module>
+                    <frontName>j2tonecheckout</frontName>
+                </args>
+            </j2tonecheckout>
+        </routers>
+        
+        <routers>
+            <checkout>
+                <args>
+                    <modules>
+                        <j2tonecheckout before="Mage_Checkout">J2t_Onecheckout</j2tonecheckout>
+                    </modules>
+                </args>
+            </checkout>
+        </routers>
+        
+        <events>
+            
+            <controller_action_layout_load_before>
+                <observers>
+                    <j2tonecheckoutnewsletter_block_xml>
+                        <type>singleton</type>
+                        <class>j2tonecheckout/observer</class>
+                        <method>updateBlockXml</method>
+                    </j2tonecheckoutnewsletter_block_xml>
+                </observers>
+            </controller_action_layout_load_before>
+            
+            <core_block_abstract_to_html_after>
+                <observers>
+                    <j2tonecheckout_reward>
+                        <class>J2t_Onecheckout_Model_Observer</class>
+                        <method>verifyRewardBlock</method>
+                    </j2tonecheckout_reward>
+                </observers>
+            </core_block_abstract_to_html_after>
+            
+            
+            
+            <!--<controller_action_predispatch_checkout_onepage_saveBilling>
+                <observers>
+                    <j2tonecheckout_captcha_guest>
+                        <class>j2tonecheckout/observer</class>
+                        <method>checkGuestCheckout</method>
+                    </j2tonecheckout_captcha_guest>
+                    <j2tonecheckout_captcha_register>
+                        <class>j2tonecheckout/observer</class>
+                        <method>checkRegisterCheckout</method>
+                    </j2tonecheckout_captcha_register>
+                </observers>
+            </controller_action_predispatch_checkout_onepage_saveBilling>-->
+            
+            
+            <model_save_after>
+                <observers>
+                    <j2tonecheckoutnewsletter_register>
+                        <type>singleton</type>
+                        <class>j2tonecheckout/observer</class>
+                        <method>setCustomerIsSubscribed</method>
+                    </j2tonecheckoutnewsletter_register>
+                </observers>
+            </model_save_after>
+            
+            
+            <!-- order comments -->
+            <checkout_type_onepage_save_order>
+                <observers>
+                    <j2tonecheckoutnewsletter_comment>
+                        <type>singleton</type>
+                        <class>j2tonecheckout/observer</class>
+                        <method>saveOrderComment</method>
+                    </j2tonecheckoutnewsletter_comment>
+                </observers>
+            </checkout_type_onepage_save_order>
+            <!-- order comments -->
+            
+            <sales_quote_save_after>
+                <observers>
+                    <j2tonecheckoutsocolissimo_address_verification>
+                        <type>singleton</type>
+                        <class>j2tonecheckout/observer</class>
+                        <method>socolissimoAddressVerification</method>
+                    </j2tonecheckoutsocolissimo_address_verification>
+                </observers>
+            </sales_quote_save_after>
+            
+            <!--<controller_action_layout_load_before>
+                <observers>
+                    <j2tonecheckout_verification>
+                        <type>singleton</type>
+                        <class>j2tonecheckout/observer</class>
+                        <method>verifVerIntegrity</method>
+                    </j2tonecheckout_verification>
+                </observers>
+            </controller_action_layout_load_before>-->
+            
+        </events>
+        
+        <secure_url>
+            <j2tonecheckout>/j2tonecheckout</j2tonecheckout>
+            <checkout_cart_couponPost>/checkout/cart/couponPost</checkout_cart_couponPost>
+            <checkout_cart_updatePost>/checkout/cart/updatePost</checkout_cart_updatePost>
+            <checkout_cart_delete>/checkout/cart/delete</checkout_cart_delete>
+            <!--<j2trewardshare_index>/j2trewardshare/index</j2trewardshare_index>-->
+        </secure_url>
+        
+    </frontend>
+    
+    
+    <adminhtml>
+        <events>
+            <adminhtml_block_html_before>
+                <observers>
+                    <onecheckout_admin_block>
+                        <type>model</type>
+                        <class>J2t_Onecheckout_Model_Observer</class>
+                        <method>modifyValidStatus</method>
+                    </onecheckout_admin_block>
+                </observers>
+            </adminhtml_block_html_before>
+        </events>
+    
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <j2tonecheckout>
+                                            <title>J2T OneCheckout</title>
+                                        </j2tonecheckout>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        
+        
+    </adminhtml>
+
+    <admin>
+        <routers>
+            <j2tonecheckout>
+                <use>admin</use>
+                <args>
+                    <module>J2t_Onecheckout</module>
+                    <frontName>j2tonecheckout</frontName>
+                </args>
+            </j2tonecheckout>
+        </routers>        
+        
+    </admin>
+
+
+    <default>
+        <j2tonecheckout>
+            <default>
+                <minified>0</minified>
+                <responsive>0</responsive>
+                <show_loading>0</show_loading>
+                <show_delete>1</show_delete>
+                <show_image>1</show_image>
+                <show_update>1</show_update>
+                <reload_townregion>0</reload_townregion>
+                <reload_paymentmethod>0</reload_paymentmethod>
+                <address_completion>0</address_completion>
+                <newsletter_on>0</newsletter_on>
+                <show_extra>0</show_extra>
+                <show_comments>0</show_comments>
+                <active>0</active>
+                <!--<reload_postcode>0</reload_postcode>-->
+            </default>
+        </j2tonecheckout>
+        
+        
+        <customer>
+            <address_templates>
+                <j2thtml><![CDATA[{{if street1}}{{var street1}}&lt;br /&gt;{{/if}}
+{{depend street2}}{{var street2}}&lt;br /&gt;{{/depend}}
+{{depend street3}}{{var street3}}&lt;br /&gt;{{/depend}}
+{{depend street4}}{{var street4}}&lt;br /&gt;{{/depend}}
+{{if city}}{{var city}},  {{/if}}{{if region}}{{var region}}, {{/if}}{{if postcode}}{{var postcode}}{{/if}}]]></j2thtml>
+            </address_templates>
+        </customer>
+    
+        
+    </default>
+</config>
+

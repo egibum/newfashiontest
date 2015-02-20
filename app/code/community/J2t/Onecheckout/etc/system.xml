@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <j2t_all>
+            <label>J2T Modules</label>
+            <class>j2t-all-area</class>
+            <sort_order>100</sort_order>
+        </j2t_all>
+    </tabs>
+    <sections>
+        <j2tonecheckout translate="label comment" module="j2tonecheckout">
+            <tab>j2t_all</tab>
+            <class>j2t-onecheckout-module</class>
+            <label>J2T OneCheckout</label>
+            <frontend_type>text</frontend_type>
+            <sort_order>40</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <module_serial translate="label comment" module="j2tonecheckout">
+                    <label>Module Serial</label>
+                    <comment><![CDATA[Module serial key linked to your server IP/site address. Note that it is necessary to fill your IP/site address on <a href="http://www.j2t-design.net" target="blank">http://www.j2t-design.net</a>.]]></comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <key translate="label">
+                            <label>Key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_model>j2tonecheckout/serialtext</frontend_model>
+                            <backend_model>j2tonecheckout/config_serialverification</backend_model>
+                            <tooltip><![CDATA[If for any reason, your valid serial doesn't work, try to tick revalidate checkbox before saving. Also check your domain name for this store against the serial.]]></tooltip>
+                            <comment><![CDATA[This is the module serial key linked to your server IP/site address. This information is available on your user account page on <a href="http://www.j2t-design.net" target="blank">http://www.j2t-design.net</a>. Note that base url must be defined in your magento configuration.]]></comment>
+                        </key>
+                    </fields>
+                </module_serial>
+                <default translate="label comment" module="j2tonecheckout">
+                    <label>Configuration</label>
+                    <comment><![CDATA[]]></comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Active</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Set to yes to activate the module and no in order to deactivate the module. Make sure to flush your Magento cache while modifying this value.]]></comment>
+                        </active>
+                        
+                        <minified translate="label">
+                            <label>Minified</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Use minified scripts in order to faster script loads.]]></comment>
+                        </minified>
+                        
+                        <responsive translate="label">
+                            <label>Responsive Mode</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Activate Responsive Mode. The main site design must also be responsive design in order for this feature to properly work.]]></comment>
+                        </responsive>
+                        
+                        <show_loading translate="label">
+                            <label>Show Loading overlay</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Decide to show a loading overlay or not.]]></comment>
+                        </show_loading>
+                        <reload_townregion translate="label">
+                            <label>Reload Town/Region</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Reload when selecting town or region. Necessary when using shipping that requires town nor region to be calculated.]]></comment>
+                        </reload_townregion>
+                        
+                        <reload_paymentmethod translate="label">
+                            <label>Reload Payment Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>16</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Reload when choosing shipping method. Necessary when shipping methods are linked to payment methods.]]></comment>
+                        </reload_paymentmethod>
+                        
+                        <address_completion translate="label">
+                            <label>Wait for address completion</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>17</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Wait for billing/shipping address completion before allowing shipping method modification.]]></comment>
+                        </address_completion>
+                        <!--<reload_postcode translate="label">
+                            <label>Reload Postcode</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Reload when changing postcode. Necessary when using shipping that requires postcode.]]></comment>
+                        </reload_postcode>-->
+                        <newsletter_on translate="label">
+                            <label>Newsletter option</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Show newsletter option on the checkout process (not logged in customers).]]></comment>
+                        </newsletter_on> 
+                        
+                        <show_extra translate="label">
+                            <label>Show Extra</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Show extra registration text.]]></comment>
+                        </show_extra>
+                        
+                        <show_comments translate="label">
+                            <label>Show comments</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Show order comments (allows customers to leave comments).]]></comment>
+                        </show_comments>
+                        
+                        <show_delete translate="label">
+                            <label>Show delete</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Show delete buttons.]]></comment>
+                        </show_delete> 
+                        <show_image translate="label">
+                            <label>Show image</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Show product image.]]></comment>
+                        </show_image> 
+                        
+                        <show_update translate="label">
+                            <label>Update quantity</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Allow to update quantities.]]></comment>
+                        </show_update> 
+                        
+                    </fields>
+                </default>
+            </groups>
+        </j2tonecheckout>
+    </sections>
+</config>

@@ -1,0 +1,440 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * NOTICE OF LICENSE
+ *
+ * You may not give, sell, distribute, sub-license, rent, lease or lend
+ * any portion of the Software or Documentation to anyone.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade to newer
+ * versions in the future.
+ *
+ * @category   ET
+ * @package    ET_FeedSalidzini
+ * @copyright  Copyright (c) 2012 ET Web Solutions (http://etwebsolutions.com)
+ * @contacts   support@etwebsolutions.com
+ * @license    http://shop.etwebsolutions.com/etws-license-commercial-v1/   ETWS Commercial License (ECL1)
+ */
+ -->
+<config>
+    <tabs>
+        <etall translate="label">
+            <label>ET Extensions</label>
+            <sort_order>400</sort_order>
+        </etall>
+    </tabs>
+
+    <sections>
+        <feedsalidzini translate="label" module="feedsalidzini">
+            <label>Feed Salidzini</label>
+            <tab>etall</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>300</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <info translate="label">
+                    <label>Feed Salidzini information</label>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <support_information>
+                            <frontend_model>feedsalidzini/adminhtml_support</frontend_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </support_information>
+                    </fields>
+                </info>
+                <generate>
+                    <label>Auto generation settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+<!--                         <heading_cron translate="label">
+                            <label>Run options</label>
+                            <frontend_model>feedsalidzini/adminhtml_heading</frontend_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </heading_cron> -->
+                        <active translate="label comment">
+                            <label>Enabled</label>
+                            <comment><![CDATA[If Enabled - xml file will be automatically generated at every chosen moment.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+
+                        <server_time translate="label">
+                            <label>Current server time</label>
+                            <frontend_model>feedsalidzini/adminhtml_system_config_form_field_time</frontend_model>
+                            <sort_order>115</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </server_time>
+
+                        <time translate="label comment">
+                            <label>Start Time</label>
+                            <comment><![CDATA[Every day at this time xml file generation will be started.]]></comment>
+                            <frontend_type>time</frontend_type>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </time>
+
+                        <timeadditional translate="label">
+                            <label>Additional Start Time</label>
+                            <frontend_model>feedsalidzini/adminhtml_starttime</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized</backend_model>
+                            <sort_order>125</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </timeadditional>
+
+                        <error_email translate="label">
+                            <label>Error Email Recipient</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </error_email>
+                        <error_email_identity translate="label">
+                            <label>Error Email Sender</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_email_identity</source_model>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </error_email_identity>
+                        <template translate="label">
+                            <label>Error Email Template</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_email_template</source_model>
+                            <sort_order>150</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </template>
+                    </fields>
+                </generate>
+
+                <filter translate="label">
+                    <label>Filter options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>200</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <filter_stock translate="label comment">
+                            <label>Include Out of Stock Products</label>
+                            <comment><![CDATA[If Yes - Out of Stock products will be included to xml file with stock = 0. Minimum stock amount option will be ignored for those products.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>310</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </filter_stock>
+                        <filter_stock_from translate="label comment">
+                            <label>Minimum stock amount</label>
+                            <comment><![CDATA[If product qty is less than this number, it will not be exported. Default: 1.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>320</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </filter_stock_from>
+                        <filter_price translate="label comment">
+                            <label>Minimal product price</label>
+                            <comment><![CDATA[If product price is less than this number, product will not be exported. Default: 0.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>330</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </filter_price>
+                        <filter_product_type translate="label comment">
+                            <label>Product Type</label>
+                            <comment><![CDATA[Only selected product types will be exported. Default: simple.<br>Since Configurable, Grouped and Bundled products have no stock values, option <strong>Minimum stock amount</strong> does not affect these product types - all products are exported.]]></comment>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>feedsalidzini/producttypes</source_model>
+                            <sort_order>340</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </filter_product_type>
+
+                        <filter_product_visibility translate="label comment">
+                            <label>Product Visibility</label>
+                            <comment><![CDATA[Only products with selected visibility will be exported. Default: Catalog, Search.]]></comment>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>feedsalidzini/productvisibility</source_model>
+                            <sort_order>350</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </filter_product_visibility>
+
+                        <filter_duplicates translate="label comment">
+                            <label>Hide duplicates</label>
+                            <comment><![CDATA[Product can be visible in more than one category. If Yes - only one product will be exported. Otherwise product from each category will be included to the xml file.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>360</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </filter_duplicates>
+<!--
+                        <filter_unique_algorithm translate="label comment">
+                            <label>Exclude algorithm</label>
+                            <comment><![CDATA[Select how duplicates are excluded.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>feedsalidzini/productuniquetypes</source_model>
+                            <sort_order>370</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends><filter_dublicates>1</filter_dublicates></depends>
+                        </filter_unique_algorithm>
+-->
+
+                    </fields>
+                </filter>
+
+                <general translate="label">
+                    <label>Feed Salidzini other options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>300</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <heading_mapping translate="label">
+                            <label>Field mapping</label>
+                            <frontend_model>feedsalidzini/adminhtml_system_config_form_field_heading</frontend_model>
+                            <sort_order>300</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </heading_mapping>
+
+                        <mapping_name_attribute translate="label">
+                            <label>Product name mapping</label>
+                            <comment><![CDATA[Name attribute can be combined from more than one attribute. Enter your formatted string for generating product name.<br><br>Use symbol @ to indicate attribute code. For example, "@manufacturer - @model". Default: @name.]]></comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>310</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </mapping_name_attribute>
+
+                        <heading_hide_stock translate="label">
+                            <label>Stock quantity hiding options</label>
+                            <frontend_model>feedsalidzini/adminhtml_system_config_form_field_heading</frontend_model>
+                            <sort_order>400</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </heading_hide_stock>
+
+                        <include_stock_value translate="label comment">
+                            <label>Include stock value</label>
+                            <comment><![CDATA[If No - stock attribute will not be included in any product.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>410</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </include_stock_value>
+
+                        <emulate_stock_for_containers translate="label comment">
+                            <label>Emulate stock value for Configurable, Grouped and Bundled products</label>
+                            <comment><![CDATA[Configurable, Grouped and Bundled products have no stock values. If this parameter is enabled stock value will be emulated. If disabled - stock attribute will be skipped for these products.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>420</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends><include_stock_value>1</include_stock_value></depends>
+                        </emulate_stock_for_containers>
+                        <emulate_stock_from_subproducts translate="label comment">
+                            <label>Sum subproducts stock</label>
+                            <comment><![CDATA[If Yes - sum of all subproduct stock amounts will be exported as main product's stock (Configurable, Grouped or Bundled)]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>430</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends><emulate_stock_for_containers>1</emulate_stock_for_containers></depends>
+                            <depends><include_stock_value>1</include_stock_value></depends>
+                        </emulate_stock_from_subproducts>
+                        <emulate_stock_default translate="label comment">
+                            <label>Default value</label>
+                            <comment><![CDATA[This value will be exported as stock amount for main products (Configurable, Grouped or Bundled). Default: 1.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>440</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends><emulate_stock_from_subproducts>0</emulate_stock_from_subproducts></depends>
+                            <depends><emulate_stock_for_containers>1</emulate_stock_for_containers></depends>
+                            <depends><include_stock_value>1</include_stock_value></depends>
+                        </emulate_stock_default>
+
+                        <hide_large_stock translate="label comment">
+                            <label>Hide large stock</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>450</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends><include_stock_value>1</include_stock_value></depends>
+                        </hide_large_stock>
+                        <hide_large_stock_value translate="label comment">
+                            <label>Large stock value</label>
+                            <comment><![CDATA[If enabled - replace product quantity with this value if it is greater than quantity. Default: 5.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>460</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends><hide_large_stock>1</hide_large_stock></depends>
+                        </hide_large_stock_value>
+
+                        <hide_all_stock translate="label comment">
+                            <label>Hide all stock</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>470</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends><hide_large_stock>0</hide_large_stock></depends>
+                            <depends><include_stock_value>1</include_stock_value></depends>
+                        </hide_all_stock>
+                        <hide_all_stock_value translate="label comment">
+                            <label>Default stock value</label>
+                            <comment><![CDATA[If enabled - replace product qty with this value. Default: 1.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>480</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends><hide_all_stock>1</hide_all_stock></depends>
+                        </hide_all_stock_value>
+
+<!-- Скрывать большие остатки
+Если да, то даём вводить значение, которым заменяем большие значения (больше указанного).
+Если нет, то показываем возможность скрыть весь сток.
+
+Скрывать сток/остатки
+Если да, то даём вводить значение, которое подставляется вместо количества.
+
+Остатки для Configurable, Grouped or Bundled:
+Так как у товаров этих типов нет своих остатков, то в большинстве случаев они не экспортировались бы.
+Поэтому вводим понятие эмуляции остатков для этих товаров. Эмуляция может быть двух видов
+1. Сумма всех подтоваров главного товара
+2. Одно значение, которое будет использоваться в качестве остатка для таких товаров.
+Если эмуляция включена, то в качестве остатка берём соответствующее значение. Если выключена, то вообще не экспортируем такие товары.
+
+НЕСТЫКОВКА. А если надо экспортировать, но не надо именно у них показывать остатки?
+ -->
+
+                        <heading_delivery translate="label">
+                            <label>Delivery cost options</label>
+                            <frontend_model>feedsalidzini/adminhtml_system_config_form_field_heading</frontend_model>
+                            <sort_order>500</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </heading_delivery>
+                        <delivery_include translate="label comment">
+                            <label>Include delivery cost</label>
+                            <comment><![CDATA[If No - delivery cost attribute will not be included for products.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>510</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </delivery_include>
+                        <delivery_default_value translate="label comment">
+                            <label>Default delivery cost</label>
+                            <comment><![CDATA[Default: 3 Ls.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>520</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends><delivery_include>1</delivery_include></depends>
+                        </delivery_default_value>
+                        <delivery_free_from_price translate="label comment">
+                            <label>Free delivery from</label>
+                            <comment><![CDATA[If product price is greater or equal than this value, delivery costs will be = 0 Ls. Default: 100.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>530</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends><delivery_include>1</delivery_include></depends>
+                        </delivery_free_from_price>
+
+
+                        <heading_image translate="label">
+                            <label>Product image sizes</label>
+                            <frontend_model>feedsalidzini/adminhtml_system_config_form_field_heading</frontend_model>
+                            <sort_order>600</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </heading_image>
+                        <image_width translate="label comment">
+                            <label>Image width</label>
+                            <comment><![CDATA[Default: 180 px.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>610</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </image_width>
+                        <image_height translate="label comment">
+                            <label>Image height</label>
+                            <comment><![CDATA[Default: 180 px.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>620</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </image_height>
+
+                    </fields>
+                </general>
+            </groups>
+        </feedsalidzini>
+    </sections>
+</config>

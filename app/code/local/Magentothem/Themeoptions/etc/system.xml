@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<magentothem translate="label" module="themeoptions">
+			<label>Magentothem</label>
+			<sort_order>205</sort_order>
+		</magentothem>
+	</tabs>
+	<sections>
+		<themeoptions translate="label" module="themeoptions">
+			<label>Theme Options</label>
+			<tab>magentothem</tab>
+			<sort_order>131</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<themeoptions_config translate="label">
+					<label>Theme Options Config</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>					
+                        <theme_color translate="label">
+                            <label>Theme Color: </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>
+								themeoptions/config_color
+							</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </theme_color>
+                        <menu_style translate="label">
+                            <label>Menu Style: </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>
+								themeoptions/config_menu
+							</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </menu_style>
+                        <main_color translate="label">
+                            <label>Main Color: </label>
+                            <frontend_type>text</frontend_type>
+							<comment>Main color: ffffff</comment>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </main_color>
+						
+						<text_color translate="label">
+                            <label>Text Color: </label>
+                            <frontend_type>text</frontend_type>
+							<comment>Text color: ffffff</comment>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_color>
+						
+						<link_color translate="label">
+                            <label>Link Color: </label>
+                            <frontend_type>text</frontend_type>
+							<comment>Link color: ffffff</comment>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_color>
+						
+						<head_color translate="label">
+                            <label>Head Color: </label>
+                            <frontend_type>text</frontend_type>
+							<comment>Head color: ffffff</comment>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </head_color>
+						
+                        <bg_color translate="label">
+                            <label>Background Color: </label>
+                            <frontend_type>text</frontend_type>
+							<comment>Background color: ffffff</comment>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bg_color>
+	                    <bg_image translate="label">
+                            <label>Background Image: </label>
+                            <frontend_type>image</frontend_type>
+							<backend_model>adminhtml/system_config_backend_image</backend_model>
+							<upload_dir config="system/filesystem/media" scope_info="1">magentothem/img</upload_dir>
+							<base_url type="media" scope_info="1">magentothem/img</base_url>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bg_image>
+                        <grid_product translate="label">
+                            <label>Grid Product Items: </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>
+								themeoptions/config_grid
+							</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </grid_product>
+					</fields>
+				</themeoptions_config>						
+			</groups>
+		</themeoptions>
+	</sections>
+</config>
+
+

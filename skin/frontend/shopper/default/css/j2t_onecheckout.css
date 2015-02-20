@@ -1,0 +1,201 @@
+/* 
+    Document   : j2t_onecheckout
+    Created on : 2013
+    Author     : J2T DESIGN
+    Description: CSS of J2T OneCheckout Module
+        
+*/
+.buttons-set p.required {display:none;}
+#j2t-onecheckout-title.page-title {display:none;}
+
+.j2t-onecheckout-left-1 {float:left; width:35%;}
+.j2t-onecheckout-left-2-3 {float:left; width:65%;}
+.j2t-onecheckout-left-2 {float:left; width:50%;}
+.j2t-onecheckout-left-3 {float:left; width:49%;}
+
+
+.j2t-onecheckout-left-4 {float:right; width:65%;}
+.j2t-onecheckout-p10 {padding-right:10px;}
+
+.j2t-onecheckout-left-1 .form-list li.wide .input-box, .j2t-onecheckout-left-1 .form-list li.wide select { width:100% }
+.j2t-onecheckout-left-1 .form-list li.wide input.input-text { width: 100%;}
+
+.j2t-login-onecheckout {width:100%;}
+
+.j2t-login-onecheckout.col2-set .col-1 {display:block; width:100%;}
+.j2t-login-onecheckout.col2-set .col-2 {display:block; width:100%;}
+
+.j2t-onecheckout-loading, .j2t-onecheckout-address {text-align:center; background-color:#fff; border:2px solid #ccc; z-index:1000;}
+.j2t-onecheckout-address {font-weight: bold;}
+.j2t-clear-both {clear:both;}
+#j2t-onecheckout-wrapper {position:relative; top:25px;}
+.j2t-onecheckout-address-arraw{background: url(../images/j2t_onecheckout/arrow.gif) no-repeat; width:10px;}
+
+.j2t-newsletter input.checkbox {float:none; }
+.j2t-newsletter .input-box {line-height: 13px; margin-top: 5px;}
+.form-list .j2t-newsletter label {float:none;}
+
+
+.j2t-onecheckout-left-1 .form-list .field{width:44%; padding-right: 10px;}
+.j2t-onecheckout-left-1 .form-list .input-box {width:100%;}
+
+/* prefix active */
+.j2t-onecheckout-left-1 .form-list .field.name-prefix{width:20%; padding-right: 10px;}
+.j2t-onecheckout-left-1 .form-list .name-prefix .input-box {width:100%;}
+.j2t-onecheckout-left-1 .form-list .name-prefix select {width: 100%}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix .field.name-firstname { width: 71%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix .field.name-lastname {width: 100%}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix .name-firstname input.input-text {width: 95%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix .field.name-lastname .input-box {width: 91%;}
+
+/* prefix, suffix and middle name active*/
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename-suffix .field.name-prefix {width:18%; padding-right: 10px;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename-suffix .name-prefix select {width: 100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename-suffix .field.name-firstname {width:33%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename-suffix .name-firstname .input-box {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename-suffix .name-firstname .input-box .input-text {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename-suffix .name-middlename .input-box {width:90%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename-suffix .field.name-middlename {width:38%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename-suffix .name-lastname .input-box {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename-suffix .name-lastname .input-box .input-text {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename-suffix .field.name-lastname {width: 70%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename-suffix .field.name-suffix  {width:22%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename-suffix .name-suffix select {width: 90%;}
+
+/* prefix, suffix active*/
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-suffix .field.name-prefix {width:20%; padding-right: 10px;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-suffix .name-prefix .input-box {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-suffix .field.name-firstname {width:71%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-suffix .name-firstname .input-box {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-suffix .name-firstname .input-box .input-text {width:95%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-suffix .name-lastname .input-box {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-suffix .name-lastname .input-box .input-text {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-suffix .field.name-lastname {width: 70%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-suffix .field.name-suffix  {width:22%;}
+
+/* suffix active*/
+.j2t-onecheckout-left-1 .form-list .customer-name-suffix .field.name-firstname {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-suffix .name-firstname .input-box {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-suffix .name-firstname .input-box .input-text {width:91%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-suffix .name-lastname .input-box {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-suffix .field.name-lastname {width: 70%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-suffix .name-lastname .input-box .input-text {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-suffix .field.name-suffix {width:22%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix .name-suffix select {width: 86%;}
+
+/* suffix & middlename active*/
+.j2t-onecheckout-left-1 .form-list .customer-name-middlename-suffix .field.name-firstname {width:50%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-middlename-suffix .name-firstname .input-box {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-middlename-suffix .name-firstname .input-box .input-text {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-middlename-suffix .field.name-middlename {width:42%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-middlename-suffix .name-middlename .input-box {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-middlename-suffix .name-middlename .input-box .input-text {width:91%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-middlename-suffix .name-lastname .input-box {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-middlename-suffix .field.name-lastname {width: 70%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-middlename-suffix .name-lastname .input-box .input-text {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-middlename-suffix .field.name-suffix {width:22%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-middlename-suffix .name-suffix select {width: 86%;}
+
+/* prefix & middlename active*/
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename .field.name-prefix {width:18%; padding-right: 10px;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename .name-prefix select {width: 100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename .name-prefix .input-box {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename.field.name-firstname {width:33%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename .name-firstname .input-box {width:100%;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename .field.name-firstname {width: 70%; padding-right: 10px;}
+.j2t-onecheckout-left-1 .form-list .customer-name-prefix-middlename .name-firstname .input-box .input-text {width:100%;}
+
+
+.j2t-onecheckout-left-1 .form-list #billing\:taxvat {width: 91%;}
+
+.j2t-onecheckout-left-1 .form-list .dob-fields .field {width:100%; padding-right: 10px;}
+.j2t-onecheckout-left-1 .form-list .dob-fields .input-box {width:100%;}
+
+.j2t-onecheckout-left-1 .form-list .customer-dob .dob-day, .j2t-onecheckout-left-1 .form-list .customer-dob .dob-month { width: 23%; }
+.j2t-onecheckout-left-1 .form-list .customer-dob .dob-day input.input-text, .j2t-onecheckout-left-1 .form-list .customer-dob .dob-month input.input-text { width: 86%; }
+
+.j2t-onecheckout-left-1 .form-list .customer-dob .dob-year {width: 50%;}
+.j2t-onecheckout-left-1 .form-list .customer-dob .dob-year input.input-text {width: 91%;}
+
+.j2t-onecheckout-left-1 .form-list input.input-text {width:100%;}
+.j2t-onecheckout-left-1 .form-list input.input-text#shipping\:company {width:91%;}
+
+.j2t-onecheckout-left-1 .form-list li.wide input.input-text {width: 91%;}
+
+
+.j2t-onecheckout-left-1 .form-list .field.country-field, .j2t-onecheckout-left-1 .form-list .field.city-field {float: left;width: 100%;}
+.j2t-onecheckout-left-1 .form-list .field.city-field input.input-text, .form-list .field.country-field  select {width: 91%;}
+
+
+.j2t-onecheckout-left-1 .form-list .field.zip-field{width:30%; padding-right: 10px;}
+.j2t-onecheckout-left-1 .form-list .zip-field .input-box {width:100%;}
+.j2t-onecheckout-left-1 .form-list .zip-field input.input-text {width: 100%;}
+
+.j2t-onecheckout-left-1 .form-list .field.region-field{width:62%; padding-right: 10px;}
+.j2t-onecheckout-left-1 .form-list .field.region-field .input-box {width:100%;}
+.j2t-onecheckout-left-1 .form-list .field.region-field select {width: 93%;}
+
+.j2t-onecheckout-left-1 .form-list .field.newsletter-field, .j2t-onecheckout-left-1 .form-list .field.newsletter-field .input-box {width:100%;}
+
+.j2t-onecheckout-left-4 .authentication {
+margin: 0 auto;
+width: 570px;
+}
+.j2t-onecheckout-left-4 .warning-message {
+color: #222;
+font-weight: bold;
+text-align: center;
+padding: 10px 10px 0;
+}
+
+#j2t-onecheckout-wrapper .form-list label, #j2t-onecheckout-wrapper .sp-methods label {font-weight:normal;}
+
+#j2t-onecheckout-wrapper { border: 1px solid #ccc; padding: 30px; background-color: rgb(252, 252, 252); }
+.checkout-description {margin-top: 10px;}
+.checkout-description h3 {font-weight: normal;}
+
+.j2t-onecheckout-left-4 .buttons-set {margin:10px 0px 10px 0px;}
+.j2t-onecheckout-left-4 .discount-codes {display:none; min-height:65px; margin-top:5px;}
+.j2t-login-onecheckout .buttons-set {margin:0px;}
+
+.j2t-onecheckout-left-1 .j2t-login-onecheckout .form-list input.input-text {width: 91%;}
+
+.j2t-onecheckout-left-1 #billing\:gender {width: auto;}
+
+.j2t-onecheckout-left-2 .sp-methods #kiala_locate_and_select {display:none;}
+
+.j2t-agreement-url {display:block; text-align: right;}
+
+
+#j2t-onecheckout-wrapper .checkout-agreements .agree label {font-weight: normal;}
+
+#orderComment { width: 80%; }
+
+
+#checkout-review-table tfoot td.checkout-update-qty { padding: 5px 10px; }
+.j2t-block-poll {padding-bottom: 10px;}
+.j2t-block-poll p {margin: 0 0 3px;}
+.checkout-agreements li {margin:0px;}
+.data-table thead th.delete-area-from-cart, .data-table thead td.delete-area-from-cart {width:20px;}
+
+.j2t-onecheckout-left-1 .form-list .field.region-field .input-text {width:93%}
+
+#j2t-onecheckout-login
+{
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+#checkout-review-coupon
+{
+	margin-top:30px;
+	max-width: 300px;
+}
+
+#checkout-review-submit
+{
+	position:relative;
+	float:right;
+	top:-65px;
+	width:300px;
+}

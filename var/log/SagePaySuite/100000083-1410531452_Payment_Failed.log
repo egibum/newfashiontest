@@ -1,0 +1,67 @@
+2014-09-12 15:17:32.000000 (1410531452.592) DEBUG: 100000083
+2014-09-12 15:17:32.000000 (1410531452.5934) DEBUG: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:31.0) Gecko/20100101 Firefox/31.0
+2014-09-12 15:17:32.000000 (1410531452.594) DEBUG: Array
+(
+    [order_comment] => 
+    [subscription_newsletter] => 1
+    [submitCustomCheckout] => save
+    [billing] => Array
+        (
+            [address_id] => 1403
+            [firstname] => Aivis
+            [lastname] => Zvezdovs
+            [street] => Array
+                (
+                    [0] => 1b High Street
+                )
+
+            [country_id] => GB
+            [region_id] => 
+            [region] => 
+            [city] => Kings Lynn
+            [postcode] => PE30 1BX
+            [telephone] => 07779626610
+            [email] => zvezdovs@gmail.com
+            [customer_password] => 
+            [confirm_password] => 
+            [save_in_address_book] => 1
+            [use_for_shipping] => 1
+        )
+
+    [shipping] => Array
+        (
+            [firstname] => Aivis
+            [address_id] => 1403
+            [lastname] => Zvezdovs
+            [street] => Array
+                (
+                    [0] => 1b High Street
+                )
+
+            [country_id] => GB
+            [region_id] => 
+            [region] => 
+            [city] => Kings Lynn
+            [postcode] => PE30 1BX
+            [telephone] => 07779626610
+            [save_in_address_book] => 1
+        )
+
+    [shipping_method] => freeshipping_freeshipping
+    [payment] => Array
+        (
+            [method] => sagepaydirectpro
+            [cc_owner] => Lunesure Bacuzere
+            [cc_type] => VISA
+            [cc_number] => XXXXXXXXXXXXX
+            [cc_exp_month] => 12
+            [cc_exp_year] => 2016
+            [cc_cid] => XXX
+            [cc_ss_issue] => 
+            [cc_ss_start_month] => 
+            [cc_ss_start_year] => 
+        )
+
+)
+
+2014-09-12 15:17:32.000000 (1410531452.5945) DEBUG: --------------------

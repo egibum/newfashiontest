@@ -1,0 +1,46 @@
+/* 
+    Document   : j2t_onecheckout
+    Created on : 2013
+    Author     : J2T DESIGN
+    Description: CSS of J2T OneCheckout Module
+        
+*/
+
+
+@media screen and (max-width:700px){
+    .j2t-onecheckout-left-1 {float:left; width:55%;}
+    .j2t-onecheckout-left-2-3 {float:left; width:45%;}
+    .j2t-onecheckout-left-2 {float:left; width:100%;}
+    .j2t-onecheckout-left-3 {float:left; width:100%;}
+    .j2t-onecheckout-left-4 {float:right; width:100%;}
+}
+
+@media screen and (max-width:480px){
+    .j2t-onecheckout-left-1 {float:left; width:100%;}
+    .j2t-onecheckout-left-2-3 {float:left; width:100%;}
+    .j2t-onecheckout-left-2 {float:left; width:100%;}
+    .j2t-onecheckout-left-3 {float:left; width:100%;}
+    .j2t-onecheckout-left-4 {float:right; width:100%;}
+    #orderComment { width: 99%; }
+}
+
+@media screen and (max-width:470px){
+   
+}
+
+@media screen and (max-width:320px){
+    
+}
+
+.checkout-onepage-index .wrapper {min-width: 320px;}
+.checkout-onepage-index .data-table thead th {white-space: normal;}
+.checkout-onepage-index #checkout-review-load {overflow-x: auto;}
+
+/*default design update*/
+/*.checkout-onepage-index .main  {
+    width:auto;
+    max-width: 900px;
+}*/
+
+/*modern design update*/
+/*.checkout-onepage-index .page  { width:auto; max-width: 960px; }*/

@@ -1,0 +1,24 @@
+2014-09-10 18:06:40.000000 (1410368800.6156) DEBUG: Array
+(
+    [VPSProtocol] => 3.00
+    [TxType] => PAYMENT
+    [VendorTxCode] => 100000077-2014-09-10-17-05-33
+    [VPSTxId] => {E1E49C51-2280-6CDD-F50D-A28AFE60184C}
+    [Status] => OK
+    [StatusDetail] => 0000 : The Authorisation was Successful.
+    [TxAuthNo] => 7781387
+    [AVSCV2] => ALL MATCH
+    [AddressResult] => MATCHED
+    [PostCodeResult] => MATCHED
+    [CV2Result] => MATCHED
+    [GiftAid] => 0
+    [3DSecureStatus] => OK
+    [CAVV] => AAABARR5kwAAAAAAAAAAAAAAAAA=
+    [CardType] => UKE
+    [Last4Digits] => 0008
+    [VPSSignature] => 046B54B81807983AD2EE8DCE47CEBB67
+    [DeclineCode] => 00
+    [ExpiryDate] => 0716
+    [BankAuthCode] => 999783
+)
+

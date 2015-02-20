@@ -1,0 +1,12 @@
+a:5:{i:0;s:73:"Mage registry key "_singleton/ewpagecache/cache_secondary" already exists";i:1;s:1771:"#0 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/Mage.php(222): Mage::throwException('Mage registry k...')
+#1 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/Mage.php(476): Mage::register('_singleton/ewpa...', false)
+#2 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/local/Extendware/EWPageCache/Model/Observer/Frontend.php(27) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(27): Mage::getSingleton('ewpagecache/cac...')
+#3 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/App.php(1338): ExtendwareInternal_EWPageCache_Model_Observer_Frontend::sendResponseBefore(Object(Varien_Event_Observer))
+#4 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/App.php(1317): Mage_Core_Model_App->_callObserverMethod(Object(Extendware_EWPageCache_Model_Observer_Frontend), 'sendResponseBef...', Object(Varien_Event_Observer))
+#5 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/Mage.php(447): Mage_Core_Model_App->dispatchEvent('controller_fron...', Array)
+#6 /var/www/vhosts/new-fashion.co.uk/httpdocs/var/cache/ew/files/52/17/Mage/Core/Controller/Varien/Front.php(205): Mage::dispatchEvent('controller_fron...', Array)
+#7 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/local/Extendware/EWPageCache/Controller/Override/Mage/Core/Varien/Front.php(17) : eval()'d code(17): Mage_Core_Controller_Varien_FrontOverriddenClass->dispatch()
+#8 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/App.php(354): Extendware_EWPageCache_Controller_Override_Mage_Core_Varien_Front->dispatch()
+#9 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#10 /var/www/vhosts/new-fashion.co.uk/httpdocs/index.php(87): Mage::run('lithuania', 'website')
+#11 {main}";s:3:"url";s:109:"/vyrams/f/jacket_type/cagoules,coats,leatherjackets,parkas,pufferjackets/shopping_price/30andmore,upto80.html";s:11:"script_name";s:10:"/index.php";s:4:"skin";s:9:"lithuania";}

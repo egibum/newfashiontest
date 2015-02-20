@@ -1,0 +1,44 @@
+/**
+ * BelVG LLC.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+ *
+ /***************************************
+ *         MAGENTO EDITION USAGE NOTICE *
+ *****************************************/
+ /* This package designed for Magento COMMUNITY edition
+ * BelVG does not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * BelVG does not provide extension support in case of
+ * incorrect edition usage.
+ /***************************************
+ *         DISCLAIMER   *
+ *****************************************/
+ /* Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future.
+ *****************************************************
+ * @category   Belvg
+ * @package    Belvg_ColorSwatchPro
+ * @copyright  Copyright (c) 2010 - 2011 BelVG LLC. (http://www.belvg.com)
+ * @license    http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+ */
+ 
+.products-grid .actions {position: static;}
+
+.category-products .product-options-block {float: left; padding: 0 0 10px 0; width: 100%;}
+
+.product-options-block label {color:#2F2F2F; font-weight:bold; float: left; width: 100%;}
+.product-options-block label.required em {color:#EB340A; margin-right:5px;}
+
+.product-options-block select {padding: 1px; float: left; margin-bottom: 10px;}
+
+.product-options-block .colorswatch-icon-set {float: left; width: 100%; margin: 5px 0 0px 0;}
+.product-options-block .colorswatch-icon-set .colorswatch-icon-item  {float: left; margin: 5px 5px 0px 0; cursor: pointer; border: 2px solid #DEE5E8;}
+.product-options-block .colorswatch-icon-set .colorswatch-icon-item.active {border: 2px solid #618499;}
+.product-options-block .colorswatch-icon-set .colorswatch-icon-item.disabled  {opacity:0.1; filter:alpha(opacity=10); cursor: auto;}
+.product-options-block .colorswatch-icon-set .colorswatch-icon-item img {width:20px; height: 20px;}

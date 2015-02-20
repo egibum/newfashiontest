@@ -1,0 +1,2 @@
+// JavaScript Document
+document.write('<div id="footer" class="clear"><div id="footer_container"><div class="designby"> Designed &amp; Developed by <a target="_blank" href="http://www.explorewebstore.com/">Explore WebStore</a></div></div></div>');

@@ -1,0 +1,23 @@
+2014-09-12 14:56:08.000000 (1410530168.2101) DEBUG: 100000081
+2014-09-12 14:56:08.000000 (1410530168.2115) DEBUG: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36
+2014-09-12 14:56:08.000000 (1410530168.212) DEBUG: Array
+(
+    [payment] => Array
+        (
+            [method] => sagepaydirectpro
+            [cc_owner] => Aivis Z
+            [cc_type] => VISA
+            [cc_number] => XXXXXXXXXXXXX
+            [cc_exp_month] => 5
+            [cc_exp_year] => 2017
+            [cc_cid] => XXX
+            [cc_ss_issue] => 
+            [cc_ss_start_month] => 
+            [cc_ss_start_year] => 
+        )
+
+    [is_subscribed] => 1
+    [customer_comment] => 
+)
+
+2014-09-12 14:56:08.000000 (1410530168.2125) DEBUG: --------------------

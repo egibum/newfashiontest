@@ -1,0 +1,24 @@
+.slider-nav .next2, .slider-nav .prev2 {
+	/*right: 15px;*/
+	/*display: none;*/
+}
+.slider{
+	 overflow: none; 
+}
+
+.slider-nav {
+	/*position: relative;*/
+	right: 330px;
+}
+
+
+.slider-nav .prev2 {
+	background: url(../images/prev.gif) no-repeat;
+	background-position: 0px 0px;
+	left: -15px;
+}
+.slider-nav .next2 {
+	background: url(../images/next.gif) no-repeat;
+	background-position: 0px 0px;
+	right: 15px;
+}

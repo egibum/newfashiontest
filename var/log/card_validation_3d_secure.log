@@ -1,0 +1,778 @@
+2014-08-01T23:31:17+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_lookup
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [Amount] => 100
+            [CurrencyCode] => 826
+            [CardNumber] => ****
+            [CardExpMonth] => ****
+            [CardExpYear] => ****
+            [OrderNumber] => 100000055
+        )
+
+    [response] => Array
+        (
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [TransactionId] => cd7OXJce1beVhVUEnCw0
+            [Payload] => eNpVUttSgzAQfc9XMDrjm+QCtFDXzNRWx7tV22p9w7AKo4U2QK1+vQktXt727G52zzkbGKcacXiPqtYo4QrLMn5FJ0sOd1TSvXk8V8ifcZpOJ8f54IPtSBj173ApYYW6zIpccpe5AmgLiRmhVRrnlYRYLY/OrqUvIiZ8oFtIYI76bCijkAnGuBdEUZcxBnSTJpDHc5QjXTiDrPp07lGvMoXOZZUAbUoEVFHnlf6UoegAbQGBWr/LtKoWPUpz/Nh/icvUUHJV4dZvQG2VAP2lN6ptVBrV6yyRM3HrjXl6MROT9Ww+fYhPnqZ3D8Ew+eofArUdBJK4QikY91nIuCO8nhf0fA60yROI55aK3NvlHe/A+GI0bVMEFnZZf4O4rfxNGEW11pirVlKLCOB6UeRoeozHP7GR8Ut+cGqdVpW11I+8KDQEA94JeGj3bwrNnMyYxLssaAZljWPUPqbbi9Lt8U3071N8AzUerho=
+            [Enrolled] => Y
+            [OrderId] => 8000271313775108
+            [EciFlag] => 07
+            [ACSUrl] => https://www.securesuite.co.uk/verde/tdsecure/opt_in_dispatcher.jsp?partner=debit&VAA=B
+            [] => 
+        )
+
+    [__pid] => 13678
+)
+
+2014-08-04T14:05:19+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_lookup
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [Amount] => 2198
+            [CurrencyCode] => 826
+            [CardNumber] => ****
+            [CardExpMonth] => ****
+            [CardExpYear] => ****
+            [OrderNumber] => 100000056
+        )
+
+    [response] => Array
+        (
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [TransactionId] => dK13hO40ylk6r02841u0
+            [Payload] => eNpVUslS4zAQvesrXEzVXCisJUqwMx1VOYQlFcgycJjhZuQGmxA7yHJI/h7JSWDm1u+91lNv8JAbxNE96saggjus6/QFgyIbnGQT3slnku3elj3DRCR5w04UzJPf+K5gg6YuqlLxkIUC6BESZ2F0npZWQarfh+OpkiJmQgI9QAIrNOORiiMmGOOdbhyfM8aA7mkCZbpCNTdVcFHYXXCPZlNoDG5tBrSVCOiqKa3ZqUj0gB4Bgca8qdzadZ/SEj/OntM6dyWFugqbJVCvEqDf5c0bH9Wu622RqcfLensn8vl0NOw+XddCvya72WixzR6SAVCfQSBLLSrBuGQRkwGXfRb3ZQS05QmkK1+K+vmD9zq/BA9jJx04Amv/W7JHgnvpX8b11BiDpT42dUQEcLuuSvSvgH7FrpHv8i9u/Ky1ddO71eu/j2L6ZyFPu8tJMkyTyZVN9GWyGA/8Btqk1rNwI+M91m1Ni3Z+1BvRw37p4RRc9N+JfALAQbMy
+            [Enrolled] => Y
+            [OrderId] => 8000948582245752
+            [EciFlag] => 07
+            [ACSUrl] => https://secure5.arcot.com/acspage/cap?RID=6494&VAA=B
+            [] => 
+        )
+
+    [__pid] => 10600
+)
+
+2014-08-04T14:05:40+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_authenticate
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [TransactionId] => dK13hO40ylk6r02841u0
+            [PAResPayload] => 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
+        )
+
+    [response] => Array
+        (
+            [EciFlag] => 05
+            [PAResStatus] => Y
+            [SignatureVerification] => Y
+            [Xid] => ZEsxM2hPNDB5bGs2cjAyODQxdTA=
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [Cavv] => AAABAYeVMihWaJYTB5UyEG2ZiSI=
+            [] => 
+        )
+
+    [__pid] => 10600
+)
+
+2014-08-04T15:35:13+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_lookup
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [Amount] => 3999
+            [CurrencyCode] => 826
+            [CardNumber] => ****
+            [CardExpMonth] => ****
+            [CardExpYear] => ****
+            [OrderNumber] => 100000057
+        )
+
+    [response] => Array
+        (
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [TransactionId] => MmjERpms9OoSL16LM0P0
+            [Payload] => 
+            [Enrolled] => N
+            [OrderId] => 8000649778230190
+            [EciFlag] => 06
+            [ACSUrl] => 
+            [] => 
+        )
+
+    [__pid] => 11992
+)
+
+2014-08-04T15:35:15+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_lookup
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [Amount] => 3999
+            [CurrencyCode] => 826
+            [CardNumber] => ****
+            [CardExpMonth] => ****
+            [CardExpYear] => ****
+            [OrderNumber] => 100000058
+        )
+
+    [response] => Array
+        (
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [TransactionId] => gDoEte9xTT1dUjdHbmw0
+            [Payload] => 
+            [Enrolled] => N
+            [OrderId] => 8000402147569371
+            [EciFlag] => 06
+            [ACSUrl] => 
+            [] => 
+        )
+
+    [__pid] => 11992
+)
+
+2014-08-04T15:39:15+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_lookup
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [Amount] => 3999
+            [CurrencyCode] => 826
+            [CardNumber] => ****
+            [CardExpMonth] => ****
+            [CardExpYear] => ****
+            [OrderNumber] => 100000058
+        )
+
+    [response] => Array
+        (
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [TransactionId] => Y09qjLOEYd4Mw1P8d6i0
+            [Payload] => 
+            [Enrolled] => N
+            [OrderId] => 8000195235957314
+            [EciFlag] => 06
+            [ACSUrl] => 
+            [] => 
+        )
+
+    [__pid] => 12079
+)
+
+2014-08-04T15:39:17+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_lookup
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [Amount] => 3999
+            [CurrencyCode] => 826
+            [CardNumber] => ****
+            [CardExpMonth] => ****
+            [CardExpYear] => ****
+            [OrderNumber] => 100000058
+        )
+
+    [response] => Array
+        (
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [TransactionId] => UC18oOt5UFEPR1rd6t20
+            [Payload] => 
+            [Enrolled] => N
+            [OrderId] => 8000524310612942
+            [EciFlag] => 06
+            [ACSUrl] => 
+            [] => 
+        )
+
+    [__pid] => 12079
+)
+
+2014-08-04T18:19:50+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_lookup
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [Amount] => 3999
+            [CurrencyCode] => 826
+            [CardNumber] => ****
+            [CardExpMonth] => ****
+            [CardExpYear] => ****
+            [OrderNumber] => 100000058
+        )
+
+    [response] => Array
+        (
+            [ErrorDesc] => Error Processing Lookup Request Message, Invalid Merchant Id or Processor Id
+            [ErrorNo] => 1002, 2002
+            [TransactionId] => 131hSfp3xde31R5kHYw0
+            [Enrolled] => U
+            [EciFlag] => 
+            [] => 
+        )
+
+    [__pid] => 14767
+)
+
+2014-08-04T18:22:52+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_lookup
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [Amount] => 3999
+            [CurrencyCode] => 826
+            [CardNumber] => ****
+            [CardExpMonth] => ****
+            [CardExpYear] => ****
+            [OrderNumber] => 100000058
+        )
+
+    [response] => Array
+        (
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [TransactionId] => 9MKgBSeVgFaV2MHlOBm0
+            [Payload] => 
+            [Enrolled] => N
+            [OrderId] => 8000317409389203
+            [EciFlag] => 06
+            [ACSUrl] => 
+            [] => 
+        )
+
+    [__pid] => 14814
+)
+
+2014-08-04T18:23:48+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_lookup
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [Amount] => 3999
+            [CurrencyCode] => 826
+            [CardNumber] => ****
+            [CardExpMonth] => ****
+            [CardExpYear] => ****
+            [OrderNumber] => 100000058
+        )
+
+    [response] => Array
+        (
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [TransactionId] => Y4PRd3cPeuwrWz76WJ50
+            [Payload] => 
+            [Enrolled] => N
+            [OrderId] => 8000291799472061
+            [EciFlag] => 06
+            [ACSUrl] => 
+            [] => 
+        )
+
+    [__pid] => 14837
+)
+
+2014-08-06T12:03:44+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_lookup
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [Amount] => 5199
+            [CurrencyCode] => 826
+            [CardNumber] => ****
+            [CardExpMonth] => ****
+            [CardExpYear] => ****
+            [OrderNumber] => 100000059
+        )
+
+    [response] => Array
+        (
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [TransactionId] => vHNF2fHmlEXzFeeHuz80
+            [Payload] => eNpVUl1TwjAQfM+v6OCMbzYflNDimRkUsTiKDDiMr532tFXaYtoi8OtNCvjxdnt7uexuAs+pRhwtMG40KnjEqore0MmSq84mnI7Fa5ivbl/2Y8Sw2fuso2A2nOOngg3qKisLxV3mCqAnSMwKHadRUSuI4s/ryVR5ImDCA3qEBHLUk5EKfCYY491eEPQZY0APbQJFlKOa6dK5yeqds0C9yWJ0HuoEaEsRiMumqPVO+UICPQECjV6ptK7XA0oL/Lp4jarUSHLj0m0+gFqWAP2VN2tsVRnX2yxRyUf6NH+/zxd3vJovUznPl6tFuJRPo+EVUDtBIIlqVIJxj/lMOlwMmD/gRkLbJxDlVoo6P+Oye9njbhAY04cegbW9bXhAPW6pvx3jqdEai/hk6oQI4HZdFmhmTMo/tTHyK/8mtFnHtQ3VY10mZE/2edeTvrSpt0S7JzMx8T7rt4uyNjNqD9Pjm9Lj85vq37f4Bhoxrxk=
+            [Enrolled] => Y
+            [OrderId] => 8000581839823772
+            [EciFlag] => 07
+            [ACSUrl] => https://verifiedbyvisa.barclays.co.uk/barclays/tdsecure/opt_in_dispatcher.jsp?partner=debit.visa&VAA=B
+            [] => 
+        )
+
+    [__pid] => 30287
+)
+
+2014-08-06T12:03:56+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_authenticate
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [TransactionId] => vHNF2fHmlEXzFeeHuz80
+            [PAResPayload] => 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
+        )
+
+    [response] => Array
+        (
+            [EciFlag] => 05
+            [PAResStatus] => Y
+            [SignatureVerification] => Y
+            [Xid] => dkhORjJmSG1sRVh6RmVlSHV6ODA=
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [Cavv] => AAABByZImQAAACUWmUiZAAAAAAA=
+            [] => 
+        )
+
+    [__pid] => 30287
+)
+
+2014-08-06T12:16:31+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_lookup
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [Amount] => 5199
+            [CurrencyCode] => 826
+            [CardNumber] => ****
+            [CardExpMonth] => ****
+            [CardExpYear] => ****
+            [OrderNumber] => 100000063
+        )
+
+    [response] => Array
+        (
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [TransactionId] => R0BVcWANWfkKgHueBN10
+            [Payload] => eNpVUk1TwjAQvedXdHTGm80HbWlxzQzgwS8QBZTh1gmrrdoW01Tx35sUEL3t27fZvPcSmGUa8WKKqtEoYYR1nb6gl6/Ojx7Y4FE99cdPz283L5cNDsacHUmY9B/wQ8In6jqvSsl95guge0jsCq2ytDQSUvUxuBrLQCRMBEB3kECB+upCJjETjPFOmCRdxhjQbZtAmRYoJ7ryhrn59qaoP3OF3q1ZAW0pAqpqSqO/ZSwioHtAoNHvMjNm3aO0xK/T57TOrCRfVX7zBtSxBOhB3qRxVW1db/KVnL8Oho/FeHE/DxfLwtwuWcaX8+u70ax/DtRNEFilBqVgPGAxizwueoL3WAdo2yeQFk6KPDnmUecs5H6SWNPbHoG1u62/RSF31N+O9dRojaXam9ojArhZVyXaGZvyb22NHOQPL13WyrhQgygMheiGcRIGUdB1qbdEuye3MfEui9tFeZsZdYfp7k3p7vlt9e9b/ADJ9K5d
+            [Enrolled] => Y
+            [OrderId] => 8000207505167589
+            [EciFlag] => 07
+            [ACSUrl] => https://secure.barclaycard.co.uk/barclays/tdsecure/pa.jsp?partner=barclaycard.visa&VAA=B
+            [] => 
+        )
+
+    [__pid] => 31150
+)
+
+2014-08-06T12:18:12+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_authenticate
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [TransactionId] => R0BVcWANWfkKgHueBN10
+            [PAResPayload] => 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
+        )
+
+    [response] => Array
+        (
+            [EciFlag] => 05
+            [PAResStatus] => Y
+            [SignatureVerification] => Y
+            [Xid] => UjBCVmNXQU5XZmtLZ0h1ZUJOMTA=
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [Cavv] => AAABBzCTBwAAACUXAZMHAAAAAAA=
+            [] => 
+        )
+
+    [__pid] => 31179
+)
+
+2014-08-06T12:19:34+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_lookup
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [Amount] => 5199
+            [CurrencyCode] => 826
+            [CardNumber] => ****
+            [CardExpMonth] => ****
+            [CardExpYear] => ****
+            [OrderNumber] => 100000064
+        )
+
+    [response] => Array
+        (
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [TransactionId] => NT1cblXQnriVwDLUT440
+            [Payload] => eNpVUl1TwjAQfM+v6OiMbzaXEKDFMzMo46ijDCCCPtb0lI7QYtoi/nuTAn683d5eLrub4HRhiQYPZGpLGu+pLJM3CrL0/Gg4FeZl+TTObTb7HNw9TpWCI42j/oQ+NG7IllmRaxFCKJEfIHMrrFkkeaUxMR8XN0OtZAxSId9DhiuyNwMdRyABRKsdx10AQL5rM8yTFemRLYLLrPoKHshuMkPBXZUibyiGpqjzyn7pSHaQHwDD2i71oqrWPc5z+jx9TcqFkxSaIqzfkXuWIf+VN6p9VTrX2yzV0+V4+yxvy/nVVW1Wy3kKk/vZbAzDQf8cuZ9gmCYVaQlCQQSdQMieVD1oI2/6DJOVl6JPjkWnddYWYRw707sew7W/rb9DbeGpvx3nqbaWcnMwdUAMabsucnIzLuWf2hn5lX957bM2lQ9VqShqdUEK5WKNWj71hmj2ZC4m0YVusyhrMuP+MN+/Kd8/v6v+fYtvml2u3g==
+            [Enrolled] => Y
+            [OrderId] => 8000523805466459
+            [EciFlag] => 07
+            [ACSUrl] => https://verifiedbyvisa.barclays.co.uk/barclays/tdsecure/opt_in_dispatcher.jsp?partner=debit.visa&VAA=B
+            [] => 
+        )
+
+    [__pid] => 31204
+)
+
+2014-08-06T12:19:44+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_authenticate
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [TransactionId] => NT1cblXQnriVwDLUT440
+            [PAResPayload] => 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
+        )
+
+    [response] => Array
+        (
+            [EciFlag] => 05
+            [PAResStatus] => Y
+            [SignatureVerification] => Y
+            [Xid] => TlQxY2JsWFFucmlWd0RMVVQ0NDA=
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [Cavv] => AAABBTIYJQAAACUXAhglAAAAAAA=
+            [] => 
+        )
+
+    [__pid] => 31204
+)
+
+2014-08-12T18:26:49+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_lookup
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [Amount] => 1699
+            [CurrencyCode] => 826
+            [CardNumber] => ****
+            [CardExpMonth] => ****
+            [CardExpYear] => ****
+            [OrderNumber] => 100000066
+        )
+
+    [response] => Array
+        (
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [TransactionId] => wsgdjmeWsjFnzKCEpnP0
+            [Payload] => eNpVUl1P4zAQfPeviEDi5XSxnfZCwm0theagFRRV5aNc36JkaUKpExwbSn89dtrCneSHndnVemd24a5UiOkt5kahgAm2bbZEryoGR+/tsnhe47x9vpDbq+GfRk7ZkYBpMsNXAW+o2qqWgvvMD4AeILEtVF5mUgvI8tfz8Y3oBzEL+kD3kMAa1TgVccQCxnjvVxyfMsaA7mgCMlujmKraG1b6w7tF9Vbl6F3rAmiXIpDXRmr1IaIgBHoABIx6EaXWzRmlEt9/PmVtaUfy89o3K6AuS4B+jzc1Lmqt6k1ViKJ3IxeXjV48FNtstTC40uns8dzcp8kAqKsgUGQaRcB4n0U88Hh01uP2Ae14AtnajSJOjnnY+81DP46t6B1HoHG/JTvEQ5f6l7GajFIo84OoAyKAm6aWaGusy1+xFfI9/nDkvM61dW82nqTzUVjezU000S+bH/3qcZusRsny78BtoCvqelbWMh6y065p1flHXSO63y/dn4KN/juRT3AjtoA=
+            [Enrolled] => Y
+            [OrderId] => 8000664422970596
+            [EciFlag] => 07
+            [ACSUrl] => https://secure5.arcot.com/acspage/cap?RID=8697&VAA=B
+            [] => 
+        )
+
+    [__pid] => 2539
+)
+
+2014-08-12T18:27:19+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_authenticate
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [TransactionId] => wsgdjmeWsjFnzKCEpnP0
+            [PAResPayload] => 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
+        )
+
+    [response] => Array
+        (
+            [EciFlag] => 05
+            [PAResStatus] => Y
+            [SignatureVerification] => Y
+            [Xid] => d3NnZGptZVdzakZuektDRXBuUDA=
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [Cavv] => AAABB3ZCY5IUWWMhAUJjED78mBw=
+            [] => 
+        )
+
+    [__pid] => 2539
+)
+
+2014-08-12T19:01:00+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_lookup
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [Amount] => 1699
+            [CurrencyCode] => 826
+            [CardNumber] => ****
+            [CardExpMonth] => ****
+            [CardExpYear] => ****
+            [OrderNumber] => 100000067
+        )
+
+    [response] => Array
+        (
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [TransactionId] => Zwuyx2uRrUSKlsFmNG20
+            [Payload] => eNpVUttSwkAMfd+v6OiMb3YvQqEYdgZlFBUYFMTL29JGqNAWt61Qv97dAl7ecpJMcs5JYLLQiN0xBoVGCQPMMjVHJwrbR6+botyK4kE/ju9W2VU8vBbsSMKo84AfEj5RZ1GaSO4yVwA9QGJG6GChklyCCj4uboayJnwmakD3kECM+qYr/SYTjPGzuu83GGNAd2kCiYpRjnTqXEZ56YxRf0YBOv08BFqVCARpkeS6lE3hAT0AAoVeyUWer1uUJrg5fVPZwlByg9QtlkBtlQD9pTcqbJQZ1dsolE9JyPF5XobT23I6HfZnveH17LHeG7x32kBtB4FQ5SgF4zXW5MLhfovVWzUjvsoTULGlIk+OuXd2zj3X943oXY7A2m7r7BD3bOlvxmgqtMYkOIg6IAK4XacJmh6z6Cc2Qn7pX/as10Fu3Jt4X2nZWM0mKZaTuK+abw3Vv1/2OvOXtr1A1VTNjIxl3GONamhU+UftILq/L92/gon+vcg3Lpu2EQ==
+            [Enrolled] => Y
+            [OrderId] => 8000605150449568
+            [EciFlag] => 07
+            [ACSUrl] => https://secure5.arcot.com/acspage/cap?RID=8697&VAA=B
+            [] => 
+        )
+
+    [__pid] => 4612
+)
+
+2014-08-12T19:02:19+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_authenticate
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [TransactionId] => Zwuyx2uRrUSKlsFmNG20
+            [PAResPayload] => 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
+        )
+
+    [response] => Array
+        (
+            [EciFlag] => 05
+            [PAResStatus] => Y
+            [SignatureVerification] => Y
+            [Xid] => Wnd1eXgydVJyVVNLbHNGbU5HMjA=
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [Cavv] => AAABB1ASIHMSMTAWhBIgED78mBw=
+            [] => 
+        )
+
+    [__pid] => 4729
+)
+
+2014-08-14T17:23:49+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_lookup
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [Amount] => 3499
+            [CurrencyCode] => 826
+            [CardNumber] => ****
+            [CardExpMonth] => ****
+            [CardExpYear] => ****
+            [OrderNumber] => 100000068
+        )
+
+    [response] => Array
+        (
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [TransactionId] => Uwv6V5YDtOULDjxGenD0
+            [Payload] => eNpVUstu2zAQvPMrhBTIreJD8kPOmoASFYkBJ3YV23ncBGpbq40lm6IcJV9fUrab5LazuxjOzBIWa42Y3KNqNEq4xbrOfqNX5OOz5eu+v+o9JWa2nCZ/2mssE3YmYR6nuJOwR10XVSm5z3wB9ASJpdBqnZVGQqZ2l5M7GYqIiRDoERLYoJ4kMhoywRgPelE0YIwBPbQJlNkG5VxX3lVh3rx71PtCoTc1OdBuREBVTWn0mxyKPtATINDoF7k2ZjuitMTX77+yem0l+arym79A3ZQA/ZA3b1xVW9dtkcvVYy7uXp74wzJlC766Ta+3YSpWTZrEY6Bug0CeGZSC8ZANeejxwUgMR0EPaNcnkG2cFHn+jfeDiyD0o8iaPvQIbN1r8QEFoRt97lhPjdZYqpOpEyKA7bYq0e7YlP/X1siH/Ksbl7UyNr0fj1PeJu1s8YyT3XtczNL3TPxUN5fxcuwu0C11nIWNjA/YgbTo8qOOiB7vS49fwVZfvsg/NLa0Uw==
+            [Enrolled] => Y
+            [OrderId] => 8000715263144061
+            [EciFlag] => 07
+            [ACSUrl] => https://secure5.arcot.com/acspage/cap?RID=8697&VAA=B
+            [] => 
+        )
+
+    [__pid] => 30274
+)
+
+2014-08-14T17:24:30+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_authenticate
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [TransactionId] => Uwv6V5YDtOULDjxGenD0
+            [PAResPayload] => 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
+        )
+
+    [response] => Array
+        (
+            [EciFlag] => 05
+            [PAResStatus] => Y
+            [SignatureVerification] => Y
+            [Xid] => VXd2NlY1WUR0T1VMRGp4R2VuRDA=
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [Cavv] => AAABApUWQhk5Y0U4SRZCEFGYXPw=
+            [] => 
+        )
+
+    [__pid] => 30286
+)
+
+2014-08-29T21:00:28+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_lookup
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [Amount] => 3798
+            [CurrencyCode] => 826
+            [CardNumber] => ****
+            [CardExpMonth] => ****
+            [CardExpYear] => ****
+            [OrderNumber] => 100000072
+        )
+
+    [response] => Array
+        (
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [TransactionId] => 1hK4Sj5kv3JTpgFBGX10
+            [Payload] => eNpVUtlOwzAQfPdXRCDxRnwkzVEWSwVEuVoVWgQ8Rs5CQmmSOk6Bv8cOLcfbzsx6vDs2LAqNeDZH1WmUMMG2zV7QK/PjPV5ch/PXwXITXC2al/OT8SNnexJmoztcS9igbsu6ktxnvgC6g8RaaFVklZGQqfXJ5VSGImUiBLqFBFaoL89kmjDBGA8GaRozxoB+0wSqbIVypmvvtDSf3hz1plTo3ZgcaC8RUHVXGf0pExEB3QECnX6ThTHNkNIK3w+fs7awI/mq9rslUKcSoL/jzTpXtXbrjzKXk4fiZno+XU8fjJiw5l6N8/HtMn+aLEbHQF0HgTwzKAXjIUtE6gk+ZINhkADteQLZyo0iD/Z5FBwFsZ9aacsRaNxto28UxE76y9idOq2xUruldogAfjR1hbbHpvxT20V+xz+9cFkr40INmfVOAh6LSERx6lLvhd6ntDHxiPHeqOwzo+4w3b4p3T6/rf59iy+lpK5p
+            [Enrolled] => Y
+            [OrderId] => 8000721439066998
+            [EciFlag] => 07
+            [ACSUrl] => https://www.securesuite.co.uk/rbs/tdsecure/pa.jsp?partner=debit_nw_visa&VAA=B
+            [] => 
+        )
+
+    [__pid] => 14793
+)
+
+2014-09-12T13:47:17+00:00 DEBUG (7): Array
+(
+    [request] => Array
+        (
+            [MsgType] => cmpi_lookup
+            [Version] => 1.7
+            [ProcessorId] => 134-01
+            [MerchantId] => newfashionofficial@gmail.com
+            [TransactionPwd] => ****
+            [TransactionType] => C
+            [Amount] => 500
+            [CurrencyCode] => 826
+            [CardNumber] => ****
+            [CardExpMonth] => ****
+            [CardExpYear] => ****
+            [OrderNumber] => 100000081
+        )
+
+    [response] => Array
+        (
+            [ErrorDesc] => 
+            [ErrorNo] => 0
+            [TransactionId] => 911u5lFYGIBssxg1KyP0
+            [Payload] => eNpVUttOwzAMfc9XVCDxRnNpw+gwkQbjMq7TLkg8VqmhFVs70nRsfD1JtzF48/FxbJ/jwCQ3iP0x6saggkes6/QdgyI7P0g4b+Ts+vVmcFHXq3d+vx6yAwXD3gg/FSzR1EVVKh6yUADdQeJaGJ2npVWQ6s+LwZOKRcJEDHQLCczRDPoqOWWCMR7JJOkwxoBu0gTKdI5qaKrgsrDrYIxmWWgMHmwGtKUI6KoprVmrU3ECdAcINGamcmsXXUpL/Dp+S+vcrRTqKmw+gHqWAN2vN2x8VDvVqyJTz5OrVTZ5qUez2e14eveto7x8nFo57ffOgfoKAllqUQnGY5ZwEfCoK0U3ToC2eQLp3K+ijg75SXQmQ69pmyKw8MN6GyQ98zfhFDXGYKl3knaIAK4WVYmuxnn8GzsZ++Uvb73T2npLpZCCRc7YOJadyM/fEG2fwpnEO0y2jYrWMeof0+1F6fb4Lvr3KX4AQAGubA==
+            [Enrolled] => Y
+            [OrderId] => 8000295687041813
+            [EciFlag] => 07
+            [ACSUrl] => https://www.securesuite.co.uk/verde/tdsecure/opt_in_dispatcher.jsp?partner=debit&VAA=B
+            [] => 
+        )
+
+    [__pid] => 29929
+)
+

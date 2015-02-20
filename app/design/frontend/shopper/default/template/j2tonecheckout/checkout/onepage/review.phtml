@@ -1,0 +1,86 @@
+<div id="checkout-review-load">
+    <?php echo $this->getChildHtml('info') ?>
+    <p class="forgot-item"><?php echo $this->__('Forgot an Item?') ?> <a href="<?php echo $this->getUrl('checkout/cart', array('form_key' => Mage::getSingleton('core/session')->getFormKey())) ?>"><?php echo $this->__('Edit Your Cart') ?></a></p>
+</div>
+
+<div id="checkout-review-coupon">
+    <?php echo $this->getChildHtml('onpage.extra.before.coupon');?>
+    <?php echo $this->getChildHtml('coupon') ?>
+    <?php echo $this->getChildHtml('onpage.extra.after.coupon');?>
+</div>
+
+<div id="j2t-coupon-ajax-reply" style="display:none;"></div>
+
+<?php $j2t_poll = trim($this->getChildHtml('j2t_poll'));?>
+
+<div id="checkout-review-submit">
+    <?php $agreements = trim($this->getChildHtml('agreements')) ?>
+    <?php echo $agreements;?>
+    
+    <?php if (Mage::getStoreConfig('j2tonecheckout/default/show_comments')): ?>
+        <?php if ($agreements != ""):?>
+            <?php echo $j2t_poll;?>
+            
+            <script type="text/javascript">
+            //<![CDATA[
+                //j2t-block-poll
+                var form_element_comments = '<div class="checkout-comments"> \
+                        <label for="orderComment"><?php echo $this->__('Comments - Special instructions?'); ?></label> \
+                        <div class="input-box"> \
+                            <textarea name="orderComment" id="orderComment" rows="3" cols="60"></textarea> \
+                        </div> \
+                      </div>';
+                if ($("checkout-agreements")) {
+                    $("checkout-agreements").insert({top: form_element_comments});
+                }
+                
+                //]]>
+            </script>
+        <?php else:?>
+            <?php echo $j2t_poll;?>
+            <form action="" id="checkout-agreements" onsubmit="return false;">
+                <div class="checkout-comments">
+                  <label for="orderComment"><?php echo $this->__('Comments - Special instructions?'); ?></label>
+                  <div class="input-box">
+                      <textarea name="orderComment" id="orderComment" rows="3" cols="60"></textarea>
+                  </div>
+                </div>
+            </form>
+        <?php endif;?>
+    <?php elseif ($agreements != "" && $j2t_poll != ""):?>
+        <?php echo $j2t_poll;?>
+    <?php elseif ($j2t_poll != ""):?>
+        <form action="" id="checkout-agreements" onsubmit="return false;">
+            <?php echo $j2t_poll;?>
+        </form>
+    <?php endif;?>
+    
+    <?php /*?>
+    <form action="" id="checkout-agreements" onsubmit="return false;">
+        <div class="checkout-comments">
+          <label for="orderComment"><?php echo $this->__('Leave special instructions (if necessary)'); ?></label>
+          <div class="input-box">
+              <textarea name="orderComment" id="orderComment" rows="3" cols="60"></textarea>
+          </div>
+        </div>
+    </form>
+    <?php */?>
+    
+    
+    <div class="buttons-set" id="review-buttons-container">
+        <button type="submit" title="<?php echo $this->__('Place Order') ?>" class="button btn-checkout" onclick="review.save();"><span><span><?php echo $this->__('Place Order') ?></span></span></button>
+        <span class="please-wait" id="review-please-wait" style="display:none;">
+            <img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo $this->__('Submitting order information...') ?>" title="<?php echo $this->__('Submitting order information...') ?>" class="v-middle" /> <?php echo $this->__('Submitting order information...') ?>
+        </span>
+    </div>
+    <div class="order-info-complete buttons-set" id="order-info-complete" style="display:none;">
+        <span class="please-wait" id="review-please-wait-filling">
+            <img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo $this->__("All steps need to be completed in order to be able to place the order.");?>" title="<?php echo $this->__("All steps need to be completed in order to be able to place the order.");?>" class="v-middle" /> <?php echo $this->__("All steps need to be completed in order to be able to place the order.");?>
+        </span>
+    </div>
+    <script type="text/javascript">
+    //<![CDATA[
+        var review = new J2t_Review('<?php echo $this->getUrl('checkout/onepage/saveOrder', array('form_key' => Mage::getSingleton('core/session')->getFormKey())) ?>', '<?php echo $this->getUrl('checkout/onepage/success', array('form_key' => Mage::getSingleton('core/session')->getFormKey())) ?>', $('checkout-agreements'));
+    //]]>
+    </script>
+</div>

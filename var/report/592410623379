@@ -1,0 +1,10 @@
+a:5:{i:0;s:247:"Error in file: "/var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/community/Ess/M2ePro/sql/M2ePro_setup/mysql4-upgrade-6.1.6-6.1.7.php" - SQLSTATE[42S22]: Column not found: 1054 Unknown column 'international_handling_cost_mode' in 'where clause'";i:1;s:1301:"#0 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/Resource/Setup.php(645): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/Resource/Setup.php(437): Mage_Core_Model_Resource_Setup->_modifyResourceDb('upgrade', '6.1.6', '6.2.3')
+#2 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/community/Ess/M2ePro/Model/Upgrade/MySqlSetup.php(64): Mage_Core_Model_Resource_Setup->_upgradeResourceDb('6.1.6', '6.2.3')
+#3 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/Resource/Setup.php(320): Ess_M2ePro_Model_Upgrade_MySqlSetup->_upgradeResourceDb('6.1.6', '6.2.3')
+#4 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/Resource/Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#5 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/App.php(417): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#6 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/App.php(343): Mage_Core_Model_App->_initModules()
+#7 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#8 /var/www/vhosts/new-fashion.co.uk/httpdocs/index.php(87): Mage::run('lithuania', 'website')
+#9 {main}";s:3:"url";s:80:"/vyrams/dzemperiai-bliuzonai/f/color/red/shopping_price/10andmore,20andmore.html";s:11:"script_name";s:10:"/index.php";s:4:"skin";s:7:"default";}

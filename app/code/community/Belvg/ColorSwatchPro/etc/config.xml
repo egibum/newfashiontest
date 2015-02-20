@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * BelVG LLC.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+ *
+ /***************************************
+ *         MAGENTO EDITION USAGE NOTICE *
+ *****************************************/
+ /* This package designed for Magento COMMUNITY edition
+ * BelVG does not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * BelVG does not provide extension support in case of
+ * incorrect edition usage.
+ /***************************************
+ *         DISCLAIMER   *
+ *****************************************/
+ /* Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future.
+ *****************************************************
+ * @category   Belvg
+ * @package    Belvg_ColorSwatchPro
+ * @copyright  Copyright (c) 2010 - 2011 BelVG LLC. (http://www.belvg.com)
+ * @license    http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+ */
+ -->
+<config>
+	<modules>
+		<Belvg_ColorSwatchPro>
+			<version>1.0.0</version>
+		</Belvg_ColorSwatchPro>
+	</modules>
+	<global>
+		<blocks>
+			<colorswatch>
+                <class>Belvg_ColorSwatchPro_Block</class>
+            </colorswatch>
+			<catalog>
+				<rewrite>
+					<product_list>Belvg_ColorSwatchPro_Block_Product_List</product_list>
+					<product_view_type_configurable>Belvg_ColorSwatchPro_Block_Product_View_Type_Configurable</product_view_type_configurable>
+				</rewrite>
+			</catalog>
+		</blocks>
+		<helpers>
+            <colorswatch>
+                <class>Belvg_ColorSwatchPro_Helper</class>
+            </colorswatch>  
+        </helpers>
+		<models>
+            <colorswatch>
+                <class>Belvg_ColorSwatchPro_Model</class>
+            </colorswatch>
+        </models>
+	</global>
+	<frontend>
+		<routers>
+            <colorswatch>
+                <use>standard</use>
+                <args>
+                    <module>Belvg_ColorSwatchPro</module>
+                    <frontName>colorswatch</frontName>
+                </args>
+            </colorswatch>
+        </routers>
+		<layout>
+            <updates>
+                <colorswatch>
+                    <file>colorswatch.xml</file>
+                </colorswatch>
+            </updates>
+        </layout>
+	</frontend>
+	<default>
+		<colorswatch>
+			<settings>
+				<enabled>0</enabled>
+				<attributes>color,size</attributes>
+				<show_not_allowed>1</show_not_allowed>
+				<use_icons>1</use_icons>
+				<icon_folder>icons/</icon_folder>
+				<icon_ext>.png</icon_ext>
+				<switch_image>1</switch_image>
+				<switch_type>all</switch_type>
+				<auto_selection>1</auto_selection>
+			</settings>
+			<category_page>
+				<show_options>1</show_options>
+				<image_size>135x135</image_size>
+				<use_icons>0</use_icons>
+				<display_link>0</display_link>
+				<link_text>%s more</link_text>
+				<icons_qty>3</icons_qty>
+			</category_page>
+			<product_page>
+				<image_size>265x265</image_size>
+				<thumb_size>56x56</thumb_size>
+			</product_page>
+		</colorswatch>
+	</default>
+</config>

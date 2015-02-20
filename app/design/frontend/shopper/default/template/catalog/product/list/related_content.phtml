@@ -1,0 +1,154 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+$num_upsell =  Mage::getStoreConfig('shoppersettings/labels/number_upsell');
+if ( !is_numeric($num_upsell) || $num_upsell < 1 ) $num_upsell = 4;
+$_helper = $this->helper('catalog/output');
+$helper = $this->helper('shoppersettings/image');
+$imgX = 270;
+$imgY = $helper->calculateHeight($imgX);
+$time = time() + rand(0,1000);
+?>
+<?php if($this->getItems()->getSize()): ?>
+<div class="product-additional" id="krunal-sathavara">
+<div class="box-collateral box-up-sell3">
+        <div id="upsells_name">
+            <h3><?php echo $this->__('More great products') ?></h3>
+        </div>
+
+        <a href="#" class="jcarousel-prev-horizontal" id="shopper_upsell_prev"></a>
+        <a href="#" class="jcarousel-next-horizontal" id="shopper_upsell_next"></a>
+        <?php /*<p class="block-subtitle"><?php echo $this->__('Check items to add to the cart or') ?>&nbsp;<a href="#" onclick="selectAllRelated(this); return false;"><?php echo $this->__('select all') ?></a></p> */ ?>
+		
+		<div class="clearer"></div>
+		
+    <ul id="upsell-products-list" class="jcarousel-skin-tango small-list">
+        <?php $i = 0;foreach ($this->getItems() as $_product): ?>
+		<?php if ( $i==0 ) :?>
+            <li>
+                <div class="related-product-count">
+                    <?php if ($bigcounter == 0): ?>
+                        <span class="current">1-4</span>
+                    <?php elseif($bigcounter > 0 ): ?>
+                        <span class="current"><?php echo ($bigcounter*$num_upsell).'-'.($bigcounter+1)*$num_upsell; ?></span>
+                    <?php endif; ?>
+                    <span class="label"> of </span>
+                    <span class="totalCount"><?php echo count($this->getItems()); ?></span>
+                </div>
+                <ul>
+        <?php endif; ?>
+
+        <li class="item">
+            <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" class="product-image">
+                <?php //echo $this->helper('shoppersettings')->getLabel($_product);  ?>
+                <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($imgX, $imgY) ?>" data-srcX2="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($imgX*2, $imgY*2) ?>" width="<?php echo $imgX; ?>" height="<?php echo $imgY; ?>" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" />
+            </a>
+            <?php $_productNameStripped = $this->stripTags($_product->getName(), null, true); ?>
+            <a class="product-name" href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $_productNameStripped; ?>"><?php echo $_helper->productAttribute($_product, $_product->getName() , 'name'); ?></a>
+            <?php if(!$_product->isComposite() && $_product->isSaleable()): ?>
+            <?php if (!$_product->getRequiredOptions()): ?>
+                <input type="checkbox" class="checkbox related-checkbox" id="related-checkbox<?php echo $_product->getId() ?>" name="related_products[]" value="<?php echo $_product->getId() ?>" />
+                <?php endif; ?>
+            <?php endif; ?>
+            <?php echo $this->getPriceHtml($_product, true) ?>
+			<div class="clear"></div>
+        </li>
+		<?php $i++;  ?>
+		<?php if ( $i==$num_upsell ) : $i=0; $bigcounter++ ?>
+            </ul></li>
+        <?php endif; ?>
+        <?php endforeach; ?>
+		
+		<?php if ( $i> 0 ) : ?>
+        </ul></li>
+    <?php endif; ?>
+		
+    </ul>
+    <div class="clear"></div>
+</div>
+</div>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".product-shop div:first").prepend("<div class='product-additional'>" + $("#krunal-sathavara").html() + "</div>");
+		$("#krunal-sathavara").remove();
+	});
+//<![CDATA[
+<?php if(count($this->getItems()) > 1 ): ?>
+	jQuery(document).ready(function($) {
+
+		function upsell_initCallback(carousel) {
+		    jQuery('#shopper_upsell_next').bind('click', function() {
+		        carousel.next();
+		        return false;
+		    });
+		    jQuery('#shopper_upsell_prev').bind('click', function() {
+		        carousel.prev();
+		        return false;
+		    });
+
+            if (typeof $('#upsell-products-list').swipe !== 'undefined'){
+                $('#upsell-products-list').swipe({
+                    swipeLeft: function() { carousel.next(); },
+                    swipeRight: function() { carousel.prev(); },
+                    swipeMoving: function() {}
+                });
+            }
+		};
+
+	    $('#upsell-products-list').jcarousel({
+		    scroll: 1,
+		    initCallback: upsell_initCallback,
+		    buttonNextHTML: null,
+		    buttonPrevHTML: null
+	    });
+
+        //line up carousel items
+        $(window).load(function(){
+            var height = 0;
+            $('li.item', '#upsell-products-list').each(function(i,v){
+                $(this).css('height', 'auto');
+                if ( $(this).actual('height') > height ) {
+                    height = $(this).actual('height');
+                }
+            });
+            $('li.item', '#upsell-products-list').height(height);
+        });
+
+
+	});
+	<?php else: ?>
+	jQuery('#shopper_upsell_next').bind('click', function() {
+	    return false;
+	});
+	jQuery('#shopper_upsell_prev').bind('click', function() {
+	    return false;
+	});
+	<?php endif ?>
+//]]>
+</script>
+
+<?php endif ?>

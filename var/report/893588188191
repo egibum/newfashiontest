@@ -1,0 +1,10 @@
+a:5:{i:0;s:237:"Error in file: "/var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/community/Ess/M2ePro/sql/M2ePro_setup/mysql4-upgrade-6.0.8-6.0.9.php" - SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'online_sale_price_start_date'";i:1;s:1292:"#0 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/Resource/Setup.php(645): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/Resource/Setup.php(437): Mage_Core_Model_Resource_Setup->_modifyResourceDb('upgrade', '6.0.8', '6.2.3')
+#2 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/community/Ess/M2ePro/Model/Upgrade/MySqlSetup.php(64): Mage_Core_Model_Resource_Setup->_upgradeResourceDb('6.0.8', '6.2.3')
+#3 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/Resource/Setup.php(320): Ess_M2ePro_Model_Upgrade_MySqlSetup->_upgradeResourceDb('6.0.8', '6.2.3')
+#4 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/Resource/Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#5 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/App.php(417): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#6 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/code/core/Mage/Core/Model/App.php(343): Mage_Core_Model_App->_initModules()
+#7 /var/www/vhosts/new-fashion.co.uk/httpdocs/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#8 /var/www/vhosts/new-fashion.co.uk/httpdocs/index.php(87): Mage::run('', 'website')
+#9 {main}";s:3:"url";s:119:"/men/bellfield/f/size/28inregularw28in71cml32in81cm,36inregularw36in91cml32in81cm,m32,s30,uk11/trouser_type/chinos.html";s:11:"script_name";s:10:"/index.php";s:4:"skin";s:7:"default";}

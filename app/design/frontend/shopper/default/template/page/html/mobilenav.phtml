@@ -1,0 +1,38 @@
+<div class="mobile-menu hide-desktop" id="icon-nav">
+ 
+    <div class="left menu-icon-wrap">
+        <label for="off-canvas-left-check" id="menu-icon">
+            <div>
+                <span class="title"><?php echo $this->__('Menu'); ?></span>
+                <span class="first"><?php echo $this->__('Menu2'); ?></span>
+                <span class="second"></span>
+                <span class="last"></span>
+            </div>
+        </label>
+    </div>
+ 
+    <div class="right">
+        <div class="links">
+            <?php echo $this->getChildHtml('loginLinks') ?>
+            <span class="div-line">|</span>
+            <a href="#" class="stores-link">
+                <?php echo $this->__('Stores'); ?>
+            </a>
+        </div>
+        <div class="bag-icon-wrap">
+            <a href="<?php echo $this->getUrl('checkout/cart') ?>">
+                <span class="label">
+                    <?php echo $this->__('Bag'); ?>
+                </span>
+                <?php $count = $this->helper('checkout/cart')->getSummaryCount(); ?> <?php /* get total items in cart */?>
+                <?php if ($count==0):?>
+                    <?php echo '<span class="mobile-cart-count">0</span>';?>
+                <?php endif; ?>
+                <?php if ($count>0):?>
+                    <?php echo '<span class="mobile-cart-count">' . $this->__('%s',$count) . '</span>';?>
+                <?php endif; ?>
+            </a>
+        </div>
+    </div>
+ 
+</div>

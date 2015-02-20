@@ -1,0 +1,65 @@
+<?php
+/**
+ * "Seo Layered Navigation" extension for "Magento Commerce" by "EcommerceTeam (www.ecommerce-team.com)"
+ *
+ * @category     Extension
+ * @copyright    Copyright (c) 2014 EcommerceTeam (http://www.ecommerce-team.com)
+ * @author       EcommerceTeam
+ * @version      4.0.0
+ */
+
+
+    /** @var $this EcommerceTeam_Sln_Block_Layer_Filter_Attribute */
+    /** @var $attribute Mage_Catalog_Model_Resource_Eav_Attribute */
+    $attribute = $this->getAttributeModel();
+    /** @var $request EcommerceTeam_Sln_Model_Request */
+    $request   = Mage::getSingleton('ecommerceteam_sln/request');
+    /** @var $helper EcommerceTeam_Sln_Helper_Data */
+    $helper = Mage::helper('ecommerceteam_sln');
+
+    $requestVar        = $attribute->getAttributeCode();
+    $values            = $request->getValue($requestVar);
+    if (!empty($values)) {
+        $values = explode('-', array_shift($values));
+
+        $currentStartValue = intval(isset($values[0]) ? $values[0] : $minValue);
+        $currentEndValue   = intval(isset($values[1]) ? $values[1] : $maxValue);
+    } else {
+        $currentStartValue = null;
+        $currentEndValue   = null;
+    }
+?>
+<?php $this->startJavaScript(); ?>
+<?php
+$nameFrom =  $requestVar . '_from';
+$nameTo   =  $requestVar . '_to';
+$url = Mage::helper('ecommerceteam_sln')->getCustomUrl($requestVar, '%'.$nameFrom.'%-%'.$nameTo.'%', true);
+$functionName = sprintf('%sChangeValue', $requestVar);
+?>
+<?php echo $functionName;?> = function() {
+var url = Base64.decode("<?php echo base64_encode($url); ?>");
+url = url.replace("%<?php echo $nameFrom;?>%", $("<?php echo $nameFrom;?>").value || 0);
+url = url.replace("%<?php echo $nameTo;?>%", $("<?php echo $nameTo;?>").value || 0);
+typeof layered != 'undefined' ? layered.setUrl(url) : setLocation(url);
+}
+<?php $this->endJavaScript(); ?>
+<div class="sln-type-input">
+    <form action="" onsubmit="<?php echo $functionName . '();';?>; return false;">
+        <fieldset class="filter-fieldset">
+            <div class="fields">
+                <div class="from-wrapper">
+                    <label><span><?php echo $this->__('From')?>:</span><input class="input-text" type="text" id="<?php echo $requestVar;?>_from" name="<?php echo $requestVar;?>_from" value="<?php echo $currentStartValue;?>" /></label>
+                </div>
+                <div class="from-wrapper">
+                    <label><span><?php echo $this->__('To')?>:</span><input class="input-text" type="text" id="<?php echo $requestVar;?>_to" name="<?php echo $requestVar;?>_to" value="<?php echo $currentEndValue;?>" /></label>
+                </div>
+            </div>
+            <div class="button-set">
+                <button class="button" type="submit"><span><span><?php echo $this->__('Filter')?></span></span></button>
+                <?php if(!empty($values)): ?>
+                    <a class="resetfilter" href="<?php echo $helper->getRemoveUrl($requestVar);?>"><?php echo $this->__('Reset filter')?></a>
+                <?php endif;?>
+            </div>
+        </fieldset>
+    </form>
+</div>

@@ -1,0 +1,32 @@
+<?php
+/**
+ * "Seo Layered Navigation" extension for "Magento Commerce" by "EcommerceTeam (www.ecommerce-team.com)"
+ *
+ * @category     Extension
+ * @copyright    Copyright (c) 2014 EcommerceTeam (http://www.ecommerce-team.com)
+ * @author       EcommerceTeam
+ * @version      4.0.0
+ */
+
+/** @var EcommerceTeam_Sln_Helper_Layer $helper */
+$helper = Mage::helper('ecommerceteam_sln/layer');
+$filters = $this->getActiveFilters();
+?>
+<?php if(!empty($filters)): ?>
+<div class="currently">
+    <p class="block-subtitle"><?php echo $this->__('Currently Shopping by:') ?></p>
+    <ol>
+    <?php foreach ($filters as $filter): /** @var EcommerceTeam_Sln_Model_Layer_Filter_Item $filter */;?>
+        <?php
+            $frontendType = $filter->getFilter()->getFrontendType();
+            if (!$frontendType || EcommerceTeam_Sln_Model_Attribute::FRONTEND_TYPE_DEFAULT == $frontendType) :?>
+        <li class="filter-<?php echo $filter->getFilter()->getRequestVar()?>">
+            <a href="<?php echo $filter->getRemoveUrl() ?>" title="<?php echo $this->__('Remove This Item') ?>" class="btn-remove <?php echo $helper->isCategoryClearItem($filter) ? 'category-clear' : '';?>"><?php echo $this->__('Remove This Item') ?></a>
+            <span class="label"><?php echo $this->__($filter->getName()) ?>:</span> <?php echo $this->stripTags($filter->getLabel()) ?>
+        </li>
+        <?php endif;?>
+    <?php endforeach; ?>
+    </ol>
+    <div class="actions"><a href="<?php echo $this->getClearUrl() ?>" class="layered-clear"><?php echo $this->__('Clear All') ?></a></div>
+</div>
+<?php endif; ?>

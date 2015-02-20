@@ -1,0 +1,130 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php if (!($_shippingRateGroups = $this->getShippingRates())): ?>
+    <p><?php echo $this->__('Sorry, no quotes are available for this order at this time.') ?></p>
+<?php else: ?>
+<dl class="sp-methods">
+    <?php $_sole = count($_shippingRateGroups) == 1; foreach ($_shippingRateGroups as $code => $_rates): ?>
+        <dt><?php echo $this->getCarrierName($code) ?> <?php /*?>>>>> <?php echo $this->getAddressShippingMethod();?><?php */?></dt>
+        <?php if (Mage::getConfig()->getModuleConfig('Kiala_LocateAndSelect')->is('active', 'true') && $code == 'kiala' /*&& strpos($this->getAddressShippingMethod(), "kiala") !== false*/):?>
+            <?php $line_kiala = $this->getLayout()->createBlock('locateandselect/checkout_onepage_shipping_method_kiala')->setTemplate('kiala/locateandselect/checkout/onepage/shipping_method/kiala.phtml')->setRate(current($_rates))->toHtml() ?>
+            <?php if (strpos($this->getAddressShippingMethod(), "kiala") === false):?>
+                <?php $line_kiala = str_replace('checked="checked"', "", $line_kiala); ?>
+                <?php $line_kiala = str_replace("checked='checked'", "", $line_kiala); ?>
+            <?php endif;?>
+            <?php echo $line_kiala;?>
+        <?php else:?>
+        <dd>
+            <ul>
+            <?php $_sole = $_sole && count($_rates) == 1; foreach ($_rates as $_rate): ?>
+                <li>
+                   <?php if ($_rate->getErrorMessage()): ?>
+                    <ul class="messages"><li class="error-msg"><ul><li><?php echo $_rate->getErrorMessage() ?></li></ul></li></ul>
+                   <?php else: ?>
+                        <?php if (Mage::getConfig()->getModuleConfig('LaPoste_SoColissimoSimplicite')->is('active', 'true') && $code == 'socolissimosimplicite'):?>
+                            <?php if ($_sole) : ?>
+                            <input name="shipping_method" type="radio" value="<?php echo $_rate->getCode() ?>" id="s_method_<?php echo $_rate->getCode() ?>" />
+                            <?php /*?><span class="no-display"><input name="shipping_method" type="radio" value="<?php echo $_rate->getCode() ?>" id="s_method_<?php echo $_rate->getCode() ?>" checked="checked" /></span><?php */?>
+                            <?php else: ?>
+                            <input name="shipping_method" type="radio" value="<?php echo $_rate->getCode() ?>" id="s_method_<?php echo $_rate->getCode() ?>"<?php if($_rate->getCode()===$this->getAddressShippingMethod()) echo ' checked="checked"' ?> class="radio" />
+                            <?php endif; ?>
+                    
+                            <?php
+                            //$_rate = $this->getRate();
+                            $_helper  = $this->helper('socolissimosimplicite');
+                            $_excl = $this->getShippingPrice($_rate->getPrice(), $this->helper('tax')->displayShippingPriceIncludingTax());
+                            ?>
+                            <label for="s_method_<?php echo $_rate->getCode() ?>"><?php echo $_rate->getMethodTitle() ?> <?php echo $_excl; ?></label> 
+                            
+                            <a id="so-colissimo" href="javascript:void(0);" title="Modify" onclick="$('s_method_<?php echo $_rate->getCode() ?>').click();"><?php echo $this->__('Select / Modify');?></a>
+                            <div class="socolissimo_message">
+                            <?php echo $_helper->getSelectMessage() ?>
+                            </div>
+                            <?php if($_rate->getCode()===$this->getAddressShippingMethod()):?>
+                            <div class="j2t-delivery-address">
+                                <div class="j2t-delivery-address-title"><strong><?php echo $this->__("Your delivery location:");?></strong></div>
+                                <div class="j2t-delivery-address-content"><?php echo $this->getQuote()->getShippingAddress()->format('j2thtml') ?></div>
+                            </div>
+                            <?php endif;?>
+                            
+                        <?php else:?>
+                            <?php if ($_sole) : ?>
+                            <span class="no-display"><input name="shipping_method" type="radio" value="<?php echo $_rate->getCode() ?>" id="s_method_<?php echo $_rate->getCode() ?>" checked="checked" /></span>
+                            <?php else: ?>
+                            <input name="shipping_method" type="radio" value="<?php echo $_rate->getCode() ?>" id="s_method_<?php echo $_rate->getCode() ?>"<?php if($_rate->getCode()===$this->getAddressShippingMethod()) echo ' checked="checked"' ?> class="radio" />
+                            <?php endif; ?>
+                            
+                            
+                            <label for="s_method_<?php echo $_rate->getCode() ?>"><?php echo $_rate->getMethodTitle() ?>
+                            <?php $_excl = $this->getShippingPrice($_rate->getPrice(), $this->helper('tax')->displayShippingPriceIncludingTax()); ?>
+                            <?php $_incl = $this->getShippingPrice($_rate->getPrice(), true); ?>
+                            <?php echo $_excl; ?>
+                            <?php if ($this->helper('tax')->displayShippingBothPrices() && $_incl != $_excl): ?>
+                                (<?php echo $this->__('Incl. Tax'); ?> <?php echo $_incl; ?>)
+                            <?php endif; ?>
+                            </label>
+                        <?php endif;?>
+                   <?php endif ?>
+                </li>
+            <?php endforeach; ?>
+            </ul>
+        </dd>
+        <?php endif?>
+        
+    <?php endforeach; ?>
+</dl>
+<?php if (Mage::getConfig()->getModuleConfig('Kiala_LocateAndSelect')->is('active', 'true')):?>
+    <script type="text/javascript">
+//<![CDATA[
+    <?php if (!empty($shippingCodePrice)): ?>
+        var shippingCodePrice = {<?php echo implode(',',$shippingCodePrice); ?>};
+    <?php endif; ?>
+
+    $$('input[type="radio"][name="shipping_method"]').each(function(el){
+        Event.observe(el, 'click', function(){
+            if (el.checked == true) {
+                var getShippingCode = el.getValue();
+                <?php if (!empty($shippingCodePrice)): ?>
+                    var newPrice = shippingCodePrice[getShippingCode];
+                    if (!lastPrice) {
+                        lastPrice = newPrice;
+                        quoteBaseGrandTotal += newPrice;
+                    }
+                    if (newPrice != lastPrice) {
+                        quoteBaseGrandTotal += (newPrice-lastPrice);
+                        lastPrice = newPrice;
+                    }
+                <?php endif; ?>
+                checkQuoteBaseGrandTotal = quoteBaseGrandTotal;
+                return false;
+            }
+       });
+    });
+//]]>
+</script>
+<?php endif;?>
+<?php endif; ?>

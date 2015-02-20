@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+    <name>Fooman_GoogleAnalyticsPlus</name>
+    <version>0.11.5</version>
+    <stability>beta</stability>
+    <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Additional features for the default GoogleAnalytics module.</summary>
+    <description>Additional features for the default GoogleAnalytics module.
+
+Current improvements:
+
+Track every individual page - including sections retrieved via AJAX during one-page-checkout
+Support for specifying DomainName to use
+Track to a secondary profile
+Track the actual typed in keywords by your customers when bidding on keywords
+
+Optionally track Adwords conversions for purchases
+
+First Touch tracking</description>
+    <notes>0.11.2</notes>
+    <authors><author><name>Kristof Ringleff</name><user>auto-converted</user><email>kristof@fooman.co.nz</email></author><author><name>Kristof Ringleff</name><user>auto-converted</user><email>kristof@fooman.co.nz</email></author></authors>
+    <date>2013-02-20</date>
+    <time>09:39:04</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Fooman_GoogleAnalyticsPlus.xml" hash="5da209561150e67ffe09e23518d86df3"/></dir></target><target name="magecommunity"><dir name="Fooman"><dir name="GoogleAnalyticsPlus"><dir name="Block"><file name="Ga.php" hash="5a62eb0caf5ade1e29392e5f04be1a4e"/><file name="GaConversion.php" hash="71a8bf21bc65a081d429f9eee6e7951a"/></dir><dir name="Helper"><file name="Data.php" hash="25075bb119ffdbc85cb17fc15f0417ff"/></dir><dir name="Model"><dir name="System"><file name="Language.php" hash="4845ccd2943cf6be7833056feafb9aec"/></dir></dir><dir name="etc"><file name="config.xml" hash="eba8af339e543abe837d5351025763db"/><file name="system.xml" hash="58d7a642740ce42d60d6a092256463a0"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="googleanalyticsplus.xml" hash="3952d2c44b81b1a150d22d17040d3ed2"/></dir><dir name="template"><dir name="googleanalyticsplus"><file name="ga-conversion.phtml" hash="41a9fe28266c937b1719d25d27c8f22a"/></dir></dir></dir></dir></dir></target><target name="mage"><dir name="js"><dir name="GoogleAnalyticsPlus"><file name="distilled.FirstTouch.js" hash="d4a642bab1d4414ac3eca1df14c596c6"/></dir></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>

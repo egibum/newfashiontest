@@ -1,0 +1,5 @@
+a:4:{i:0;s:53:"Mage registry key "application_params" already exists";i:1;s:446:"#0 /var/www/vhosts/new-fashion.info/httpdocs/app/Mage.php(222): Mage::throwException('Mage registry k...')
+#1 /var/www/vhosts/new-fashion.info/httpdocs/app/code/core/Mage/Core/Model/App.php(338): Mage::register('application_par...', Array)
+#2 /var/www/vhosts/new-fashion.info/httpdocs/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#3 /var/www/vhosts/new-fashion.info/httpdocs/index.php(95): Mage::run('???base???', '???website???')
+#4 {main}";s:3:"url";s:1:"/";s:11:"script_name";s:10:"/index.php";}

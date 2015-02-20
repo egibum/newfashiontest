@@ -1,0 +1,551 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Product view template
+ *
+ * @see Mage_Catalog_Block_Product_View
+ * @see Mage_Review_Block_Product_View
+ */
+?>
+<?php
+$_helper = $this->helper('catalog/output');
+$_product = $this->getProduct();
+$enable_upsell =  Mage::getStoreConfig('shoppersettings/labels/enable_upsell');
+$replace_upsell =  Mage::getStoreConfig('shoppersettings/labels/replace_upsell');
+
+$helper = $this->helper('shoppersettings/image');
+list($defaultImgX, $defaultImgY) = $helper->getDefaultSize();
+list($imgX, $imgY) = $helper->getMainSize();
+if ( $imgX > 800 ) {
+    $imgX = 800;
+    $imgY = $helper->calculateHeight($imgX);
+}
+
+$product_img_box_width = $defaultImgX;
+if ( $defaultImgX != $imgX ) {
+    $product_img_box_width = $imgX;
+}
+//add image border
+$product_img_box_width += 18;
+?>
+<?php if ($_category = $_product->getCategory()): ?>
+<div class="back-button">
+    <button onclick="history.back();" class="link" title="<?php echo $this->__('Back') ?>" type="link">
+        <span>
+            <span><?php echo $this->__('<< Back') ?></span>
+        </span>
+    </button>
+</div>
+<?php endif;?>
+<?php
+if (!$_category = Mage::registry('current_category')) {
+    $_product = Mage::getSingleton( 'catalog/product' )->load( $_product->getId() );
+    $categories=$_product->getCategoryIds();
+    $_category = Mage::getModel('catalog/category')->load($categories[0]);
+}
+if ($_category) {
+echo '<div class="product-category-title">'.$_category->getName().'</div>';
+}
+ ?>
+
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+<?php echo $this->getChildHtml('global_messages') ?>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+<div class="product-view">
+    <div class="product-essential">
+    <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+        <div class="no-display">
+            <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+            <input type="hidden" name="related_product" id="related-products-field" value="" />
+        </div>
+
+        <div class="product-img-box" style="width:<?php echo $product_img_box_width; ?>px">
+			<link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('js/owl/owl.carousel.css') ?>" />
+			<link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('js/owl/owl.theme.css') ?>" />
+			<script src=""></script>
+			<script src="<?php echo $this->getSkinUrl('js/owl/owl.carousel.js') ?>"></script>
+            <?php echo $this->helper('shoppersettings')->getLabel($_product);  ?>
+            <?php echo $this->getChildHtml('media') ?>
+            
+            <!-- added html by vasu -->
+            
+            <div class="v-slider">
+              <div id="owl-demo" class="owl-carousel" style="">
+				<?php
+	            	foreach($_product->getMediaGalleryImages() as $image){
+	            		//$image->resize(200, 100);
+	            ?>
+	            <?php		
+	            		echo '<div class="item"><img src="'.$this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $image->getFile())->resize(640,640).'" alt="'.$this->htmlEscape($image->getLabel()).'" width="640" height="640"></div>';
+	            	}
+	            ?>
+                
+              	</div>
+              </div>
+  
+
+    
+    
+    <style>
+    #owl-demo .item img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .v-slider {
+    	display: none;
+    }
+    
+    
+    @media (max-width: 767px){
+		.v-slider{
+			display:block;
+		}
+		.product-image {
+			display: none;
+		}
+		.more-views {
+			display: none;
+		}
+	}
+    </style>
+
+
+    <script>
+    /**
+ * @author vasu naman
+ */
+var $j = jQuery.noConflict();
+    $j(document).ready(function() {
+      $j("#owl-demo").owlCarousel({
+
+      navigation : true,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem : true
+
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+
+      });
+    });
+    </script>
+          <script>
+      /**
+       * author : vasu naman
+       */
+	
+</script>
+
+    
+
+
+            
+            <!-- added HTML by vasu ends here -->
+            
+            
+            
+        </div>
+        <!-- MORE FROM BLOCK -->
+        <div class="more-from hidden-xs">
+            <div class="title"><h3><?php echo $this->__('More From') ?></h3></div>
+            <div class="content">
+                <?php echo $this->getMoreFrom($_product->getCategoryIds(),$_product->getAttributeText('manufacturer')); ?>
+            </div>
+        </div>
+        <!-- MORE FROM BLOCK -->
+
+        <div class="product-shop">
+		<div itemscope itemtype="http://schema.org/Product">
+            <?php
+            $output = '';
+            switch ($replace_upsell) {
+                case 'always':
+                    $output = $this->getChildHtml('queldorei_product_additional');
+                    break;
+                case 'never':
+                    if ($enable_upsell) $output = $this->getChildHtml('upsell_products');
+                    break;
+                case 'only':
+                    if ($enable_upsell) $output = $this->getChildHtml('upsell_products');
+                    if ( empty($output) ) $output = $this->getChildHtml('queldorei_product_additional');
+                    break;
+            }
+            if(!empty($output)){
+                echo '<div class="product-additional">'.$output.'</div>';
+            }
+            ?>
+            <div class="product-shop-info">
+                <div class="product-name">
+                    <h1 itemprop="name" ><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+                </div>
+                <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
+
+                <?php echo $this->getChildHtml('alert_urls') ?>
+                <?php echo $this->getChildHtml('product_type_data') ?>
+                <?php echo $this->getTierPriceHtml() ?>
+                <?php echo $this->getChildHtml('extrahint') ?>
+<div id="product_social"><script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5347f4871e3c511d"></script>
+<div class="addthis_sharing_toolbox"></div></div>
+                <?php if (!$this->hasOptions()):?>
+                    <div class="add-to-box">
+                        <?php if($_product->isSaleable()): ?>
+                            <?php echo $this->getChildHtml('addtocart') ?>
+                        <?php endif; ?>
+                    </div>
+                    <?php echo $this->getChildHtml('extra_buttons') ?>
+                <?php endif; ?>
+             <div id="size_button"><button type="button" onclick="myFunction()">Size Guide</link>
+
+</div>
+             <div id="delivery_button"><button type="button" onclick="myFunction2()"><p>FREE UK DELIVERY >></p></link>
+
+</div>
+
+                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                    <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+                <?php endif;?>
+
+                <?php echo $this->getChildHtml('addto') ?>
+   <?php if(!$_product->isGrouped()): ?>
+                <div class="qty-container clearfix">
+                    <label for="qty"><?php echo $this->__('Qty') ?>:</label>
+                    <input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->__('Qty') ?>" class="input-text qty" />
+                </div>
+                <?php endif; ?>
+
+                <?php if ($_product->getShortDescription()):?>
+                <div class="short-description">
+                    <div class="std" itemprop="description" ><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+                </div>
+
+                <?php endif;?>
+                                <?php echo $this->getChildHtml('other');?>
+                                <?php
+/* to override the default configurable options template  */
+
+//echo ;
+
+include_once 'attributeSwatches.php';
+//$_d = $this->getJsonConfig();
+$_json_config = addAttributeSwatches($this->getJsonConfig());
+$_product = $this->getProduct();
+?>
+
+
+
+<?php if ($_product->isSaleable() && count($_json_config["attributes"])): ?>
+
+    <dl id="options-container-<?php echo $_product->getId(); ?>">
+
+        <?php foreach ($_json_config["attributes"] as $_attribute):  ?>
+
+            <dt id="label-attribute-<?php echo $_attribute["id"] ?>"><label class="required"><em>*</em><?php echo $_attribute["label"] ?></label><span class="selected-label">&nbsp;</span>   </dt>
+            <dd>
+                <?php
+                /* WILL DISPLAY THE COLOR SWATCHES AND ALL THE CUSTOM OPTION SELECTORS HERE */
+                if (in_array($_attribute["swatch_type"], array("image", "child", "label"))) {
+                    ?>
+                    <div id="attribute-<?php echo $_attribute["id"] ?>-container" class="product-swatches-container">
+                        <ul id="swatches-options-<?php echo $_attribute["id"] ?>" class="has-swatches" <?php /* if ($_attribute["swatch_type"] == "image") echo ' class="has-swatches"'*/ ?>>
+                                <?php
+                                /* preload swatches from product gallery if necessary */
+                                $_gallery_images = array();
+                                $_load_swatch_from_gallery = Mage::getStoreConfig("attributeswatches/settings/images") == "gallery";
+                                if ($_attribute["swatch_type"] == "child" && $_load_swatch_from_gallery) {
+                                    $_gallery = $_product->getSwatchesGalleryImages($_attribute["id"]);
+                                    foreach ($_gallery as $_image) {
+                                        $_gallery_images[$_image->getAttributeValue()] = $_image->getFile();
+                                    }
+                                }
+                                foreach ($_attribute["options"] as $_option) {
+                                    ?>
+                                <li>
+                                    <?php
+                                    switch ($_attribute["swatch_type"]) {
+                                        case "child":
+                                            $_image = "";
+                                            if ($_load_swatch_from_gallery) {
+                                                if(isset($_gallery_images[$_option["id"]])){
+                                                $_image = $this->helper('catalog/image')->init($_product, 'image', $_gallery_images[$_option["id"]]);
+                                                }else{
+                                                    $_image = $this->helper('catalog/image')->init($_product, 'image');
+                                                }
+                                            } else {
+                                                $_image_product = Mage::getModel('catalog/product')->load($_option["products"][0]);
+                                                $_image = $this->helper('catalog/image')->init($_image_product, 'image');
+                                            }
+                                            ?>
+                                            <a class="" title="<?php echo $_option["label"] ?>" data-original-title="<?php echo $_option["label"] ?>"  rel="<?php echo $_option["id"] ?>" id="swatches_option_value_<?php echo $_option["id"] ?>" href="<?php echo $_image; ?>" rev="<?php echo $_image->resize(256); ?>">
+                                                <?php
+                                                echo "<img src='" . $_image->resize(150) . "' title='" . $_option["label"] . "' alt='" . $_option["label"] . "'/>";
+                                                ?>
+                                            </a>
+                                            <span class="tooltip-container"><span class="tooltip"><span><?php echo $_option["label"] ?></span></span></span>
+                                            <?php
+                                            break;
+                                        case 'image':
+                                            ?>
+                                            <a class="" style="<?php echo $_option["swatch_value"] ?>" data-original-title="<?php echo $_option["label"] ?>"  title="<?php echo $_option["label"] ?>" rel="<?php echo $_option["id"] ?>" id="swatches_option_value_<?php echo $_option["id"] ?>" href="#" rev="">
+                                                <span><?php echo $_option["label"] ?></span>
+                                            </a>
+                                            <span class="tooltip-container"><span class="tooltip"><span><?php echo $_option["label"] ?></span></span></span>
+                                            <?php
+                                            break;
+                                        case 'label':
+                                            ?>
+                                            <a class="" title="<?php echo $_option["label"] ?>" data-original-title="<?php echo $_option["label"] ?>"   rel="<?php echo $_option["id"] ?>" id="swatches_option_value_<?php echo $_option["id"] ?>" href="#">
+                                                <?php echo $_option["label"] ?>
+                                            </a>
+                                            <?php
+                                            break;
+                                    }
+                                    ?>
+                                </li>
+                                <?php
+                            }
+                            ?>
+                        </ul>
+                    </div>
+                    <?php
+                }
+                /* Eof MAIN SWATCHES CODE */
+                ?>
+                <div class="input-box">
+                    <select name="super_attribute[<?php echo $_attribute["id"] ?>]" id="attribute<?php echo $_attribute["id"] ?>" class="configurable-option-select required-entry super-attribute-select  swatches-type-<?php echo $_attribute["swatch_type"]; ?> <?php echo (($_attribute["hideselect"]) ? "hideselect" : ""); ?> <?php echo (($_attribute["switchgallery"]) ? "switch-gallery" : ""); ?>">
+                        <option value=""><?php echo $this->__('Select Size') ?></option>
+                    </select>
+                </div>
+                <div class="clearer">&nbsp;</div>
+            </dd>
+        <?php endforeach; ?>
+    </dl>
+    <script type="text/javascript">
+        function out_of_stock_string() {
+            return "<?php echo $this->__(" (Out of Stock)"); ?>";
+        }
+
+        var mng_Config = null;
+        var spConfig = null;
+
+        jQuery(document).ready(function() {
+            window.mng_Config = <?php echo Mage::helper('core')->jsonEncode($_json_config); ?>;
+            window.mng_Config.containerId = 'options-container-<?php echo $_product->getId(); ?>';
+            window.spConfig = new Product.Config(window.mng_Config);
+            window.addNewConfigurableProductMethods();
+            window.enableSwatchesOptions("first");
+            window.swatchesSelectDefaultValueOnHash();
+        });
+
+
+
+    </script>
+<?php endif; ?>
+
+                <div class="clear"></div>
+                <?php echo $this->getChildHtml('shopper_product_addthis') ?>
+            </div>
+      	<!-- Rich snippets block -->
+				<?php echo $this->getLayout()
+					->createBlock('richsnippets/product')
+					->setTemplate('tm/richsnippets/richsnippets_view.phtml')
+					->toHtml() ?>
+			 <!-- Rich snippets block -->  
+			</div> 
+	    <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+	        <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+	    <?php endif;?>
+    </form>
+    <script>
+function myFunction() {
+    window.open("http://new-fashion.co.uk/extras/size_guide/mens-size-guide.html", "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=000, left=0, width=485, height=560");
+}
+</script>
+    <script>
+function myFunction2() {
+    window.open("http://new-fashion.co.uk/extras/delivery.html", "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=000, left=0, width=485, height=560");
+}
+</script>
+    <script type="text/javascript">
+    //<![CDATA[
+
+		<?php if ( !Mage::getStoreConfig('shoppersettings/ajax/cart', Mage::app()->getStore()->getId())) : ?>
+
+        var productAddToCartForm = new VarienForm('product_addtocart_form');
+        productAddToCartForm.submit = function(button, url) {
+            if (this.validator.validate()) {
+                var form = this.form;
+                var oldUrl = form.action;
+
+                if (url) {
+                    form.action = url;
+                }
+                var e = null;
+                try {
+                    this.form.submit();
+                } catch (e) {
+                }
+                this.form.action = oldUrl;
+                if (e) {
+                    throw e;
+                }
+
+                if (button && button != 'undefined') {
+                    button.disabled = true;
+                }
+            }
+        }.bind(productAddToCartForm);
+
+        <?php else : ?>
+
+        function setAjaxData(data,iframe){
+            //showMessage(data.message);
+            if (data.status != 'ERROR' && jQuery('.cart-top-container').length) {
+                jQuery('.cart-top-container').replaceWith(data.cart_top);
+            }
+        }
+
+        function showMessage(message)
+        {
+            jQuery('body').append('<div class="alert"></div>');
+            var $alert = jQuery('.alert');
+            $alert.slideDown(400);
+            $alert.html(message).append('<button></button>');
+            jQuery('button').click(function () {
+                $alert.slideUp(400);
+            });
+            $alert.slideDown('400', function () {
+                setTimeout(function () {
+                    $alert.slideUp('400', function () {
+                        jQuery(this).slideUp(400, function(){ jQuery(this).detach(); })
+                    });
+                }, 7000)
+            });
+        }
+
+        var productAddToCartForm = new VarienForm('product_addtocart_form');
+        productAddToCartForm.submit = function (button, url) {
+            if (this.validator.validate()) {
+                var form = this.form;
+                var oldUrl = form.action;
+                if (url) {
+                    form.action = url;
+                }
+                var e = null;
+                // Start of our new ajax code
+                if (!url) {
+                    url = jQuery('#product_addtocart_form').attr('action');
+                }
+                url = url.replace("checkout/cart", "ajax/index"); // New Code
+                var data = jQuery('#product_addtocart_form').serialize();
+                data += '&isAjax=1';
+                jQuery('#ajax_loading'+ jQuery('#product_addtocart_form').find("[name='product']").val() ).css('display', 'block');
+                try {
+                    jQuery.ajax({
+                        url:url,
+                        dataType:'jsonp',
+                        type:'post',
+                        data:data,
+                        success:function (data) {
+                            jQuery('#ajax_loading'+ jQuery('#product_addtocart_form').find("[name='product']").val() ).css('display', 'none');
+                            setAjaxData(data, true);
+                            showMessage(data.message);
+                        }
+                    });
+                } catch (e) {
+                }
+                // End of our new ajax code
+                this.form.action = oldUrl;
+
+                if (e) {
+                    throw e;
+                }
+            }
+        }.bind(productAddToCartForm);
+
+        <?php endif; ?>
+
+	    productAddToCartForm.submitLight = function(button, url){
+	        if(this.validator) {
+	            var nv = Validation.methods;
+	            delete Validation.methods['required-entry'];
+	            delete Validation.methods['validate-one-required'];
+	            delete Validation.methods['validate-one-required-by-name'];
+	            if (this.validator.validate()) {
+	                if (url) {
+	                    this.form.action = url;
+	                }
+	                this.form.submit();
+	            }
+	            Object.extend(Validation.methods, nv);
+	        }
+	    }.bind(productAddToCartForm);
+    //]]>
+    </script>
+    </div>
+
+	<!-- ADDITIONAL -->
+	<?php echo $this->getChildHtml('product_additional_data') ?>
+	<!-- ADDITIONAL -->
+
+    <?php
+    $output = '';
+    switch ($replace_upsell) {
+        case 'always':
+            break;
+        case 'never':
+            if ($enable_upsell) $output = $this->getChildHtml('upsell_products2');
+            break;
+        case 'only':
+            if ($enable_upsell) $output = $this->getChildHtml('upsell_products2');
+            break;
+    }
+    if(!empty($output)){
+        echo $output;
+    }
+    ?>
+
+    <?php
+    $after_tabs_block = Mage::getModel('cms/block')
+	    ->setStoreId( Mage::app()->getStore()->getId() )
+	    ->load('shopper_after_tabs');
+    if($after_tabs_block->getIsActive()){
+        echo '<div class="after-tabs-block additional-block">'.$this->getLayout()->createBlock('cms/block')->setBlockId('shopper_after_tabs')->toHtml().'</div>';
+    }
+    ?>
+
+	<!-- RELATED -->
+	<?php echo $this->getChildHtml('content_related') ?>
+	<!-- RELATED -->
+
+</div>

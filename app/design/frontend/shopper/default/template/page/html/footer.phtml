@@ -1,0 +1,149 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+$config = Mage::getStoreConfig('shoppersettings/social', Mage::app()->getStore()->getId());
+$appearance = Mage::getStoreConfig('shoppersettings/appearance', Mage::app()->getStore()->getId());
+$route = Mage::app()->getFrontController()->getRequest()->getRouteName();
+$action = Mage::app()->getFrontController()->getRequest()->getActionName();
+?>
+        <script>
+      /**
+       * author : vasu naman
+       */
+	   var $j = jQuery.noConflict();
+	$j( document ).ready(function() {
+			$j('.product-swatches-container ul li a').click(function(){
+	var clickedIndex =  $j(this).index('.product-swatches-container ul li a');
+        clickedIndex++;
+
+$j('.MagicThumb-swap img').each(function(){
+console.log('I am inside loop');
+
+console.log(clickedIndex)
+if($j(this).attr('alt') == clickedIndex.toString()){
+console.log('I am inside if');
+console.log($j(this).parent().parent())
+   $j('.MagicScrollContainer div').first().prepend($j(this).parent().parent());
+}
+})			
+				$j('.MagicToolboxContainer').children().children()[0].src =   $j(this).attr('href');
+
+				$j('.MagicThumb-expanded').children().children()[0].src = $j(this).attr('href');
+
+
+
+			});
+	});
+</script>
+<!-- footer BOF -->
+<div class="footer-container">
+    <?php if ( !($route == 'customer' && ($action == 'login' || $action == 'forgotpassword' || $action == 'create')) ) : ?>
+    </div>
+    <div class="footer-info">
+        <div class="row clearfix facebook">
+
+
+            <div class="grid">
+            <?php if ( empty($config['twitter_replace']) ) { ?>
+                <h4><?php echo $this->__('From Twitter');?></h4>
+            <?php } else {
+                $cms_block = Mage::getModel('cms/block')
+		            ->setStoreId( Mage::app()->getStore()->getId() )
+		            ->load($config['twitter_replace']);
+	            if($cms_block->getIsActive()) {
+		            echo $this->getLayout()->createBlock('cms/block')->setBlockId($config['twitter_replace'])->toHtml();
+	            }
+            } ?>
+            </div>
+            <div class="grid_3 information">
+	            <?php $cms_block = Mage::getModel('cms/block')
+		            ->setStoreId( Mage::app()->getStore()->getId() )
+		            ->load('shopper_footer_information');
+	            if($cms_block->getIsActive()) {
+		            echo $this->getLayout()->createBlock('cms/block')->setBlockId('shopper_footer_information')->toHtml();
+	            }
+	            ?>
+            </div>
+            <div class="grid_3 contact">
+	            <?php $cms_block = Mage::getModel('cms/block')
+		            ->setStoreId( Mage::app()->getStore()->getId() )
+		            ->load('shopper_footer');
+	            if($cms_block->getIsActive()) {
+		            echo $this->getLayout()->createBlock('cms/block')->setBlockId('shopper_footer')->toHtml();
+	            }
+	            ?>
+            </div>
+
+        </div>
+    </div>
+    <?php endif; // ( !($route == 'customer' && $action == 'login') ) : ?>
+    <footer class="row clearfix">
+        <div class="grid_6">
+            <address><?php echo $this->getCopyright(); ?></address>
+        </div>
+        <div class="grid_6">
+            <?php echo $this->getChildHtml('shopper_footer_links'); ?>
+        </div>
+    </footer>
+</div>
+<!-- footer EOF -->
+		<style>
+		.slideshow { margin: auto }
+		.slideshow img { width: 100%; height: 115px; padding: 2px; }
+		div.responsive img { width: auto; height: auto }
+		.cycle-pager { position: static; margin-top: 5px }
+		div.vertical { width: 100% }
+		</style>
+
+<script type="text/javascript" src="<?php echo Mage::getBaseUrl('js') . 'queldorei/bigSlide.min.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo Mage::getBaseUrl('js') . 'jquery.cycle2.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo Mage::getBaseUrl('js') . 'jquery.cycle2.carousel.js'; ?>"></script>
+
+
+<script>
+var $j = jQuery.noConflict();
+    $j(document).ready(function() {
+        $j('.menu-link').bigSlide({			
+		});
+    });
+    
+</script>
+<script>
+	$j.fn.cycle.defaults.autoSelector = '.slideshow';
+	
+	$j(".slideshow").mouseover(function() { 
+		$j('.slideshow').cycle('pause');
+	});
+		$j(".slideshow").mouseout(function() {
+			 $j('.slideshow').cycle('resume'); 
+		}); 
+	
+	
+	
+	
+	
+	
+	
+</script>

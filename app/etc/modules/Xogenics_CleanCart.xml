@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Xogenics_CleanCart>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Xogenics_CleanCart>
+	</modules>
+</config> 

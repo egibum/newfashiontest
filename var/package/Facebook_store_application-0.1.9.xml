@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Facebook_store_application</name>
+    <version>0.1.9</version>
+    <stability>stable</stability>
+    <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This module freely creates the Magento API required for importing your store into Facebook using StoreYa.</summary>
+    <description>This module freely creates the Magento API required for importing your store into Facebook using StoreYa.</description>
+    <notes>Minor bug fixes for versions 1.4 and 1.7</notes>
+    <authors><author><name>StoreYa.com</name><user>auto-converted</user><email>support@storeya.com</email></author></authors>
+    <date>2013-04-23</date>
+    <time>06:13:01</time>
+    <contents><target name="magelocal"><dir name="Akdev"><dir name="Storeya"><dir name="Block"><file name="Storeya.php" hash="9e59143a2af62e324e666b798906491a"/><file name="storeya.phtml" hash="c790c3bbbdfa61e0a67359cf665a1861"/></dir><dir name="Helper"><file name="Data.php" hash="67604218d3b6854ad3a10c969fda2050"/></dir><dir name="controllers"><file name="AdminController.php" hash="64c0f21d81eb93146c0a79e4185e687a"/><file name="IndexController.php" hash="ebae9de7452caeeebd6bcb80dddcb0e5"/></dir><dir name="etc"><file name="config.xml" hash="20a7dd527279d81e5851ec627910d1d9"/><file name="storeya_api.xml" hash="4314c57e61790484c08bb445d501b646"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Akdev_Storeya.xml" hash="869952b96739a3eff712f8947c40af01"/></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>

@@ -1,0 +1,841 @@
+2014-08-04T14:05:57+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [DoDirectPayment] => Array
+        (
+            [PAYMENTACTION] => Sale
+            [IPADDRESS] => 109.153.137.34
+            [RETURNFMFDETAILS] => 1
+            [AMT] => 21.98
+            [CURRENCYCODE] => GBP
+            [INVNUM] => 100000056
+            [NOTIFYURL] => http://new-fashion.co.uk/paypal/ipn/
+            [EMAIL] => mattaallen97@gmail.com
+            [CREDITCARDTYPE] => ****
+            [ACCT] => ****
+            [EXPDATE] => ****
+            [CVV2] => ****
+            [ISSUENUMBER] => 
+            [AUTHSTATUS3DS] => Y
+            [MPIVENDOR3DS] => Y
+            [CAVV] => AAABAYeVMihWaJYTB5UyEG2ZiSI=
+            [ECI3DS] => 05
+            [XID] => ZEsxM2hPNDB5bGs2cjAyODQxdTA=
+            [ITEMAMT] => 19.99
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 1.99
+            [BUSINESS] => 
+            [FIRSTNAME] => Matthew
+            [LASTNAME] => Allen
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => GB
+            [STATE] => Cheshire
+            [CITY] => Macclesfield
+            [STREET] => 23 Beverley Way
+            [ZIP] => sk10 2wp
+            [PHONENUM] => 07500043142
+            [SHIPTOCOUNTRYCODE] => GB
+            [SHIPTOSTATE] => Cheshire
+            [SHIPTOCITY] => Macclesfield
+            [SHIPTOSTREET] => 23 Beverley Way
+            [SHIPTOZIP] => sk10 2wp
+            [SHIPTOPHONENUM] => 07500043142
+            [SHIPTOSTREET2] => 
+            [STREET2] => 
+            [SHIPTONAME] => Matthew Allen
+            [METHOD] => DoDirectPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_DP_UK
+        )
+
+    [response] => Array
+        (
+            [TIMESTAMP] => 2014-08-04T14:10:25Z
+            [CORRELATIONID] => 2aea3747ad956
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 12194268
+            [AMT] => 21.98
+            [CURRENCYCODE] => GBP
+            [AVSCODE] => F
+            [CVV2MATCH] => M
+            [VPAS] => 2
+            [ECIAUTH] => 05
+            [TRANSACTIONID] => 3C976447GU9490017
+        )
+
+    [__pid] => 10600
+)
+
+2014-08-04T14:05:57+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetTransactionDetails] => Array
+        (
+            [TRANSACTIONID] => 3C976447GU9490017
+            [METHOD] => GetTransactionDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_DP_UK
+        )
+
+    [response] => Array
+        (
+            [RECEIVERBUSINESS] => newfashionofficial@gmail.com
+            [RECEIVEREMAIL] => newfashionofficial@gmail.com
+            [RECEIVERID] => D69YT7XN65SAA
+            [EMAIL] => mattaallen97@gmail.com
+            [PAYERID] => DFJK87CCTPPHA
+            [PAYERSTATUS] => unverified
+            [COUNTRYCODE] => GB
+            [SHIPTONAME] => Matthew Allen
+            [SHIPTOSTREET] => 23 beverley way
+            [SHIPTOCITY] => macclesfield
+            [SHIPTOSTATE] => Cheshire
+            [SHIPTOCOUNTRYCODE] => GB
+            [SHIPTOCOUNTRYNAME] => United Kingdom
+            [SHIPTOZIP] => sk10 2wp
+            [ADDRESSOWNER] => PayPal
+            [ADDRESSSTATUS] => Unconfirmed
+            [INVNUM] => 100000056
+            [SALESTAX] => 0.00
+            [SHIPAMOUNT] => 1.99
+            [SHIPHANDLEAMOUNT] => 0.00
+            [ECI3DS] => 5
+            [CAVV] => AAABAYeVMihWaJYTB5UyEG2ZiSI=
+            [XID] => ZEsxM2hPNDB5bGs2cjAyODQxdTA=
+            [MPIVENDOR3DS] => Y
+            [AUTHSTATUS3DS] => Y
+            [VPAS] => 2
+            [ECISUBMITTED3DS] => 05
+            [TIMESTAMP] => 2014-08-04T14:10:26Z
+            [CORRELATIONID] => 27b14a731a424
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 11950065
+            [FIRSTNAME] => Matthew
+            [LASTNAME] => Allen
+            [TRANSACTIONID] => 3C976447GU9490017
+            [RECEIPTID] => 0393-0418-5024-3402
+            [TRANSACTIONTYPE] => webaccept
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2014-08-04T14:10:25Z
+            [AMT] => 21.98
+            [FEEAMT] => 0.84
+            [TAXAMT] => 0.00
+            [CURRENCYCODE] => GBP
+            [PAYMENTSTATUS] => Completed
+            [PENDINGREASON] => None
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [PROTECTIONELIGIBILITYTYPE] => None
+            [L_QTY0] => 1
+            [L_TAXAMT0] => 0.00
+            [L_CURRENCYCODE0] => GBP
+        )
+
+    [__pid] => 10600
+)
+
+2014-08-04T14:06:13+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [address_city] => macclesfield
+            [address_country] => United Kingdom
+            [address_country_code] => GB
+            [address_name] => Matthew Allen
+            [address_state] => Cheshire
+            [address_status] => unconfirmed
+            [address_street] => 23 beverley way
+            [address_zip] => sk10 2wp
+            [business] => newfashionofficial@gmail.com
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Matthew
+            [handling_amount] => 0.00
+            [invoice] => 100000056
+            [ipn_track_id] => 2aea3747ad956
+            [item_name] => 
+            [item_number] => 
+            [last_name] => Allen
+            [mc_currency] => GBP
+            [mc_fee] => 0.84
+            [mc_gross] => 21.98
+            [notify_version] => 3.8
+            [payer_email] => mattaallen97@gmail.com
+            [payer_id] => DFJK87CCTPPHA
+            [payer_status] => unverified
+            [payment_date] => 07:10:25 Aug 04, 2014 PDT
+            [payment_fee] => 
+            [payment_gross] => 
+            [payment_status] => Completed
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity] => 1
+            [receipt_id] => 0393-0418-5024-3402
+            [receiver_email] => newfashionofficial@gmail.com
+            [receiver_id] => D69YT7XN65SAA
+            [residence_country] => GB
+            [shipping] => 1.99
+            [tax] => 0.00
+            [transaction_subject] => 
+            [txn_id] => 3C976447GU9490017
+            [txn_type] => web_accept
+            [verify_sign] => AVfSQ5PLCwiNa3zy.rOy.Na-EbloAdymxzPBbfUooqKWzU2NJ5STUCOy
+        )
+
+    [postback_to] => https://www.paypal.com/webscr
+    [__pid] => 10610
+)
+
+2014-08-06T15:33:30+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [address_city] => CHIPPENHAM
+            [address_country] => United Kingdom
+            [address_country_code] => GB
+            [address_name] => Natalie Chaloner
+            [address_state] => Wiltshire
+            [address_street] => 2 Newton Abbot Close,
+            [address_zip] => SN14 0YN
+            [business] => newfashionofficial@gmail.com
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Natalie
+            [handling_amount] => 0.00
+            [invoice] => 100000048
+            [ipn_track_id] => 9d3ac8d124047
+            [item_name] => 
+            [item_number] => 
+            [last_name] => Chaloner
+            [mc_currency] => GBP
+            [mc_fee] => -1.67
+            [mc_gross] => -49.00
+            [notify_version] => 3.8
+            [parent_txn_id] => 5L513986YL398305A
+            [payer_email] => natalie.chaloner@btinternet.com
+            [payer_id] => HZBZ4KKUM9MWL
+            [payment_date] => 08:37:53 Aug 06, 2014 PDT
+            [payment_fee] => 
+            [payment_gross] => 
+            [payment_status] => Refunded
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [reason_code] => refund
+            [receipt_id] => 2293-8265-5103-9993
+            [receiver_email] => newfashionofficial@gmail.com
+            [receiver_id] => D69YT7XN65SAA
+            [residence_country] => GB
+            [shipping] => 0.00
+            [transaction_subject] => 
+            [txn_id] => 4T196809J72814706
+            [verify_sign] => ACzMwMaXu52Vz29CJRUB.oMqZma3AyNyMPZXfUYMRiGJv6tBHQx4ph6j
+        )
+
+    [postback_to] => https://www.paypal.com/webscr
+    [__pid] => 10083
+)
+
+2014-08-12T18:27:32+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [DoDirectPayment] => Array
+        (
+            [PAYMENTACTION] => Sale
+            [IPADDRESS] => 62.252.152.28
+            [RETURNFMFDETAILS] => 1
+            [AMT] => 16.99
+            [CURRENCYCODE] => GBP
+            [INVNUM] => 100000066
+            [NOTIFYURL] => http://new-fashion.co.uk/paypal/ipn/
+            [EMAIL] => jake.coull@ymail.com
+            [CREDITCARDTYPE] => ****
+            [ACCT] => ****
+            [EXPDATE] => ****
+            [CVV2] => ****
+            [ISSUENUMBER] => 
+            [AUTHSTATUS3DS] => Y
+            [MPIVENDOR3DS] => Y
+            [CAVV] => AAABB3ZCY5IUWWMhAUJjED78mBw=
+            [ECI3DS] => 05
+            [XID] => d3NnZGptZVdzakZuektDRXBuUDA=
+            [ITEMAMT] => 16.99
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [BUSINESS] => 
+            [FIRSTNAME] => Jake
+            [LASTNAME] => Coull
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => GB
+            [STATE] => 
+            [CITY] => hoddesdon
+            [STREET] => 47 walton road
+            [ZIP] => en11 0ln
+            [PHONENUM] => 07930661339
+            [SHIPTOCOUNTRYCODE] => GB
+            [SHIPTOSTATE] => 
+            [SHIPTOCITY] => hoddesdon
+            [SHIPTOSTREET] => 47 walton road
+            [SHIPTOZIP] => en11 0ln
+            [SHIPTOPHONENUM] => 07930661339
+            [SHIPTOSTREET2] => 
+            [STREET2] => 
+            [SHIPTONAME] => Jake Coull
+            [METHOD] => DoDirectPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_DP_UK
+        )
+
+    [response] => Array
+        (
+            [TIMESTAMP] => 2014-08-12T18:32:14Z
+            [CORRELATIONID] => 851f2ecb3870c
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 12303548
+            [AMT] => 16.99
+            [CURRENCYCODE] => GBP
+            [AVSCODE] => F
+            [CVV2MATCH] => M
+            [VPAS] => 2
+            [ECIAUTH] => 05
+            [TRANSACTIONID] => 8K82184715589132J
+        )
+
+    [__pid] => 2539
+)
+
+2014-08-12T18:27:33+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetTransactionDetails] => Array
+        (
+            [TRANSACTIONID] => 8K82184715589132J
+            [METHOD] => GetTransactionDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_DP_UK
+        )
+
+    [response] => Array
+        (
+            [RECEIVERBUSINESS] => newfashionofficial@gmail.com
+            [RECEIVEREMAIL] => newfashionofficial@gmail.com
+            [RECEIVERID] => D69YT7XN65SAA
+            [EMAIL] => jake.coull@ymail.com
+            [PAYERID] => AEX3N5TYENFAE
+            [PAYERSTATUS] => unverified
+            [COUNTRYCODE] => GB
+            [SHIPTONAME] => Jake Coull
+            [SHIPTOSTREET] => 47 walton road
+            [SHIPTOCITY] => hoddesdon
+            [SHIPTOSTATE] => XX
+            [SHIPTOCOUNTRYCODE] => GB
+            [SHIPTOCOUNTRYNAME] => United Kingdom
+            [SHIPTOZIP] => en11 0ln
+            [ADDRESSOWNER] => PayPal
+            [ADDRESSSTATUS] => Unconfirmed
+            [INVNUM] => 100000066
+            [SALESTAX] => 0.00
+            [SHIPAMOUNT] => 0.00
+            [SHIPHANDLEAMOUNT] => 0.00
+            [ECI3DS] => 5
+            [CAVV] => AAABB3ZCY5IUWWMhAUJjED78mBw=
+            [XID] => d3NnZGptZVdzakZuektDRXBuUDA=
+            [MPIVENDOR3DS] => Y
+            [AUTHSTATUS3DS] => Y
+            [VPAS] => 2
+            [ECISUBMITTED3DS] => 05
+            [TIMESTAMP] => 2014-08-12T18:32:15Z
+            [CORRELATIONID] => deca1b885fb2b
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 11950065
+            [FIRSTNAME] => Jake
+            [LASTNAME] => Coull
+            [TRANSACTIONID] => 8K82184715589132J
+            [RECEIPTID] => 1082-9276-9707-3115
+            [TRANSACTIONTYPE] => webaccept
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2014-08-12T18:32:14Z
+            [AMT] => 16.99
+            [FEEAMT] => 0.69
+            [TAXAMT] => 0.00
+            [CURRENCYCODE] => GBP
+            [PAYMENTSTATUS] => Completed
+            [PENDINGREASON] => None
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [PROTECTIONELIGIBILITYTYPE] => None
+            [L_QTY0] => 1
+            [L_TAXAMT0] => 0.00
+            [L_CURRENCYCODE0] => GBP
+        )
+
+    [__pid] => 2539
+)
+
+2014-08-12T18:27:41+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [address_city] => hoddesdon
+            [address_country] => United Kingdom
+            [address_country_code] => GB
+            [address_name] => Jake Coull
+            [address_state] => XX
+            [address_status] => unconfirmed
+            [address_street] => 47 walton road
+            [address_zip] => en11 0ln
+            [business] => newfashionofficial@gmail.com
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Jake
+            [handling_amount] => 0.00
+            [invoice] => 100000066
+            [ipn_track_id] => 851f2ecb3870c
+            [item_name] => 
+            [item_number] => 
+            [last_name] => Coull
+            [mc_currency] => GBP
+            [mc_fee] => 0.69
+            [mc_gross] => 16.99
+            [notify_version] => 3.8
+            [payer_email] => jake.coull@ymail.com
+            [payer_id] => AEX3N5TYENFAE
+            [payer_status] => unverified
+            [payment_date] => 11:32:14 Aug 12, 2014 PDT
+            [payment_fee] => 
+            [payment_gross] => 
+            [payment_status] => Completed
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity] => 1
+            [receipt_id] => 1082-9276-9707-3115
+            [receiver_email] => newfashionofficial@gmail.com
+            [receiver_id] => D69YT7XN65SAA
+            [residence_country] => GB
+            [shipping] => 0.00
+            [tax] => 0.00
+            [transaction_subject] => 
+            [txn_id] => 8K82184715589132J
+            [txn_type] => web_accept
+            [verify_sign] => AZ48O92n56aLJAgQJ-jKQROjjsE8AGM26fWBZCJqdULOOmgsPK3wDvnO
+        )
+
+    [postback_to] => https://www.paypal.com/webscr
+    [__pid] => 2572
+)
+
+2014-08-12T19:02:34+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [DoDirectPayment] => Array
+        (
+            [PAYMENTACTION] => Sale
+            [IPADDRESS] => 62.252.152.28
+            [RETURNFMFDETAILS] => 1
+            [AMT] => 16.99
+            [CURRENCYCODE] => GBP
+            [INVNUM] => 100000067
+            [NOTIFYURL] => http://new-fashion.co.uk/paypal/ipn/
+            [EMAIL] => jake.coull@ymail.com
+            [CREDITCARDTYPE] => ****
+            [ACCT] => ****
+            [EXPDATE] => ****
+            [CVV2] => ****
+            [ISSUENUMBER] => 
+            [AUTHSTATUS3DS] => Y
+            [MPIVENDOR3DS] => Y
+            [CAVV] => AAABB1ASIHMSMTAWhBIgED78mBw=
+            [ECI3DS] => 05
+            [XID] => Wnd1eXgydVJyVVNLbHNGbU5HMjA=
+            [ITEMAMT] => 16.99
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [BUSINESS] => 
+            [FIRSTNAME] => Jake
+            [LASTNAME] => Coull
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => GB
+            [STATE] => 
+            [CITY] => Hoddesdon
+            [STREET] => 47 walton road
+            [ZIP] => en11 0ln
+            [PHONENUM] => 07930661339
+            [SHIPTOCOUNTRYCODE] => GB
+            [SHIPTOSTATE] => 
+            [SHIPTOCITY] => Hoddesdon
+            [SHIPTOSTREET] => 47 walton road
+            [SHIPTOZIP] => en11 0ln
+            [SHIPTOPHONENUM] => 07930661339
+            [SHIPTOSTREET2] => 
+            [STREET2] => 
+            [SHIPTONAME] => Jake Coull
+            [METHOD] => DoDirectPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_DP_UK
+        )
+
+    [response] => Array
+        (
+            [TIMESTAMP] => 2014-08-12T19:07:16Z
+            [CORRELATIONID] => 963a8d918123
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 12303548
+            [AMT] => 16.99
+            [CURRENCYCODE] => GBP
+            [AVSCODE] => F
+            [CVV2MATCH] => M
+            [VPAS] => 2
+            [ECIAUTH] => 05
+            [TRANSACTIONID] => 2U868842WN517880Y
+        )
+
+    [__pid] => 4729
+)
+
+2014-08-12T19:02:36+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetTransactionDetails] => Array
+        (
+            [TRANSACTIONID] => 2U868842WN517880Y
+            [METHOD] => GetTransactionDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_DP_UK
+        )
+
+    [response] => Array
+        (
+            [RECEIVERBUSINESS] => newfashionofficial@gmail.com
+            [RECEIVEREMAIL] => newfashionofficial@gmail.com
+            [RECEIVERID] => D69YT7XN65SAA
+            [EMAIL] => jake.coull@ymail.com
+            [PAYERID] => AEX3N5TYENFAE
+            [PAYERSTATUS] => unverified
+            [COUNTRYCODE] => GB
+            [SHIPTONAME] => Jake Coull
+            [SHIPTOSTREET] => 47 walton road
+            [SHIPTOCITY] => hoddesdon
+            [SHIPTOSTATE] => XX
+            [SHIPTOCOUNTRYCODE] => GB
+            [SHIPTOCOUNTRYNAME] => United Kingdom
+            [SHIPTOZIP] => en11 0ln
+            [ADDRESSOWNER] => PayPal
+            [ADDRESSSTATUS] => Unconfirmed
+            [INVNUM] => 100000067
+            [SALESTAX] => 0.00
+            [SHIPAMOUNT] => 0.00
+            [SHIPHANDLEAMOUNT] => 0.00
+            [ECI3DS] => 5
+            [CAVV] => AAABB1ASIHMSMTAWhBIgED78mBw=
+            [XID] => Wnd1eXgydVJyVVNLbHNGbU5HMjA=
+            [MPIVENDOR3DS] => Y
+            [AUTHSTATUS3DS] => Y
+            [VPAS] => 2
+            [ECISUBMITTED3DS] => 05
+            [TIMESTAMP] => 2014-08-12T19:07:18Z
+            [CORRELATIONID] => efb1dc5fc9250
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 11950065
+            [FIRSTNAME] => Jake
+            [LASTNAME] => Coull
+            [TRANSACTIONID] => 2U868842WN517880Y
+            [RECEIPTID] => 1830-6489-8632-1362
+            [TRANSACTIONTYPE] => webaccept
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2014-08-12T19:07:16Z
+            [AMT] => 16.99
+            [FEEAMT] => 0.69
+            [TAXAMT] => 0.00
+            [CURRENCYCODE] => GBP
+            [PAYMENTSTATUS] => Completed
+            [PENDINGREASON] => None
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [PROTECTIONELIGIBILITYTYPE] => None
+            [L_QTY0] => 1
+            [L_TAXAMT0] => 0.00
+            [L_CURRENCYCODE0] => GBP
+        )
+
+    [__pid] => 4729
+)
+
+2014-08-12T19:02:43+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [address_city] => hoddesdon
+            [address_country] => United Kingdom
+            [address_country_code] => GB
+            [address_name] => Jake Coull
+            [address_state] => XX
+            [address_status] => unconfirmed
+            [address_street] => 47 walton road
+            [address_zip] => en11 0ln
+            [business] => newfashionofficial@gmail.com
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Jake
+            [handling_amount] => 0.00
+            [invoice] => 100000067
+            [ipn_track_id] => 963a8d918123
+            [item_name] => 
+            [item_number] => 
+            [last_name] => Coull
+            [mc_currency] => GBP
+            [mc_fee] => 0.69
+            [mc_gross] => 16.99
+            [notify_version] => 3.8
+            [payer_email] => jake.coull@ymail.com
+            [payer_id] => AEX3N5TYENFAE
+            [payer_status] => unverified
+            [payment_date] => 12:07:16 Aug 12, 2014 PDT
+            [payment_fee] => 
+            [payment_gross] => 
+            [payment_status] => Completed
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity] => 1
+            [receipt_id] => 1830-6489-8632-1362
+            [receiver_email] => newfashionofficial@gmail.com
+            [receiver_id] => D69YT7XN65SAA
+            [residence_country] => GB
+            [shipping] => 0.00
+            [tax] => 0.00
+            [transaction_subject] => 
+            [txn_id] => 2U868842WN517880Y
+            [txn_type] => web_accept
+            [verify_sign] => AJkbSnRh7mvgdXj6JQxaVY.UfP76AqBZS1qL4bFHeGbkzsuMMIbnpwvY
+        )
+
+    [postback_to] => https://www.paypal.com/webscr
+    [__pid] => 4755
+)
+
+2014-08-14T17:24:42+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [DoDirectPayment] => Array
+        (
+            [PAYMENTACTION] => Sale
+            [IPADDRESS] => 81.152.92.252
+            [RETURNFMFDETAILS] => 1
+            [AMT] => 34.99
+            [CURRENCYCODE] => GBP
+            [INVNUM] => 100000068
+            [NOTIFYURL] => http://new-fashion.co.uk/paypal/ipn/
+            [EMAIL] => Vkmcnally@yahoo.co.uk
+            [CREDITCARDTYPE] => ****
+            [ACCT] => ****
+            [EXPDATE] => ****
+            [CVV2] => ****
+            [ISSUENUMBER] => 
+            [AUTHSTATUS3DS] => Y
+            [MPIVENDOR3DS] => Y
+            [CAVV] => AAABApUWQhk5Y0U4SRZCEFGYXPw=
+            [ECI3DS] => 05
+            [XID] => VXd2NlY1WUR0T1VMRGp4R2VuRDA=
+            [ITEMAMT] => 34.99
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [BUSINESS] => 
+            [FIRSTNAME] => Victoria
+            [LASTNAME] => Mcnally
+            [MIDDLENAME] => 
+            [SALUTATION] => 
+            [SUFFIX] => 
+            [COUNTRYCODE] => GB
+            [STATE] => 
+            [CITY] => London
+            [STREET] => 56 Adley street
+            [ZIP] => E5 0dy
+            [PHONENUM] => 07890121035
+            [SHIPTOCOUNTRYCODE] => GB
+            [SHIPTOSTATE] => 
+            [SHIPTOCITY] => Cambridge
+            [SHIPTOSTREET] => 3 Ditton fields
+            [SHIPTOZIP] => Cb5 8qq
+            [SHIPTOPHONENUM] => 01223502529
+            [SHIPTOSTREET2] => 
+            [STREET2] => 
+            [SHIPTONAME] => Ciara Mcnally
+            [METHOD] => DoDirectPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_DP_UK
+        )
+
+    [response] => Array
+        (
+            [TIMESTAMP] => 2014-08-14T17:29:27Z
+            [CORRELATIONID] => 28e8ac1191ed7
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 12364540
+            [AMT] => 34.99
+            [CURRENCYCODE] => GBP
+            [AVSCODE] => F
+            [CVV2MATCH] => M
+            [VPAS] => 2
+            [ECIAUTH] => 05
+            [TRANSACTIONID] => 2V627058FN440320M
+        )
+
+    [__pid] => 30286
+)
+
+2014-08-14T17:24:43+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetTransactionDetails] => Array
+        (
+            [TRANSACTIONID] => 2V627058FN440320M
+            [METHOD] => GetTransactionDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Varien_Cart_DP_UK
+        )
+
+    [response] => Array
+        (
+            [RECEIVERBUSINESS] => newfashionofficial@gmail.com
+            [RECEIVEREMAIL] => newfashionofficial@gmail.com
+            [RECEIVERID] => D69YT7XN65SAA
+            [EMAIL] => Vkmcnally@yahoo.co.uk
+            [PAYERID] => XCLQ5DBT8B98S
+            [PAYERSTATUS] => unverified
+            [COUNTRYCODE] => GB
+            [SHIPTONAME] => Ciara Mcnally
+            [SHIPTOSTREET] => 3 Ditton fields
+            [SHIPTOCITY] => Cambridge
+            [SHIPTOSTATE] => XX
+            [SHIPTOCOUNTRYCODE] => GB
+            [SHIPTOCOUNTRYNAME] => United Kingdom
+            [SHIPTOZIP] => Cb5 8qq
+            [ADDRESSOWNER] => PayPal
+            [ADDRESSSTATUS] => Unconfirmed
+            [INVNUM] => 100000068
+            [SALESTAX] => 0.00
+            [SHIPAMOUNT] => 0.00
+            [SHIPHANDLEAMOUNT] => 0.00
+            [ECI3DS] => 5
+            [CAVV] => AAABApUWQhk5Y0U4SRZCEFGYXPw=
+            [XID] => VXd2NlY1WUR0T1VMRGp4R2VuRDA=
+            [MPIVENDOR3DS] => Y
+            [AUTHSTATUS3DS] => Y
+            [VPAS] => 2
+            [ECISUBMITTED3DS] => 05
+            [TIMESTAMP] => 2014-08-14T17:29:28Z
+            [CORRELATIONID] => e930ef3b2ff65
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 11950065
+            [FIRSTNAME] => Victoria
+            [LASTNAME] => Mcnally
+            [TRANSACTIONID] => 2V627058FN440320M
+            [RECEIPTID] => 1726-0645-6126-3333
+            [TRANSACTIONTYPE] => webaccept
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2014-08-14T17:29:27Z
+            [AMT] => 34.99
+            [FEEAMT] => 1.21
+            [TAXAMT] => 0.00
+            [CURRENCYCODE] => GBP
+            [PAYMENTSTATUS] => Completed
+            [PENDINGREASON] => None
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [PROTECTIONELIGIBILITYTYPE] => None
+            [L_QTY0] => 1
+            [L_TAXAMT0] => 0.00
+            [L_CURRENCYCODE0] => GBP
+        )
+
+    [__pid] => 30286
+)
+
+2014-08-14T17:24:46+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [address_city] => Cambridge
+            [address_country] => United Kingdom
+            [address_country_code] => GB
+            [address_name] => Ciara Mcnally
+            [address_state] => XX
+            [address_status] => unconfirmed
+            [address_street] => 3 Ditton fields
+            [address_zip] => Cb5 8qq
+            [business] => newfashionofficial@gmail.com
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Victoria
+            [handling_amount] => 0.00
+            [invoice] => 100000068
+            [ipn_track_id] => 28e8ac1191ed7
+            [item_name] => 
+            [item_number] => 
+            [last_name] => Mcnally
+            [mc_currency] => GBP
+            [mc_fee] => 1.21
+            [mc_gross] => 34.99
+            [notify_version] => 3.8
+            [payer_email] => Vkmcnally@yahoo.co.uk
+            [payer_id] => XCLQ5DBT8B98S
+            [payer_status] => unverified
+            [payment_date] => 10:29:27 Aug 14, 2014 PDT
+            [payment_fee] => 
+            [payment_gross] => 
+            [payment_status] => Completed
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity] => 1
+            [receipt_id] => 1726-0645-6126-3333
+            [receiver_email] => newfashionofficial@gmail.com
+            [receiver_id] => D69YT7XN65SAA
+            [residence_country] => GB
+            [shipping] => 0.00
+            [tax] => 0.00
+            [transaction_subject] => 
+            [txn_id] => 2V627058FN440320M
+            [txn_type] => web_accept
+            [verify_sign] => A2rDnzDGFqKaSpkiw57sLjSY6SPCAKy26.fJbPj5QvwPwNvn9DO0LWv5
+        )
+
+    [postback_to] => https://www.paypal.com/webscr
+    [__pid] => 30289
+)
+

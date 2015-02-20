@@ -1,0 +1,67 @@
+2014-09-12 14:04:20.000000 (1410527060.3522) DEBUG: 100000080
+2014-09-12 14:04:20.000000 (1410527060.3536) DEBUG: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:31.0) Gecko/20100101 Firefox/31.0
+2014-09-12 14:04:20.000000 (1410527060.3542) DEBUG: Array
+(
+    [order_comment] => 
+    [subscription_newsletter] => 1
+    [submitCustomCheckout] => save
+    [billing] => Array
+        (
+            [address_id] => 1391
+            [firstname] => Nerijus
+            [lastname] => Erminas
+            [street] => Array
+                (
+                    [0] => Flat 4, 3 Saturday Market Place
+                )
+
+            [country_id] => GB
+            [region_id] => 
+            [region] => Norfolk
+            [city] => Kings Lynn
+            [postcode] => PE30 5DQ
+            [telephone] => 07779626160
+            [email] => zvezdovs@gmail.com
+            [customer_password] => 
+            [confirm_password] => 
+            [save_in_address_book] => 1
+            [use_for_shipping] => 1
+        )
+
+    [shipping] => Array
+        (
+            [firstname] => Nerijus
+            [address_id] => 1392
+            [lastname] => Erminas
+            [street] => Array
+                (
+                    [0] => Flat 4, 3 Saturday Market Place
+                )
+
+            [country_id] => GB
+            [region_id] => 
+            [region] => Norfolk
+            [city] => Kings Lynn
+            [postcode] => PE30 5DQ
+            [telephone] => Kings Lynn
+            [save_in_address_book] => 1
+        )
+
+    [shipping_method] => freeshipping_freeshipping
+    [payment] => Array
+        (
+            [method] => sagepaydirectpro
+            [cc_owner] => MR N ERMINAS
+            [cc_type] => DELTA
+            [cc_number] => XXXXXXXXXXXXX
+            [cc_exp_month] => 5
+            [cc_exp_year] => 2017
+            [cc_cid] => XXX
+            [cc_ss_issue] => 
+            [cc_ss_start_month] => 
+            [cc_ss_start_year] => 
+        )
+
+)
+
+2014-09-12 14:04:20.000000 (1410527060.3547) DEBUG: --------------------

@@ -1,0 +1,61 @@
+/**
+ * "Seo Layered Navigation" extension for "Magento Commerce" by "EcommerceTeam (www.ecommerce-team.com)"
+ *
+ * @category     Extension
+ * @copyright    Copyright (c) 2014 EcommerceTeam (http://www.ecommerce-team.com)
+ * @author       EcommerceTeam
+ * @version      4.0.0
+ */
+
+.uploader{
+    text-align:center;
+    position:relative;
+    z-index:1;
+    margin:-3px 0 0;
+    float:right;
+}
+
+.ui-button{
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.1em;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+.ui-button input {
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    width: 90px;
+    filter:alpha(opacity=0);
+    height:27px;
+    /*left: -45px;*/
+}
+
+.file-row-info{
+    clear:both;
+    font-weight:bold;
+}
+
+.uploader button{
+    cursor: pointer;
+}
+
+/*span.button span {
+    border: 0 none;
+    color: #FFFFFF;
+    display: block;
+    font: bold 12px/26px Arial,Helvetica,sans-serif;
+    height: 27px;
+    padding: 0 0 0 14px;
+    text-align: center;
+    white-space: nowrap;
+}*/

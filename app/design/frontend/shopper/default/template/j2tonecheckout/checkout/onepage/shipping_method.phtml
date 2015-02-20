@@ -1,0 +1,41 @@
+<form id="co-shipping-method-form" action="">
+    <div id="checkout-shipping-method-load">
+        <?php echo $this->getChildHtml('available') ?>
+    </div>
+    <script type="text/javascript">
+    //<![CDATA[
+        var isVirtualOrder = false;
+        <?php if (Mage::getSingleton('checkout/type_onepage')->getQuote()->isVirtual()): ?>
+            isVirtualOrder = true;
+        <?php endif;?>
+        var shippingMethod = new J2t_ShippingMethod('co-shipping-method-form', "<?php echo $this->getUrl('j2tonecheckout/onepage/saveShippingMethod', array('form_key' => Mage::getSingleton('core/session')->getFormKey())) ?>", '<?php echo $this->getUrl('checkout/onepage/shippingmethod', array('form_key' => Mage::getSingleton('core/session')->getFormKey())) ?>', '<?php echo $this->getUrl('j2tonecheckout/onepage/paymentmethod', array('form_key' => Mage::getSingleton('core/session')->getFormKey()));?>', '<?php echo $this->getUrl('j2tonecheckout/onepage/review', array('form_key' => Mage::getSingleton('core/session')->getFormKey()));?>', isVirtualOrder);
+    //]]>
+    </script>
+    <div id="shipping-not-relevant" style="display:none;"><?php echo $this->__('Not relevant for this order.');?></div>
+    <div id="onepage-checkout-shipping-method-additional-load">
+        <?php echo $this->getChildHtml('additional') ?>
+    </div>
+</form>
+
+<script type="text/javascript">
+//<![CDATA[
+    var j2t_onechekout_checked = false;
+    var j2t_onechekout_shipment_form = $('co-shipping-method-form');
+    var j2t_onechekout_shipment_radios = j2t_onechekout_shipment_form.getInputs('radio');
+    j2t_onechekout_shipment_radios.each(function (el, index){
+        if(el.checked){
+            j2t_onechekout_checked = true;
+        }
+        el.observe('click', function (event){
+            j2t_one_checkout.stepShippingComplete = false;
+        });
+    });
+
+    if (!j2t_onechekout_checked && j2t_onechekout_shipment_radios.length > 0){
+        j2t_onechekout_shipment_radios[0].checked = true;
+    }
+    
+    
+
+//]]>
+</script>

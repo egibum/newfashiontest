@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>IG_FlatShipping5</name>
+    <version>1.0.3</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL3</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>IDEALIAGroup Multiple Flat Shipping Module with custom text configuration</summary>
+    <description>IDEALIAGroup Multiple Flat Shipping Module with custom text configuration</description>
+    <notes>Enjoy it ;)</notes>
+    <authors><author><name>Riccardo Tempesta</name><user>auto-converted</user><email>tempesta@idealiagroup.com</email></author><author><name>Marco Giorgetti</name><user>auto-converted</user><email>giorgetti@idealiagroup.com</email></author></authors>
+    <date>2010-04-07</date>
+    <time>14:00:17</time>
+    <contents><target name="magedesign"><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="ig_flatshipping5.xml" hash="e93195ae4920e33df6f3a44fe6ce5458"/></dir><dir name="template"><dir name="ig_flatshipping5"><file name="available.phtml" hash="b3d5d16fc51e785d87666a58474aebf8"/></dir></dir></dir></dir></dir></target><target name="magecommunity"><dir name="IG"><dir name="FlatShipping5"><dir name="Block"><file name="Available.php" hash="dc2da4d9488240a252bd605d674b42d9"/></dir><dir name="etc"><file name="config.xml" hash="e4c5ca93e49c17840358a968822fb364"/><file name="system.xml" hash="7a9997c2537929d46ad4015cdf546845"/></dir><dir name="Helper"><file name="Data.php" hash="c6fe3815c0100a530a2707614486c265"/></dir><dir name="Model"><dir name="Carrier"><file name="Abstract.php" hash="aed5516b9fc3262a1006c520c0d68724"/><file name="Flatrate2.php" hash="9e96fa0d08bb2e3ac74710fc8e5cb22a"/><file name="Flatrate3.php" hash="283e176ad8072fdb12bc5d48bc6ca802"/><file name="Flatrate4.php" hash="cebe770bb4f1a65ad6a0db31f9021cb9"/><file name="Flatrate5.php" hash="8672be6609384e02a4ac6356d7f77ed0"/></dir></dir><file name="LICENSE.txt" hash="b7870fbc716085862b4cba9b4629a24e"/></dir></dir></target><target name="mageetc"><dir name="modules"><file name="IG_FlatShipping5.xml" hash="e486f22b163a30a96f552cc09279ae11"/></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>
