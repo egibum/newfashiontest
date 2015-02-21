@@ -1652,7 +1652,7 @@ button.link:hover {background:#000; color: white; text-decoration:underline;}
 /* My Account ============================================================================= */
 dd#sizes {position:relative; margin-left:10%; float: left;}
 dd#colours h2 {width:80%; margin-left: 10%; text-transform: capitalize; font-family: "Verdana"; font-weight:bold; font-size: 14px;}
-dd#colours { position:relative; float: left;}
+dd#colours { position:relative; float; left;}
 #size_button {position:relative; float:right; width:35%; margin-left: 5%; margin-top: 10px;}
 .my-account .title-buttons .link-rss { float:none; margin:0; }
 
