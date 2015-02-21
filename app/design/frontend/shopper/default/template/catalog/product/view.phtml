@@ -55,13 +55,13 @@ $product_img_box_width += 18;
 <?php if ($_category = $_product->getCategory()): ?>
 
 <!-- BACK BUTTON -->
-	<div class="back-button">
-    <button onclick="history.back();" class="link" title="<?php echo $this->__('Back') ?>" type="link">
+<div class="back-button">
+	<button onclick="history.back();" class="link" title="<?php echo $this->__('Back') ?>" type="link">
         <span>
             <span><?php echo $this->__('<< Back') ?></span>
         </span>
     </button>
-	</div>
+</div>
 <!-- BACK BUTTON -->
 <?php endif;?>
 <?php
@@ -241,7 +241,7 @@ var $j = jQuery.noConflict();
              <div id="size_button"><button type="button" onclick="myFunction()">Size Guide</link></div>
 			 	<!-- SIZE GUIDE BUTTON -->
 
-
+                <?php echo $this->getChildHtml('shopper_product_addthis') ?>
                 <?php echo $this->getChildHtml('addto') ?>
    <?php if(!$_product->isGrouped()): ?>
                 <div class="qty-container clearfix">
@@ -374,7 +374,6 @@ $_product = $this->getProduct();
     </script>
 <?php endif; ?>
                 <div class="clear"></div>
-                <?php echo $this->getChildHtml('shopper_product_addthis') ?>
             </div>
       	<!-- Rich snippets block -->
 				<?php echo $this->getLayout()
