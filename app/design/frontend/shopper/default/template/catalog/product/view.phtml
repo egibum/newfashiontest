@@ -241,9 +241,7 @@ var $j = jQuery.noConflict();
              <div id="size_button"><button type="button" onclick="myFunction()">Size Guide</link></div>
 			 	<!-- SIZE GUIDE BUTTON -->
 
-                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                    <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
-                <?php endif;?>
+
 
                 <?php echo $this->getChildHtml('addto') ?>
    <?php if(!$_product->isGrouped()): ?>
