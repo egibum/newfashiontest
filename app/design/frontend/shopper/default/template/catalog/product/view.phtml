@@ -229,12 +229,14 @@ var $j = jQuery.noConflict();
                     </div>
                     <?php echo $this->getChildHtml('extra_buttons') ?>
                 <?php endif; ?>
-             <div id="size_button"><button type="button" onclick="myFunction()">Size Guide</link>
-
-</div>
-             <div id="delivery_button"><button type="button" onclick="myFunction2()"><p>FREE UK DELIVERY >></p></link>
-
-</div>
+				
+				<!-- DELIVERY BUTTON -->
+             <div id="delivery_button"><button type="button" onclick="myFunction2()"><p>FREE UK DELIVERY >></p></link></div>
+				<!-- DELIVERY BUTTON -->
+				
+				<!-- SIZE GUIDE BUTTON -->
+             <div id="size_button"><button type="button" onclick="myFunction()">Size Guide</link></div>
+			 	<!-- SIZE GUIDE BUTTON -->
 
                 <?php if ($_product->isSaleable() && $this->hasOptions()):?>
                     <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
