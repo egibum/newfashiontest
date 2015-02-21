@@ -915,7 +915,7 @@ left:0px;
 .product-view .box-additional {}
 
 /* Block: Upsell */
-.product-view .box-up-sell {min-height:745px;}
+.product-view .box-up-sell {}
 .product-view .box-up-sell .products-grid td { width:25%; }
 
 /* Block: Tags */

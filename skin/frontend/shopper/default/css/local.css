@@ -1364,7 +1364,7 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 
 
 /* Product Tabs */
-.product-tabs {margin:110px 0 0; border:0; }
+.product-tabs {border:0; }
 .product-tabs li { float:left; border:1px solid #e1e1e1; height:43px; line-height:43px; margin-right:7px; position:relative;  }
 .product-tabs li.first { }
 .product-tabs li.last { }
@@ -1377,7 +1377,7 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
             box-shadow:1px -1px 6px -1px rgba(0, 0, 0, 0.15);}
 .product-tabs li.active a,
 .product-tabs li.active a:hover { background-color:#fff; }
-.product-tabs-content {position:relative; z-index:2; border:none; background:#fff; padding:23px; margin:155px 0 40px; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px;
+.product-tabs-content {position:relative; z-index:2; border:none; background:#fff; padding:23px; margin:45px 0 40px; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px;
     -webkit-box-shadow:2px 1px 6px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow:2px 1px 6px 0px rgba(0, 0, 0, 0.15);
     box-shadow:2px 1px 6px 0px rgba(0, 0, 0, 0.15);}
@@ -1426,7 +1426,7 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 .product-view .qty-container input{float:left; width:15px;}
 .product-view .product-options {background: transparent; margin:0 0 0 0 13px; padding:0;}
 .col1-layout .product-view .product-shop { float:none; width:55%; overflow:hidden; margin:0;}
-.product-view .product-shop-info {width:45%; float:left;}
+.product-view .product-shop-info {float:left;}
 .product-view .product-shop .product-options {margin:0px 0 13px; padding-top: 10px;}
 .product-view .product-shop .price-box {float:left;}
 .product-view .product-shop .price-box .price-label { display:none;}
@@ -1511,7 +1511,7 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 
 .product-view .after-tabs-block { margin:0 0 30px;}
 .main-container  .slider-container {height: 250px !important;}
-.product-view .product-additional { float:right; width:55%;}
+.product-view .product-additional {}
 .product-view .product-additional .block {margin:0 0 20px; padding:0; width:270px; }
 .product-view .product-additional .block .block-title {border:0; padding:24px 35px 27px; margin:0; color:#000; color:rgba(0,0,0,0.75); text-align:center;}
 .product-view .product-additional .block .block-title:after {content:''; float:left; width:120px; height:1px; background:#e8e8e8; margin:14px 0 0 39px;}
