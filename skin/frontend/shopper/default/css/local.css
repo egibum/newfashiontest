@@ -1420,7 +1420,7 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 .product-view .product-shop .grouped-items-table .price-box .price { font-size:24px; line-height:24px; }
 .product-view .product-shop .grouped-items-table tbody td { padding:10px;}
 .product-view .product-essential {}
-.product-view .short-description { margin:5px 0; padding:17px 0; border-top:1px solid; border-color:#666; width:80%; margin: 0 10%; position: relative; font-family: "Verdana"; font-size: 14px; color: black; height: 320px;}
+.product-view .short-description { margin:5px 0; padding:17px 0; width:80%; margin: 0 10%; position: relative; font-family: "Verdana"; font-size: 14px; color: black; height: 320px;}
 .product-view .qty-container { position:relative; width:20%; margin-left:10%;}
 .product-view .qty-container label{float:left; margin-right:10px; line-height:30px; color:#000; color:rgba(0,0,0,0.67);}
 .product-view .qty-container input{float:left; width:15px;}
@@ -1479,7 +1479,7 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 
 .product-view .add-to-links{margin:88px 0 0; padding:0; float:left; }
 .product-view .add-to-links li{line-height:38px; padding-left:53px; margin:0 0 0 20px; float:left;}
-.product-view .product-shop-info .add-to-links{float:none; clear:left;}
+.product-view .product-shop-info .add-to-links{float:none; display: none;}
 .product-view .product-shop-info .add-to-links li{margin:8px 50px 0 0; float:none;}
 .product-view .add-to-links li a{display:block; color:#322c29; font-size:14px;}
 .product-view .add-to-links li span.icon {display:block; float:left; overflow:hidden; margin-left:-53px; width:38px; height:38px; background:#322c29 url("../images/icon_wishlist.png") 50% 50% no-repeat; -webkit-border-radius:100% !important; -moz-border-radius:100% !important; border-radius:100% !important; text-indent:-999px; }
@@ -1567,6 +1567,7 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 
 #delivery_button button:hover {background:#aaa; text-decoration:underline;}
 #delivery_button button {width: 217px; height: 24px; left:49%;}
+#delivery_button {text-align: center; margin-top: 5px;}
 
 .back-button button {background: #eee;}
 .back-button {position:absolute; top: 5px; right: 10px;}
