@@ -177,21 +177,19 @@ var $j = jQuery.noConflict();
             
         </div>
         <!-- MORE FROM BLOCK -->
-		<?php $moreFromContent = $this->getMoreFrom($_product->getCategoryIds(),$_product->getAttributeText('manufacturer')); ?>
         <div class="more-from hidden-xs">
             <div class="title"><h3><?php echo $this->__('More From') ?></h3></div>
             <div class="content">
-                <?php echo $moreFromContent['html']; ?>
+                <?php echo $this->getMoreFrom($_product->getCategoryIds(),$_product->getAttributeText('manufacturer')); ?>
             </div>
         </div>
         <!-- MORE FROM BLOCK -->
 
         <div class="product-shop">
-			<div class="product_right">
-				<div itemscope itemtype="http://schema.org/Product"></div>
-				<?php
-				$output = '';
-				switch ($replace_upsell) {
+		<div itemscope itemtype="http://schema.org/Product">
+            <?php
+            $output = '';
+            switch ($replace_upsell) {
                 case 'always':
                     $output = $this->getChildHtml('queldorei_product_additional');
                     break;
@@ -202,13 +200,11 @@ var $j = jQuery.noConflict();
                     if ($enable_upsell) $output = $this->getChildHtml('upsell_products');
                     if ( empty($output) ) $output = $this->getChildHtml('queldorei_product_additional');
                     break;
-				}
-				if(!empty($output)){
+            }
+            if(!empty($output)){
                 echo '<div class="product-additional">'.$output.'</div>';
-				}
-				?>
-			</div>
-			<div class="product_middle">
+            }
+            ?>
             <div class="product-shop-info">
                 <div class="product-name">
                     <h1 itemprop="name" ><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
@@ -219,7 +215,7 @@ var $j = jQuery.noConflict();
                 <?php echo $this->getChildHtml('product_type_data') ?>
                 <?php echo $this->getTierPriceHtml() ?>
                 <?php echo $this->getChildHtml('extrahint') ?>
-				<div id="product_social"><script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5347f4871e3c511d"></script>
+<div id="product_social"><script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5347f4871e3c511d"></script>
 <div class="addthis_sharing_toolbox"></div></div>
                 <?php if (!$this->hasOptions()):?>
                     <div class="add-to-box">
@@ -229,9 +225,13 @@ var $j = jQuery.noConflict();
                     </div>
                     <?php echo $this->getChildHtml('extra_buttons') ?>
                 <?php endif; ?>
-             <div id="size_button"><button type="button" onclick="myFunction()">Size Guide</link></div>
-             <div id="delivery_button"><button type="button" onclick="myFunction2()"><p>FREE UK DELIVERY >></p></link></div>
-			 
+             <div id="size_button"><button type="button" onclick="myFunction()">Size Guide</link>
+
+</div>
+             <div id="delivery_button"><button type="button" onclick="myFunction2()"><p>FREE UK DELIVERY >></p></link>
+
+</div>
+
                 <?php if ($_product->isSaleable() && $this->hasOptions()):?>
                     <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
                 <?php endif;?>
@@ -248,10 +248,8 @@ var $j = jQuery.noConflict();
                 <div class="short-description">
                     <div class="std" itemprop="description" ><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                 </div>
-				</div>
 
                 <?php endif;?>
-					<div class="product-right">
                                 <?php echo $this->getChildHtml('other');?>
                                 <?php
 /* to override the default configurable options template  */
@@ -267,6 +265,7 @@ $_product = $this->getProduct();
 
 
 <?php if ($_product->isSaleable() && count($_json_config["attributes"])): ?>
+
     <dl id="options-container-<?php echo $_product->getId(); ?>">
 
         <?php foreach ($_json_config["attributes"] as $_attribute):  ?>
@@ -376,20 +375,6 @@ $_product = $this->getProduct();
                 <div class="clear"></div>
                 <?php echo $this->getChildHtml('shopper_product_addthis') ?>
             </div>
-			<?php if($this->isReplacingBlock($_product) <= 1 && $_product->isConfigurable()): ?>
-				<div class="randomBrandProducts">
-					<div class="randomBrandTitle"><?php echo $this->__('More from ') ?><?php echo ucwords(strtolower($_product->getAttributeText('manufacturer'))); ?></div>
-					<ul>
-					<?php foreach($this->getRandomProductFromBrand($moreFromContent['brand_id']) as $brandProduct): ?>
-						<li>
-							<div class="productImage">
-								<a href="<?php echo $brandProduct['url'];?>"><img src="<?php echo $brandProduct['image']; ?>" alt="<?php echo $brandProduct['name'];?>"/></a> 
-							</div>
-						</li>
-					<?php endforeach; ?>
-					</ul>
-				</div>
-			<?php endif; ?>
       	<!-- Rich snippets block -->
 				<?php echo $this->getLayout()
 					->createBlock('richsnippets/product')
