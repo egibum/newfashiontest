@@ -53,13 +53,16 @@ if ( $defaultImgX != $imgX ) {
 $product_img_box_width += 18;
 ?>
 <?php if ($_category = $_product->getCategory()): ?>
-<div class="back-button">
+
+<!-- BACK BUTTON -->
+	<div class="back-button">
     <button onclick="history.back();" class="link" title="<?php echo $this->__('Back') ?>" type="link">
         <span>
             <span><?php echo $this->__('<< Back') ?></span>
         </span>
     </button>
-</div>
+	</div>
+<!-- BACK BUTTON -->
 <?php endif;?>
 <?php
 if (!$_category = Mage::registry('current_category')) {
@@ -185,9 +188,9 @@ var $j = jQuery.noConflict();
         </div>
         <!-- MORE FROM BLOCK -->
 
-        <div class="product-shop">
-		<div itemscope itemtype="http://schema.org/Product">
-            <?php
+        <div class="product-shop">		
+		<div id="product_right">
+		            <?php
             $output = '';
             switch ($replace_upsell) {
                 case 'always':
@@ -205,6 +208,10 @@ var $j = jQuery.noConflict();
                 echo '<div class="product-additional">'.$output.'</div>';
             }
             ?>
+		<div itemscope itemtype="http://schema.org/Product">
+		</div>
+		</div>
+		<div id="product_left">
             <div class="product-shop-info">
                 <div class="product-name">
                     <h1 itemprop="name" ><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
@@ -225,16 +232,15 @@ var $j = jQuery.noConflict();
                     </div>
                     <?php echo $this->getChildHtml('extra_buttons') ?>
                 <?php endif; ?>
-             <div id="size_button"><button type="button" onclick="myFunction()">Size Guide</link>
+				
+				<!-- DELIVERY BUTTON -->
+             <div id="delivery_button"><button type="button" onclick="myFunction2()"><p>FREE UK DELIVERY >></p></link></div>
+				<!-- DELIVERY BUTTON -->
+				
+				<!-- SIZE GUIDE BUTTON -->
+             <div id="size_button"><button type="button" onclick="myFunction()">Size Guide</link></div>
+			 	<!-- SIZE GUIDE BUTTON -->
 
-</div>
-             <div id="delivery_button"><button type="button" onclick="myFunction2()"><p>FREE UK DELIVERY >></p></link>
-
-</div>
-
-                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                    <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
-                <?php endif;?>
 
                 <?php echo $this->getChildHtml('addto') ?>
    <?php if(!$_product->isGrouped()): ?>
@@ -248,7 +254,10 @@ var $j = jQuery.noConflict();
                 <div class="short-description">
                     <div class="std" itemprop="description" ><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                 </div>
-
+		</div>
+                <?php endif;?>
+				                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                    <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
                 <?php endif;?>
                                 <?php echo $this->getChildHtml('other');?>
                                 <?php
@@ -261,8 +270,6 @@ include_once 'attributeSwatches.php';
 $_json_config = addAttributeSwatches($this->getJsonConfig());
 $_product = $this->getProduct();
 ?>
-
-
 
 <?php if ($_product->isSaleable() && count($_json_config["attributes"])): ?>
 
@@ -371,7 +378,6 @@ $_product = $this->getProduct();
 
     </script>
 <?php endif; ?>
-
                 <div class="clear"></div>
                 <?php echo $this->getChildHtml('shopper_product_addthis') ?>
             </div>
@@ -386,16 +392,23 @@ $_product = $this->getProduct();
 	        <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
 	    <?php endif;?>
     </form>
+	
+	<!-- SIZE GUIDE FUNCTION -->
     <script>
 function myFunction() {
     window.open("http://new-fashion.co.uk/extras/size_guide/mens-size-guide.html", "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=000, left=0, width=485, height=560");
 }
 </script>
+		<!-- SIZE GUIDE FUNCTION -->
+		
+		<!-- DELIVERY BUTTON FUNCTION -->
     <script>
 function myFunction2() {
     window.open("http://new-fashion.co.uk/extras/delivery.html", "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=000, left=0, width=485, height=560");
 }
 </script>
+		<!-- DELIVERY BUTTON FUNCTION -->
+		
     <script type="text/javascript">
     //<![CDATA[
 
