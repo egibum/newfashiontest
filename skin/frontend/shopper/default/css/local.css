@@ -1426,7 +1426,7 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 .product-view .qty-container input{float:left; width:15px;}
 .product-view .product-options {background: transparent; margin:0 0 0 0 13px; padding:0;}
 .col1-layout .product-view .product-shop { float:none; width:55%; overflow:hidden; margin:0;}
-.product-view .product-shop-info {width:45%; float:left; min-height:1000px;}
+.product-view .product-shop-info {width:45%; float:left;}
 .product-view .product-shop .product-options {margin:0px 0 13px; padding-top: 10px;}
 .product-view .product-shop .price-box {float:left;}
 .product-view .product-shop .price-box .price-label { display:none;}
@@ -1543,7 +1543,7 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 #shopping_upsells .slider-container .jcarousel-list .button-container {position:absolute; top:103%; margin-left:13px;}
 #shopping_upsells .slider-container .jcarousel-list .button-container button.button span  { width: 109px !important; background:#c31f00; line-height:22px; height:22px; font-size: 8pt; text-transform: uppercase; }
 
-.product-view .box-up-sell3 { position: absolute; top: 565px; width:400px; right: 0px;}
+.product-view .box-up-sell3 {}
 .product-view .box-up-sell3 h2{font-size:24px; text-transform:uppercase; margin:0 80px 20px 0 }
 .product-view .box-up-sell3 .block-subtitle {line-height:32px;}
 .product-view .box-up-sell3 .block-subtitle a {font-weight:300; text-decoration:underline; }
