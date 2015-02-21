@@ -348,13 +348,6 @@ $_product = $this->getProduct();
                 }
                 /* Eof MAIN SWATCHES CODE */
                 ?>
-				<div class="sizes">
-					<div class="input-box">
-						<select name="super_attribute[<?php echo $_attribute["id"] ?>]" id="attribute<?php echo $_attribute["id"] ?>" class="configurable-option-select required-entry super-attribute-select  swatches-type-<?php echo $_attribute["swatch_type"]; ?> <?php echo (($_attribute["hideselect"]) ? "hideselect" : ""); ?> <?php echo (($_attribute["switchgallery"]) ? "switch-gallery" : ""); ?>">
-							<option value=""><?php echo $this->__('Choose an Option...') ?></option>
-						</select>
-					</div>
-				</div>
                 <div class="clearer">&nbsp;</div>
             </dd>
         <?php endforeach; ?>
