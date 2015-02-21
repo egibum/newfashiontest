@@ -261,6 +261,17 @@ var $j = jQuery.noConflict();
                 <?php endif;?>
                                 <?php echo $this->getChildHtml('other');?>
                                 <?php
+/* to override the default configurable options template  */
+
+//echo ;
+
+include_once 'attributeSwatches.php';
+//$_d = $this->getJsonConfig();
+$_json_config = addAttributeSwatches($this->getJsonConfig());
+$_product = $this->getProduct();
+?>
+
+
 
 
                 <div class="clear"></div>
