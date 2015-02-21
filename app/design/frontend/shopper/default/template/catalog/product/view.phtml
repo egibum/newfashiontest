@@ -237,14 +237,6 @@ var $j = jQuery.noConflict();
              <div id="delivery_button"><button type="button" onclick="myFunction2()"><p>FREE UK DELIVERY >></p></link></div>
 				<!-- DELIVERY BUTTON -->
 				
-								<div class="sizes">
-					<div class="input-box">
-						<select name="super_attribute[<?php echo $_attribute["id"] ?>]" id="attribute<?php echo $_attribute["id"] ?>" class="configurable-option-select required-entry super-attribute-select  swatches-type-<?php echo $_attribute["swatch_type"]; ?> <?php echo (($_attribute["hideselect"]) ? "hideselect" : ""); ?> <?php echo (($_attribute["switchgallery"]) ? "switch-gallery" : ""); ?>">
-							<option value=""><?php echo $this->__('Choose an Option...') ?></option>
-						</select>
-					</div>
-				</div>
-				
 				<!-- SIZE GUIDE BUTTON -->
              <div id="size_button"><button type="button" onclick="myFunction()">Size Guide</link></div>
 			 	<!-- SIZE GUIDE BUTTON -->
@@ -356,11 +348,13 @@ $_product = $this->getProduct();
                 }
                 /* Eof MAIN SWATCHES CODE */
                 ?>
-                <div class="input-box">
-                    <select name="super_attribute[<?php echo $_attribute["id"] ?>]" id="attribute<?php echo $_attribute["id"] ?>" class="configurable-option-select required-entry super-attribute-select  swatches-type-<?php echo $_attribute["swatch_type"]; ?> <?php echo (($_attribute["hideselect"]) ? "hideselect" : ""); ?> <?php echo (($_attribute["switchgallery"]) ? "switch-gallery" : ""); ?>">
-                        <option value=""><?php echo $this->__('Select Size') ?></option>
-                    </select>
-                </div>
+				<div class="sizes">
+					<div class="input-box">
+						<select name="super_attribute[<?php echo $_attribute["id"] ?>]" id="attribute<?php echo $_attribute["id"] ?>" class="configurable-option-select required-entry super-attribute-select  swatches-type-<?php echo $_attribute["swatch_type"]; ?> <?php echo (($_attribute["hideselect"]) ? "hideselect" : ""); ?> <?php echo (($_attribute["switchgallery"]) ? "switch-gallery" : ""); ?>">
+							<option value=""><?php echo $this->__('Choose an Option...') ?></option>
+						</select>
+					</div>
+				</div>
                 <div class="clearer">&nbsp;</div>
             </dd>
         <?php endforeach; ?>
