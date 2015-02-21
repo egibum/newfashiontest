@@ -256,9 +256,6 @@ var $j = jQuery.noConflict();
                 </div>
 		</div>
                 <?php endif;?>
-				                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                    <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
-                <?php endif;?>
                                 <?php echo $this->getChildHtml('other');?>
                                 <?php
 /* to override the default configurable options template  */
@@ -270,10 +267,6 @@ include_once 'attributeSwatches.php';
 $_json_config = addAttributeSwatches($this->getJsonConfig());
 $_product = $this->getProduct();
 ?>
-
-
-
-
                 <div class="clear"></div>
                 <?php echo $this->getChildHtml('shopper_product_addthis') ?>
             </div>
