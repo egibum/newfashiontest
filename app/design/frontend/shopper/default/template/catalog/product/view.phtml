@@ -264,6 +264,40 @@ var $j = jQuery.noConflict();
 /* to override the default configurable options template  */
 
 //echo ;
+<<<<<<< HEAD
+=======
+
+include_once 'attributeSwatches.php';
+//$_d = $this->getJsonConfig();
+$_json_config = addAttributeSwatches($this->getJsonConfig());
+$_product = $this->getProduct();
+?>
+
+
+
+
+    <script type="text/javascript">
+        function out_of_stock_string() {
+            return "<?php echo $this->__(" (Out of Stock)"); ?>";
+        }
+
+        var mng_Config = null;
+        var spConfig = null;
+
+        jQuery(document).ready(function() {
+            window.mng_Config = <?php echo Mage::helper('core')->jsonEncode($_json_config); ?>;
+            window.mng_Config.containerId = 'options-container-<?php echo $_product->getId(); ?>';
+            window.spConfig = new Product.Config(window.mng_Config);
+            window.addNewConfigurableProductMethods();
+            window.enableSwatchesOptions("first");
+            window.swatchesSelectDefaultValueOnHash();
+        });
+
+
+
+    </script>
+<?php endif; ?>
+>>>>>>> parent of 59758bb... .
 
 include_once 'attributeSwatches.php';
 //$_d = $this->getJsonConfig();
