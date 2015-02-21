@@ -222,8 +222,8 @@ var $j = jQuery.noConflict();
                 <?php echo $this->getChildHtml('product_type_data') ?>
                 <?php echo $this->getTierPriceHtml() ?>
                 <?php echo $this->getChildHtml('extrahint') ?>
-<div id="product_social"><script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5347f4871e3c511d"></script>
-<div class="addthis_sharing_toolbox"></div></div>
+				<div id="product_social"><script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5347f4871e3c511d"></script>
+				<div class="addthis_sharing_toolbox"></div></div>
                 <?php if (!$this->hasOptions()):?>
                     <div class="add-to-box">
                         <?php if($_product->isSaleable()): ?>
@@ -243,7 +243,7 @@ var $j = jQuery.noConflict();
 
                 <?php echo $this->getChildHtml('shopper_product_addthis') ?>
                 <?php echo $this->getChildHtml('addto') ?>
-   <?php if(!$_product->isGrouped()): ?>
+				<?php if(!$_product->isGrouped()): ?>
                 <div class="qty-container clearfix">
                     <label for="qty"><?php echo $this->__('Qty') ?>:</label>
                     <input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->__('Qty') ?>" class="input-text qty" />
@@ -254,7 +254,7 @@ var $j = jQuery.noConflict();
                 <div class="short-description">
                     <div class="std" itemprop="description" ><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                 </div>
-		</div>
+				</div>
                 <?php endif;?>
 				                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
                     <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
