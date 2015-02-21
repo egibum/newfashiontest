@@ -222,9 +222,7 @@ var $j = jQuery.noConflict();
                 <?php echo $this->getChildHtml('product_type_data') ?>
                 <?php echo $this->getTierPriceHtml() ?>
                 <?php echo $this->getChildHtml('extrahint') ?>
-				<div id="product_social"><script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5347f4871e3c511d"></script>
-				<div class="addthis_sharing_toolbox"></div></div>
-                <?php if (!$this->hasOptions()):?>
+				                <?php if (!$this->hasOptions()):?>
                     <div class="add-to-box">
                         <?php if($_product->isSaleable()): ?>
                             <?php echo $this->getChildHtml('addtocart') ?>
@@ -232,6 +230,8 @@ var $j = jQuery.noConflict();
                     </div>
                     <?php echo $this->getChildHtml('extra_buttons') ?>
                 <?php endif; ?>
+				<div id="product_social"><script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5347f4871e3c511d"></script>
+				<div class="addthis_sharing_toolbox"></div></div>
 				
 				<!-- DELIVERY BUTTON -->
              <div id="delivery_button"><button type="button" onclick="myFunction2()"><p>FREE UK DELIVERY >></p></link></div>
