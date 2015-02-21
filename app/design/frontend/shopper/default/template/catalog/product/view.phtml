@@ -280,6 +280,9 @@ $_product = $this->getProduct();
 					->toHtml() ?>
 			 <!-- Rich snippets block -->  
 			</div> 
+	    <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+	        <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+	    <?php endif;?>
     </form>
 	
 	<!-- SIZE GUIDE FUNCTION -->
