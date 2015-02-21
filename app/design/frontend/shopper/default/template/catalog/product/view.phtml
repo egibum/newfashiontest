@@ -186,7 +186,8 @@ var $j = jQuery.noConflict();
         <!-- MORE FROM BLOCK -->
 
         <div class="product-shop">
-		<div itemscope itemtype="http://schema.org/Product">
+		<div itemscope itemtype="http://schema.org/Product"></div>
+		<div id="product_right">
             <?php
             $output = '';
             switch ($replace_upsell) {
@@ -205,6 +206,8 @@ var $j = jQuery.noConflict();
                 echo '<div class="product-additional">'.$output.'</div>';
             }
             ?>
+		</div>
+		<div id="product_left">
             <div class="product-shop-info">
                 <div class="product-name">
                     <h1 itemprop="name" ><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
@@ -248,7 +251,7 @@ var $j = jQuery.noConflict();
                 <div class="short-description">
                     <div class="std" itemprop="description" ><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                 </div>
-
+		</div>
                 <?php endif;?>
                                 <?php echo $this->getChildHtml('other');?>
                                 <?php
