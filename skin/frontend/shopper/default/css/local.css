@@ -1338,7 +1338,6 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 .block-subscribe .form-subscribe-header{text-align:center; font-size:14px; color:#000; color:rgba(0,0,0,0.67);}
 .block-subscribe .input-box{margin:16px 0; text-align:center }
 .block-subscribe input.input-text{min-width:90%; border-radius:2px; -webkit-border-radius:2px; -moz-border-radius:2px; }
-.test {}
 .block-login {float:none; width:350px; margin:0 auto; padding:0; position:relative; background:#fff; border:none; border-top:6px solid #97d2c9; border-radius:2px; -webkit-border-radius:2px; -moz-border-radius:2px;
     -webkit-box-shadow:0px 0px 6px 0px rgba(0, 0, 0, 0.10);
     -moz-box-shadow:0px 0px 6px 0px rgba(0, 0, 0, 0.10);

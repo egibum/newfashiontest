@@ -24,6 +24,7 @@
  */
 
 /* Reset ================================================================================= */
+.test2 {}
 #w_n_window{height:100%; overflow: hidden; margin-top:12px;}
 .language-switch {display:none !important;}
 .footer_links a:hover { text-decoration: underline !important;}
