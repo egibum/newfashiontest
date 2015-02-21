@@ -12,12 +12,14 @@ $_product = $this->getProduct();
     <dl id="options-container-<?php echo $_product->getId(); ?>">
         <?php foreach ($_json_config["attributes"] as $_attribute): ?>
                     <dd id="sizes">
-                            <div class="input-box">
-                    <select name="super_attribute[<?php echo $_attribute["id"] ?>]" id="attribute<?php echo $_attribute["id"] ?>" class="configurable-option-select required-entry super-attribute-select  swatches-type-<?php echo $_attribute["swatch_type"]; ?> <?php echo (($_attribute["hideselect"]) ? "hideselect" : ""); ?> <?php echo (($_attribute["switchgallery"]) ? "switch-gallery" : ""); ?>">
-                        <option value=""><?php echo $this->__('Select Size') ?></option>
+                        <div class="input-box">
+							<select name="super_attribute[<?php echo $_attribute["id"] ?>]" id="attribute<?php echo $_attribute["id"] ?>" class="configurable-option-select required-entry super-attribute-select  swatches-type-<?php echo $_attribute["swatch_type"]; ?> <?php echo (($_attribute["hideselect"]) ? "hideselect" : ""); ?> <?php echo (($_attribute["switchgallery"]) ? "switch-gallery" : ""); ?>">
+								<option value=""><?php echo $this->__('Select Size') ?></option>
                     </select>
-                </div>
-                </dd>
+						</div>
+					</dd>
+	</dl>
+	<dl id="options-container-<?php echo $_product->getId(); ?>">
             <dd id="colours">
             <h2> More colors</h2>
                 <?php
