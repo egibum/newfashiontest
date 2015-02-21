@@ -2031,5 +2031,5 @@ html[xmlns] .slides {display: block;}
 
 
 /* ========== CSS FIX FOR PRODUCT PAGE ===================== */
-.product_right {width: 55%; float:right;}
-.product_left {width: 45%; float:left;}
+#product_right {width: 55%; float:right;}
+#product_left {width: 45%; float:left;}
