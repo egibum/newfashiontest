@@ -9,16 +9,6 @@ $_json_config = addAttributeSwatches($this->getJsonConfig());
 $_product = $this->getProduct();
 ?>
 <?php if ($_product->isSaleable() && count($_json_config["attributes"])): ?>
-    <dl id="options-container-<?php echo $_product->getId(); ?>">
-        <?php foreach ($_json_config["attributes"] as $_attribute): ?>
-                    <dd id="sizes">
-                        <div class="input-box">
-							<select name="super_attribute[<?php echo $_attribute["id"] ?>]" id="attribute<?php echo $_attribute["id"] ?>" class="configurable-option-select required-entry super-attribute-select  swatches-type-<?php echo $_attribute["swatch_type"]; ?> <?php echo (($_attribute["hideselect"]) ? "hideselect" : ""); ?> <?php echo (($_attribute["switchgallery"]) ? "switch-gallery" : ""); ?>">
-								<option value=""><?php echo $this->__('Select Size') ?></option>
-                    </select>
-						</div>
-					</dd>
-	</dl>
 	<dl id="options-container-2">
             <dd id="colours">
             <h2> More colors</h2>
