@@ -1566,7 +1566,7 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 .product-view .box-up-sell3 .jcarousel-clip-horizontal {width:400px; margin:0;}
 
 #delivery_button button:hover {background:#aaa; text-decoration:underline;}
-#delivery_button button {position:absolute; top: 221px; width: 217px; height: 24px; left:49%;}
+#delivery_button button {width: 217px; height: 24px; left:49%;}
 
 .back-button button {background: #eee;}
 .back-button {position:absolute; top: 5px; right: 10px;}
@@ -2028,3 +2028,8 @@ html[xmlns] .slides {display: block;}
 
 .j2t-rewards-review-points
 {position: relative; margin-right:25%; margin-left: 26%;}
+
+
+/* ========== CSS FIX FOR PRODUCT PAGE ===================== */
+.product_right {width: 55%; float:right;}
+.product_left {width: 45%; float:left;}
