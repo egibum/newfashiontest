@@ -13,7 +13,7 @@ $_product = $this->getProduct();
         <?php foreach ($_json_config["attributes"] as $_attribute): ?>
 
             <dt id="label-attribute-<?php echo $_attribute["id"] ?>"><label class="required"><em>*</em><?php echo $_attribute["label"] ?></label><span class="selected-label">&nbsp;</span>   </dt>
-            <dd>
+            <dd id="colours">
                 <?php
                 /* WILL DISPLAY THE COLOR SWATCHES AND ALL THE CUSTOM OPTION SELECTORS HERE */
                 if (in_array($_attribute["swatch_type"], array("image", "child", "label"))) {
