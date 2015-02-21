@@ -222,6 +222,7 @@ var $j = jQuery.noConflict();
                 <?php echo $this->getChildHtml('product_type_data') ?>
                 <?php echo $this->getTierPriceHtml() ?>
                 <?php echo $this->getChildHtml('extrahint') ?>
+				<div class="cart_add">
 				                <?php if (!$this->hasOptions()):?>
                     <div class="add-to-box">
                         <?php if($_product->isSaleable()): ?>
@@ -229,7 +230,8 @@ var $j = jQuery.noConflict();
                         <?php endif; ?>
                     </div>
                     <?php echo $this->getChildHtml('extra_buttons') ?>
-                <?php endif; ?>
+					<?php endif; ?>
+				</div>
 				<div id="product_social"><script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5347f4871e3c511d"></script>
 				<div class="addthis_sharing_toolbox"></div></div>
 				
