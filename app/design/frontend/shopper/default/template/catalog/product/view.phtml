@@ -256,6 +256,9 @@ var $j = jQuery.noConflict();
                 </div>
 		</div>
                 <?php endif;?>
+				                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                    <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+                <?php endif;?>
                                 <?php echo $this->getChildHtml('other');?>
                                 <?php
 /* to override the default configurable options template  */
@@ -277,9 +280,6 @@ $_product = $this->getProduct();
 					->toHtml() ?>
 			 <!-- Rich snippets block -->  
 			</div> 
-	    <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-	        <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
-	    <?php endif;?>
     </form>
 	
 	<!-- SIZE GUIDE FUNCTION -->
