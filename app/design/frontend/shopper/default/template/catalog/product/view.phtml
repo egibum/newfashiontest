@@ -188,24 +188,6 @@ var $j = jQuery.noConflict();
         <div class="product-shop">		
 		<div id="product_right">
 		<div itemscope itemtype="http://schema.org/Product">
-            <?php
-            $output = '';
-            switch ($replace_upsell) {
-                case 'always':
-                    $output = $this->getChildHtml('queldorei_product_additional');
-                    break;
-                case 'never':
-                    if ($enable_upsell) $output = $this->getChildHtml('upsell_products');
-                    break;
-                case 'only':
-                    if ($enable_upsell) $output = $this->getChildHtml('upsell_products');
-                    if ( empty($output) ) $output = $this->getChildHtml('queldorei_product_additional');
-                    break;
-            }
-            if(!empty($output)){
-                echo '<div class="product-additional">'.$output.'</div>';
-            }
-            ?>
 		</div>
 		</div>
 		<div id="product_left">
