@@ -559,4 +559,9 @@ function myFunction2() {
         echo '<div class="after-tabs-block additional-block">'.$this->getLayout()->createBlock('cms/block')->setBlockId('shopper_after_tabs')->toHtml().'</div>';
     }
     ?>
+
+	<!-- RELATED -->
+	<?php echo $this->getChildHtml('content_related') ?>
+	<!-- RELATED -->
+
 </div>
