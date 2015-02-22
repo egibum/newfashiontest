@@ -180,10 +180,11 @@ var $j = jQuery.noConflict();
             
         </div>
         <!-- MORE FROM BLOCK -->
+		<?php $moreFromContent = $this->getMoreFrom($_product->getCategoryIds(),$_product->getAttributeText('manufacturer')); ?>
         <div class="more-from hidden-xs">
             <div class="title"><h3><?php echo $this->__('More From') ?></h3></div>
             <div class="content">
-                <?php echo $this->getMoreFrom($_product->getCategoryIds(),$_product->getAttributeText('manufacturer')); ?>
+                <?php echo $moreFromContent['html']; ?>
             </div>
         </div>
         <!-- MORE FROM BLOCK -->
@@ -272,7 +273,6 @@ $_product = $this->getProduct();
     <dl id="options-container-<?php echo $_product->getId(); ?>">
 
         <?php foreach ($_json_config["attributes"] as $_attribute):  ?>
-
             <dt id="label-attribute-<?php echo $_attribute["id"] ?>"><label class="required"><em>*</em><?php echo $_attribute["label"] ?></label><span class="selected-label">&nbsp;</span>   </dt>
             <dd>
                 <?php
@@ -377,6 +377,24 @@ $_product = $this->getProduct();
                 <?php endif;?>
                 <div class="clear"></div>
             </div>
+			
+			<!-- Random brand products block -->
+			<?php if($this->isReplacingBlock($_product) <= 1 && $_product->isConfigurable()): ?>
+				<div class="randomBrandProducts">
+					<div class="randomBrandTitle"><?php echo $this->__('More from ') ?><?php echo ucwords(strtolower($_product->getAttributeText('manufacturer'))); ?></div>
+					<ul>
+					<?php foreach($this->getRandomProductFromBrand($moreFromContent['brand_id']) as $brandProduct): ?>
+						<li>
+							<div class="productImage">
+								<a href="<?php echo $brandProduct['url'];?>"><img src="<?php echo $brandProduct['image']; ?>" alt="<?php echo $brandProduct['name'];?>"/></a> 
+							</div>
+						</li>
+					<?php endforeach; ?>
+					</ul>
+				</div>
+			<?php endif; ?>
+			<!-- Random brand products block -->
+			
       	<!-- Rich snippets block -->
 				<?php echo $this->getLayout()
 					->createBlock('richsnippets/product')

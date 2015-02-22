@@ -1420,7 +1420,7 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 .product-view .product-shop .grouped-items-table .price-box .price { font-size:24px; line-height:24px; }
 .product-view .product-shop .grouped-items-table tbody td { padding:10px;}
 .product-view .product-essential {}
-.product-view .short-description { margin:5px 0; padding:17px 0; width:80%; margin: 0 10%; position: relative; font-family: "Verdana"; font-size: 14px; color: black; height: 320px;}
+.product-view .short-description { margin:5px 0; padding:17px 0; width:80%; margin: 0 10%; position: relative; font-family: "Verdana"; font-size: 14px; color: black; margin-bottom:50px; }
 .product-view .qty-container { position:relative; width:20%; margin-left:10%; top: 10px;}
 .product-view .qty-container label{float:left; margin-right:10px; line-height:30px; color:#000; color:rgba(0,0,0,0.67);}
 .product-view .qty-container input{float:left; width:15px;}
@@ -1609,6 +1609,15 @@ button.link:hover {background:#000; color: white; text-decoration:underline;}
 .product-view .more-from  .content ul.more-from-cat li { float:left; clear:both; margin-left:30px; margin-bottom:5px; }
 .product-view .more-from  .content ul.more-from-brand  li.first { margin-right:10px; }
 /* Product view more from block */
+
+/* Random brand products block */
+.randomBrandProducts { float:left; width:210px; margin-left:30px; }
+.randomBrandProducts .randomBrandTitle { font-family:"Verdana"; font-size:14px; color:#000; font-weight:bold; margin-bottom:5px; }
+.randomBrandProducts  ul li { float:left; width:90px; height:110px; margin-bottom:5px; border:1px solid #aaa; }
+.randomBrandProducts  ul li:nth-child(odd) { margin-right:15px; }
+
+/* Random brand products block */
+
 
 .box-up-sell2 {position: relative; margin:30px 0 0 -15px; display:none; }
 .box-up-sell2 h3{ font-family:"Myriad Pro", serif; font-size:24px; font-weight:300; padding:0 0 28px; margin:0 0 0 15px; text-transform:uppercase; letter-spacing:-1.2px; line-height:21px;}

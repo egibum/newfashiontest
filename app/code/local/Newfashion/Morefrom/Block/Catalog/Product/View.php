@@ -16,6 +16,7 @@ class Newfashion_Morefrom_Block_Catalog_Product_View extends Mage_Catalog_Block_
                 $mainCat['name'] = $cat->getName(); 
                 $mainCat['url'] = $cat->getUrl(); 
             } elseif ($manufacturer == $cat->getName()) {
+				$brandID = $cat->getId();
                 $manufacturerUrl = $cat->getUrl(); 
                 $manufacturerImage = Mage::getBaseUrl('media').'catalog/category/'.$cat->getThumbnail(); 
             } else {
@@ -28,32 +29,61 @@ class Newfashion_Morefrom_Block_Catalog_Product_View extends Mage_Catalog_Block_
         if ($manufacturerUrl != NULL) {
             $html.='<ul class="more-from-brand"><li class="first"><img src="'.$manufacturerImage.'" alt="" /></li><li><a href="'.$mainCat['url'].'">' .$mainCat['name'].'</a> > <a href="'.$manufacturerUrl.'">' .ucwords(strtolower($manufacturer)).'</a></li></ul>';
         }
-        return $html;
+		$output['html'] = $html;
+		$output['brand_id'] = $brandID;
+        return $output;
     }
 	
-	public function getBrandCategoryID($currentCatIds,$manufacturer) {
-        $categoryCollection = Mage::getResourceModel('catalog/category_collection')
-                             ->addAttributeToSelect('name')
-                             ->addAttributeToFilter('entity_id', $currentCatIds)
-                             ->addIsActiveFilter();
-		foreach($categoryCollection as $cat):
-		if ($cat->getName() == $manufacturer) {
-			return $cat->getId();
+	public function isReplacingBlock($_product) {
+		// get the necessary model
+		$_helper2 = Mage::getModel('catalog/product_type_configurable')
+					->setProduct($_product);
+		$_subproducts = $_helper2
+						->getUsedProductCollection()
+						->addAttributeToSelect('color')
+						->addFilterByRequiredOptions();
+
+		// initialise our colours array
+		$_colors = array();
+		$_color_id = array();
+
+		// look for attribute value of color in each associated product and assign to $_colours array
+		foreach ($_subproducts as $_subproduct) {
+		  // look for attribute value of color in each associated product and assign to $_colours array
+
+		  $label = $_subproduct->getAttributeText('color');
+		  $_colors[] = $label;
+
+		  if (!isset($_color_id[$label])) {
+			$_color_id[$label] = $_subproduct->getData('color');
+		  }
 		}
-		endforeach;
+
+		// remove dup's
+		$_color_swatch = array_unique($_colors);
+		return count($_color_swatch);
+
 	}
 	
-	public function getRandomProductFromBrand($name) {
-        $categoryCollection = Mage::getResourceModel('catalog/category_collection')
-                             ->addAttributeToSelect('name')
-                             ->addAttributeToSelect('url')
-                             ->addAttributeToSelect('thumbnail')
-                             ->addAttributeToFilter('entity_id', $currentCatIds)
-                             ->addIsActiveFilter();
-        foreach($categoryCollection as $cat):
-		
-		$cat->getUrl();
+	public function getRandomProductFromBrand($categoryID) {
+		$products = Mage::getModel('catalog/product')
+			->getCollection()
+			->addAttributeToSort()
+			->addCategoryFilter(Mage::getModel('catalog/category')->load($categoryID));
+			$products->getSelect()->order(new Zend_Db_Expr('RAND()'));
+		$counter = 0; 
+		foreach($products as $product):
+			if ($counter == 6) { return $productArray; }
+			$fullProduct = Mage::getModel('catalog/product')->load($product->getId()); //Product ID
+			$images_obj = $this->helper('catalog/image')->init($fullProduct, 'small_image')->resize(90, 110);
+			$images[] = (string)$images_obj;
+			$productArray[$product->getId()]['image'] = (string)$images_obj;
+			$productArray[$product->getId()]['url'] = $fullProduct->getProductUrl();
+			$productArray[$product->getId()]['name'] = $fullProduct->getName();
+			$counter++;
 		endforeach;
+		
+		
 	}
 }
 ?>

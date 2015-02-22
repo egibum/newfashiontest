@@ -8,10 +8,11 @@ include_once 'attributeSwatches.php';
 $_json_config = addAttributeSwatches($this->getJsonConfig());
 $_product = $this->getProduct();
 ?>
+
 <?php if ($_product->isSaleable() && count($_json_config["attributes"])): ?>
     <dl id="options-container-<?php echo $_product->getId(); ?>">
         <?php foreach ($_json_config["attributes"] as $_attribute): ?>
-
+			<?php if ($_attribute['code'] == 'color' && count($_attribute["options"]) > 1): ?>
             <dt id="label-attribute-<?php echo $_attribute["id"] ?>"><label class="required"><em>*</em><?php echo $_attribute["label"] ?></label><span class="selected-label">&nbsp;</span>   </dt>
             <dd id="colours">
                 <?php
@@ -84,6 +85,7 @@ $_product = $this->getProduct();
                 /* Eof MAIN SWATCHES CODE */
                 ?>
 				            </dd>
+							<?php endif; ?>
 											<div class="sizes">
 					<div class="input-box">
 						<select name="super_attribute[<?php echo $_attribute["id"] ?>]" id="attribute<?php echo $_attribute["id"] ?>" class="configurable-option-select required-entry super-attribute-select  swatches-type-<?php echo $_attribute["swatch_type"]; ?> <?php echo (($_attribute["hideselect"]) ? "hideselect" : ""); ?> <?php echo (($_attribute["switchgallery"]) ? "switch-gallery" : ""); ?>">
