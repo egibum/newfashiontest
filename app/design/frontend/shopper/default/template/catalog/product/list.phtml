@@ -200,6 +200,7 @@ $empty_category_block = Mage::getModel('cms/block')
 
         </li>
         <?php endforeach ?>
+		<?php if ($products_count > 15): ?>
 		<li class="item page-2 more-items-item">
 			<div class="more-items" onclick="getMoreProducts(<?php echo $this->getLayer()->getCurrentCategory()->getId(); ?>,2);">
 				<div class="more-items-image"></div>
@@ -207,6 +208,7 @@ $empty_category_block = Mage::getModel('cms/block')
 			</div>
 			<div class="itemCount"><?php echo $this->__('Items 1 to 15 of '); echo $products_count; echo $this->__(' total');  ?></div>
 		</li>
+		<?php endif; ?>
     </ul>
     <?php endif; ?>
 
