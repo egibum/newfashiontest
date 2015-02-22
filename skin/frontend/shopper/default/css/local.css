@@ -123,7 +123,7 @@ button, input { line-height: normal; }
  * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
  */
 button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible;}
-#size_button button {height: 26px; width: 77px;}
+#size_button button {height: 26px; width: 77px; float: right;}
 #size_button button:hover {background-color: #aaa; text-decoration:underline;}
 /*
  * Re-set default cursor for disabled elements
