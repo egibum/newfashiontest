@@ -1650,7 +1650,7 @@ button.link:hover {background:#000; color: white; text-decoration:underline;}
 
 
 /* My Account ============================================================================= */
-dd#sizes {position:relative; margin-left:10%; float: left; top: -245px; margin-left:12%;}
+.sizes {position:relative; margin-left:10%; float: left; top: -245px; margin-left:12%;}
 dd#colours h2 {width:80%; margin-left: 10%; text-transform: capitalize; font-family: "Verdana"; font-weight:bold; font-size: 14px;}
 dd#colours { position:relative; float; left;}
 #size_button {position:relative; float:right; width:100%; margin-right: 12%; margin-top: 10px;}
