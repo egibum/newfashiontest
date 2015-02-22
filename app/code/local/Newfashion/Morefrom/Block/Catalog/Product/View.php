@@ -6,6 +6,7 @@ class Newfashion_Morefrom_Block_Catalog_Product_View extends Mage_Catalog_Block_
                              ->addAttributeToSelect('name')
                              ->addAttributeToSelect('url')
                              ->addAttributeToSelect('thumbnail')
+                             ->addAttributeToFilter('include_in_menu' , 1)
                              ->addAttributeToFilter('entity_id', $currentCatIds)
                              ->addIsActiveFilter();
                              
