@@ -1444,7 +1444,7 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 .product-view .product-options .qty-holder {display:block; margin-top:5px;}
 .product-view .product-options dd input.qty {width:40px;}
 .product-view .product-options-bottom {background: transparent; margin:10px 0; padding:0; max-width: 324px;}
-.product-view .product-shop .product-options-bottom {margin:0; float:right; position:relative; width:65%; margin-right:5%; top: -6px;}
+.product-view .product-shop .product-options-bottom {margin:0; float:right; position:relative; width:65%; margin-right:5%; top: -245px;}
 .product-view .product-shop .product-options-bottom .price-box {float:none; margin:0 0 15px; }
 .product-view .product-img-box {position:relative;}
 .product-view .product-img-box .zoom {background:none; }
