@@ -114,7 +114,14 @@ only screen and (min-device-pixel-ratio: 1.5) {
     .footer-info .information ul li:before,
     #checkout-step-login .block-checkout-register ul.ul li:before,
     .block-progress dt:before {top:-2px}
+	
+	
 
+}
+
+@media only screen and (max-width: 400px) {
+	.toolbar-bottom, .toolbar { display:none; }
+	.more-items-item { display:block; }
 }
 
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5) and (max-width: 959px),

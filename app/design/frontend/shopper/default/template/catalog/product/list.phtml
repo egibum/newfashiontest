@@ -31,6 +31,7 @@
  * @see Mage_Catalog_Block_Product_List
  */
 ?>
+
 <?php
     $_productCollection=$this->getLoadedProductCollection();
     $_helper = $this->helper('catalog/output');
@@ -38,6 +39,7 @@
 
     $listX = 252;
     $listY = $helper->calculateHeight($listX);
+	$products_count = Mage::getModel('catalog/category')->load($this->getLayer()->getCurrentCategory()->getId())->getProductCount();
 ?>
 <?php if(!$_productCollection->count()): ?>
 <?php
@@ -198,6 +200,13 @@ $empty_category_block = Mage::getModel('cms/block')
 
         </li>
         <?php endforeach ?>
+		<li class="item page-2 more-items-item">
+			<div class="more-items" onclick="getMoreProducts(<?php echo $this->getLayer()->getCurrentCategory()->getId(); ?>,2);">
+				<div class="more-items-image"></div>
+				<div class="title"><?php echo $this->__('Load 15 more items') ?></div>
+			</div>
+			<div class="itemCount"><?php echo $this->__('Items 1 to 15 of '); echo $products_count; echo $this->__(' total');  ?></div>
+		</li>
     </ul>
     <?php endif; ?>
 
@@ -206,3 +215,18 @@ $empty_category_block = Mage::getModel('cms/block')
     </div>
 </div>
 <?php endif; ?>
+<script type="text/javascript">
+	function getMoreProducts(id,page){
+		jQuery.ajax({
+			type: 'POST',
+			dataType: 'json',
+			url: '<?php echo Mage::getUrl('',array('_secure'=>true)); ?>newfashion/index/index/id/'+id+'/page/'+page,
+			success:
+				function(data) {
+					jQuery('.products-grid').append(data);
+					jQuery('li.item.page-'+page).css('display','none');
+				}
+		});
+	}
+</script>
+
