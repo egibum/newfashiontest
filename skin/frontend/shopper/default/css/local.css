@@ -1421,7 +1421,7 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 .product-view .product-shop .grouped-items-table tbody td { padding:10px;}
 .product-view .product-essential {}
 .product-view .short-description { margin:5px 0; padding:17px 0; width:80%; margin: 0 10%; position: relative; font-family: "Verdana"; font-size: 14px; color: black; height: 320px;}
-.product-view .qty-container { position:relative; width:20%; margin-left:10%;}
+.product-view .qty-container { position:relative; width:20%; margin-left:10%; top: 10px;}
 .product-view .qty-container label{float:left; margin-right:10px; line-height:30px; color:#000; color:rgba(0,0,0,0.67);}
 .product-view .qty-container input{float:left; width:15px;}
 .product-view .product-options {background: transparent; margin:0 0 0 0 13px; padding:0;}
