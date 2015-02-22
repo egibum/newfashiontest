@@ -69,6 +69,7 @@ class Newfashion_Morefrom_Block_Catalog_Product_View extends Mage_Catalog_Block_
 		$products = Mage::getModel('catalog/product')
 			->getCollection()
 			->addAttributeToSort()
+			->addAttributeToFilter('type_id', 'configurable')
 			->addCategoryFilter(Mage::getModel('catalog/category')->load($categoryID));
 			$products->getSelect()->order(new Zend_Db_Expr('RAND()'));
 		$counter = 0; 
