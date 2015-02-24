@@ -323,7 +323,7 @@ body.non-responsive {min-width:1200px;}
 .links li a:hover {color:#777; text-decoration: none;}
 .links li.separator{ padding:0 12px; background:url("../images/links_separator.png") 50% 50% no-repeat; }
 
-header { position:relative; z-index:1000; height:100%; border-bottom: 1px solid #eee;}
+header { position:relative; z-index:1000; height:100%; border-bottom: 1px solid #eee; max-width: 1366px;}
 .logo { display: inline-block; }
 header a.logo {  text-decoration:none !important; margin-top: 10px; margion-bottom: 2px; }
 header a.logo img{ max-width:280px; height:auto;width:auto\9; /* ie8 */ }
@@ -1972,8 +1972,10 @@ html[xmlns] .slides {display: block;}
    Modify as content requires.
    ========================================================================== */
 
+  
 /***** Standard 1200px *****/
-.row { margin:0 auto; width:100%; height:100%;}
+.main-container {border-top: 1px solid #666; margin-top: 3px;}
+.row { margin:0 auto; width:100%; height:100%; max-width: 1366px;}
 .row .row { display:inline-block; margin:0 -15px; }
 .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12 {	display:inline;	float: left; position: relative; margin:0 1%; min-height:1px;}
 .grid_1 { width:70px;}
@@ -1987,7 +1989,7 @@ html[xmlns] .slides {display: block;}
 .grid_9 { width:870px;}
 .grid_10 { width:970px;}
 .grid_11 { width:1070px;}
-.grid_12 { width:98%; height:59%;}
+.grid_12 { width:98%; height:100%;}
 .space_1 { margin-left:100px; }
 .space_2 { margin-left:200px; }
 .space_3 { margin-left:300px; }
