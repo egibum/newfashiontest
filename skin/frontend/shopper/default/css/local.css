@@ -1552,8 +1552,8 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 .product-view .box-up-sell3 .block-subtitle {line-height:32px;}
 .product-view .box-up-sell3 .block-subtitle a {font-weight:300; text-decoration:underline; }
 .product-view .box-up-sell3 .block-subtitle a:hover {text-decoration:none; }
-.product-view .box-up-sell3 .jcarousel-item, .product-view .box-up-sell .item {width:29%; margin-right:3%;}
-.product-view .box-up-sell3 .item {float:left; width:42%; padding:0; position:relative; margin: 0 4%; margin-bottom: 20px;}
+.product-view .box-up-sell3 .jcarousel-item, .product-view .box-up-sell .item {width:400px; margin:0;}
+.product-view .box-up-sell3 .item {float:left; width:39%; padding:0; position:relative; min-height: 220px; margin-left: 27px; margin-right: 17px; margin-bottom: 20px;}
 .product-view .box-up-sell3 .product-image img {height: 100%; width:auto; right:10%; position: relative;}
 .product-view .box-up-sell3 .product-image {display:block; height:186px; overflow:hidden; border: 1px solid #aaa;}
 .product-view .box-up-sell3 .product-name {color:#3c3c3c; font-size:10pt; font-weight:300; display:block; position:relative; text-align:left; min-height:20px; font-family: "Verdana"; margin-left:0px;}
@@ -1566,8 +1566,8 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 .product-view .box-up-sell3 .jcarousel-next-horizontal:hover {background-color: #666;}
 .product-view .box-up-sell3 .jcarousel-prev-horizontal:hover {background-color: #666;}
 .product-view .box-up-sell3 .jcarousel-prev-horizontal {margin:-15px 0 0 0 !important; background-color:#efefef; z-index:9;}
-.product-view .box-up-sell3 .jcarousel-container-horizontal {width:auto; margin:0;}
-.product-view .box-up-sell3 .jcarousel-clip-horizontal {width:auto; margin:0;}
+.product-view .box-up-sell3 .jcarousel-container-horizontal {width:280px; margin:0;}
+.product-view .box-up-sell3 .jcarousel-clip-horizontal {width:400px; margin:0;}
 
 #delivery_button button:hover {background:#aaa; text-decoration:underline;}
 #delivery_button button {width: 217px; height: 24px; left:49%;}
