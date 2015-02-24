@@ -1344,7 +1344,6 @@ left:0px;
 	margin-left:auto;
 	background: #000;
 	position: relative;
-	top: -44px;
 }
 
 #mens_brand_centre_title h1 {color: #fff;}
@@ -1355,7 +1354,6 @@ left:0px;
 	margin-left:auto;
 	background: #000;
 	position: relative;
-	top: -44px;
 }
 
 #mens_brand_right_title h1 {color: #fff;}
@@ -1366,7 +1364,6 @@ left:0px;
 {
 	margin-top: 12px;
 	position:relative;
-	top: -60px;
 }
 
 mens_brand_centre_logos a img :hover
@@ -1389,7 +1386,6 @@ mens_brand_centre_logos a img :hover
 	margin-bottom:0px;
 	background: #000;
 	position: relative;
-	top: -44px;
 }
 #mens_brand_left_title h1 {color: #fff;}
 
@@ -1398,7 +1394,6 @@ mens_brand_centre_logos a img :hover
 	margin-right:auto;
 	margin-left:auto;
 	position: relative;
-	top: -88px;
 }
 
 .col1-layout .col-main {margin-top:0px !important;}
@@ -1427,7 +1422,6 @@ mens_brand_centre_logos a img :hover
 	display:inline;
 	float:right;
 	position: relative;
-	top: -28px;
 }
 
 #mens_brand_right
@@ -1447,7 +1441,6 @@ mens_brand_centre_logos a img :hover
 {
 	margin-left:10px;
 	position:relative;
-	top: -88px;
 }
 
 #mens_brand_right_az_az
@@ -1459,7 +1452,6 @@ mens_brand_centre_logos a img :hover
 	display:inline;
 	float:left;
 	position:relative;
-	top: -120px;
 }
 
 #mens_brand_right_az_b
