@@ -686,7 +686,7 @@ nav.queldorei {position:relative; z-index:10010; display:inline-block; vertical-
 /********** Navigation > */
 /* ======================================================================================= */
 
-a.product-image {display:block;position:relative;}
+a.product-image {display:block;position:relative; text-align: center;}
 
 .new-label, .sale-label {position: absolute; z-index:10000; width:91px; height:91px; background:url(../images/labels.png) 0 0 no-repeat; }
 .sale-top-left {top:-13px; left:-13px; background-position:-182px 0;}
