@@ -1415,6 +1415,7 @@ mens_brand_centre_logos a img :hover
 	display:inline;
 	float:right;
 	position: relative;
+	top: 37px;
 }
 
 #mens_brand_left_desc
