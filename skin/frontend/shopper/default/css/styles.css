@@ -1705,7 +1705,8 @@ nav ul ul li a:hover {
 .navi_fashion
 {
 	float:left;
-	margin: 15px 30px;
+	margin: 0 30px;
+	margin-top: 20px;
 }
 
 #navi_m_left

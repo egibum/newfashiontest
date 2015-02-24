@@ -325,7 +325,7 @@ body.non-responsive {min-width:1200px;}
 
 header { position:relative; z-index:1000; height:100%; border-bottom: 1px solid #eee;}
 .logo { display: inline-block; }
-header a.logo {  text-decoration:none !important; margin-top: 10px; }
+header a.logo {  text-decoration:none !important; margin-top: 10px; margion-bottom: 2px; }
 header a.logo img{ max-width:280px; height:auto;width:auto\9; /* ie8 */ }
 header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
 header h1.logo {padding:0;}
