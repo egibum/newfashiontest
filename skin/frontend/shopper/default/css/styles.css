@@ -2326,12 +2326,10 @@ width:100%;
 .product-info2
 {
 	position:relative;
-	width: 100%;
-	max-width:220px;
-	margin-right:auto;
-	margin-left:auto;
+	width: 90%;
+	margin: 0 5%;
 	max-height:16px;
-	overflow: hidden;
+	float: left;
 }
 
 .product-info2 a
