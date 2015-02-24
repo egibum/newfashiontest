@@ -323,7 +323,7 @@ body.non-responsive {min-width:1200px;}
 .links li a:hover {color:#777; text-decoration: none;}
 .links li.separator{ padding:0 12px; background:url("../images/links_separator.png") 50% 50% no-repeat; }
 
-header { position:relative; z-index:1000; height:100%; border-bottom: 1px solid #eee; max-width: 1366px;}
+header { position:relative; z-index:1000; height:100%; border-bottom: 1px solid #eee; max-width: 1366px; margin: auto;}
 .logo { display: inline-block; }
 header a.logo {  text-decoration:none !important; margin-top: 10px; margion-bottom: 2px; }
 header a.logo img{ max-width:280px; height:auto;width:auto\9; /* ie8 */ }
