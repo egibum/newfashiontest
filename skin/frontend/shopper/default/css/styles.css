@@ -1362,7 +1362,7 @@ left:0px;
 
 #mens_brand_centre_logos
 {
-	margin-top: 12px;
+	margin-top: 45px;;
 	position:relative;
 }
 
@@ -1373,7 +1373,7 @@ mens_brand_centre_logos a img :hover
 
 #mens_brand_left_bottom
 {
-	position:relative; top: -131px;
+	position:relative; top: -60px;
 }
 
 
@@ -1404,6 +1404,8 @@ mens_brand_centre_logos a img :hover
 	display:inline;
 	float:left;
 	margin-left:10px;
+	position: relative;
+	top: 35px;
 }
 
 #wmens_brand_left_desc
