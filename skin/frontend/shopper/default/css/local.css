@@ -881,7 +881,7 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 /* View Type: Grid */
 .products-grid { border:none; position:relative; margin:0 0 50px; }
 .col2-left-layout .products-grid,
-.col2-right-layout .products-grid { width:100%; margin:0 0px; }
+.col2-right-layout .products-grid { width:100%; margin:0 0px;display: inline-block;}
 .col1-layout .products-grid { width:1200px; margin:0 auto; }
 #social_category {width:125px; right:60px; top: 35px; position:absolute;}
 .products-grid.last { border-bottom:0; }
