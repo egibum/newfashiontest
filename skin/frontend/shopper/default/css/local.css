@@ -1515,7 +1515,7 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 
 .product-view .after-tabs-block { margin:0 0 30px;}
 .main-container  .slider-container {height: 250px !important;}
-.product-view .product-additional {}
+.product-view .product-additional { width: 350px; float:right;}
 .product-view .product-additional .block {margin:0 0 20px; padding:0; width:270px; }
 .product-view .product-additional .block .block-title {border:0; padding:24px 35px 27px; margin:0; color:#000; color:rgba(0,0,0,0.75); text-align:center;}
 .product-view .product-additional .block .block-title:after {content:''; float:left; width:120px; height:1px; background:#e8e8e8; margin:14px 0 0 39px;}
@@ -1584,7 +1584,7 @@ button.link:hover {background:#000; color: white; text-decoration:underline;}
 .product-view .box-up-sell .block-subtitle a {font-weight:300; text-decoration:underline; }
 .product-view .box-up-sell .block-subtitle a:hover {text-decoration:none; }
 .product-view .box-up-sell .jcarousel-item, .product-view .box-up-sell .item {width:100%; margin-bottom: 20px;}
-.product-view .box-up-sell .item {float:left; width:31%; padding:0; margin-right: 25px; margin-left:25px; position:relative; min-height: 220px; }
+.product-view .box-up-sell .item {float:left; width:160px; padding:0; margin:0 2%; position:relative; min-height: 220px; }
 .product-view .box-up-sell .product-image {display:block; height: 186px; overflow:hidden; border: 1px solid #aaa; width: 156px;}
 .product-view .box-up-sell .product-image img {height:100%; width: auto; position:relative; right: 10%;}
 .product-view .box-up-sell .product-name {color:#3c3c3c; font-size:12px; font-weight:300; display:block; position:relative; text-align:left; min-height: 20px; font-family: "Verdana"; font-size: 10pt; margin-left: 0px;}
