@@ -2,10 +2,8 @@
 <layout version="0.1.0">    
     <default>        
         <reference name="head">      
-		    <action method="addItem" ifconfig="brandlogo/general/brandlogoenabled"><type>skin_js</type><name>js/queldorei/jquery-1.8.2.min.js</name></action> 
-            <action method="addItem" ifconfig="brandlogo/general/brandlogoenabled"><type>skin_js</type><name>js/brandlogonew/jquery.bxslider.js</name></action> 
+		    <action method="addItem" ifconfig="brandlogo/general/brandlogoenabled"><type>skin_js</type><name>js/brandlogonew/jquery.bxslider.js</name></action> 
             <action method="addItem" ifconfig="brandlogo/general/brandlogoenabled"><type>skin_css</type><name>css/brandlogonew/jquery.bxslider.css</name></action>
-			<action method="addItem" ifconfig="brandlogo/general/brandlogoenabled"><type>skin_js</type><name>js/queldorei/jquery.easing.js</name></action>
         </reference>   
     </default>
     

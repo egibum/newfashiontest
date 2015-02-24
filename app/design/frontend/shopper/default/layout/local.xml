@@ -38,8 +38,8 @@
 			<action ifconfig="shoppersettings/design/override_css" method="addItem"><type>skin_css</type><name>css/override.css</name></action>
 
             <action method="addItem"><type>js</type><name>queldorei/html5shiv.js</name><params/><if>lt IE 9</if></action>
-			<action method="addItem"><type>js</type><script>queldorei/jquery-1.8.2.min.js</script></action>
-			<action method="addItem"><type>js</type><script>queldorei/jquery.noconflict.js</script></action>
+			<!--<action method="addItem"><type>js</type><script>queldorei/jquery-1.8.2.min.js</script></action>-->
+			<!--<action method="addItem"><type>js</type><script>queldorei/jquery.noconflict.js</script></action>-->
             <action method="addItem"><type>js</type><name>queldorei/swipe.js</name><params/><if>!IE</if></action>
             <action method="addJs"><script>queldorei/jquery.masonry.min.js</script></action>
 			<action ifconfig="shoppersettings/ajax/totop" method="addJs"><script>queldorei/jquery.ui.totop.js</script></action>
