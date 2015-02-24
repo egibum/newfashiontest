@@ -671,7 +671,7 @@ tr.summary-details-excluded { font-style:italic; }
 .products-grid { border-bottom:1px solid #ddd; position:relative; }
 .products-grid.last { border-bottom:0; }
 .products-grid li.item { float:left; width:138px; padding:12px 10px 80px; }
-.products-grid .product-image { display:block; margin:0 0 10px; }
+.products-grid .product-image { display:block; }
 .products-grid .product-name { margin:0 0 5px; font-weight:bold; font-size:13px; }
 .products-grid .product-name a {}
 .products-grid .price-box { margin:5px 0; }
