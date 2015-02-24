@@ -1704,12 +1704,8 @@ nav ul ul li a:hover {
 
 .navi_fashion
 {
-	display:inline;
 	float:left;
-	position:absolute;
-	z-index: 9999;
-	margin-top: 30px;
-	margin-left: 25px;
+	margin: 20px 30px;
 }
 
 #navi_m_left
@@ -2096,9 +2092,7 @@ nav ul ul li a:hover {
 
 #zem_navi
 {
-	position:absolute;
-	top: 82px;
-	left: 0px;
+	margin-top: 6px;
 	display: inline;
 	float:left;
 	width:100%;
