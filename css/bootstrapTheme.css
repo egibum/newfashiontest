@@ -176,10 +176,7 @@ body {
   -moz-border-radius: 500px;
   border-radius: 500px;
 }
-.row {
-  margin-left: 0px;
-  *zoom: 1;
-}
+
 .row:before,
 .row:after {
   display: table;
@@ -4694,10 +4691,7 @@ a.badge:focus {
   }
 }
 @media (min-width: 1200px) {
-  .row {
-    margin-left: 0px;
-    *zoom: 1;
-  }
+
   .row:before,
   .row:after {
     display: table;

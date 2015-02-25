@@ -1451,7 +1451,7 @@ mens_brand_centre_logos a img :hover
 	margin-top:20px;
 	margin-left: 10px;
 	max-height: 325px;
-	overflow:scroll;
+	overflow-y:scroll;
 	display:inline;
 	float:left;
 	position:relative;
