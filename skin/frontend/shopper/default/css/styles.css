@@ -847,6 +847,7 @@ left:0px;
 .product-view 
 {
 	position: relative;
+	float:left;
 	}
 
 .product-essential {}
