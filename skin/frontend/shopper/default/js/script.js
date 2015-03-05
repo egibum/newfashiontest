@@ -64,6 +64,38 @@ jQuery(window).on("load", function() {
     }
 
     jQuery(window).resize().scroll();
+    
+	jQuery('.MagicScrollArrowRight').click(function(){
+		jQuery(this).css('visibility','hidden');
+		setTimeout(function() {
+			jQuery(this).css('visibility','hidden');
+			jQuery('.MagicScrollArrowRight').css('display','none');
+		}, 1500);
+	});
+	
+	jQuery('.product-swatches-container ul li a').click(function(){
+		jQuery('.MagicScrollArrowLeft').trigger('click');
+		
+		var clickedIndex =  jQuery(this).index('.product-swatches-container ul li a');
+			clickedIndex++;
+		jQuery('.MagicScrollArrowLeft').trigger('click');
+		jQuery('.MagicScrollContainer img').each(function(){
+			if(jQuery(this).attr('alt') == clickedIndex.toString()){
+			   jQuery('.MagicScrollContainer div').first().prepend(jQuery(this).parent().parent());
+			   jQuery(this).parent().parent().css('visibility','visible');
+			} else {
+				jQuery(this).parent().parent().css('visibility','hidden');
+			}
+		});
+		
+		jQuery('.MagicScrollContainer img').each(function(){
+			if(jQuery(this).attr('alt') == clickedIndex.toString()){
+			   
+			   jQuery('.MagicScrollContainer div').first().prepend(jQuery(this).parent().parent());
+			}
+		});
+		jQuery('.MagicScrollContainer .MagicScrollItem a img').first().trigger('click');
+	});
 });
 
 jQuery.fn.extend({

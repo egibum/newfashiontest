@@ -28,35 +28,6 @@ $appearance = Mage::getStoreConfig('shoppersettings/appearance', Mage::app()->ge
 $route = Mage::app()->getFrontController()->getRequest()->getRouteName();
 $action = Mage::app()->getFrontController()->getRequest()->getActionName();
 ?>
-        <script>
-      /**
-       * author : vasu naman
-       */
-	   var $j = jQuery.noConflict();
-	$j( document ).ready(function() {
-			$j('.product-swatches-container ul li a').click(function(){
-	var clickedIndex =  $j(this).index('.product-swatches-container ul li a');
-        clickedIndex++;
-
-$j('.MagicThumb-swap img').each(function(){
-console.log('I am inside loop');
-
-console.log(clickedIndex)
-if($j(this).attr('alt') == clickedIndex.toString()){
-console.log('I am inside if');
-console.log($j(this).parent().parent())
-   $j('.MagicScrollContainer div').first().prepend($j(this).parent().parent());
-}
-})			
-				$j('.MagicToolboxContainer').children().children()[0].src =   $j(this).attr('href');
-
-				$j('.MagicThumb-expanded').children().children()[0].src = $j(this).attr('href');
-
-
-
-			});
-	});
-</script>
 <!-- footer BOF -->
 <div class="footer-container">
     <?php if ( !($route == 'customer' && ($action == 'login' || $action == 'forgotpassword' || $action == 'create')) ) : ?>

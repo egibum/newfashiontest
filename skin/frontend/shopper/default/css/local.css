@@ -1423,7 +1423,7 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 .product-view .product-shop .grouped-items-table tbody td { padding:10px;}
 .product-view .product-essential {}
 .product-view .short-description { margin:5px 0; padding:17px 0; width:80%; margin: 0 10%; position: relative; font-family: "Verdana"; font-size: 14px; color: black; margin-bottom:50px; }
-.product-view .qty-container { position:relative; width:20%; margin-left:10%; top: 10px;}
+.product-view .qty-container { position:relative; width:100%; margin-left:10%; float:left; margin-top:20px; }
 .product-view .qty-container label{float:left; margin-right:10px; line-height:30px; color:#000; color:rgba(0,0,0,0.67);}
 .product-view .qty-container input{float:left; width:15px;}
 .product-view .product-options {background: transparent; margin:0 0 0 0 13px; padding:0;}
@@ -1473,11 +1473,11 @@ div.alert button:hover{ cursor:pointer; background-position:0 -9px;}
 .product-view .product-img-box .more-views .jcarousel-controls {position:relative;}
 .product-view .product-img-box .more-views .jcarousel-prev-horizontal { position:absolute; left:1px;}
 .product-view .product-img-box .more-views .jcarousel-next-horizontal { position:absolute; right:1px;}
-.product-view .add-to-cart { margin:0; width: 90%;}
-.product-view .product-shop .add-to-box { margin:0; float:left;}
-.product-view .product-shop .add-to-cart button.button { margin:0; width: 100%}
+.product-view .add-to-cart { margin:0; width: auto; }
+.product-view .product-shop .add-to-box { margin:0; float:left; }
+.product-view .product-shop .add-to-cart button.button { margin:-5px 0 0 10px; width: 100%}
 .product-view .add-to-cart button.button span{ height:40px; width:100%; background-image:url('../images/btn_overlay_product.png'); }
-.product-view .add-to-cart button.button span span {line-height:41px; font-size:16px; text-transform:uppercase; padding:0 20px 0 25px; background:url('../images/icon_cart_product.png') 17px 50% no-repeat; }
+.product-view .add-to-cart button.button span span {line-height:41px; font-size:16px; text-transform:uppercase; padding-right:50px; padding-left:24px; background:url('../images/icon_cart_product.png') 17px 50% no-repeat; }
 
 .product-view .add-to-links{margin:88px 0 0; padding:0; float:left; }
 .product-view .add-to-links li{line-height:38px; padding-left:53px; margin:0 0 0 20px; float:left;}
@@ -1662,7 +1662,7 @@ button.link:hover {background:#000; color: white; text-decoration:underline;}
 
 
 /* My Account ============================================================================= */
-.sizes {position:relative; margin-left:10%; float: left; margin-left:12%;}
+.sizes {position:absolute; top:-55px; margin-left:10%; float: left; margin-left:12%;}
 dd#colours h2 {width:80%; margin-left: 10%; text-transform: capitalize; font-family: "Verdana"; font-weight:bold; font-size: 14px;}
 dd#colours { position:relative; float; left;}
 #size_button {position:relative; float:right; width:100%; margin-right: 12%; margin-top: 10px;}
