@@ -209,8 +209,12 @@ var $j = jQuery.noConflict();
                 echo '<div class="product-additional">'.$output.'</div>';
             }
             ?>
-		<div itemscope itemtype="http://schema.org/Product">
-		</div>
+			<div class="more-great-products">
+				<!-- RELATED -->
+				<?php echo $this->getChildHtml('content_related') ?>
+				<!-- RELATED -->
+			</div>
+			<div itemscope itemtype="http://schema.org/Product"></div>
 		</div>
 		<div id="product_left">
             <div class="product-shop-info">
@@ -570,9 +574,4 @@ function myFunction2() {
         echo '<div class="after-tabs-block additional-block">'.$this->getLayout()->createBlock('cms/block')->setBlockId('shopper_after_tabs')->toHtml().'</div>';
     }
     ?>
-
-	<!-- RELATED -->
-	<?php echo $this->getChildHtml('content_related') ?>
-	<!-- RELATED -->
-
 </div>
