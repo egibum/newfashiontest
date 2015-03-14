@@ -84,9 +84,10 @@ class Newfashion_Morefrom_Block_Catalog_Product_View extends Mage_Catalog_Block_
 			->addAttributeToFilter('type_id', 'configurable')
 			->addCategoryFilter(Mage::getModel('catalog/category')->load($categoryID));
 			$products->getSelect()->order(new Zend_Db_Expr('RAND()'));
-		$counter = 0; 
+		$counter = 0;
+		$totalProducts = count($products);
 		foreach($products as $product):
-			if ($counter == 6) { return $productArray; }
+			if ($counter == ($totalProducts-1) || $counter == 6) { return $productArray; }
 			$fullProduct = Mage::getModel('catalog/product')->load($product->getId()); //Product ID
 			$images_obj = $this->helper('catalog/image')->init($fullProduct, 'small_image')->resize(150, 150);
 			$images[] = (string)$images_obj;

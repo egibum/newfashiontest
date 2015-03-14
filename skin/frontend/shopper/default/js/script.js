@@ -158,6 +158,13 @@ jQuery(window).on("load", function() {
 				'overflow': 'auto',
 				'height': 'auto'
 			});	
+			jQuery('.refine-by-mobile').click(function(){
+				jQuery('.catalog-category-view .col-left').css('display','block');
+				jQuery('html, body').css({
+					'overflow': 'hidden',
+					'height': '100%'
+				});
+			});	
 		}
 	});
 	
@@ -190,6 +197,13 @@ jQuery(window).on("load", function() {
 			'overflow': 'auto',
 			'height': 'auto'
 		});
+		jQuery('.refine-by-mobile').click(function(){
+			jQuery('.catalog-category-view .col-left').css('display','block');
+			jQuery('html, body').css({
+				'overflow': 'hidden',
+				'height': '100%'
+			});
+		});	
 	});
 	
 	jQuery('.block-layered-mobile dt span.checked').each(function(){
@@ -214,12 +228,10 @@ jQuery(window).on("load", function() {
 		baseUrl = jQuery(this).attr('href');
 		if (jQuery(this).hasClass('checked')) {
 			jQuery('dd.filter-items-'+attrCode+' ol li a').each(function(){
-				
 				if (baseUrl == jQuery(this).attr('href')) {
 					doneUrl = updateUrls(jQuery(this).html(),attrCode,baseUrl,true);
 					jQuery(this).attr('href',doneUrl);
 				} else {
-					console.log('not same url');
 					doneUrl = updateUrls(jQuery(this).html(),attrCode,baseUrl,false);
 					jQuery(this).attr('href',doneUrl);
 				} 
@@ -233,13 +245,11 @@ jQuery(window).on("load", function() {
 		element = element.toLowerCase();
 		if(baseUrl.search(element) > 0 || remove == true) {
 			baseUrl = baseUrl.replace(element, '');
-			console.log('delete element from url');
 			return baseUrl;
 		} else if (baseUrl.search(attrcode) > 0) {
 			attrcodeL = attrcode.length;
 			element = element+',';
 			setPosition = attrcodeL + 1 + baseUrl.search(attrcode);
-			console.log('add element to url');
 			return baseUrl.splice( setPosition, 0, element );
 		}
 	};
