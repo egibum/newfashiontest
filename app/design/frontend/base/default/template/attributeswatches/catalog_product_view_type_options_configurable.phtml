@@ -8,18 +8,18 @@ include_once 'attributeSwatches.php';
 $_json_config = addAttributeSwatches($this->getJsonConfig());
 $_product = $this->getProduct();
 ?>
-
 <?php if ($_product->isSaleable() && count($_json_config["attributes"])): ?>
     <dl id="options-container-<?php echo $_product->getId(); ?>">
         <?php foreach ($_json_config["attributes"] as $_attribute): ?>
-			<?php if ($_attribute['code'] == 'color' && count($_attribute["options"]) > 1): ?>
+
             <dt id="label-attribute-<?php echo $_attribute["id"] ?>"><label class="required"><em>*</em><?php echo $_attribute["label"] ?></label><span class="selected-label">&nbsp;</span>   </dt>
-            <dd id="colours">
+            <dd>
                 <?php
                 /* WILL DISPLAY THE COLOR SWATCHES AND ALL THE CUSTOM OPTION SELECTORS HERE */
                 if (in_array($_attribute["swatch_type"], array("image", "child", "label"))) {
                     ?>
                     <div id="attribute-<?php echo $_attribute["id"] ?>-container" class="product-swatches-container">
+						<?php if ($_attribute['code'] == 'color' && count($_attribute["options"]) > 1): ?>
                         <ul id="swatches-options-<?php echo $_attribute["id"] ?>" class="has-swatches" <?php /* if ($_attribute["swatch_type"] == "image") echo ' class="has-swatches"'*/ ?>>
                                 <?php
                                 /* preload swatches from product gallery if necessary */
@@ -51,7 +51,7 @@ $_product = $this->getProduct();
                                             ?>
                                             <a class="" title="<?php echo $_option["label"] ?>" data-original-title="<?php echo $_option["label"] ?>"  rel="<?php echo $_option["id"] ?>" id="swatches_option_value_<?php echo $_option["id"] ?>" href="<?php echo $_image; ?>" rev="<?php echo $_image->resize(256); ?>">
                                                 <?php
-                                                echo "<img src='" . $_image->resize(30) . "' title='" . $_option["label"] . "' alt='" . $_option["label"] . "'/>";
+                                                echo "<img src='" . $_image->resize(150) . "' title='" . $_option["label"] . "' alt='" . $_option["label"] . "'/>";
                                                 ?>
                                             </a>
                                             <span class="tooltip-container"><span class="tooltip"><span><?php echo $_option["label"] ?></span></span></span>
@@ -79,21 +79,19 @@ $_product = $this->getProduct();
                             }
                             ?>
                         </ul>
+						<?php endif; ?>
                     </div>
                     <?php
                 }
                 /* Eof MAIN SWATCHES CODE */
                 ?>
-				            </dd>
-							<?php endif; ?>
-											<div class="sizes">
-					<div class="input-box">
-						<select name="super_attribute[<?php echo $_attribute["id"] ?>]" id="attribute<?php echo $_attribute["id"] ?>" class="configurable-option-select required-entry super-attribute-select  swatches-type-<?php echo $_attribute["swatch_type"]; ?> <?php echo (($_attribute["hideselect"]) ? "hideselect" : ""); ?> <?php echo (($_attribute["switchgallery"]) ? "switch-gallery" : ""); ?>">
-							<option value=""><?php echo $this->__('Choose an Option...') ?></option>
-						</select>
-					</div>
-				</div>
+                <div class="input-box">
+                    <select name="super_attribute[<?php echo $_attribute["id"] ?>]" id="attribute<?php echo $_attribute["id"] ?>" class="configurable-option-select required-entry super-attribute-select  swatches-type-<?php echo $_attribute["swatch_type"]; ?> <?php echo (($_attribute["hideselect"]) ? "hideselect" : ""); ?> <?php echo (($_attribute["switchgallery"]) ? "switch-gallery" : ""); ?>">
+                        <option value=""><?php echo $this->__('Choose an Option...') ?></option>
+                    </select>
+                </div>
                 <div class="clearer">&nbsp;</div>
+            </dd>
         <?php endforeach; ?>
     </dl>
     <script type="text/javascript">

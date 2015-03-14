@@ -1,0 +1,30 @@
+<?php
+/**
+ * "Seo Layered Navigation" extension for "Magento Commerce" by "EcommerceTeam (www.ecommerce-team.com)"
+ *
+ * @category     Extension
+ * @copyright    Copyright (c) 2014 EcommerceTeam (http://www.ecommerce-team.com)
+ * @author       EcommerceTeam
+ * @version      4.0.0
+ */
+
+/** @var EcommerceTeam_Sln_Helper_Layer $helper */
+$filters = $this->getActiveFilters();
+?>
+<?php if(!empty($filters)): ?>
+<div class="currently">
+    <div class="actions">
+		<a href="<?php echo $this->getClearUrl() ?>" class="layered-clear"><?php echo $this->__('Clear All') ?></a>
+		<div class="layered-apply"><?php echo $this->__('Apply') ?></div>
+	</div>
+</div>
+<?php else: ?>
+<div class="currently">
+    <div class="actions">
+		<div class="close-full"><?php echo $this->__('Close') ?></div>
+	</div>
+</div>
+<?php endif; ?>
+<div class="save-block">
+	<div class="save-button"><?php echo $this->__('Done') ?></div>
+</div>

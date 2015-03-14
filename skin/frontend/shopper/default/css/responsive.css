@@ -6,6 +6,7 @@
 
 /***** iPhone (portrait) *****/
 @media only screen and (max-width: 767px) {
+	.item.page-2.more-items-item { display:block; }
 	.footer_col_20 {width: 31% !important;}
 	.footer_links2 {position:relative; top: 45px; margin-bottom: 30px;}
 	.footer_links {position:relative; top: 20px;}
@@ -34,7 +35,7 @@
 	#mobile-nav li a span {background: #7c7c7c; font-size:x-large;}
 	header {height:135px;}
 	.push.ltop {height: 1px; background-color: black; position:relative;}
-	a.menu-link {position: relative; z-index: 100000; top: 85px;}
+	a.menu-link {position: relative; z-index: 999; top: 85px;}
 	.top-switch-bg {display:none;}
 	.navi-shop2 img {width:100%; height: auto;}
 	.navi-shop2 {width:300px; height: auto;}
@@ -120,8 +121,8 @@
 	li.product {display:none;}
 	.block-viewed2 {display:none;}
 	.box-up-sell2 {display:none !important;}
-	.view-mode {display:none;}
-	.sorter {display:none;}
+	.pager {display:none;}
+	.sorter .limiter {display:none;}
 	.regular-price {}
 	.products-grid .price-box {width: 100%; position:relative;}
 	.products-grid .button-container {display:none;}
@@ -379,6 +380,7 @@
 
 /***** iPhone (landscape) *****/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+	.item.page-2.more-items-item { display:block; }
 	#w_n_window {height: 50%;}
 	.form-list li.wide textarea {width:100%;}
 	.bx-wrapper .bx-viewport {width: 95% !important; left: 1% !important;}

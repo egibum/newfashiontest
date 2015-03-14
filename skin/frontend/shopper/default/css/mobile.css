@@ -119,9 +119,46 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 }
 
-@media only screen and (max-width: 400px) {
-	.toolbar-bottom, .toolbar { display:none; }
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	.toolbar-bottom { display:none; }
+	.sorter { width:66%; }
+	.sorter .view-mode label { display:none; }
+	.sorter .view-mode { margin-left:10px; }
+	.sorter .sort-order {display:none; }
+	.toolbar { padding:0 5px; }
 	.products-grid li.item .more-items { display:block; }
+	.block-layered-nav { display:none; }
+	.catalog-category-view .col-left { display:none; position:absolute !important; width:100%; max-width:100%; height:100% !important; top:-135px; z-index:1000; left:0; background:#fff;  }
+	.main-container { position:relative; z-index:99999; }
+	.block-layered-mobile { display:block; position:fixed; width:100%; background:#fff;}
+	.block-layered-mobile .main-content { padding:30px 20px; }
+	.block-layered-mobile .block-title { border-bottom:1px solid #000; padding-bottom:10px; }
+	.block-layered-mobile .block-title strong span { font-size:14px; text-transform:uppercase; color:#666; }
+	.block-layered-mobile .block-title .cancel-refine { float:right; padding:5px 20px; cursor:pointer; margin-top:-10px; border:1px solid #000; }
+	.block-layered-mobile .block-title .cancel-refine:hover { background-color:#ddd; }
+	.block-layered-mobile dl dd { display:none; border:none; max-height:100%; }
+	.block-layered-mobile dl dd ol { max-height:400px; }
+	.block-layered-mobile dl dd ol li { overflow:hidden; margin-bottom:20px; float:left; clear:both; width:100%; margin-top:10px; }
+	.block-layered-mobile dl dd ol li a { color:#000; font-size:14px; }
+	.block-layered-mobile .save-block { display:none; }
+	.block-layered-mobile .save-block div {color:#000; font-size:14px;  float:left; border:1px solid #000; width:100%; padding:10px 0; text-align:center;}
+	
+	.block-layered-mobile .block-content dl { margin-top:10px; }
+	.block-layered-mobile .block-content dt { cursor:pointer; margin-bottom:5px; float:left; clear:both; width:100%; margin-top:10px; font-size:14px; color:#000;  }
+	.block-layered-mobile .block-content div.label  .title { float:left; }
+	.block-layered-mobile .block-content div.label span { float:right; }
+	.block-layered-mobile .block-content div.label{ float:left; width:100%; clear:both; }
+	.block-layered-mobile .block-content .checked { min-height:10px; font-size:12px; color:#666; text-transform:capitalize; float:left; width:100%; }
+	.block-layered-mobile .block-content dl#narrow-by-list.sln-nav { max-height:400px; overflow:scroll; }
+	.block-layered-mobile .block-content .currently {float:left; clear:both; width:100%; margin-top:20px; }
+	.block-layered-mobile .block-content .currently  .actions a, .block-layered-mobile .block-content .currently  .actions .close-full, .layered-apply { color:#000; float:left; border:1px solid #000; width:49%; padding:10px 0; text-align:center; }
+	.block-layered-mobile .block-content .currently  .actions a:first-child { border-right:none; }
+	.block-layered-mobile .block-content .currently  .actions .close-full { width:100%; border-right:1px solid #000; }
+	body #sln-indicator span { width:100px; left:35%; top:35%; z-index:99999; color:#000; }
+	body #sln-indicator {margin-left:0; left:0; top:0; z-index:99999; padding:0;}
+	
+	.refine-by-mobile { display:block; float:left; width:33%; margin-top:10px; border:1px solid #e1e1e1; font-size:14px; color:#000; line-height:24px; text-align:center;}
+	
 }
 
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5) and (max-width: 959px),

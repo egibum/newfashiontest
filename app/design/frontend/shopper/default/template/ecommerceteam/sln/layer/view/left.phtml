@@ -1,0 +1,75 @@
+<?php
+/**
+ * "Seo Layered Navigation" extension for "Magento Commerce" by "EcommerceTeam (www.ecommerce-team.com)"
+ *
+ * @category     Extension
+ * @copyright    Copyright (c) 2014 EcommerceTeam (http://www.ecommerce-team.com)
+ * @author       EcommerceTeam
+ * @version      4.0.0
+ */
+
+/** @var $this EcommerceTeam_Sln_Block_Layer_View */
+?>
+<?php if($this->canShowBlock()): ?>
+<div id="<?php echo $this->getBlockId();?>" class="block block-layered-nav">
+    <div class="block-title">
+        <strong><span><?php echo $this->__('Refine By') ?></span></strong>
+    </div>
+    <div class="block-content">
+        <?php echo $this->getStateHtml() ?>
+        <?php if($this->canShowOptions()): ?>
+            <p class="block-subtitle"><?php echo $this->__('Shopping Options') ?></p>
+            <dl id="narrow-by-list" class="sln-nav">
+                <?php $_filters = $this->getFilters(); ?>
+                <?php foreach ($_filters as $filter): /** @var $filter EcommerceTeam_Sln_Block_Layer_Filter_Abstract */ ?>
+                <?php if($filter->canShow()): $filterCode = $filter->getRequestVar(); ?>
+                    <dt class="filter-title-<?php echo $filterCode;?>">
+                        <span><?php echo $this->__($filter->getName()) ?></span>
+                        <?php if($filterComment = $filter->getComment()):?>
+                        <img onmouseover="showFilterComment('<?php echo $filter->getRequestVar()?>', this)"
+                              onmouseout="hideFilterComment('<?php echo $filter->getRequestVar()?>', this)"
+                              class="filter-details"
+                              src="<?php echo $this->getSkinUrl('images/ecommerceteam/sln/help.png')?>"
+                              alt="Filter Details" />
+                        <?php endif;?>
+                    </dt>
+                    <dd class="filter-items-<?php echo $filterCode;?>"><?php echo $filter->getHtml(); ?></dd>
+                <?php endif; ?>
+                <?php endforeach; ?>
+            </dl>
+            <script type="text/javascript">decorateDataList('narrow-by-list')</script>
+        <?php endif; ?>
+    </div>
+</div>
+
+<div id="<?php echo $this->getBlockId();?>" class="block-layered-mobile">
+	<div class="main-content">
+		<div class="block-title">
+			<strong><span><?php echo $this->__('Refine By:'); ?></span></strong>
+			<span class="refine-by-label"></span>
+			<span class="cancel-refine"><?php echo $this->__('Cancel'); ?></span>
+		</div>
+		<div class="block-content">
+			<?php if($this->canShowOptions()): ?>
+				<dl id="narrow-by-list" class="sln-nav">
+					<?php $_filters = $this->getFilters(); ?>
+					<?php foreach ($_filters as $filter): /** @var $filter EcommerceTeam_Sln_Block_Layer_Filter_Abstract */ ?>
+					<?php if($filter->canShow()): $filterCode = $filter->getRequestVar(); ?>
+						<dt class="filter-title-<?php echo $filterCode;?>">
+							<div class="label">
+								<span class="title"><?php echo $this->__($filter->getName()) ?></span>
+								<span>></span>
+							</div>
+							<span class="checked"></span>
+						</dt>
+						<dd attrcode="<?php echo $filterCode;?>" class="filter-items-<?php echo $filterCode;?>"><?php echo $filter->getHtml(); ?></dd>
+					<?php endif; ?>
+					<?php endforeach; ?>
+				</dl>
+				<script type="text/javascript">decorateDataList('narrow-by-list')</script>
+			<?php endif; ?>
+			<?php echo $this->getStateHtml(); ?>
+		</div>
+	</div>
+</div>
+<?php endif; ?>

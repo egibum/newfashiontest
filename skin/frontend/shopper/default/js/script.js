@@ -64,16 +64,21 @@ jQuery(window).on("load", function() {
     }
 
     jQuery(window).resize().scroll();
-    
-	jQuery('.MagicScrollArrowRight').click(function(){
-		jQuery(this).css('visibility','hidden');
-		setTimeout(function() {
-			jQuery(this).css('visibility','hidden');
-			jQuery('.MagicScrollArrowRight').css('display','none');
-		}, 1500);
-	});
+
+	
+	function hideMagicScrollRightNavButton() {
+		jQuery('.MagicScrollArrowRight').click(function(){
+			jQuery('.MagicScrollArrowRight').addClass('HideMagicScrollArrowRight');
+		});
+		
+		jQuery('.MagicScrollArrowLeft').click(function(){
+			jQuery('.MagicScrollArrowRight').removeClass('HideMagicScrollArrowRight');
+		});
+	}
+	
 	
 	jQuery('.product-swatches-container ul li a').click(function(){
+		jQuery('.MagicScrollArrowRight').removeClass('HideMagicScrollArrowRight');
 		jQuery('.MagicScrollArrowLeft').trigger('click');
 		
 		var clickedIndex =  jQuery(this).index('.product-swatches-container ul li a');
@@ -95,7 +100,154 @@ jQuery(window).on("load", function() {
 			}
 		});
 		jQuery('.MagicScrollContainer .MagicScrollItem a img').first().trigger('click');
+		
+		var c = jQuery('.MagicScrollItem').filter(function() {
+			return jQuery(this).css('visibility') !== 'hidden';
+		}).length;
+		
+		if (c < 4) {
+			jQuery('.MagicScrollArrowRight').addClass('HideMagicScrollArrowRight');
+		} else {
+			hideMagicScrollRightNavButton();
+		}
 	});
+	
+	// Refiny by module
+	jQuery('.refine-by-mobile').click(function(){
+		jQuery('.catalog-category-view .col-left').css('display','block');
+		jQuery('html, body').css({
+			'overflow': 'hidden',
+			'height': '100%'
+		});
+	});	
+	
+	jQuery('.block-layered-mobile dl dt').click(function(){
+		jQuery(this).next().css('display','block');
+		jQuery('.cancel-refine').addClass('attr-view');
+		jQuery('.refine-by-label').html(jQuery(this).find('.title').html());
+		jQuery('.block-layered-mobile dl dt').css('display','none');
+		jQuery('.currently .actions').css('display','none');
+		jQuery('.block-layered-mobile .save-block').css('display','block');
+	});
+	var attributeHTML;
+	jQuery('.cancel-refine').click(function(){
+		if (jQuery(this).hasClass('attr-view')) {
+			jQuery('.refine-by-label').html('');
+			jQuery('.block-layered-mobile dl dt').css('display','block');
+			jQuery('.block-layered-mobile dl dd').css('display','none');
+			jQuery('.currently .actions').css('display','block');
+			jQuery(this).removeClass('attr-view');
+			jQuery('.block-layered-mobile .save-block').css('display','none');
+			jQuery('.block-layered-mobile dt span.checked').each(function(){
+				attributeHTML = '';
+				jQuery(this).parent().next().find('li a').each(function(){
+					if(jQuery(this).hasClass('checked')) {
+						if (attributeHTML == '') {
+							attributeHTML = jQuery(this).html();
+						} else {
+							attributeHTML = attributeHTML+', '+jQuery(this).html();
+						}
+						
+					}
+				});
+				jQuery(this).html(attributeHTML);
+			});
+		} else {
+			jQuery('.catalog-category-view .col-left').css('display','none');
+			jQuery('html, body').css({
+				'overflow': 'auto',
+				'height': 'auto'
+			});	
+		}
+	});
+	
+	jQuery('.block-layered-mobile .save-block .save-button').click(function(){
+		jQuery('.refine-by-label').html('');
+		jQuery('.block-layered-mobile dl dt').css('display','block');
+		jQuery('.block-layered-mobile dl dd').css('display','none');
+		jQuery('.currently .actions').css('display','block');
+		jQuery('.cancel-refine').removeClass('attr-view');
+		jQuery('.block-layered-mobile .save-block').css('display','none');
+		jQuery('.block-layered-mobile dt span.checked').each(function(){
+			attributeHTML = '';
+			jQuery(this).parent().next().find('li a').each(function(){
+				if(jQuery(this).hasClass('checked')) {
+					if (attributeHTML == '') {
+						attributeHTML = jQuery(this).html();
+					} else {
+						attributeHTML = attributeHTML+', '+jQuery(this).html();
+					}
+					
+				}
+			});
+			jQuery(this).html(attributeHTML);
+		});
+	});
+		
+	jQuery('.close-full, .layered-apply').click(function(){
+		jQuery('.catalog-category-view .col-left').css('display','none');
+		jQuery('html, body').css({
+			'overflow': 'auto',
+			'height': 'auto'
+		});
+	});
+	
+	jQuery('.block-layered-mobile dt span.checked').each(function(){
+		attributeHTML = '';
+		jQuery(this).parent().next().find('li a').each(function(){
+			if(jQuery(this).hasClass('checked')) {
+				if (attributeHTML == '') {
+					attributeHTML = jQuery(this).html();
+				} else {
+					attributeHTML = attributeHTML+', '+jQuery(this).html();
+				}
+				
+			}
+		});
+		jQuery(this).html(attributeHTML);
+	});
+	var baseUrl;
+	var attrCode;
+	var doneUrl;
+	jQuery('.block-layered-mobile dl dd ol li a').click(function(){
+		attrCode = jQuery(this).parent().parent().parent().attr('attrcode');
+		baseUrl = jQuery(this).attr('href');
+		if (jQuery(this).hasClass('checked')) {
+			jQuery('dd.filter-items-'+attrCode+' ol li a').each(function(){
+				
+				if (baseUrl == jQuery(this).attr('href')) {
+					doneUrl = updateUrls(jQuery(this).html(),attrCode,baseUrl,true);
+					jQuery(this).attr('href',doneUrl);
+				} else {
+					console.log('not same url');
+					doneUrl = updateUrls(jQuery(this).html(),attrCode,baseUrl,false);
+					jQuery(this).attr('href',doneUrl);
+				} 
+			});
+		}
+	});
+	var attrcodeL;
+	var setPosition;
+	function updateUrls(element,attrcode,baseUrl,remove) {
+		element = element.replace(/\s+/g, '');
+		element = element.toLowerCase();
+		if(baseUrl.search(element) > 0 || remove == true) {
+			baseUrl = baseUrl.replace(element, '');
+			console.log('delete element from url');
+			return baseUrl;
+		} else if (baseUrl.search(attrcode) > 0) {
+			attrcodeL = attrcode.length;
+			element = element+',';
+			setPosition = attrcodeL + 1 + baseUrl.search(attrcode);
+			console.log('add element to url');
+			return baseUrl.splice( setPosition, 0, element );
+		}
+	};
+	
+	String.prototype.splice = function( idx, rem, s ) {
+		return (this.slice(0,idx) + s + this.slice(idx + Math.abs(rem)));
+	};
+	// Refiny by module
 });
 
 jQuery.fn.extend({

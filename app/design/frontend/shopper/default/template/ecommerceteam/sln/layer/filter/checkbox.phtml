@@ -1,0 +1,38 @@
+<?php
+/**
+ * "Seo Layered Navigation" extension for "Magento Commerce" by "EcommerceTeam (www.ecommerce-team.com)"
+ *
+ * @category     Extension
+ * @copyright    Copyright (c) 2014 EcommerceTeam (http://www.ecommerce-team.com)
+ * @author       EcommerceTeam
+ * @version      4.0.0
+ */
+/** @var $this EcommerceTeam_Sln_Block_Layer_Filter_Attribute */
+/** @var EcommerceTeam_Sln_Helper_Layer $helper */
+$helper = Mage::helper('ecommerceteam_sln/layer');
+?>
+<ol class="sln-type-checkbox">
+<?php
+$i = 0;
+$limit = $this->getOptionsLimit();
+$count = count($this->getAllItems());
+$showMore = !$this->hasSelectedOptions() && $limit && ($count > $limit);
+/** @var $_item EcommerceTeam_Sln_Model_Layer_Filter_Item */
+foreach ($this->getAllItems() as $_item): $i++;?>
+    <li
+        <?php if ($_item->getLevel() > 0):?>style="padding-left:<?php echo $_item->getLevel() * 15?>px"<?php endif;?>
+        <?php if ($showMore && ($i > $limit)):?>class="additional hidden"<?php endif;?>
+    >
+        <?php if ($_item->getCount() > 0 && !$_item->getIsSelected()): ?>
+            <a href="<?php echo $this->urlEscape($_item->getUrl()) ?>"><?php echo $_item->getLabel() ?></a>
+        <?php elseif($_item->getIsSelected()): ?>
+            <a class="checked <?php echo $helper->isCategoryClearItem($_item) ? 'category-clear' : '';?>" href="<?php echo $this->urlEscape($_item->getRemoveUrl()) ?>"><?php echo $_item->getLabel() ?></a>
+        <?php else: ?>
+            <span class="disabled"><?php echo $_item->getLabel() ?></span>
+        <?php endif; ?>
+        <?php if (!method_exists($this, 'shouldDisplayProductCount') || $this->shouldDisplayProductCount()): ?>
+            (<?php echo $_item->getCount() ?>)
+        <?php endif; ?>
+    </li>
+<?php endforeach ?>
+</ol>

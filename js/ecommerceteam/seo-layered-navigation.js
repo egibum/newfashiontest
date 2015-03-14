@@ -14,7 +14,7 @@ var layered = {
     baseUrl: null,
     init:function(layeredBaseUrl){
         layered.baseUrl = layeredBaseUrl;
-        $$('div.block-layered-nav, div.toolbar').each(function(e){
+        $$('div.block-layered-nav, div.block-layered-mobile, div.toolbar').each(function(e){
             e.select('a').each(function(e){
                 // Fix for stupid IE9
                 e.onclick = function(){

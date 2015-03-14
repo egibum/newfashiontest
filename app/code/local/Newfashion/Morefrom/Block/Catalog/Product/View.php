@@ -2,11 +2,14 @@
 class Newfashion_Morefrom_Block_Catalog_Product_View extends Mage_Catalog_Block_Product_View
 {
     public function getMoreFrom($currentCatIds,$manufacturer) {
-        $categoryCollection = Mage::getResourceModel('catalog/category_collection')
+		$rootCategoryId = Mage::app()->getStore()->getRootCategoryId();
+        $categoryCollection = Mage::getResourceModel('catalog/category_collection');
+		$categoryCollection->setStoreId(Mage::app()->getStore()->getId())
                              ->addAttributeToSelect('name')
                              ->addAttributeToSelect('url')
                              ->addAttributeToSelect('thumbnail')
                              ->addAttributeToFilter('include_in_menu' , 1)
+                             ->addAttributeToFilter('path', array('like' => "1/{$rootCategoryId}/%"))
                              ->addAttributeToFilter('entity_id', $currentCatIds)
                              ->addIsActiveFilter();
                              
@@ -18,8 +21,12 @@ class Newfashion_Morefrom_Block_Catalog_Product_View extends Mage_Catalog_Block_
                 $mainCat['url'] = $cat->getUrl(); 
             } elseif ($manufacturer == $cat->getName()) {
 				$brandID = $cat->getId();
-                $manufacturerUrl = $cat->getUrl(); 
-                $manufacturerImage = Mage::getBaseUrl('media').'catalog/category/'.$cat->getThumbnail(); 
+                $manufacturerUrl = $cat->getUrl();
+				if ($cat->getThumbnail()) {
+					$manufacturerImage = Mage::getBaseUrl('media').'catalog/category/'.$cat->getThumbnail(); 
+				} else {
+					$manufacturerImage = false;
+				}
             } else {
                
                $html .= '<li><a href="'.$mainCat['url'].'">' .$mainCat['name'].'</a> > <a href="'.$cat->getUrl().'">' .ucwords(strtolower($cat->getName())).'</a></li>'; 
@@ -28,7 +35,11 @@ class Newfashion_Morefrom_Block_Catalog_Product_View extends Mage_Catalog_Block_
         endforeach;
         $html.='</ul>';
         if ($manufacturerUrl != NULL) {
-            $html.='<ul class="more-from-brand"><li class="first"><img src="'.$manufacturerImage.'" alt="" /></li><li><a href="'.$mainCat['url'].'">' .$mainCat['name'].'</a> > <a href="'.$manufacturerUrl.'">' .ucwords(strtolower($manufacturer)).'</a></li></ul>';
+			if ($manufacturerImage == false) {
+				$html.='<ul class="more-from-brand"><li><a href="'.$mainCat['url'].'">' .$mainCat['name'].'</a> > <a href="'.$manufacturerUrl.'">' .ucwords(strtolower($manufacturer)).'</a></li></ul>';
+			} else {
+				$html.='<ul class="more-from-brand"><li class="first"><img src="'.$manufacturerImage.'" alt="" /></li><li><a href="'.$mainCat['url'].'">' .$mainCat['name'].'</a> > <a href="'.$manufacturerUrl.'">' .ucwords(strtolower($manufacturer)).'</a></li></ul>';
+			}
         }
 		$output['html'] = $html;
 		$output['brand_id'] = $brandID;
@@ -77,7 +88,7 @@ class Newfashion_Morefrom_Block_Catalog_Product_View extends Mage_Catalog_Block_
 		foreach($products as $product):
 			if ($counter == 6) { return $productArray; }
 			$fullProduct = Mage::getModel('catalog/product')->load($product->getId()); //Product ID
-			$images_obj = $this->helper('catalog/image')->init($fullProduct, 'small_image')->resize(90, 110);
+			$images_obj = $this->helper('catalog/image')->init($fullProduct, 'small_image')->resize(150, 150);
 			$images[] = (string)$images_obj;
 			$productArray[$product->getId()]['image'] = (string)$images_obj;
 			$productArray[$product->getId()]['url'] = $fullProduct->getProductUrl();
