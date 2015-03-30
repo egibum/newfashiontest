@@ -219,6 +219,7 @@ $empty_category_block = Mage::getModel('cms/block')
 <?php endif; ?>
 <script type="text/javascript">
 	function getMoreProducts(id,page){
+		jQuery('body').append('<div id="sln-indicator" style="display: block;"><span>Please wait...</span></div>');
 		jQuery.ajax({
 			type: 'POST',
 			dataType: 'json',
@@ -227,6 +228,7 @@ $empty_category_block = Mage::getModel('cms/block')
 				function(data) {
 					jQuery('.products-grid').append(data);
 					jQuery('li.item.page-'+page).css('display','none');
+					jQuery('#sln-indicator').css('display','none')
 				}
 		});
 	}

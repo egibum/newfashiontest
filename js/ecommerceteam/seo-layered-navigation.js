@@ -146,6 +146,7 @@ var layered = {
         if (window.History.enabled ) {
             window.History.replaceState('', title, url);
         }
+		jQuery('.more-items-item').css('display','none');
     },
     showOverlay:function() {
         this.showIndicator();

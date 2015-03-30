@@ -55,6 +55,7 @@
 					<?php $_filters = $this->getFilters(); ?>
 					<?php foreach ($_filters as $filter): /** @var $filter EcommerceTeam_Sln_Block_Layer_Filter_Abstract */ ?>
 					<?php if($filter->canShow()): $filterCode = $filter->getRequestVar(); ?>
+						<?php if ($filterCode != 'cat'): ?>
 						<dt class="filter-title-<?php echo $filterCode;?>">
 							<div class="label">
 								<span class="title"><?php echo $this->__($filter->getName()) ?></span>
@@ -63,6 +64,7 @@
 							<span class="checked"></span>
 						</dt>
 						<dd attrcode="<?php echo $filterCode;?>" class="filter-items-<?php echo $filterCode;?>"><?php echo $filter->getHtml(); ?></dd>
+						<?php endif; ?>
 					<?php endif; ?>
 					<?php endforeach; ?>
 				</dl>

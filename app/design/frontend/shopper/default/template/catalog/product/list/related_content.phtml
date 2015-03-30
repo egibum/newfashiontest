@@ -32,8 +32,18 @@ $helper = $this->helper('shoppersettings/image');
 $imgX = 270;
 $imgY = $helper->calculateHeight($imgX);
 $time = time() + rand(0,1000);
+$rootCategoryId = Mage::app()->getStore()->getRootCategoryId();
+$category = Mage::getModel('catalog/category')->load($rootCategoryId);
+$attribute_set_id = Mage::registry('current_product')->getAttributeSetId();
+$collection = Mage::getResourceModel('catalog/product_collection')->addCategoryFilter($category);
+$collection->addAttributeToFilter('status', array('eq' =>1))
+	->addAttributeToFilter('type_id', 'configurable')
+	->addAttributeToFilter('attribute_set_id',$attribute_set_id)
+	->addAttributeToSelect('*');
+$collection->getSelect()->limit(12);
 ?>
-<?php if($this->getItems()->getSize()): ?>
+
+<?php if($collection): ?>
 <div class="product-additional" id="krunal-sathavara">
 <div class="box-collateral box-up-sell3">
         <div id="upsells_name">
@@ -47,7 +57,7 @@ $time = time() + rand(0,1000);
 		<div class="clearer"></div>
 		
     <ul id="upsell-products-list" class="jcarousel-skin-tango small-list">
-        <?php $i = 0;foreach ($this->getItems() as $_product): ?>
+        <?php $i = 0;foreach ($collection as $_product): ?>
 		<?php if ( $i==0 ) :?>
             <li>
                 <div class="related-product-count">
