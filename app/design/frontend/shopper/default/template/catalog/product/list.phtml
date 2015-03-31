@@ -223,7 +223,7 @@ $empty_category_block = Mage::getModel('cms/block')
 		jQuery.ajax({
 			type: 'POST',
 			dataType: 'json',
-			url: '<?php echo Mage::getUrl('',array('_secure'=>true)); ?>newfashion/index/index/id/'+id+'/page/'+page,
+			url: '<?php echo Mage::getBaseUrl(); ?>newfashion/index/index/id/'+id+'/page/'+page,
 			success:
 				function(data) {
 					jQuery('.products-grid').append(data);

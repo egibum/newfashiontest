@@ -32,15 +32,14 @@ $helper = $this->helper('shoppersettings/image');
 $imgX = 270;
 $imgY = $helper->calculateHeight($imgX);
 $time = time() + rand(0,1000);
-$rootCategoryId = Mage::app()->getStore()->getRootCategoryId();
-$category = Mage::getModel('catalog/category')->load($rootCategoryId);
 $attribute_set_id = Mage::registry('current_product')->getAttributeSetId();
-$collection = Mage::getResourceModel('catalog/product_collection')->addCategoryFilter($category);
+$collection = Mage::getResourceModel('catalog/product_collection');
 $collection->addAttributeToFilter('status', array('eq' =>1))
+	->addStoreFilter(Mage::app()->getStore()->getStoreId())
 	->addAttributeToFilter('type_id', 'configurable')
 	->addAttributeToFilter('attribute_set_id',$attribute_set_id)
 	->addAttributeToSelect('*');
-$collection->getSelect()->limit(12);
+$collection->getSelect()->order(new Zend_Db_Expr('RAND()'))->limit(12);
 ?>
 
 <?php if($collection): ?>
