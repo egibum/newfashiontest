@@ -39,7 +39,7 @@ print_r($_json_config);
                                             $_ratio = $_height / $_width;
                                         $_large_img_height = 370 * $_ratio;
                                         ?>
-                                        <a class="" title="<?php echo $_option["label"] ?>" val="<?php echo $_option["id"] ?>" id="swatches_option_value_<?php echo $_option["id"] ?>" href="<?php echo $_zimage ?>" rev="<?php echo $_zimage->resize(370, $_large_img_height) ?>">
+                                        <a class="goup" title="<?php echo $_option["label"] ?>" val="<?php echo $_option["id"] ?>" id="swatches_option_value_<?php echo $_option["id"] ?>" href="<?php echo $_zimage ?>" rev="<?php echo $_zimage->resize(370, $_large_img_height) ?>">
                                             <?php
                                             echo "<img src='" . $this->helper('catalog/image')->init($_image_product, 'image')->constrainOnly(TRUE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(50, 0) . "' title='" . $_option["label"] . "' alt='" . $_option["label"] . "'/>";
                                             ?>
@@ -48,7 +48,7 @@ print_r($_json_config);
 
                                     <?php } else {
                                         ?>
-                                        <a class="" title="<?php echo $_option["label"] ?>"  val="<?php echo $_option["id"] ?>" id="swatches_option_value_<?php echo $_option["id"] ?>" href="#">
+                                        <a class="goup" title="<?php echo $_option["label"] ?>"  val="<?php echo $_option["id"] ?>" id="swatches_option_value_<?php echo $_option["id"] ?>" href="#">
                                             <?php echo $_option["label"] ?>
                                         </a>
                                     <?php } ?>
@@ -96,7 +96,7 @@ print_r($_json_config);
          /*          alert("sdfs")                 ;
             window.enableSwatchesOptions ( element.config.id);
             //window.resetLabels(element.config.id);
-       /* }*/
+       /* }*/ 
             
              
              
